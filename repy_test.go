@@ -45,6 +45,26 @@ func TestTimeOfDayFromString(t *testing.T) {
 	}
 }
 
+func TestParseTestDate(t *testing.T) {
+	testCases := []struct {
+		data string
+		want Date
+	}{
+		{"|             11/02/16 'ה  םוי: ןושאר דעומ |", Date{2016, 02, 11}},
+		{"|             08/03/16 'ג  םוי:   ינש דעומ |", Date{2016, 03, 8}},
+	}
+
+	for _, tc := range testCases {
+		cp := newCourseParserFromString(tc.data)
+		got, ok := cp.getTestDateFromLine(tc.data)
+		if !ok {
+			t.Errorf("getTestDateFromLine(%q) -> NOT OK", tc.data)
+		} else if got != tc.want {
+			t.Errorf("getTestDateFromLine(%q) == %v; want %v", tc.data, got, tc.want)
+		}
+	}
+}
+
 func TestParseCourse(t *testing.T) {
 	testCases := []struct {
 		data string
@@ -84,7 +104,8 @@ func TestParseCourse(t *testing.T) {
 	}
 
 	for _, tc := range testCases {
-		got, err := parseCourse(strings.TrimSpace(tc.data))
+		cp := newCourseParserFromString(strings.TrimSpace(tc.data))
+		got, err := cp.parse()
 		if err != nil {
 			t.Errorf("Error parsing course: %v\n%s", err, tc.data)
 		} else if !reflect.DeepEqual(*got, tc.want) {

@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"io"
+	"log"
 	"regexp"
 	"strconv"
 	"strings"
@@ -86,14 +86,6 @@ func parseTimeOfDay(x string) (TimeOfDay, error) {
 	}
 
 	return TimeOfDay(result), nil
-}
-
-func parseCourse(x string) (*Course, error) {
-	// TODO(lutzky): This function is a testing-only function, rename
-	// appropriately
-	b := bytes.NewBufferString(x)
-	cp := courseParser{}
-	return cp.parseCourseFromReader(b)
 }
 
 func hebrewFlip(s string) string {
@@ -180,6 +172,10 @@ func (cp *courseParser) errorf(format string, a ...interface{}) error {
 	return fmt.Errorf("%s:%d: %s", cp.file, cp.line, fmt.Errorf(format, a...))
 }
 
+func (cp *courseParser) logf(format string, a ...interface{}) {
+	log.Printf("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
+}
+
 func (cp *courseParser) scan() {
 	cp.scanner.Scan()
 	cp.line += 1
@@ -189,11 +185,55 @@ func (cp *courseParser) text() string {
 	return cp.scanner.Text()
 }
 
-func (cp *courseParser) parseCourseFromReader(r io.Reader) (*Course, error) {
+func (cp *courseParser) getTestDateFromLine(line string) (Date, bool) {
+	// TODO(lutzky): Shouldn't be necessary to pass line here, cp.text() should do
+	// it.
+	testDate := regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
+	m := testDate.FindStringSubmatch(line)
+	if m == nil {
+		return Date{}, false
+	}
+	return Date{
+		2000 + cp.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
+		cp.parseUint(m[2]),
+		cp.parseUint(m[1]),
+	}, true
+}
+
+func (cp *courseParser) parseTestDates() error {
+	// TODO(lutzky): All regexes should be compiled once, ahead of time.
+	separatorLine := regexp.MustCompile(`\| +-+ *\|`)
+	for {
+		if separatorLine.MatchString(cp.text()) {
+			cp.scan()
+			continue
+		}
+		if testDate, ok := cp.getTestDateFromLine(cp.text()); !ok {
+			// Test date section has ended
+			cp.scan()
+			if len(cp.course.testDates) == 0 {
+				cp.logf("WARNING: No tests found")
+			}
+			return nil
+		} else {
+			cp.course.testDates = append(cp.course.testDates, testDate)
+			cp.scan()
+		}
+	}
+
+	return nil
+}
+
+func newCourseParserFromString(s string) *courseParser {
+	b := bytes.NewBufferString(s)
+	cp := courseParser{}
 	cp.file = "DUMMY" // TODO(lutzky): courseParser should know filename by now
 	cp.course = &Course{}
-	cp.scanner = bufio.NewScanner(r)
+	cp.scanner = bufio.NewScanner(b)
+	return &cp
+}
 
+func (cp *courseParser) parse() (*Course, error) {
 	cp.scan()
 	if cp.text() != courseSep {
 		return nil, cp.errorf("Expected course separator, got %q", cp.text())
@@ -203,8 +243,19 @@ func (cp *courseParser) parseCourseFromReader(r io.Reader) (*Course, error) {
 	if err := cp.parseIdAndName(); err != nil {
 		return nil, err
 	}
+
 	cp.scan()
 	if err := cp.parseHoursAndPoints(); err != nil {
+		return nil, err
+	}
+
+	cp.scan()
+	if cp.text() != courseSep {
+		return nil, cp.errorf("Expected course separator, got %q", cp.text())
+	}
+
+	cp.scan()
+	if err := cp.parseTestDates(); err != nil {
 		return nil, err
 	}
 
