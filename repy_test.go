@@ -87,9 +87,9 @@ func TestParseCourse(t *testing.T) {
 		got, err := parseCourse(strings.TrimSpace(tc.data))
 		if err != nil {
 			t.Errorf("Error parsing course: %v\n%s", err, tc.data)
-		} else if !reflect.DeepEqual(got, tc.want) {
+		} else if !reflect.DeepEqual(*got, tc.want) {
 			t.Errorf("Mismatch parsing course. Course data:\n%s\nGot:\n%+v\nWant:\n%+v",
-				"" /* TODO(lutzky): strings.TrimSpace(tc.data)*/, got, tc.want)
+				"" /* TODO(lutzky): strings.TrimSpace(tc.data)*/, *got, tc.want)
 		}
 	}
 }

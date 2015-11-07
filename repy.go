@@ -89,8 +89,11 @@ func parseTimeOfDay(x string) (TimeOfDay, error) {
 }
 
 func parseCourse(x string) (*Course, error) {
+	// TODO(lutzky): This function is a testing-only function, rename
+	// appropriately
 	b := bytes.NewBufferString(x)
-	return parseCourseFromReader(b)
+	cp := courseParser{}
+	return cp.parseCourseFromReader(b)
 }
 
 func hebrewFlip(s string) string {
@@ -103,29 +106,106 @@ func hebrewFlip(s string) string {
 
 const courseSep = "+------------------------------------------+"
 
-func parseCourseFromReader(r io.Reader) (*Course, error) {
-	var err error
-	c := Course{}
-	s := bufio.NewScanner(r)
+func (cp *courseParser) parseIdAndName() error {
+	re := regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
+	if m := re.FindStringSubmatch(cp.text()); m == nil {
+		return cp.errorf("Line %q doesn't match %q", cp.text(), re)
+	} else {
+		cp.course.name = hebrewFlip(m[1])
+		cp.course.id = cp.parseUint(m[2])
+	}
+	return nil
+}
 
-	s.Scan()
-	if s.Text() != courseSep {
-		// TODO(lutzky): Line numbers?
-		return nil, fmt.Errorf("FILE:LINE: Expected course separator, got %q", s.Text())
+func (cp *courseParser) parseUint(s string) uint {
+	result, err := strconv.ParseUint(s, 10, 32)
+	if err != nil {
+		panic(cp.errorf("Couldn't ParseUint(%q, 10, 32): %v", s, err))
+	}
+	return uint(result)
+}
+
+func (cp *courseParser) parseFloat(s string) float32 {
+	result, err := strconv.ParseFloat(s, 32)
+	if err != nil {
+		panic(cp.errorf("Couldn't ParseFloat(%q, 32): %v", s, err))
+	}
+	return float32(result)
+}
+
+func (cp *courseParser) parseTotalHours(totalHours string) error {
+	descriptors := strings.Split(totalHours, " ")
+	for _, desc := range descriptors {
+		bits := strings.Split(desc, "-")
+		hours := cp.parseUint(bits[0])
+		switch bits[1] {
+		case "ה":
+			cp.course.weeklyHours.lecture = hours
+		case "ת":
+			cp.course.weeklyHours.tutorial = hours
+		case "מ":
+			cp.course.weeklyHours.lab = hours
+		default:
+			return cp.errorf("Invalid hour descriptor %q", bits[1])
+		}
+	}
+	return nil
+}
+
+func (cp *courseParser) parseHoursAndPoints() error {
+	re := regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
+	if m := re.FindStringSubmatch(cp.text()); m == nil {
+		return cp.errorf("Line %q doesn't match %q", cp.text(), re)
+	} else {
+		var academicPoints float64
+		cp.course.academicPoints = cp.parseFloat(m[1])
+		cp.course.academicPoints = float32(academicPoints)
+		if err := cp.parseTotalHours(m[2]); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+// TODO(lutzky): The logic for courseParser should be shared with faculty
+// parsers, etc.
+type courseParser struct {
+	scanner *bufio.Scanner
+	course  *Course
+	line    uint
+	file    string
+}
+
+func (cp *courseParser) errorf(format string, a ...interface{}) error {
+	return fmt.Errorf("%s:%d: %s", cp.file, cp.line, fmt.Errorf(format, a...))
+}
+
+func (cp *courseParser) scan() {
+	cp.scanner.Scan()
+	cp.line += 1
+}
+
+func (cp *courseParser) text() string {
+	return cp.scanner.Text()
+}
+
+func (cp *courseParser) parseCourseFromReader(r io.Reader) (*Course, error) {
+	cp.file = "DUMMY" // TODO(lutzky): courseParser should know filename by now
+	cp.course = &Course{}
+	cp.scanner = bufio.NewScanner(r)
+
+	cp.scan()
+	if cp.text() != courseSep {
+		return nil, cp.errorf("Expected course separator, got %q", cp.text())
 	}
 
-	s.Scan()
-	re := regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
-	if m := re.FindStringSubmatch(s.Text()); m == nil {
-		return nil, fmt.Errorf("FILE:LINE: Line %q doesn't match %q", s.Text(), re)
-	} else {
-		c.name = hebrewFlip(m[1])
-		var id uint64
-		id, err = strconv.ParseUint(m[2], 10, 32)
-		if err != nil {
-			panic(fmt.Sprintf("Couldn't ParseUint(%q, 10, 32): %v", m[2], err))
-		}
-		c.id = uint(id)
+	cp.scan()
+	if err := cp.parseIdAndName(); err != nil {
+		return nil, err
+	}
+	cp.scan()
+	if err := cp.parseHoursAndPoints(); err != nil {
+		return nil, err
 	}
 
 	/*
@@ -135,5 +215,5 @@ func parseCourseFromReader(r io.Reader) (*Course, error) {
 			}
 	*/
 
-	return &c, nil
+	return cp.course, nil
 }
