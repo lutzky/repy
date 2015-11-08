@@ -23,6 +23,19 @@ type Course struct {
 	groups           []Group
 }
 
+func (c Course) String() string {
+	return fmt.Sprintf(
+		"{Course[%d] (%q) AP:%.1f Hours:%v lecturer:%q testDates:%v groups:%v}",
+		c.id,
+		c.name,
+		c.academicPoints,
+		c.weeklyHours,
+		c.lecturerInCharge,
+		c.testDates,
+		c.groups,
+	)
+}
+
 // Date is a timezone-free representation of a date
 type Date struct {
 	Year, Month, Day uint
@@ -37,6 +50,10 @@ type WeeklyHours struct {
 	lecture  uint
 	tutorial uint
 	lab      uint
+}
+
+func (wh WeeklyHours) String() string {
+	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.lecture, wh.tutorial, wh.lab)
 }
 
 type GroupType int
@@ -62,10 +79,30 @@ type Group struct {
 	groupType GroupType
 }
 
+func (g Group) String() string {
+	return fmt.Sprintf(
+		"{group%d (%v) teachers:%q events:%v}",
+		g.id,
+		g.groupType,
+		g.teachers,
+		g.events,
+	)
+}
+
 type Event struct {
 	day                time.Weekday
 	location           string
 	startHour, endHour TimeOfDay
+}
+
+func (e Event) String() string {
+	return fmt.Sprintf(
+		"{%v %v-%v at %q}",
+		e.day,
+		e.startHour,
+		e.endHour,
+		e.location,
+	)
 }
 
 // TimeOfDay is represented as "minutes since midnight".
