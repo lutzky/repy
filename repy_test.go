@@ -1,6 +1,7 @@
 package repy
 
 import (
+	"fmt"
 	"reflect"
 	"strings"
 	"testing"
@@ -54,8 +55,8 @@ func TestParseTestDate(t *testing.T) {
 		{"|             08/03/16 'ג  םוי:   ינש דעומ |", Date{2016, 03, 8}},
 	}
 
-	for _, tc := range testCases {
-		cp := newCourseParserFromString(tc.data)
+	for i, tc := range testCases {
+		cp := newCourseParserFromString(tc.data, fmt.Sprintf("parseTestDate%d", i))
 		got, ok := cp.getTestDateFromLine(tc.data)
 		if !ok {
 			t.Errorf("getTestDateFromLine(%q) -> NOT OK", tc.data)
@@ -103,8 +104,9 @@ func TestParseCourse(t *testing.T) {
 		}},
 	}
 
-	for _, tc := range testCases {
-		cp := newCourseParserFromString(strings.TrimSpace(tc.data))
+	for i, tc := range testCases {
+		cp := newCourseParserFromString(strings.TrimSpace(tc.data),
+			fmt.Sprintf("testParseCourse%d", i))
 		got, err := cp.parse()
 		if err != nil {
 			t.Errorf("Error parsing course: %v\n%s", err, tc.data)

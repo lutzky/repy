@@ -47,6 +47,14 @@ const (
 	gtLab
 )
 
+func (gt GroupType) String() string {
+	return map[GroupType]string{
+		gtLecture:  "Lecture",
+		gtTutorial: "Tutorial",
+		gtLab:      "Lab",
+	}[gt]
+}
+
 type Group struct {
 	id        uint
 	teachers  []string
@@ -97,16 +105,19 @@ func hebrewFlip(s string) string {
 }
 
 const courseSep = "+------------------------------------------+"
+const groupSep1 = "|               ++++++                  .סמ|"
+const groupSep2 = "|                                     םושיר|"
 
 func (cp *courseParser) parseIdAndName() error {
 	re := regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
 	if m := re.FindStringSubmatch(cp.text()); m == nil {
-		return cp.errorf("Line %q doesn't match %q", cp.text(), re)
+		return cp.errorf("Line %q doesn't match id-and-name regex `%s`", cp.text(), re)
 	} else {
 		cp.course.name = hebrewFlip(m[1])
 		cp.course.id = cp.parseUint(m[2])
+		cp.scan()
+		return nil
 	}
-	return nil
 }
 
 func (cp *courseParser) parseUint(s string) uint {
@@ -147,7 +158,7 @@ func (cp *courseParser) parseTotalHours(totalHours string) error {
 func (cp *courseParser) parseHoursAndPoints() error {
 	re := regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
 	if m := re.FindStringSubmatch(cp.text()); m == nil {
-		return cp.errorf("Line %q doesn't match %q", cp.text(), re)
+		return cp.errorf("Line %q doesn't match hours-and-points regex `%s`", cp.text(), re)
 	} else {
 		var academicPoints float64
 		cp.course.academicPoints = cp.parseFloat(m[1])
@@ -155,8 +166,9 @@ func (cp *courseParser) parseHoursAndPoints() error {
 		if err := cp.parseTotalHours(m[2]); err != nil {
 			return err
 		}
+		cp.scan()
+		return nil
 	}
-	return nil
 }
 
 // TODO(lutzky): The logic for courseParser should be shared with faculty
@@ -210,7 +222,6 @@ func (cp *courseParser) parseTestDates() error {
 		}
 		if testDate, ok := cp.getTestDateFromLine(cp.text()); !ok {
 			// Test date section has ended
-			cp.scan()
 			if len(cp.course.testDates) == 0 {
 				cp.logf("WARNING: No tests found")
 			}
@@ -224,10 +235,10 @@ func (cp *courseParser) parseTestDates() error {
 	return nil
 }
 
-func newCourseParserFromString(s string) *courseParser {
+func newCourseParserFromString(s string, name string) *courseParser {
 	b := bytes.NewBufferString(s)
 	cp := courseParser{}
-	cp.file = "DUMMY" // TODO(lutzky): courseParser should know filename by now
+	cp.file = name
 	cp.course = &Course{}
 	cp.scanner = bufio.NewScanner(b)
 	return &cp
@@ -235,36 +246,146 @@ func newCourseParserFromString(s string) *courseParser {
 
 func (cp *courseParser) parse() (*Course, error) {
 	cp.scan()
-	if cp.text() != courseSep {
-		return nil, cp.errorf("Expected course separator, got %q", cp.text())
+	if err := cp.expectLineAndAdvance(courseSep); err != nil {
+		return nil, err
 	}
 
-	cp.scan()
 	if err := cp.parseIdAndName(); err != nil {
 		return nil, err
 	}
 
-	cp.scan()
 	if err := cp.parseHoursAndPoints(); err != nil {
 		return nil, err
 	}
 
-	cp.scan()
-	if cp.text() != courseSep {
-		return nil, cp.errorf("Expected course separator, got %q", cp.text())
+	if err := cp.expectLineAndAdvance(courseSep); err != nil {
+		return nil, err
 	}
 
-	cp.scan()
 	if err := cp.parseTestDates(); err != nil {
 		return nil, err
 	}
 
-	/*
-		  TODO(lutzky): error handling
-			if err := scanner.Err(); err != nil {
-				return nil, err
-			}
-	*/
+	// TODO(lutzky): There might be some comments about the course here
+
+	if err := cp.parseGroups(); err != nil {
+		return nil, err
+	}
 
 	return cp.course, nil
+}
+
+func (cp *courseParser) expectLineAndAdvance(s string) error {
+	if cp.text() != s {
+		return cp.errorf("Expected %q, got %q", s, cp.text())
+	}
+	cp.scan()
+	return nil
+}
+
+func (cp *courseParser) weekDayFromHebrewLetter(letter string) time.Weekday {
+	mapping := map[string]time.Weekday{
+		"א": time.Sunday,
+		"ב": time.Monday,
+		"ג": time.Tuesday,
+		"ד": time.Wednesday,
+		"ה": time.Thursday,
+		"ו": time.Friday,
+		"ש": time.Saturday,
+	}
+
+	result, ok := mapping[letter]
+	if !ok {
+		panic(cp.errorf("Invalid weekday letter %q", letter))
+	}
+
+	return result
+}
+
+func (cp *courseParser) timeOfDayFromStrings(hours, minutes string) TimeOfDay {
+	h := cp.parseUint(hours)
+	m := cp.parseUint(minutes)
+	return TimeOfDay(h*60 + m)
+}
+
+func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
+	mapping := map[string]GroupType{
+		"האצרה": gtLecture,
+		"לוגרת": gtTutorial,
+		"הדבעמ": gtLab,
+	}
+
+	result, ok := mapping[s]
+	if !ok {
+		return 0, cp.errorf("Invalid group type %q", s)
+	}
+	return result, nil
+}
+
+func (cp *courseParser) parseLocation(s string) string {
+	// TODO(lutzky): This requires reversal of the Hebrew, but not of the number.
+	return s
+}
+
+var eventRegexp = regexp.MustCompile(
+	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) *\|`)
+
+func (cp *courseParser) parseEventLine() bool {
+	// TODO(lutzky): This is actually a group-and-event-at-once line
+	if m := eventRegexp.FindStringSubmatch(cp.text()); len(m) > 0 {
+		cp.logf("Parsed %s", cp.text())
+		ev := Event{
+			day:       cp.weekDayFromHebrewLetter(m[6]),
+			startHour: cp.timeOfDayFromStrings(m[2], m[3]),
+			endHour:   cp.timeOfDayFromStrings(m[4], m[5]),
+			location:  cp.parseLocation(m[1]),
+		}
+
+		groupType, err := cp.groupTypeFromString(m[7])
+		if err != nil {
+			cp.logf("ERROR: %v", err)
+			return false
+		}
+
+		group := Group{
+			id:        42,         // TODO(lutzky): Actual group ID by state
+			teachers:  []string{}, // TODO(lutzky): Fill these in
+			events:    []Event{ev},
+			groupType: groupType,
+		}
+
+		cp.course.groups = append(cp.course.groups, group)
+
+		cp.scan()
+		return true
+	}
+	return false
+}
+
+func (cp *courseParser) parseGroups() error {
+	var groupId uint
+
+	if cp.text() != groupSep1 {
+		return cp.errorf("Expected %q, got %q", groupSep1, cp.text())
+	}
+
+	for {
+		if cp.text() == groupSep1 {
+			cp.scan()
+			if err := cp.expectLineAndAdvance(groupSep2); err != nil {
+				return err
+			}
+			groupId = (10*(groupId/10) + 1)
+		} else if cp.text() == courseSep {
+			cp.scan()
+			return nil
+		} else if cp.parseEventLine() {
+			// TODO(lutzky): Do nothing?
+		} else {
+			cp.logf("WARNING: Ignored line %q", cp.text())
+			cp.scan()
+		}
+	}
+
+	return cp.errorf("Unexpected end of parseGroups()")
 }
