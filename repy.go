@@ -4,11 +4,12 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"log"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/golang/glog"
 )
 
 type Faculty []Course
@@ -224,8 +225,11 @@ func (cp *courseParser) errorf(format string, a ...interface{}) error {
 	return fmt.Errorf("%s:%d: %s", cp.file, cp.line, fmt.Errorf(format, a...))
 }
 
-func (cp *courseParser) logf(format string, a ...interface{}) {
-	log.Printf("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
+func (cp *courseParser) infof(format string, a ...interface{}) {
+	glog.Infof("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
+}
+func (cp *courseParser) warningf(format string, a ...interface{}) {
+	glog.Warningf("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
 }
 
 func (cp *courseParser) scan() {
@@ -263,7 +267,7 @@ func (cp *courseParser) parseTestDates() error {
 		if testDate, ok := cp.getTestDateFromLine(cp.text()); !ok {
 			// Test date section has ended
 			if len(cp.course.testDates) == 0 {
-				cp.logf("WARNING: No tests found")
+				cp.warningf("No tests found")
 			}
 			return nil
 		} else {
@@ -405,7 +409,7 @@ var eventRegexp = regexp.MustCompile(
 func (cp *courseParser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
 	if m := eventRegexp.FindStringSubmatch(cp.text()); len(m) > 0 {
-		cp.logf("Parsed %s", cp.text())
+		cp.infof("Parsed %s", cp.text())
 		ev := Event{
 			day:       cp.weekDayFromHebrewLetter(m[6]),
 			startHour: cp.timeOfDayFromStrings(m[2], m[3]),
@@ -415,7 +419,7 @@ func (cp *courseParser) parseEventLine() bool {
 
 		groupType, err := cp.groupTypeFromString(m[7])
 		if err != nil {
-			cp.logf("ERROR: %v", err)
+			cp.warningf("Failed to parse group type %q: %v", m[7], err)
 			return false
 		}
 
@@ -465,7 +469,7 @@ func (cp *courseParser) parseGroups() error {
 		} else if cp.parseLecturerLine() {
 			cp.scan()
 		} else {
-			cp.logf("WARNING: Ignored line %q", cp.text())
+			cp.warningf("Ignored line %q", cp.text())
 			cp.scan()
 		}
 	}
