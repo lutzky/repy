@@ -213,6 +213,7 @@ type courseParser struct {
 	course  *Course
 	line    uint
 	file    string
+	groupID uint
 }
 
 func (cp *courseParser) errorf(format string, a ...interface{}) error {
@@ -280,6 +281,9 @@ func newCourseParserFromString(s string, name string) *courseParser {
 }
 
 func (cp *courseParser) parse() (*Course, error) {
+	// First groupID is usually omitted in REPY.
+	cp.groupID = 10
+
 	cp.scan()
 	if err := cp.expectLineAndAdvance(courseSep); err != nil {
 		return nil, err
@@ -362,6 +366,27 @@ func (cp *courseParser) parseLocation(s string) string {
 	return s
 }
 
+func (cp *courseParser) lastGroup() *Group {
+	return &cp.course.groups[len(cp.course.groups)-1]
+}
+
+func collapseSpaces(s string) string {
+	return strings.Join(strings.Fields(s), " ")
+}
+
+var lecturerRegexp = regexp.MustCompile(
+	`\| *(.*) *: *הצרמ *\|`)
+
+func (cp *courseParser) parseLecturerLine() bool {
+	if m := lecturerRegexp.FindStringSubmatch(cp.text()); len(m) > 0 {
+		lecturer := hebrewFlip(collapseSpaces(m[1]))
+		teachers := &cp.lastGroup().teachers
+		*teachers = append(*teachers, lecturer)
+		return true
+	}
+	return false
+}
+
 var eventRegexp = regexp.MustCompile(
 	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) *\|`)
 
@@ -383,7 +408,7 @@ func (cp *courseParser) parseEventLine() bool {
 		}
 
 		group := Group{
-			id:        42,         // TODO(lutzky): Actual group ID by state
+			id:        cp.groupID,
 			teachers:  []string{}, // TODO(lutzky): Fill these in
 			events:    []Event{ev},
 			groupType: groupType,
@@ -416,6 +441,8 @@ func (cp *courseParser) parseGroups() error {
 			return nil
 		} else if cp.parseEventLine() {
 			// TODO(lutzky): Do nothing?
+		} else if cp.parseLecturerLine() {
+			cp.scan()
 		} else {
 			cp.logf("WARNING: Ignored line %q", cp.text())
 			cp.scan()
