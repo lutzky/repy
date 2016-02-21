@@ -12,8 +12,10 @@ import (
 	"github.com/golang/glog"
 )
 
+// Faculty represents a set of courses offered by a faculty.
 type Faculty []Course
 
+// Course represents information about a technion course.
 type Course struct {
 	id               uint
 	name             string
@@ -47,6 +49,8 @@ func (d Date) String() string {
 	return fmt.Sprintf("%04d-%02d-%02d", d.Year, d.Month, d.Day)
 }
 
+// WeeklyHours represents the amount of weekly hours, by type, that a course
+// has.
 type WeeklyHours struct {
 	lecture  uint
 	tutorial uint
@@ -57,22 +61,31 @@ func (wh WeeklyHours) String() string {
 	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.lecture, wh.tutorial, wh.lab)
 }
 
+// GroupType is the type of events in a group (applies to all events within a
+// group).
 type GroupType int
 
 const (
-	gtLecture = iota
-	gtTutorial
-	gtLab
+	// Lecture groups indicate frontal lectures by professors (הרצאה)
+	Lecture GroupType = iota
+
+	// Tutorial groups indicate frontal tutorials by TAs (תרגול, תרגיל)
+	Tutorial
+
+	// Lab groups indicate laboratory experiments (מעבדה)
+	Lab
 )
 
 func (gt GroupType) String() string {
 	return map[GroupType]string{
-		gtLecture:  "Lecture",
-		gtTutorial: "Tutorial",
-		gtLab:      "Lab",
+		Lecture:  "Lecture",
+		Tutorial: "Tutorial",
+		Lab:      "Lab",
 	}[gt]
 }
 
+// Group represents a course's registration group (קבוצת רישום) and the events
+// it entails.
 type Group struct {
 	id        uint
 	teachers  []string
@@ -90,6 +103,7 @@ func (g Group) String() string {
 	)
 }
 
+// Event represents a singular weekly event within a course.
 type Event struct {
 	day                time.Weekday
 	location           string
@@ -150,16 +164,18 @@ const (
 	blankLine2 = "|                                          |"
 )
 
-func (cp *courseParser) parseIdAndName() error {
-	re := regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
-	if m := re.FindStringSubmatch(cp.text()); m == nil {
-		return cp.errorf("Line %q doesn't match id-and-name regex `%s`", cp.text(), re)
-	} else {
-		cp.course.name = hebrewFlip(m[1])
-		cp.course.id = cp.parseUint(m[2])
-		cp.scan()
-		return nil
+var idAndNameRegex = regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
+
+func (cp *courseParser) parseIDAndName() error {
+	m := idAndNameRegex.FindStringSubmatch(cp.text())
+	if m == nil {
+		return cp.errorf("Line %q doesn't match id-and-name regex `%s`", cp.text(), idAndNameRegex)
 	}
+
+	cp.course.name = hebrewFlip(m[1])
+	cp.course.id = cp.parseUint(m[2])
+	cp.scan()
+	return nil
 }
 
 func (cp *courseParser) parseUint(s string) uint {
@@ -197,18 +213,20 @@ func (cp *courseParser) parseTotalHours(totalHours string) error {
 	return nil
 }
 
+var hoursAndPointsRegex = regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
+
 func (cp *courseParser) parseHoursAndPoints() error {
-	re := regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
-	if m := re.FindStringSubmatch(cp.text()); m == nil {
-		return cp.errorf("Line %q doesn't match hours-and-points regex `%s`", cp.text(), re)
-	} else {
-		cp.course.academicPoints = cp.parseFloat(m[1])
-		if err := cp.parseTotalHours(m[2]); err != nil {
-			return err
-		}
-		cp.scan()
-		return nil
+	m := hoursAndPointsRegex.FindStringSubmatch(cp.text())
+	if m == nil {
+		return cp.errorf("Line %q doesn't match hours-and-points regex `%s`", cp.text(), hoursAndPointsRegex)
 	}
+
+	cp.course.academicPoints = cp.parseFloat(m[1])
+	if err := cp.parseTotalHours(m[2]); err != nil {
+		return err
+	}
+	cp.scan()
+	return nil
 }
 
 // TODO(lutzky): The logic for courseParser should be shared with faculty
@@ -234,18 +252,19 @@ func (cp *courseParser) warningf(format string, a ...interface{}) {
 
 func (cp *courseParser) scan() {
 	cp.scanner.Scan()
-	cp.line += 1
+	cp.line++
 }
 
 func (cp *courseParser) text() string {
 	return cp.scanner.Text()
 }
 
+var testDateRegex = regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
+
 func (cp *courseParser) getTestDateFromLine(line string) (Date, bool) {
 	// TODO(lutzky): Shouldn't be necessary to pass line here, cp.text() should do
 	// it.
-	testDate := regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
-	m := testDate.FindStringSubmatch(line)
+	m := testDateRegex.FindStringSubmatch(line)
 	if m == nil {
 		return Date{}, false
 	}
@@ -256,27 +275,24 @@ func (cp *courseParser) getTestDateFromLine(line string) (Date, bool) {
 	}, true
 }
 
+var separatorLineRegex = regexp.MustCompile(`\| +-+ *\|`)
+
 func (cp *courseParser) parseTestDates() error {
-	// TODO(lutzky): All regexes should be compiled once, ahead of time.
-	separatorLine := regexp.MustCompile(`\| +-+ *\|`)
 	for {
-		if separatorLine.MatchString(cp.text()) {
+		if separatorLineRegex.MatchString(cp.text()) {
 			cp.scan()
 			continue
 		}
-		if testDate, ok := cp.getTestDateFromLine(cp.text()); !ok {
+		testDate, ok := cp.getTestDateFromLine(cp.text())
+		if !ok {
 			// Test date section has ended
 			if len(cp.course.testDates) == 0 {
 				cp.warningf("No tests found")
 			}
-			return nil
-		} else {
-			cp.course.testDates = append(cp.course.testDates, testDate)
-			cp.scan()
 		}
+		cp.course.testDates = append(cp.course.testDates, testDate)
+		cp.scan()
 	}
-
-	return nil
 }
 
 func newCourseParserFromString(s string, name string) *courseParser {
@@ -297,7 +313,7 @@ func (cp *courseParser) parse() (*Course, error) {
 		return nil, err
 	}
 
-	if err := cp.parseIdAndName(); err != nil {
+	if err := cp.parseIDAndName(); err != nil {
 		return nil, err
 	}
 
@@ -357,10 +373,10 @@ func (cp *courseParser) timeOfDayFromStrings(hours, minutes string) TimeOfDay {
 
 func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
 	mapping := map[string]GroupType{
-		"האצרה": gtLecture,
-		"לוגרת": gtTutorial,
-		"ליגרת": gtTutorial,
-		"הדבעמ": gtLab,
+		"האצרה": Lecture,
+		"לוגרת": Tutorial,
+		"ליגרת": Tutorial,
+		"הדבעמ": Lab,
 	}
 
 	result, ok := mapping[s]
@@ -373,13 +389,13 @@ func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
 var standardLocationRegexp = regexp.MustCompile(`([א-ת]+) ([0-9]+)`)
 
 func (cp *courseParser) parseLocation(s string) string {
-	if m := standardLocationRegexp.FindStringSubmatch(s); len(m) > 0 {
-		building := hebrewFlip(m[1])
-		room := cp.parseUint(m[2])
-		return fmt.Sprintf("%s %d", building, room)
-	} else {
+	m := standardLocationRegexp.FindStringSubmatch(s)
+	if len(m) == 0 {
 		return hebrewFlip(s)
 	}
+	building := hebrewFlip(m[1])
+	room := cp.parseUint(m[2])
+	return fmt.Sprintf("%s %d", building, room)
 }
 
 func (cp *courseParser) lastGroup() *Group {
@@ -434,7 +450,7 @@ func (cp *courseParser) parseEventLine() bool {
 			cp.groupID = group.id + 1
 		} else {
 			group.id = cp.groupID
-			cp.groupID += 1
+			cp.groupID++
 		}
 
 		cp.course.groups = append(cp.course.groups, group)
@@ -446,7 +462,7 @@ func (cp *courseParser) parseEventLine() bool {
 }
 
 func (cp *courseParser) parseGroups() error {
-	var groupId uint
+	var groupID uint
 
 	if cp.text() != groupSep1 {
 		return cp.errorf("Expected %q, got %q", groupSep1, cp.text())
@@ -458,7 +474,7 @@ func (cp *courseParser) parseGroups() error {
 			if err := cp.expectLineAndAdvance(groupSep2); err != nil {
 				return err
 			}
-			groupId = (10*(groupId/10) + 1)
+			groupID = (10*(groupID/10) + 1)
 		} else if cp.text() == courseSep {
 			cp.scan()
 			return nil
@@ -473,6 +489,4 @@ func (cp *courseParser) parseGroups() error {
 			cp.scan()
 		}
 	}
-
-	return cp.errorf("Unexpected end of parseGroups()")
 }

@@ -116,8 +116,8 @@ func TestParseCourse(t *testing.T) {
 			academicPoints: 3.0,
 			weeklyHours:    WeeklyHours{lecture: 2, tutorial: 1},
 			testDates: []Date{
-				Date{2016, 2, 11},
-				Date{2016, 3, 8},
+				{2016, 2, 11},
+				{2016, 3, 8},
 			},
 			groups: []Group{
 				{
@@ -126,21 +126,21 @@ func TestParseCourse(t *testing.T) {
 					events: []Event{
 						{day: 2, location: "טאוב 9", startHour: 10*60 + 30, endHour: 12*60 + 30},
 					},
-					groupType: gtLecture,
+					groupType: Lecture,
 				},
 				{
 					id: 11,
 					events: []Event{
 						{day: 2, location: "טאוב 5", startHour: 17*60 + 30, endHour: 18*60 + 30},
 					},
-					groupType: gtTutorial,
+					groupType: Tutorial,
 				},
 				{
 					id: 12,
 					events: []Event{
 						{day: 3, location: "טאוב 6", startHour: 15*60 + 30, endHour: 16*60 + 30},
 					},
-					groupType: gtTutorial,
+					groupType: Tutorial,
 				},
 			},
 		}},
