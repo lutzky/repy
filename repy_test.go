@@ -102,6 +102,30 @@ func TestParseCourse(t *testing.T) {
 				Date{2016, 2, 11},
 				Date{2016, 3, 8},
 			},
+			groups: []Group{
+				{
+					id:       10,
+					teachers: []string{`ד"ר ג.ידגר`},
+					events: []Event{
+						{day: 2, location: "טאוב 9", startHour: 10*60 + 30, endHour: 12*60 + 30},
+					},
+					groupType: gtLecture,
+				},
+				{
+					id: 11,
+					events: []Event{
+						{day: 2, location: "טאוב 5", startHour: 17*60 + 30, endHour: 18*60 + 30},
+					},
+					groupType: gtTutorial,
+				},
+				{
+					id: 12,
+					events: []Event{
+						{day: 3, location: "טאוב 6", startHour: 15*60 + 30, endHour: 16*60 + 30},
+					},
+					groupType: gtTutorial,
+				},
+			},
 		}},
 	}
 
