@@ -197,9 +197,7 @@ func (cp *courseParser) parseHoursAndPoints() error {
 	if m := re.FindStringSubmatch(cp.text()); m == nil {
 		return cp.errorf("Line %q doesn't match hours-and-points regex `%s`", cp.text(), re)
 	} else {
-		var academicPoints float64
 		cp.course.academicPoints = cp.parseFloat(m[1])
-		cp.course.academicPoints = float32(academicPoints)
 		if err := cp.parseTotalHours(m[2]); err != nil {
 			return err
 		}
