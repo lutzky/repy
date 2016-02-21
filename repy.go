@@ -141,9 +141,13 @@ func hebrewFlip(s string) string {
 	return string(runes)
 }
 
-const courseSep = "+------------------------------------------+"
-const groupSep1 = "|               ++++++                  .סמ|"
-const groupSep2 = "|                                     םושיר|"
+const (
+	courseSep  = "+------------------------------------------+"
+	groupSep1  = "|               ++++++                  .סמ|"
+	groupSep2  = "|                                     םושיר|"
+	blankLine1 = "|                               -----      |"
+	blankLine2 = "|                                          |"
+)
 
 func (cp *courseParser) parseIdAndName() error {
 	re := regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
@@ -351,6 +355,7 @@ func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
 	mapping := map[string]GroupType{
 		"האצרה": gtLecture,
 		"לוגרת": gtTutorial,
+		"ליגרת": gtTutorial,
 		"הדבעמ": gtLab,
 	}
 
@@ -361,9 +366,16 @@ func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
 	return result, nil
 }
 
+var standardLocationRegexp = regexp.MustCompile(`([א-ת]+) ([0-9]+)`)
+
 func (cp *courseParser) parseLocation(s string) string {
-	// TODO(lutzky): This requires reversal of the Hebrew, but not of the number.
-	return s
+	if m := standardLocationRegexp.FindStringSubmatch(s); len(m) > 0 {
+		building := hebrewFlip(m[1])
+		room := cp.parseUint(m[2])
+		return fmt.Sprintf("%s %d", building, room)
+	} else {
+		return hebrewFlip(s)
+	}
 }
 
 func (cp *courseParser) lastGroup() *Group {
@@ -388,7 +400,7 @@ func (cp *courseParser) parseLecturerLine() bool {
 }
 
 var eventRegexp = regexp.MustCompile(
-	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) *\|`)
+	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) +([0-9]+)? *\|`)
 
 func (cp *courseParser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
@@ -408,10 +420,17 @@ func (cp *courseParser) parseEventLine() bool {
 		}
 
 		group := Group{
-			id:        cp.groupID,
 			teachers:  []string{}, // TODO(lutzky): Fill these in
 			events:    []Event{ev},
 			groupType: groupType,
+		}
+
+		if m[8] != "" {
+			group.id = cp.parseUint(m[8])
+			cp.groupID = group.id + 1
+		} else {
+			group.id = cp.groupID
+			cp.groupID += 1
 		}
 
 		cp.course.groups = append(cp.course.groups, group)
@@ -439,6 +458,8 @@ func (cp *courseParser) parseGroups() error {
 		} else if cp.text() == courseSep {
 			cp.scan()
 			return nil
+		} else if cp.text() == blankLine1 || cp.text() == blankLine2 {
+			cp.scan()
 		} else if cp.parseEventLine() {
 			// TODO(lutzky): Do nothing?
 		} else if cp.parseLecturerLine() {

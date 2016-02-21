@@ -47,6 +47,23 @@ func TestTimeOfDayFromString(t *testing.T) {
 	}
 }
 
+func TestParseLocation(t *testing.T) {
+	cp := courseParser{}
+
+	testCases := []struct{ s, want string }{
+		{"בואט 009", "טאוב 9"},
+		{"ןמלוא 501", "אולמן 501"},
+		{"והשלכ רחא הנבמ", "מבנה אחר כלשהו"},
+	}
+
+	for _, tc := range testCases {
+		got := cp.parseLocation(tc.s)
+		if got != tc.want {
+			t.Errorf("cp.parseLocation(%q) == %q; want %q", tc.s, got, tc.want)
+		}
+	}
+}
+
 func TestParseTestDate(t *testing.T) {
 	testCases := []struct {
 		data string
