@@ -2,9 +2,10 @@ package repy
 
 import (
 	"fmt"
-	"reflect"
 	"strings"
 	"testing"
+
+	"github.com/kylelemons/godebug/pretty"
 )
 
 func TestTimeOfDayToString(t *testing.T) {
@@ -110,9 +111,9 @@ func TestParseCourse(t *testing.T) {
 		got, err := cp.parse()
 		if err != nil {
 			t.Errorf("Error parsing course: %v\n%s", err, tc.data)
-		} else if !reflect.DeepEqual(*got, tc.want) {
-			t.Errorf("Mismatch parsing course. Course data:\n%s\nGot:\n%+v\nWant:\n%+v",
-				"" /* TODO(lutzky): strings.TrimSpace(tc.data)*/, *got, tc.want)
+		} else if diff := pretty.Compare(tc.want, *got); diff != "" {
+			t.Errorf("Mismatch parsing course. Diff -want +got:\n%s", diff)
+			t.Errorf("Course data:\n%s", tc.data)
 		}
 	}
 }
