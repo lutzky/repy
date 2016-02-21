@@ -289,6 +289,7 @@ func (cp *courseParser) parseTestDates() error {
 			if len(cp.course.testDates) == 0 {
 				cp.warningf("No tests found")
 			}
+			return nil
 		}
 		cp.course.testDates = append(cp.course.testDates, testDate)
 		cp.scan()
