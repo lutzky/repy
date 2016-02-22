@@ -48,7 +48,7 @@ func TestTimeOfDayFromString(t *testing.T) {
 }
 
 func TestParseLocation(t *testing.T) {
-	cp := courseParser{}
+	cp := parser{}
 
 	testCases := []struct{ s, want string }{
 		{"בואט 009", "טאוב 9"},
@@ -74,7 +74,7 @@ func TestParseTestDate(t *testing.T) {
 	}
 
 	for i, tc := range testCases {
-		cp := newCourseParserFromString(tc.data, fmt.Sprintf("parseTestDate%d", i))
+		cp := newParserFromString(tc.data, fmt.Sprintf("parseTestDate%d", i))
 		got, ok := cp.getTestDateFromLine(tc.data)
 		if !ok {
 			t.Errorf("getTestDateFromLine(%q) -> NOT OK", tc.data)
@@ -147,9 +147,9 @@ func TestParseCourse(t *testing.T) {
 	}
 
 	for i, tc := range testCases {
-		cp := newCourseParserFromString(strings.TrimSpace(tc.data),
+		cp := newParserFromString(strings.TrimSpace(tc.data),
 			fmt.Sprintf("testParseCourse%d", i))
-		got, err := cp.parse()
+		got, err := cp.parseCourse()
 		if err != nil {
 			t.Errorf("Error parsing course: %v\n%s", err, tc.data)
 		} else if diff := pretty.Compare(tc.want, *got); diff != "" {

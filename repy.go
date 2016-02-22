@@ -4,16 +4,42 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"os"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/golang/glog"
+	"golang.org/x/text/encoding/charmap"
 )
 
+// ReadFile reads filename, parses it as REPY, and returns a Catalog.
+// TODO(lutzky): Determine if encoding can be auto-detected here.
+func ReadFile(filename string) (*Catalog, error) {
+	d := charmap.CodePage862.NewDecoder()
+	f, err := os.Open(filename)
+	if err != nil {
+		return nil, fmt.Errorf("Couldn't open %q: %v", filename, err)
+	}
+
+	p := parser{
+		file:    filename,
+		course:  &Course{},
+		scanner: bufio.NewScanner(d.Reader(f)),
+	}
+
+	return p.parseFile()
+}
+
+// Catalog represents all of the information in a REPY file
+type Catalog []Faculty
+
 // Faculty represents a set of courses offered by a faculty.
-type Faculty []Course
+type Faculty struct {
+	name    string
+	courses []Course
+}
 
 // Course represents information about a technion course.
 type Course struct {
@@ -157,6 +183,7 @@ func hebrewFlip(s string) string {
 }
 
 const (
+	facultySep = "+==========================================+"
 	courseSep  = "+------------------------------------------+"
 	groupSep1  = "|               ++++++                  .סמ|"
 	groupSep2  = "|                                     םושיר|"
@@ -166,48 +193,48 @@ const (
 
 var idAndNameRegex = regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
 
-func (cp *courseParser) parseIDAndName() error {
-	m := idAndNameRegex.FindStringSubmatch(cp.text())
+func (p *parser) parseIDAndName() error {
+	m := idAndNameRegex.FindStringSubmatch(p.text())
 	if m == nil {
-		return cp.errorf("Line %q doesn't match id-and-name regex `%s`", cp.text(), idAndNameRegex)
+		return p.errorf("Line %q doesn't match id-and-name regex `%s`", p.text(), idAndNameRegex)
 	}
 
-	cp.course.name = hebrewFlip(m[1])
-	cp.course.id = cp.parseUint(m[2])
-	cp.scan()
+	p.course.name = hebrewFlip(m[1])
+	p.course.id = p.parseUint(m[2])
+	p.scan()
 	return nil
 }
 
-func (cp *courseParser) parseUint(s string) uint {
+func (p *parser) parseUint(s string) uint {
 	result, err := strconv.ParseUint(s, 10, 32)
 	if err != nil {
-		panic(cp.errorf("Couldn't ParseUint(%q, 10, 32): %v", s, err))
+		panic(p.errorf("Couldn't ParseUint(%q, 10, 32): %v", s, err))
 	}
 	return uint(result)
 }
 
-func (cp *courseParser) parseFloat(s string) float32 {
+func (p *parser) parseFloat(s string) float32 {
 	result, err := strconv.ParseFloat(s, 32)
 	if err != nil {
-		panic(cp.errorf("Couldn't ParseFloat(%q, 32): %v", s, err))
+		panic(p.errorf("Couldn't ParseFloat(%q, 32): %v", s, err))
 	}
 	return float32(result)
 }
 
-func (cp *courseParser) parseTotalHours(totalHours string) error {
+func (p *parser) parseTotalHours(totalHours string) error {
 	descriptors := strings.Split(totalHours, " ")
 	for _, desc := range descriptors {
 		bits := strings.Split(desc, "-")
-		hours := cp.parseUint(bits[0])
+		hours := p.parseUint(bits[0])
 		switch bits[1] {
 		case "ה":
-			cp.course.weeklyHours.lecture = hours
+			p.course.weeklyHours.lecture = hours
 		case "ת":
-			cp.course.weeklyHours.tutorial = hours
+			p.course.weeklyHours.tutorial = hours
 		case "מ":
-			cp.course.weeklyHours.lab = hours
+			p.course.weeklyHours.lab = hours
 		default:
-			return cp.errorf("Invalid hour descriptor %q", bits[1])
+			return p.errorf("Invalid hour descriptor %q", bits[1])
 		}
 	}
 	return nil
@@ -215,23 +242,21 @@ func (cp *courseParser) parseTotalHours(totalHours string) error {
 
 var hoursAndPointsRegex = regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
 
-func (cp *courseParser) parseHoursAndPoints() error {
-	m := hoursAndPointsRegex.FindStringSubmatch(cp.text())
+func (p *parser) parseHoursAndPoints() error {
+	m := hoursAndPointsRegex.FindStringSubmatch(p.text())
 	if m == nil {
-		return cp.errorf("Line %q doesn't match hours-and-points regex `%s`", cp.text(), hoursAndPointsRegex)
+		return p.errorf("Line %q doesn't match hours-and-points regex `%s`", p.text(), hoursAndPointsRegex)
 	}
 
-	cp.course.academicPoints = cp.parseFloat(m[1])
-	if err := cp.parseTotalHours(m[2]); err != nil {
+	p.course.academicPoints = p.parseFloat(m[1])
+	if err := p.parseTotalHours(m[2]); err != nil {
 		return err
 	}
-	cp.scan()
+	p.scan()
 	return nil
 }
 
-// TODO(lutzky): The logic for courseParser should be shared with faculty
-// parsers, etc.
-type courseParser struct {
+type parser struct {
 	scanner *bufio.Scanner
 	course  *Course
 	line    uint
@@ -239,115 +264,170 @@ type courseParser struct {
 	groupID uint
 }
 
-func (cp *courseParser) errorf(format string, a ...interface{}) error {
-	return fmt.Errorf("%s:%d: %s", cp.file, cp.line, fmt.Errorf(format, a...))
+func (p *parser) errorf(format string, a ...interface{}) error {
+	return fmt.Errorf("%s:%d: %s", p.file, p.line, fmt.Errorf(format, a...))
 }
 
-func (cp *courseParser) infof(format string, a ...interface{}) {
-	glog.Infof("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
+func (p *parser) infof(format string, a ...interface{}) {
+	glog.Infof("%s:%d: %s", p.file, p.line, fmt.Sprintf(format, a...))
 }
-func (cp *courseParser) warningf(format string, a ...interface{}) {
-	glog.Warningf("%s:%d: %s", cp.file, cp.line, fmt.Sprintf(format, a...))
-}
-
-func (cp *courseParser) scan() {
-	cp.scanner.Scan()
-	cp.line++
+func (p *parser) warningf(format string, a ...interface{}) {
+	glog.Warningf("%s:%d: %s", p.file, p.line, fmt.Sprintf(format, a...))
 }
 
-func (cp *courseParser) text() string {
-	return cp.scanner.Text()
+func (p *parser) scan() bool {
+	p.line++
+	result := p.scanner.Scan()
+	glog.V(1).Infof("%s:%d: %s", p.file, p.line, p.text())
+	return result
+}
+
+func (p *parser) text() string {
+	return p.scanner.Text()
 }
 
 var testDateRegex = regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
 
-func (cp *courseParser) getTestDateFromLine(line string) (Date, bool) {
-	// TODO(lutzky): Shouldn't be necessary to pass line here, cp.text() should do
+func (p *parser) getTestDateFromLine(line string) (Date, bool) {
+	// TODO(lutzky): Shouldn't be necessary to pass line here, p.text() should do
 	// it.
 	m := testDateRegex.FindStringSubmatch(line)
 	if m == nil {
 		return Date{}, false
 	}
 	return Date{
-		2000 + cp.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
-		cp.parseUint(m[2]),
-		cp.parseUint(m[1]),
+		2000 + p.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
+		p.parseUint(m[2]),
+		p.parseUint(m[1]),
 	}, true
 }
 
 var separatorLineRegex = regexp.MustCompile(`\| +-+ *\|`)
 
-func (cp *courseParser) parseTestDates() error {
+func (p *parser) parseTestDates() error {
 	for {
-		if separatorLineRegex.MatchString(cp.text()) {
-			cp.scan()
+		if separatorLineRegex.MatchString(p.text()) {
+			p.scan()
 			continue
 		}
-		testDate, ok := cp.getTestDateFromLine(cp.text())
+		testDate, ok := p.getTestDateFromLine(p.text())
 		if !ok {
 			// Test date section has ended
-			if len(cp.course.testDates) == 0 {
-				cp.warningf("No tests found")
+			if len(p.course.testDates) == 0 {
+				p.warningf("No tests found")
 			}
 			return nil
 		}
-		cp.course.testDates = append(cp.course.testDates, testDate)
-		cp.scan()
+		p.course.testDates = append(p.course.testDates, testDate)
+		p.scan()
 	}
 }
 
-func newCourseParserFromString(s string, name string) *courseParser {
+func newParserFromString(s string, name string) *parser {
 	b := bytes.NewBufferString(s)
-	cp := courseParser{}
-	cp.file = name
-	cp.course = &Course{}
-	cp.scanner = bufio.NewScanner(b)
-	return &cp
+	p := parser{}
+	p.file = name
+	p.course = &Course{}
+	p.scanner = bufio.NewScanner(b)
+	return &p
 }
 
-func (cp *courseParser) parse() (*Course, error) {
+var facultyNameRegexp = regexp.MustCompile(`\| *([א-ת ]+) *- *תועש תכרעמ *\|`)
+
+func (p *parser) parseFacultyName() (string, error) {
+	m := facultyNameRegexp.FindStringSubmatch(p.text())
+	if m == nil {
+		return "", p.errorf("Line %q doesn't match faculty name regex `%s`", p.text(), facultyNameRegexp)
+	}
+	p.scan()
+	return strings.TrimSpace(m[1]), nil
+}
+
+func (p *parser) parseFile() (*Catalog, error) {
+	p.scan()
+
+	for strings.TrimSpace(p.text()) == "" {
+		p.scan()
+	}
+
+	if err := p.expectLineAndAdvance(facultySep); err != nil {
+		return nil, err
+	}
+
+	facultyName, err := p.parseFacultyName()
+	if err != nil {
+		return nil, err
+	}
+
+	// Throw away semester line
+	p.scan()
+
+	if err := p.expectLineAndAdvance(facultySep); err != nil {
+		return nil, err
+	}
+
+	courses := []Course{}
+
+	for p.text() != facultySep {
+		course, err := p.parseCourse()
+		if err != nil {
+			return nil, err
+		}
+		courses = append(courses, *course)
+	}
+
+	return &Catalog{
+		Faculty{
+			name:    facultyName,
+			courses: courses,
+		},
+	}, nil
+}
+
+func (p *parser) parseCourse() (*Course, error) {
+	*p.course = Course{}
 	// First groupID is usually omitted in REPY.
-	cp.groupID = 10
+	p.groupID = 10
 
-	cp.scan()
-	if err := cp.expectLineAndAdvance(courseSep); err != nil {
+	p.scan()
+	if p.text() == courseSep {
+		p.scan()
+	}
+
+	if err := p.parseIDAndName(); err != nil {
 		return nil, err
 	}
 
-	if err := cp.parseIDAndName(); err != nil {
+	if err := p.parseHoursAndPoints(); err != nil {
 		return nil, err
 	}
 
-	if err := cp.parseHoursAndPoints(); err != nil {
+	if err := p.expectLineAndAdvance(courseSep); err != nil {
 		return nil, err
 	}
 
-	if err := cp.expectLineAndAdvance(courseSep); err != nil {
-		return nil, err
-	}
-
-	if err := cp.parseTestDates(); err != nil {
+	if err := p.parseTestDates(); err != nil {
 		return nil, err
 	}
 
 	// TODO(lutzky): There might be some comments about the course here
 
-	if err := cp.parseGroups(); err != nil {
+	if err := p.parseGroups(); err != nil {
 		return nil, err
 	}
 
-	return cp.course, nil
+	return p.course, nil
 }
 
-func (cp *courseParser) expectLineAndAdvance(s string) error {
-	if cp.text() != s {
-		return cp.errorf("Expected %q, got %q", s, cp.text())
+func (p *parser) expectLineAndAdvance(s string) error {
+	if p.text() != s {
+		return p.errorf("Expected %q, got %q", s, p.text())
 	}
-	cp.scan()
+	p.scan()
 	return nil
 }
 
-func (cp *courseParser) weekDayFromHebrewLetter(letter string) time.Weekday {
+func (p *parser) weekDayFromHebrewLetter(letter string) time.Weekday {
 	mapping := map[string]time.Weekday{
 		"א": time.Sunday,
 		"ב": time.Monday,
@@ -360,19 +440,19 @@ func (cp *courseParser) weekDayFromHebrewLetter(letter string) time.Weekday {
 
 	result, ok := mapping[letter]
 	if !ok {
-		panic(cp.errorf("Invalid weekday letter %q", letter))
+		panic(p.errorf("Invalid weekday letter %q", letter))
 	}
 
 	return result
 }
 
-func (cp *courseParser) timeOfDayFromStrings(hours, minutes string) TimeOfDay {
-	h := cp.parseUint(hours)
-	m := cp.parseUint(minutes)
+func (p *parser) timeOfDayFromStrings(hours, minutes string) TimeOfDay {
+	h := p.parseUint(hours)
+	m := p.parseUint(minutes)
 	return TimeOfDay(h*60 + m)
 }
 
-func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
+func (p *parser) groupTypeFromString(s string) (GroupType, error) {
 	mapping := map[string]GroupType{
 		"האצרה": Lecture,
 		"לוגרת": Tutorial,
@@ -382,25 +462,25 @@ func (cp *courseParser) groupTypeFromString(s string) (GroupType, error) {
 
 	result, ok := mapping[s]
 	if !ok {
-		return 0, cp.errorf("Invalid group type %q", s)
+		return 0, p.errorf("Invalid group type %q", s)
 	}
 	return result, nil
 }
 
 var standardLocationRegexp = regexp.MustCompile(`([א-ת]+) ([0-9]+)`)
 
-func (cp *courseParser) parseLocation(s string) string {
+func (p *parser) parseLocation(s string) string {
 	m := standardLocationRegexp.FindStringSubmatch(s)
 	if len(m) == 0 {
 		return hebrewFlip(s)
 	}
 	building := hebrewFlip(m[1])
-	room := cp.parseUint(m[2])
+	room := p.parseUint(m[2])
 	return fmt.Sprintf("%s %d", building, room)
 }
 
-func (cp *courseParser) lastGroup() *Group {
-	return &cp.course.groups[len(cp.course.groups)-1]
+func (p *parser) lastGroup() *Group {
+	return &p.course.groups[len(p.course.groups)-1]
 }
 
 func collapseSpaces(s string) string {
@@ -410,10 +490,10 @@ func collapseSpaces(s string) string {
 var lecturerRegexp = regexp.MustCompile(
 	`\| *(.*) *: *הצרמ *\|`)
 
-func (cp *courseParser) parseLecturerLine() bool {
-	if m := lecturerRegexp.FindStringSubmatch(cp.text()); len(m) > 0 {
+func (p *parser) parseLecturerLine() bool {
+	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
 		lecturer := hebrewFlip(collapseSpaces(m[1]))
-		teachers := &cp.lastGroup().teachers
+		teachers := &p.lastGroup().teachers
 		*teachers = append(*teachers, lecturer)
 		return true
 	}
@@ -423,20 +503,20 @@ func (cp *courseParser) parseLecturerLine() bool {
 var eventRegexp = regexp.MustCompile(
 	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) +([0-9]+)? *\|`)
 
-func (cp *courseParser) parseEventLine() bool {
+func (p *parser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
-	if m := eventRegexp.FindStringSubmatch(cp.text()); len(m) > 0 {
-		cp.infof("Parsed %s", cp.text())
+	if m := eventRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
+		p.infof("Parsed %s", p.text())
 		ev := Event{
-			day:       cp.weekDayFromHebrewLetter(m[6]),
-			startHour: cp.timeOfDayFromStrings(m[2], m[3]),
-			endHour:   cp.timeOfDayFromStrings(m[4], m[5]),
-			location:  cp.parseLocation(m[1]),
+			day:       p.weekDayFromHebrewLetter(m[6]),
+			startHour: p.timeOfDayFromStrings(m[2], m[3]),
+			endHour:   p.timeOfDayFromStrings(m[4], m[5]),
+			location:  p.parseLocation(m[1]),
 		}
 
-		groupType, err := cp.groupTypeFromString(m[7])
+		groupType, err := p.groupTypeFromString(m[7])
 		if err != nil {
-			cp.warningf("Failed to parse group type %q: %v", m[7], err)
+			p.warningf("Failed to parse group type %q: %v", m[7], err)
 			return false
 		}
 
@@ -447,47 +527,47 @@ func (cp *courseParser) parseEventLine() bool {
 		}
 
 		if m[8] != "" {
-			group.id = cp.parseUint(m[8])
-			cp.groupID = group.id + 1
+			group.id = p.parseUint(m[8])
+			p.groupID = group.id + 1
 		} else {
-			group.id = cp.groupID
-			cp.groupID++
+			group.id = p.groupID
+			p.groupID++
 		}
 
-		cp.course.groups = append(cp.course.groups, group)
+		p.course.groups = append(p.course.groups, group)
 
-		cp.scan()
+		p.scan()
 		return true
 	}
 	return false
 }
 
-func (cp *courseParser) parseGroups() error {
+func (p *parser) parseGroups() error {
 	var groupID uint
 
-	if cp.text() != groupSep1 {
-		return cp.errorf("Expected %q, got %q", groupSep1, cp.text())
+	if p.text() != groupSep1 {
+		return p.errorf("Expected %q, got %q", groupSep1, p.text())
 	}
 
 	for {
-		if cp.text() == groupSep1 {
-			cp.scan()
-			if err := cp.expectLineAndAdvance(groupSep2); err != nil {
+		if p.text() == groupSep1 {
+			p.scan()
+			if err := p.expectLineAndAdvance(groupSep2); err != nil {
 				return err
 			}
 			groupID = (10*(groupID/10) + 1)
-		} else if cp.text() == courseSep {
-			cp.scan()
+		} else if p.text() == courseSep {
+			p.scan()
 			return nil
-		} else if cp.text() == blankLine1 || cp.text() == blankLine2 {
-			cp.scan()
-		} else if cp.parseEventLine() {
+		} else if p.text() == blankLine1 || p.text() == blankLine2 {
+			p.scan()
+		} else if p.parseEventLine() {
 			// TODO(lutzky): Do nothing?
-		} else if cp.parseLecturerLine() {
-			cp.scan()
+		} else if p.parseLecturerLine() {
+			p.scan()
 		} else {
-			cp.warningf("Ignored line %q", cp.text())
-			cp.scan()
+			p.warningf("Ignored line %q", p.text())
+			p.scan()
 		}
 	}
 }
