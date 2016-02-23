@@ -286,40 +286,37 @@ func (p *parser) text() string {
 	return p.scanner.Text()
 }
 
-var testDateRegex = regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
-
-func (p *parser) getTestDateFromLine(line string) (Date, bool) {
-	// TODO(lutzky): Shouldn't be necessary to pass line here, p.text() should do
-	// it.
-	m := testDateRegex.FindStringSubmatch(line)
-	if m == nil {
-		return Date{}, false
-	}
-	return Date{
-		2000 + p.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
-		p.parseUint(m[2]),
-		p.parseUint(m[1]),
-	}, true
-}
+var (
+	testDateRegex         = regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
+	lecturerInChargeRegex = regexp.MustCompile(`\| *(.*) : *יארחא *הרומ *\|`)
+)
 
 var separatorLineRegex = regexp.MustCompile(`\| +-+ *\|`)
 
-func (p *parser) parseTestDates() error {
+func (p *parser) parseCourseHeadInfo() error {
 	for {
-		if separatorLineRegex.MatchString(p.text()) {
-			p.scan()
-			continue
-		}
-		testDate, ok := p.getTestDateFromLine(p.text())
-		if !ok {
-			// Test date section has ended
-			if len(p.course.testDates) == 0 {
-				p.warningf("No tests found")
-			}
+		if p.text() == groupSep1 {
 			return nil
 		}
-		p.course.testDates = append(p.course.testDates, testDate)
-		p.scan()
+
+		if separatorLineRegex.MatchString(p.text()) {
+			// skip
+		} else if m := testDateRegex.FindStringSubmatch(p.text()); m != nil {
+			d := Date{
+				2000 + p.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
+				p.parseUint(m[2]),
+				p.parseUint(m[1]),
+			}
+			p.course.testDates = append(p.course.testDates, d)
+		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
+			p.course.lecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
+		} else {
+			p.warningf("Ignored line %q", p.text())
+		}
+
+		if !p.scan() {
+			return p.errorf("Reached EOF")
+		}
 	}
 }
 
@@ -389,7 +386,9 @@ func (p *parser) parseCourse() (*Course, error) {
 	// First groupID is usually omitted in REPY.
 	p.groupID = 10
 
-	p.scan()
+	if p.text() == "" {
+		p.scan()
+	}
 	if p.text() == courseSep {
 		p.scan()
 	}
@@ -406,7 +405,7 @@ func (p *parser) parseCourse() (*Course, error) {
 		return nil, err
 	}
 
-	if err := p.parseTestDates(); err != nil {
+	if err := p.parseCourseHeadInfo(); err != nil {
 		return nil, err
 	}
 

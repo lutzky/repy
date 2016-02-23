@@ -64,26 +64,6 @@ func TestParseLocation(t *testing.T) {
 	}
 }
 
-func TestParseTestDate(t *testing.T) {
-	testCases := []struct {
-		data string
-		want Date
-	}{
-		{"|             11/02/16 'ה  םוי: ןושאר דעומ |", Date{2016, 02, 11}},
-		{"|             08/03/16 'ג  םוי:   ינש דעומ |", Date{2016, 03, 8}},
-	}
-
-	for i, tc := range testCases {
-		cp := newParserFromString(tc.data, fmt.Sprintf("parseTestDate%d", i))
-		got, ok := cp.getTestDateFromLine(tc.data)
-		if !ok {
-			t.Errorf("getTestDateFromLine(%q) -> NOT OK", tc.data)
-		} else if got != tc.want {
-			t.Errorf("getTestDateFromLine(%q) == %v; want %v", tc.data, got, tc.want)
-		}
-	}
-}
-
 func TestParseCourse(t *testing.T) {
 	testCases := []struct {
 		data string
@@ -141,6 +121,48 @@ func TestParseCourse(t *testing.T) {
 						{day: 3, location: "טאוב 6", startHour: 15*60 + 30, endHour: 16*60 + 30},
 					},
 					groupType: Tutorial,
+				},
+			},
+		}},
+		{`
++------------------------------------------+
+|                        הקיטסיטטס  014003 |
+|3.0 :קנ          2-ת 2-ה:עובשב הארוה תועש |
++------------------------------------------+
+|           ןייבשיפ.ב        : יארחא  הרומ |
+|                              ----------- |
+|   9.00  העש 28/01/16 'ה  םוי: ןושאר דעומ |
+|                              ----------- |
+|   9.00  העש 26/02/16 'ו  םוי:   ינש דעומ |
+|                              ----------- |
+|         דבלב היזדואיגל תדעוימ 13 הצובק.1 |
+|               ++++++                  .סמ|
+|                                     םושיר|
+|      ןיבר 206  14.30-16.30'ג :האצרה      |
+|             ןייבשיפ.ב מ/פורפ : הצרמ      |
+|                               -----      |
++------------------------------------------+
+`, Course{
+			id:               14003,
+			name:             "סטטיסטיקה",
+			lecturerInCharge: "ב.פישביין",
+			academicPoints:   3.0,
+			weeklyHours: WeeklyHours{
+				lecture:  2,
+				tutorial: 2,
+			},
+			groups: []Group{
+				{
+					id:       10,
+					teachers: []string{"פרופ/מ ב.פישביין"},
+					events: []Event{
+						{
+							day:       2,
+							startHour: 14*60 + 30,
+							endHour:   16*60 + 30,
+							location:  "רבין 206",
+						},
+					},
 				},
 			},
 		}},
