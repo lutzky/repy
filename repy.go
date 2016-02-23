@@ -222,7 +222,7 @@ func (p *parser) parseFloat(s string) float32 {
 }
 
 func (p *parser) parseTotalHours(totalHours string) error {
-	descriptors := strings.Split(totalHours, " ")
+	descriptors := strings.Fields(totalHours)
 	for _, desc := range descriptors {
 		bits := strings.Split(desc, "-")
 		hours := p.parseUint(bits[0])
