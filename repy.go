@@ -314,7 +314,7 @@ func (p *parser) parseCourseHeadInfo() error {
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
 			p.course.lecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
 		} else {
-			p.warningf("Ignored line %q", p.text())
+			p.warningf("Ignored courseHeadInfo line %q", p.text())
 		}
 
 		if !p.scan() {
@@ -548,8 +548,6 @@ func (p *parser) parseEventLine() bool {
 }
 
 func (p *parser) parseGroups() error {
-	var groupID uint
-
 	if p.text() != groupSep1 {
 		return p.errorf("Expected %q, got %q", groupSep1, p.text())
 	}
@@ -560,7 +558,6 @@ func (p *parser) parseGroups() error {
 			if err := p.expectLineAndAdvance(groupSep2); err != nil {
 				return err
 			}
-			groupID = (10*(groupID/10) + 1)
 		} else if p.text() == courseSep {
 			p.scan()
 			return nil
@@ -571,7 +568,7 @@ func (p *parser) parseGroups() error {
 		} else if p.parseLecturerLine() {
 			p.scan()
 		} else {
-			p.warningf("Ignored line %q", p.text())
+			p.warningf("Ignored group line %q", p.text())
 			p.scan()
 		}
 	}
