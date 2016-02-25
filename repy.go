@@ -81,6 +81,7 @@ type WeeklyHours struct {
 	lecture  uint
 	tutorial uint
 	lab      uint
+	project  uint
 }
 
 func (wh WeeklyHours) String() string {
@@ -233,6 +234,8 @@ func (p *parser) parseTotalHours(totalHours string) error {
 			p.course.weeklyHours.tutorial = hours
 		case "מ":
 			p.course.weeklyHours.lab = hours
+		case "פ":
+			p.course.weeklyHours.project = hours
 		default:
 			return p.errorf("Invalid hour descriptor %q", bits[1])
 		}
@@ -240,12 +243,12 @@ func (p *parser) parseTotalHours(totalHours string) error {
 	return nil
 }
 
-var hoursAndPointsRegex = regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]-[התמ] *)+):עובשב הארוה תועש *\|`)
+var hoursAndPointsRegex = regexp.MustCompile(`\| *([0-9]+\.[0-9]+) *:קנ *(([0-9]+-[התפמ] *)+):עובשב הארוה תועש *\|`)
 
 func (p *parser) parseHoursAndPoints() error {
 	m := hoursAndPointsRegex.FindStringSubmatch(p.text())
 	if m == nil {
-		return p.errorf("Line %q doesn't match hours-and-points regex `%s`", p.text(), hoursAndPointsRegex)
+		return p.errorf("Line %q doesn't match hoursAndPointsRegex `%s`", p.text(), hoursAndPointsRegex)
 	}
 
 	p.course.academicPoints = p.parseFloat(m[1])
