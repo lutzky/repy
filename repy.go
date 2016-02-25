@@ -479,6 +479,9 @@ func (p *parser) parseLocation(s string) string {
 }
 
 func (p *parser) lastGroup() *Group {
+	if len(p.course.groups) == 0 {
+		p.course.groups = []Group{{}}
+	}
 	return &p.course.groups[len(p.course.groups)-1]
 }
 
