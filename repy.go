@@ -300,7 +300,7 @@ var separatorLineRegex = regexp.MustCompile(`\| +-+ *\|`)
 
 func (p *parser) parseCourseHeadInfo() error {
 	for {
-		if p.text() == groupSep1 {
+		if p.text() == groupSep1 || p.text() == courseSep {
 			return nil
 		}
 
@@ -495,7 +495,7 @@ func collapseSpaces(s string) string {
 }
 
 var lecturerRegexp = regexp.MustCompile(
-	`\| *(.*) *: *הצרמ *\|`)
+	`\| *(.*) *: *(הצרמ|לגרתמ) *\|`)
 
 func (p *parser) parseLecturerLine() bool {
 	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
@@ -513,7 +513,6 @@ var eventRegexp = regexp.MustCompile(
 func (p *parser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
 	if m := eventRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
-		p.infof("Parsed %s", p.text())
 		ev := Event{
 			day:       p.weekDayFromHebrewLetter(m[6]),
 			startHour: p.timeOfDayFromStrings(m[2], m[3]),
@@ -551,7 +550,8 @@ func (p *parser) parseEventLine() bool {
 
 func (p *parser) parseGroups() error {
 	if p.text() != groupSep1 {
-		return p.errorf("Expected %q, got %q", groupSep1, p.text())
+		p.warningf("Expected %q, got %q; skipping course", groupSep1, p.text())
+		return nil
 	}
 
 	for {
