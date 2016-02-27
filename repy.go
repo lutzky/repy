@@ -290,7 +290,9 @@ func (p *parser) text() string {
 }
 
 var (
-	testDateRegex         = regexp.MustCompile(`\| *([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
+	// testDateRegex currently ignores the test time present at the end of test
+	// date lines.
+	testDateRegex         = regexp.MustCompile(`\|.*([0-9]{2})/([0-9]{2})/([0-9]{2}) *'. +םוי *:.*דעומ +\|`)
 	lecturerInChargeRegex = regexp.MustCompile(`\| *(.*) : *יארחא *הרומ *\|`)
 )
 

@@ -151,6 +151,10 @@ func TestParseCourse(t *testing.T) {
 				lecture:  2,
 				tutorial: 2,
 			},
+			testDates: []Date{
+				{2016, 01, 28},
+				{2016, 02, 26},
+			},
 			groups: []Group{
 				{
 					id:       10,
