@@ -5,7 +5,9 @@ import (
 	"bytes"
 	"fmt"
 	"os"
+	"path"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -267,8 +269,16 @@ type parser struct {
 	groupID uint
 }
 
+func (p *parser) errorfSkip(skip int, format string, a ...interface{}) error {
+	var caller string
+	if _, file, line, ok := runtime.Caller(skip); ok {
+		caller = fmt.Sprintf("[%s:%d] ", path.Base(file), line)
+	}
+	return fmt.Errorf("%s%s:%d: %s", caller, p.file, p.line, fmt.Errorf(format, a...))
+}
+
 func (p *parser) errorf(format string, a ...interface{}) error {
-	return fmt.Errorf("%s:%d: %s", p.file, p.line, fmt.Errorf(format, a...))
+	return p.errorfSkip(2, format, a...)
 }
 
 func (p *parser) infof(format string, a ...interface{}) {
