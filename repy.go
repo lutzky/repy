@@ -356,46 +356,59 @@ func (p *parser) parseFacultyName() (string, error) {
 }
 
 func (p *parser) parseFile() (*Catalog, error) {
+	catalog := Catalog{}
+
+	for {
+		catalog = append(catalog, Faculty{})
+		currentFaculty := catalog[len(catalog)-1]
+		if err := p.parseFaculty(&currentFaculty); err != nil {
+			return nil, err
+		}
+	}
+
+	return &catalog, nil
+}
+
+func (p *parser) parseFaculty(faculty *Faculty) error {
 	p.scan()
+	var err error
 
 	for strings.TrimSpace(p.text()) == "" {
 		p.scan()
 	}
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
-		return nil, err
+		return err
 	}
 
-	facultyName, err := p.parseFacultyName()
+	faculty.name, err = p.parseFacultyName()
 	if err != nil {
-		return nil, err
+		return err
 	}
 
 	// Throw away semester line
 	p.scan()
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
-		return nil, err
+		return err
 	}
 
-	courses := []Course{}
-
-	for p.text() != facultySep {
+	for {
 		course, err := p.parseCourse()
 		if err != nil {
-			return nil, err
+			return err
 		}
-		courses = append(courses, *course)
+		if course != nil {
+			faculty.courses = append(faculty.courses, *course)
+		} else {
+			return nil
+		}
 	}
 
-	return &Catalog{
-		Faculty{
-			name:    facultyName,
-			courses: courses,
-		},
-	}, nil
+	return nil
 }
 
+// parseCourse will return a parsed course, or nil on end-of-faculty.
 func (p *parser) parseCourse() (*Course, error) {
 	*p.course = Course{}
 	// First groupID is usually omitted in REPY.
@@ -406,6 +419,11 @@ func (p *parser) parseCourse() (*Course, error) {
 	}
 	if p.text() == courseSep {
 		p.scan()
+	}
+
+	if p.text() == "" {
+		// End of faculty
+		return nil, nil
 	}
 
 	if err := p.parseIDAndName(); err != nil {
@@ -435,7 +453,7 @@ func (p *parser) parseCourse() (*Course, error) {
 
 func (p *parser) expectLineAndAdvance(s string) error {
 	if p.text() != s {
-		return p.errorf("Expected %q, got %q", s, p.text())
+		return p.errorfSkip(2, "Expected %q, got %q", s, p.text())
 	}
 	p.scan()
 	return nil
