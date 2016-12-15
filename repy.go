@@ -431,7 +431,8 @@ func (p *parser) parseCourse() (*Course, error) {
 	}
 
 	if err := p.parseHoursAndPoints(); err != nil {
-		return nil, err
+		p.warningf("Invalid hours and points line: %v", err)
+		p.scan()
 	}
 
 	if err := p.expectLineAndAdvance(courseSep); err != nil {
