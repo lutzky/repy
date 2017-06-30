@@ -415,10 +415,7 @@ func (p *parser) parseCourse() (*Course, error) {
 	// First groupID is usually omitted in REPY.
 	p.groupID = 10
 
-	if p.text() == "" {
-		p.scan()
-	}
-	if p.text() == courseSep {
+	for p.text() == courseSep {
 		p.scan()
 	}
 
