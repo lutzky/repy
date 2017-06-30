@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/golang/glog"
+	"github.com/pkg/errors"
 	"golang.org/x/text/encoding/charmap"
 )
 
@@ -22,7 +23,7 @@ func ReadFile(filename string) (*Catalog, error) {
 	d := charmap.CodePage862.NewDecoder()
 	f, err := os.Open(filename)
 	if err != nil {
-		return nil, fmt.Errorf("Couldn't open %q: %v", filename, err)
+		return nil, errors.Wrapf(err, "couldn't open %q", filename)
 	}
 
 	p := parser{
@@ -160,7 +161,7 @@ func parseTimeOfDay(x string) (TimeOfDay, error) {
 	sections := strings.Split(strings.TrimSpace(x), ".")
 
 	if len(sections) != 2 {
-		return 0, fmt.Errorf("Invalid TimeOfDay: %q", x)
+		return 0, errors.Errorf("Invalid TimeOfDay: %q", x)
 	}
 
 	result := uint(0)
@@ -169,7 +170,7 @@ func parseTimeOfDay(x string) (TimeOfDay, error) {
 		result *= 60
 		n, err := strconv.ParseUint(section, 10, 32)
 		if err != nil {
-			return 0, fmt.Errorf("Invalid TimeOfDay: %q (%v)", x, err)
+			return 0, errors.Wrapf(err, "invalid TimeOfDay: %q", x)
 		}
 		result += uint(n)
 	}
@@ -255,7 +256,7 @@ func (p *parser) parseHoursAndPoints() error {
 
 	p.course.academicPoints = p.parseFloat(m[1])
 	if err := p.parseTotalHours(m[2]); err != nil {
-		return err
+		return errors.Wrapf(err, "couldn't parse total-hours %q in hours-and-points line", m[2])
 	}
 	p.scan()
 	return nil
@@ -274,7 +275,7 @@ func (p *parser) errorfSkip(skip int, format string, a ...interface{}) error {
 	if _, file, line, ok := runtime.Caller(skip); ok {
 		caller = fmt.Sprintf("[%s:%d] ", path.Base(file), line)
 	}
-	return fmt.Errorf("%s%s:%d: %s", caller, p.file, p.line, fmt.Errorf(format, a...))
+	return errors.Errorf("%s%s:%d: %s", caller, p.file, p.line, errors.Errorf(format, a...))
 }
 
 func (p *parser) errorf(format string, a ...interface{}) error {
@@ -362,7 +363,7 @@ func (p *parser) parseFile() (*Catalog, error) {
 		catalog = append(catalog, Faculty{})
 		currentFaculty := catalog[len(catalog)-1]
 		if err := p.parseFaculty(&currentFaculty); err != nil {
-			return nil, err
+			return nil, errors.Wrap(err, "failed to parse a faculty")
 		}
 	}
 
@@ -378,25 +379,25 @@ func (p *parser) parseFaculty(faculty *Faculty) error {
 	}
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
-		return err
+		return errors.Wrap(err, "didn't find  1st faculty separator line in faculty")
 	}
 
 	faculty.name, err = p.parseFacultyName()
 	if err != nil {
-		return err
+		return errors.Wrap(err, "failed to parse faculty name")
 	}
 
 	// Throw away semester line
 	p.scan()
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
-		return err
+		return errors.Wrap(err, "didn't find 2nd faculty separator line in faculty")
 	}
 
 	for {
 		course, err := p.parseCourse()
 		if err != nil {
-			return err
+			return errors.Wrapf(err, "failed to scan a course in faculty %s", faculty.name)
 		}
 		if course != nil {
 			faculty.courses = append(faculty.courses, *course)
@@ -427,7 +428,7 @@ func (p *parser) parseCourse() (*Course, error) {
 	}
 
 	if err := p.parseIDAndName(); err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "failed to parse ID and name")
 	}
 
 	if err := p.parseHoursAndPoints(); err != nil {
@@ -436,17 +437,17 @@ func (p *parser) parseCourse() (*Course, error) {
 	}
 
 	if err := p.expectLineAndAdvance(courseSep); err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "didn't find expected course separator when parsing course")
 	}
 
 	if err := p.parseCourseHeadInfo(); err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "failed to parse course head info")
 	}
 
 	// TODO(lutzky): There might be some comments about the course here
 
 	if err := p.parseGroups(); err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "failed to parse groups for course")
 	}
 
 	return p.course, nil
@@ -587,7 +588,7 @@ func (p *parser) parseGroups() error {
 		if p.text() == groupSep1 {
 			p.scan()
 			if err := p.expectLineAndAdvance(groupSep2); err != nil {
-				return err
+				return errors.Wrap(err, "didn't find 2nd expected group separator")
 			}
 		} else if p.text() == courseSep {
 			p.scan()
