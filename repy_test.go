@@ -66,10 +66,11 @@ func TestParseLocation(t *testing.T) {
 
 func TestParseCourse(t *testing.T) {
 	testCases := []struct {
+		name string
 		data string
 		want Course
 	}{
-		{`
+		{"storage_systems", `
 +------------------------------------------+
 |                עדימ ןוסחא תוכרעמ  234322 |
 |3.0 :קנ          1-ת 2-ה:עובשב הארוה תועש |
@@ -124,7 +125,7 @@ func TestParseCourse(t *testing.T) {
 				},
 			},
 		}},
-		{`
+		{"statistics", `
 +------------------------------------------+
 |                        הקיטסיטטס  014003 |
 |3.0 :קנ          2-ת 2-ה:עובשב הארוה תועש |
@@ -173,14 +174,35 @@ func TestParseCourse(t *testing.T) {
 	}
 
 	for i, tc := range testCases {
-		cp := newParserFromString(strings.TrimSpace(tc.data),
-			fmt.Sprintf("testParseCourse%d", i))
-		got, err := cp.parseCourse()
-		if err != nil {
-			t.Errorf("Error parsing course: %v\n%s", err, tc.data)
-		} else if diff := pretty.Compare(tc.want, *got); diff != "" {
-			t.Errorf("Mismatch parsing course. Diff -want +got:\n%s", diff)
-			t.Errorf("Course data:\n%s", tc.data)
+		t.Run(tc.name, func(t *testing.T) {
+			cp := newParserFromString(strings.TrimSpace(tc.data),
+				fmt.Sprintf("testParseCourse%d", i))
+			// parseCourse() expects one line to be scanned already
+			cp.scan()
+			got, err := cp.parseCourse()
+			if err != nil {
+				t.Fatalf("Error parsing course: %v", err)
+			} else if got == nil {
+				t.Fatalf("Got a nil course")
+			} else if diff := pretty.Compare(tc.want, *got); diff != "" {
+				t.Fatalf("Mismatch parsing course. Diff -want +got:\n%s", diff)
+			}
+		})
+	}
+}
+
+func TestReverse(t *testing.T) {
+	testCases := []struct {
+		s, want string
+	}{
+		{"hello", "olleh"},
+		{"הסדנה", "הנדסה"},
+	}
+
+	for _, tc := range testCases {
+		got := Reverse(tc.s)
+		if got != tc.want {
+			t.Errorf("Reverse(a%qa) = a%qa; want a%qa", tc.s, got, tc.want)
 		}
 	}
 }

@@ -4,10 +4,12 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"io"
 	"os"
 	"path"
 	"regexp"
 	"runtime"
+	"runtime/debug"
 	"strconv"
 	"strings"
 	"time"
@@ -19,7 +21,12 @@ import (
 
 // ReadFile reads filename, parses it as REPY, and returns a Catalog.
 // TODO(lutzky): Determine if encoding can be auto-detected here.
-func ReadFile(filename string) (*Catalog, error) {
+func ReadFile(filename string) (c *Catalog, err error) {
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("Failed to read %q: %v\n%s", filename, r, debug.Stack())
+		}
+	}()
 	d := charmap.CodePage862.NewDecoder()
 	f, err := os.Open(filename)
 	if err != nil {
@@ -42,6 +49,10 @@ type Catalog []Faculty
 type Faculty struct {
 	name    string
 	courses []Course
+}
+
+func (f Faculty) String() string {
+	return fmt.Sprintf("faculty(%s, %d)", f.name, len(f.courses))
 }
 
 // Course represents information about a technion course.
@@ -193,9 +204,14 @@ const (
 	groupSep2  = "|                                     םושיר|"
 	blankLine1 = "|                               -----      |"
 	blankLine2 = "|                                          |"
+
+	sportsFacultySep = "+===============================================================+"
+	sportsCourseSep  = "+---------------------------------------------------------------+"
+	sportsBlankLine1 = "|                                             -----------       |"
+	sportsBlankLine2 = "|                                                               |"
 )
 
-var idAndNameRegex = regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) \|`)
+var idAndNameRegex = regexp.MustCompile(`\| *(.*) +([0-9]{5,6}) +\|`)
 
 func (p *parser) parseIDAndName() error {
 	m := idAndNameRegex.FindStringSubmatch(p.text())
@@ -289,9 +305,23 @@ func (p *parser) warningf(format string, a ...interface{}) {
 	glog.Warningf("%s:%d: %s", p.file, p.line, fmt.Sprintf(format, a...))
 }
 
+var eof = false
+var numEOFHits = 0
+
 func (p *parser) scan() bool {
-	p.line++
 	result := p.scanner.Scan()
+	if result {
+		p.line++
+	} else {
+		if err := p.scanner.Err(); err != nil {
+			panic(err)
+		}
+		if numEOFHits > 10 {
+			panic("Hit EOF too many times")
+		}
+		numEOFHits++
+		eof = true
+	}
 	glog.V(1).Infof("%s:%d: %s", p.file, p.line, p.text())
 	return result
 }
@@ -353,16 +383,23 @@ func (p *parser) parseFacultyName() (string, error) {
 		return "", p.errorf("Line %q doesn't match faculty name regex `%s`", p.text(), facultyNameRegexp)
 	}
 	p.scan()
-	return strings.TrimSpace(m[1]), nil
+	return Reverse(strings.TrimSpace(m[1])), nil
 }
 
 func (p *parser) parseFile() (*Catalog, error) {
 	catalog := Catalog{}
 
+faculties:
 	for {
 		catalog = append(catalog, Faculty{})
-		currentFaculty := catalog[len(catalog)-1]
-		if err := p.parseFaculty(&currentFaculty); err != nil {
+		currentFaculty := &catalog[len(catalog)-1]
+		switch err := p.parseFaculty(currentFaculty); err {
+		case nil: // Do nothing
+		case io.EOF:
+			// Drop last faculty added, as it doesn't actually contain anything
+			catalog = catalog[0 : len(catalog)-1]
+			break faculties
+		default:
 			return nil, errors.Wrap(err, "failed to parse a faculty")
 		}
 	}
@@ -371,20 +408,30 @@ func (p *parser) parseFile() (*Catalog, error) {
 }
 
 func (p *parser) parseFaculty(faculty *Faculty) error {
-	p.scan()
-	var err error
-
 	for strings.TrimSpace(p.text()) == "" {
-		p.scan()
+		if !p.scan() {
+			return io.EOF
+		}
+	}
+
+	switch p.text() {
+	case sportsFacultySep:
+		return p.parseSportsFaculty(faculty)
+	case facultySep:
+		// Ordinary faculty - keep going
+	default:
+		return p.errorf("Expected faculty separator, but got %q", p.text())
 	}
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
-		return errors.Wrap(err, "didn't find  1st faculty separator line in faculty")
+		return errors.Wrap(err, "didn't find 1st faculty separator line in faculty")
 	}
 
-	faculty.name, err = p.parseFacultyName()
-	if err != nil {
-		return errors.Wrap(err, "failed to parse faculty name")
+	{
+		var err error
+		if faculty.name, err = p.parseFacultyName(); err != nil {
+			return errors.Wrap(err, "failed to parse faculty name")
+		}
 	}
 
 	// Throw away semester line
@@ -394,15 +441,47 @@ func (p *parser) parseFaculty(faculty *Faculty) error {
 		return errors.Wrap(err, "didn't find 2nd faculty separator line in faculty")
 	}
 
+courses:
 	for {
 		course, err := p.parseCourse()
-		if err != nil {
+		switch err {
+		case io.EOF:
+			break courses
+		case nil:
+			faculty.courses = append(faculty.courses, *course)
+			// Keep scanning
+		default:
 			return errors.Wrapf(err, "failed to scan a course in faculty %s", faculty.name)
+		}
+	}
+
+	return nil
+}
+
+const sportsFacultyName = "חינוך גופני"
+
+func (p *parser) parseSportsFaculty(faculty *Faculty) error {
+	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {
+		return errors.Wrap(err, "didn't find 1nd faculty separate line in sports faculty")
+	}
+
+	// Skip faculty name line
+	p.scan()
+	faculty.name = sportsFacultyName
+
+	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {
+		return errors.Wrap(err, "didn't find 2nd faculty separate line in sports faculty")
+	}
+
+	for {
+		course, err := p.parseSportsCourse()
+		if err != nil {
+			return errors.Wrap(err, "failed to scan a sports course")
 		}
 		if course != nil {
 			faculty.courses = append(faculty.courses, *course)
 		} else {
-			return nil
+			break
 		}
 	}
 
@@ -416,16 +495,20 @@ func (p *parser) parseCourse() (*Course, error) {
 	p.groupID = 10
 
 	for p.text() == courseSep {
-		p.scan()
+		if !p.scan() {
+			return nil, p.errorf("Unexpected EOF while parsing course")
+		}
 	}
 
 	if p.text() == "" {
 		// End of faculty
-		return nil, nil
+		return nil, io.EOF
 	}
 
+	p.infof("Still scanning")
+
 	if err := p.parseIDAndName(); err != nil {
-		return nil, errors.Wrap(err, "failed to parse ID and name")
+		return nil, errors.Wrap(err, "failed to parse ID and name in ordinary course")
 	}
 
 	if err := p.parseHoursAndPoints(); err != nil {
@@ -445,6 +528,44 @@ func (p *parser) parseCourse() (*Course, error) {
 
 	if err := p.parseGroups(); err != nil {
 		return nil, errors.Wrap(err, "failed to parse groups for course")
+	}
+
+	return p.course, nil
+}
+
+func (p *parser) parseSportsCourse() (*Course, error) {
+	*p.course = Course{}
+
+	p.groupID = 10
+
+	for p.text() == sportsCourseSep {
+		p.scan()
+	}
+
+	if p.text() == "" {
+		// End of faculty
+		return nil, nil
+	}
+
+	if err := p.parseIDAndName(); err != nil {
+		return nil, errors.Wrap(err, "failed to parse ID and name in sports course")
+	}
+
+	if err := p.parseHoursAndPoints(); err != nil {
+		p.warningf("Invalid hours and points line in sports course: %v", err)
+		p.scan()
+	}
+
+	if err := p.expectLineAndAdvance(sportsCourseSep); err != nil {
+		return nil, errors.Wrap(err, "didn't find expected course separator when parsing course")
+	}
+
+	// TODO(lutzky): Actually collect the group information
+
+	for p.text() != sportsCourseSep {
+		if !p.scan() {
+			panic("End of file reached unexpectedly")
+		}
 	}
 
 	return p.course, nil
@@ -601,4 +722,13 @@ func (p *parser) parseGroups() error {
 			p.scan()
 		}
 	}
+}
+
+// Reverse reverses a visual-Hebrew string into logical order.
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
 }
