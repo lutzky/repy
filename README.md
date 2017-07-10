@@ -1,6 +1,6 @@
-# repy-go
+# repy
 
-[![Build Status](https://travis-ci.org/lutzky/repy-go.svg?branch=master)](https://travis-ci.org/lutzky/repy-go)
+[![Build Status](https://travis-ci.org/lutzky/repy.svg?branch=master)](https://travis-ci.org/lutzky/repy)
 
 This is a parsing library for Technion REPY files, written in Go. The intent is
 to provide better-tested and more robust code, focused entirely on parsing the
