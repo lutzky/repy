@@ -47,35 +47,35 @@ type Catalog []Faculty
 
 // Faculty represents a set of courses offered by a faculty.
 type Faculty struct {
-	name    string
-	courses []Course
+	Name    string
+	Courses []Course
 }
 
 func (f Faculty) String() string {
-	return fmt.Sprintf("faculty(%s, %d)", f.name, len(f.courses))
+	return fmt.Sprintf("faculty(%s, %d)", f.Name, len(f.Courses))
 }
 
 // Course represents information about a technion course.
 type Course struct {
-	id               uint
-	name             string
-	academicPoints   float32 // ...even though 2*points is always a uint :/
-	lecturerInCharge string
-	weeklyHours      WeeklyHours
-	testDates        []Date
-	groups           []Group
+	ID               uint
+	Name             string
+	AcademicPoints   float32 // ...even though 2*points is always a uint :/
+	LecturerInCharge string
+	WeeklyHours      WeeklyHours
+	TestDates        []Date
+	Groups           []Group
 }
 
 func (c Course) String() string {
 	return fmt.Sprintf(
 		"{Course[%d] (%q) AP:%.1f Hours:%v lecturer:%q testDates:%v groups:%v}",
-		c.id,
-		c.name,
-		c.academicPoints,
-		c.weeklyHours,
-		c.lecturerInCharge,
-		c.testDates,
-		c.groups,
+		c.ID,
+		c.Name,
+		c.AcademicPoints,
+		c.WeeklyHours,
+		c.LecturerInCharge,
+		c.TestDates,
+		c.Groups,
 	)
 }
 
@@ -219,8 +219,8 @@ func (p *parser) parseIDAndName() error {
 		return p.errorf("Line %q doesn't match id-and-name regex `%s`", p.text(), idAndNameRegex)
 	}
 
-	p.course.name = hebrewFlip(m[1])
-	p.course.id = p.parseUint(m[2])
+	p.course.Name = hebrewFlip(m[1])
+	p.course.ID = p.parseUint(m[2])
 	p.scan()
 	return nil
 }
@@ -248,13 +248,13 @@ func (p *parser) parseTotalHours(totalHours string) error {
 		hours := p.parseUint(bits[0])
 		switch bits[1] {
 		case "ה":
-			p.course.weeklyHours.lecture = hours
+			p.course.WeeklyHours.lecture = hours
 		case "ת":
-			p.course.weeklyHours.tutorial = hours
+			p.course.WeeklyHours.tutorial = hours
 		case "מ":
-			p.course.weeklyHours.lab = hours
+			p.course.WeeklyHours.lab = hours
 		case "פ":
-			p.course.weeklyHours.project = hours
+			p.course.WeeklyHours.project = hours
 		default:
 			return p.errorf("Invalid hour descriptor %q", bits[1])
 		}
@@ -270,7 +270,7 @@ func (p *parser) parseHoursAndPoints() error {
 		return p.errorf("Line %q doesn't match hoursAndPointsRegex `%s`", p.text(), hoursAndPointsRegex)
 	}
 
-	p.course.academicPoints = p.parseFloat(m[1])
+	p.course.AcademicPoints = p.parseFloat(m[1])
 	if err := p.parseTotalHours(m[2]); err != nil {
 		return errors.Wrapf(err, "couldn't parse total-hours %q in hours-and-points line", m[2])
 	}
@@ -353,9 +353,9 @@ func (p *parser) parseCourseHeadInfo() error {
 				p.parseUint(m[2]),
 				p.parseUint(m[1]),
 			}
-			p.course.testDates = append(p.course.testDates, d)
+			p.course.TestDates = append(p.course.TestDates, d)
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
-			p.course.lecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
+			p.course.LecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
 		} else {
 			p.warningf("Ignored courseHeadInfo line %q", p.text())
 		}
@@ -429,7 +429,7 @@ func (p *parser) parseFaculty(faculty *Faculty) error {
 
 	{
 		var err error
-		if faculty.name, err = p.parseFacultyName(); err != nil {
+		if faculty.Name, err = p.parseFacultyName(); err != nil {
 			return errors.Wrap(err, "failed to parse faculty name")
 		}
 	}
@@ -448,10 +448,10 @@ courses:
 		case io.EOF:
 			break courses
 		case nil:
-			faculty.courses = append(faculty.courses, *course)
+			faculty.Courses = append(faculty.Courses, *course)
 			// Keep scanning
 		default:
-			return errors.Wrapf(err, "failed to scan a course in faculty %s", faculty.name)
+			return errors.Wrapf(err, "failed to scan a course in faculty %s", faculty.Name)
 		}
 	}
 
@@ -467,7 +467,7 @@ func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 
 	// Skip faculty name line
 	p.scan()
-	faculty.name = sportsFacultyName
+	faculty.Name = sportsFacultyName
 
 	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {
 		return errors.Wrap(err, "didn't find 2nd faculty separate line in sports faculty")
@@ -479,7 +479,7 @@ func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 			return errors.Wrap(err, "failed to scan a sports course")
 		}
 		if course != nil {
-			faculty.courses = append(faculty.courses, *course)
+			faculty.Courses = append(faculty.Courses, *course)
 		} else {
 			break
 		}
@@ -632,10 +632,10 @@ func (p *parser) parseLocation(s string) string {
 }
 
 func (p *parser) lastGroup() *Group {
-	if len(p.course.groups) == 0 {
-		p.course.groups = []Group{{}}
+	if len(p.course.Groups) == 0 {
+		p.course.Groups = []Group{{}}
 	}
-	return &p.course.groups[len(p.course.groups)-1]
+	return &p.course.Groups[len(p.course.Groups)-1]
 }
 
 func collapseSpaces(s string) string {
@@ -688,7 +688,7 @@ func (p *parser) parseEventLine() bool {
 			p.groupID++
 		}
 
-		p.course.groups = append(p.course.groups, group)
+		p.course.Groups = append(p.course.Groups, group)
 
 		p.scan()
 		return true

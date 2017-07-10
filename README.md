@@ -6,3 +6,9 @@ This is a parsing library for Technion REPY files, written in Go. The intent is
 to provide better-tested and more robust code, focused entirely on parsing the
 REPY file, and providing it in a usable format for other software, replacing
 the aging [ttime](http://lutzky.github.io/ttime).
+
+Example usage:
+
+```
+go run examples/json-export.go -input_file REPY
+```

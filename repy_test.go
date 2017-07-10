@@ -92,15 +92,15 @@ func TestParseCourse(t *testing.T) {
 |                     -        :ליגרת  13  |
 +------------------------------------------+
 `, Course{
-			id:             234322,
-			name:           "מערכות אחסון מידע",
-			academicPoints: 3.0,
-			weeklyHours:    WeeklyHours{lecture: 2, tutorial: 1},
-			testDates: []Date{
+			ID:             234322,
+			Name:           "מערכות אחסון מידע",
+			AcademicPoints: 3.0,
+			WeeklyHours:    WeeklyHours{lecture: 2, tutorial: 1},
+			TestDates: []Date{
 				{2016, 2, 11},
 				{2016, 3, 8},
 			},
-			groups: []Group{
+			Groups: []Group{
 				{
 					id:       10,
 					teachers: []string{`ד"ר ג.ידגר`},
@@ -144,19 +144,19 @@ func TestParseCourse(t *testing.T) {
 |                               -----      |
 +------------------------------------------+
 `, Course{
-			id:               14003,
-			name:             "סטטיסטיקה",
-			lecturerInCharge: "ב.פישביין",
-			academicPoints:   3.0,
-			weeklyHours: WeeklyHours{
+			ID:               14003,
+			Name:             "סטטיסטיקה",
+			LecturerInCharge: "ב.פישביין",
+			AcademicPoints:   3.0,
+			WeeklyHours: WeeklyHours{
 				lecture:  2,
 				tutorial: 2,
 			},
-			testDates: []Date{
+			TestDates: []Date{
 				{2016, 01, 28},
 				{2016, 02, 26},
 			},
-			groups: []Group{
+			Groups: []Group{
 				{
 					id:       10,
 					teachers: []string{"פרופ/מ ב.פישביין"},

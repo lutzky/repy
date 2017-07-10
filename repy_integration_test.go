@@ -43,7 +43,7 @@ func TestReadKnownREPY(t *testing.T) {
 	got := make([]string, len(*catalog))
 
 	for i, f := range *catalog {
-		got[i] = f.name
+		got[i] = f.Name
 	}
 
 	sort.Strings(got)
