@@ -28,10 +28,7 @@ func main() {
 	enc := json.NewEncoder(os.Stdout)
 	enc.SetIndent("", "  ")
 
-	var f repy.Faculty
-	f = (*catalog)[0]
-
-	if err := enc.Encode(&f); err != nil {
+	if err := enc.Encode(catalog); err != nil {
 		glog.Exitf("Error serializing JSON: %v", err)
 	}
 }
