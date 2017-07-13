@@ -1,12 +1,21 @@
 package repy
 
 import (
-	"fmt"
+	"bufio"
+	"bytes"
 	"strings"
 	"testing"
 
 	"github.com/kylelemons/godebug/pretty"
 )
+
+func newParserFromString(s string) *parser {
+	return &parser{
+		course:  &Course{},
+		scanner: bufio.NewScanner(bytes.NewBufferString(s)),
+		logger:  GLogger{},
+	}
+}
 
 func TestTimeOfDayToString(t *testing.T) {
 	testCases := []struct {
@@ -173,10 +182,9 @@ func TestParseCourse(t *testing.T) {
 		}},
 	}
 
-	for i, tc := range testCases {
+	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			cp := newParserFromString(strings.TrimSpace(tc.data),
-				fmt.Sprintf("testParseCourse%d", i))
+			cp := newParserFromString(strings.TrimSpace(tc.data))
 			// parseCourse() expects one line to be scanned already
 			cp.scan()
 			got, err := cp.parseCourse()

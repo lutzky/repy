@@ -1,6 +1,7 @@
 package repy
 
 import (
+	"os"
 	"sort"
 	"testing"
 
@@ -8,6 +9,7 @@ import (
 )
 
 func TestReadKnownREPY(t *testing.T) {
+	// TODO(lutzky): Instead of this, compare to golden JSON
 	want := []string{
 		"אנרגיה",
 		"ארכיטקטורה ובינוי ערים",
@@ -32,7 +34,12 @@ func TestReadKnownREPY(t *testing.T) {
 		"רפואה",
 	}
 
-	catalog, err := ReadFile("REPY")
+	repfile, err := os.Open("REPY")
+	if err != nil {
+		t.Fatalf("Couldn't read REPY: %v", err)
+	}
+
+	catalog, err := ReadFile(repfile, GLogger{})
 	if err != nil {
 		t.Fatalf("Couldn't parse REPY: %v", err)
 	}

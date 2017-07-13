@@ -2,10 +2,8 @@ package repy
 
 import (
 	"bufio"
-	"bytes"
 	"fmt"
 	"io"
-	"os"
 	"path"
 	"regexp"
 	"runtime"
@@ -19,24 +17,40 @@ import (
 	"golang.org/x/text/encoding/charmap"
 )
 
-// ReadFile reads filename, parses it as REPY, and returns a Catalog.
+// Logger is an interface for passing a logger to ReadFile
+type Logger interface {
+	Infof(format string, args ...interface{})
+	Warningf(format string, args ...interface{})
+}
+
+// GLogger is a Logger that uses glog
+type GLogger struct{}
+
+// Infof implements Logger.Infof
+func (g GLogger) Infof(format string, args ...interface{}) {
+	glog.Infof(format, args...)
+}
+
+// Warningf implements Logger.Warningf
+func (g GLogger) Warningf(format string, args ...interface{}) {
+	glog.Warningf(format, args...)
+}
+
+// ReadFile reads repyReader, parses it as REPY, and returns a Catalog. If
+// logger is not nil, log messages will be sent to it.
 // TODO(lutzky): Determine if encoding can be auto-detected here.
-func ReadFile(filename string) (c *Catalog, err error) {
+func ReadFile(repyReader io.Reader, logger Logger) (c *Catalog, err error) {
 	defer func() {
 		if r := recover(); r != nil {
-			err = fmt.Errorf("Failed to read %q: %v\n%s", filename, r, debug.Stack())
+			err = fmt.Errorf("Failed to read REPY: %v\n%s", r, debug.Stack())
 		}
 	}()
 	d := charmap.CodePage862.NewDecoder()
-	f, err := os.Open(filename)
-	if err != nil {
-		return nil, errors.Wrapf(err, "couldn't open %q", filename)
-	}
 
 	p := parser{
-		file:    filename,
 		course:  &Course{},
-		scanner: bufio.NewScanner(d.Reader(f)),
+		scanner: bufio.NewScanner(d.Reader(repyReader)),
+		logger:  logger,
 	}
 
 	return p.parseFile()
@@ -282,8 +296,8 @@ type parser struct {
 	scanner *bufio.Scanner
 	course  *Course
 	line    uint
-	file    string
 	groupID uint
+	logger  Logger
 }
 
 func (p *parser) errorfSkip(skip int, format string, a ...interface{}) error {
@@ -291,7 +305,7 @@ func (p *parser) errorfSkip(skip int, format string, a ...interface{}) error {
 	if _, file, line, ok := runtime.Caller(skip); ok {
 		caller = fmt.Sprintf("[%s:%d] ", path.Base(file), line)
 	}
-	return errors.Errorf("%s%s:%d: %s", caller, p.file, p.line, errors.Errorf(format, a...))
+	return errors.Errorf("%sLine %d: %s", caller, p.line, errors.Errorf(format, a...))
 }
 
 func (p *parser) errorf(format string, a ...interface{}) error {
@@ -299,10 +313,14 @@ func (p *parser) errorf(format string, a ...interface{}) error {
 }
 
 func (p *parser) infof(format string, a ...interface{}) {
-	glog.Infof("%s:%d: %s", p.file, p.line, fmt.Sprintf(format, a...))
+	if p.logger != nil {
+		p.logger.Infof("Line %d: %s", p.line, fmt.Sprintf(format, a...))
+	}
 }
 func (p *parser) warningf(format string, a ...interface{}) {
-	glog.Warningf("%s:%d: %s", p.file, p.line, fmt.Sprintf(format, a...))
+	if p.logger != nil {
+		p.logger.Warningf("Line %d: %s", p.line, fmt.Sprintf(format, a...))
+	}
 }
 
 var eof = false
@@ -322,7 +340,6 @@ func (p *parser) scan() bool {
 		numEOFHits++
 		eof = true
 	}
-	glog.V(1).Infof("%s:%d: %s", p.file, p.line, p.text())
 	return result
 }
 
@@ -364,15 +381,6 @@ func (p *parser) parseCourseHeadInfo() error {
 			return p.errorf("Reached EOF")
 		}
 	}
-}
-
-func newParserFromString(s string, name string) *parser {
-	b := bytes.NewBufferString(s)
-	p := parser{}
-	p.file = name
-	p.course = &Course{}
-	p.scanner = bufio.NewScanner(b)
-	return &p
 }
 
 var facultyNameRegexp = regexp.MustCompile(`\| *([א-ת ]+) *- *תועש תכרעמ *\|`)
