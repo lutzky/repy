@@ -33,7 +33,7 @@
           "EndHour": 990
         }
       ],
-      "Type": 0
+      "Type": "lecture"
     }
   ]
 }

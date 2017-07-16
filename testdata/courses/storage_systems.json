@@ -33,7 +33,7 @@
           "EndHour": 750
         }
       ],
-      "Type": 0
+      "Type": "lecture"
     },
     {
       "ID": 11,
@@ -46,7 +46,7 @@
           "EndHour": 1110
         }
       ],
-      "Type": 1
+      "Type": "tutorial"
     },
     {
       "ID": 12,
@@ -59,7 +59,7 @@
           "EndHour": 990
         }
       ],
-      "Type": 1
+      "Type": "tutorial"
     }
   ]
 }

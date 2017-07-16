@@ -2,7 +2,12 @@
 // determine the JSON export format.
 package repy
 
-import "time"
+import (
+	"encoding/json"
+	"time"
+
+	"github.com/pkg/errors"
+)
 
 // Catalog represents all of the information in a REPY file
 type Catalog []Faculty
@@ -53,8 +58,34 @@ const (
 	Lab
 )
 
-// TODO(lutzky): GroupType should be JSON-Marshaled as "lecture", "tutorial",
-// etc.
+var GroupTypeName = []string{
+	Lecture:  "lecture",
+	Tutorial: "tutorial",
+	Lab:      "lab",
+}
+
+func (gt GroupType) String() string {
+	return GroupTypeName[gt]
+}
+
+func (gt GroupType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(GroupTypeName[gt])
+}
+
+func (gt *GroupType) UnmarshalJSON(b []byte) error {
+	var s string
+	if err := json.Unmarshal(b, &s); err != nil {
+		return err
+	}
+
+	for i, n := range GroupTypeName {
+		if n == s {
+			*gt = GroupType(i)
+			return nil
+		}
+	}
+	return errors.Errorf("Unknown GroupType %q", s)
+}
 
 // Group represents a course's registration group (קבוצת רישום) and the events
 // it entails.
@@ -74,5 +105,3 @@ type Event struct {
 
 // TimeOfDay is represented as "minutes since midnight".
 type TimeOfDay uint
-
-// TODO(lutzky): TimeOfDay should be JSON-Marshaled as HH:MM

@@ -81,13 +81,7 @@ func (d Date) String() string {
 func (wh WeeklyHours) String() string {
 	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.Lecture, wh.Tutorial, wh.Lab)
 }
-func (gt GroupType) String() string {
-	return map[GroupType]string{
-		Lecture:  "Lecture",
-		Tutorial: "Tutorial",
-		Lab:      "Lab",
-	}[gt]
-}
+
 func (g Group) String() string {
 	return fmt.Sprintf(
 		"{group%d (%v) teachers:%q events:%v}",
