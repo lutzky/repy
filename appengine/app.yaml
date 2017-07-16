@@ -2,5 +2,8 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /.*
+- url: /
   script: _go_app
+- url: /view
+  static_files: view/index.html
+  upload: view/index.html
