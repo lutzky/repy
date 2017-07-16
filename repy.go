@@ -298,7 +298,7 @@ func (p *parser) parseCourseHeadInfo() error {
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
 			p.course.LecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
 		} else {
-			p.warningf("Ignored courseHeadInfo line %q", p.text())
+			p.infof("Ignored courseHeadInfo line %q", p.text())
 		}
 
 		if !p.scan() {
