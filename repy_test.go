@@ -3,6 +3,10 @@ package repy
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"path/filepath"
 	"strings"
 	"testing"
 
@@ -74,126 +78,51 @@ func TestParseLocation(t *testing.T) {
 }
 
 func TestParseCourse(t *testing.T) {
-	testCases := []struct {
-		name string
-		data string
-		want Course
-	}{
-		{"storage_systems", `
-+------------------------------------------+
-|                עדימ ןוסחא תוכרעמ  234322 |
-|3.0 :קנ          1-ת 2-ה:עובשב הארוה תועש |
-+------------------------------------------+
-|             11/02/16 'ה  םוי: ןושאר דעומ |
-|                              ----------- |
-|             08/03/16 'ג  םוי:   ינש דעומ |
-|                              ----------- |
-|               ++++++                  .סמ|
-|                                     םושיר|
-|      בואט 009  10.30-12.30'ג :האצרה      |
-|                רגדי.ג    ר"ד : הצרמ      |
-|                               -----      |
-|                                          |
-|      בואט 005  17.30-18.30'ג :ליגרת  11  |
-|                                          |
-|      בואט 006  15.30-16.30'ד :ליגרת  12  |
-|                                          |
-|                     -        :ליגרת  13  |
-+------------------------------------------+
-`, Course{
-			ID:             234322,
-			Name:           "מערכות אחסון מידע",
-			AcademicPoints: 3.0,
-			WeeklyHours:    WeeklyHours{lecture: 2, tutorial: 1},
-			TestDates: []Date{
-				{2016, 2, 11},
-				{2016, 3, 8},
-			},
-			Groups: []Group{
-				{
-					id:       10,
-					teachers: []string{`ד"ר ג.ידגר`},
-					events: []Event{
-						{day: 2, location: "טאוב 9", startHour: 10*60 + 30, endHour: 12*60 + 30},
-					},
-					groupType: Lecture,
-				},
-				{
-					id: 11,
-					events: []Event{
-						{day: 2, location: "טאוב 5", startHour: 17*60 + 30, endHour: 18*60 + 30},
-					},
-					groupType: Tutorial,
-				},
-				{
-					id: 12,
-					events: []Event{
-						{day: 3, location: "טאוב 6", startHour: 15*60 + 30, endHour: 16*60 + 30},
-					},
-					groupType: Tutorial,
-				},
-			},
-		}},
-		{"statistics", `
-+------------------------------------------+
-|                        הקיטסיטטס  014003 |
-|3.0 :קנ          2-ת 2-ה:עובשב הארוה תועש |
-+------------------------------------------+
-|           ןייבשיפ.ב        : יארחא  הרומ |
-|                              ----------- |
-|   9.00  העש 28/01/16 'ה  םוי: ןושאר דעומ |
-|                              ----------- |
-|   9.00  העש 26/02/16 'ו  םוי:   ינש דעומ |
-|                              ----------- |
-|         דבלב היזדואיגל תדעוימ 13 הצובק.1 |
-|               ++++++                  .סמ|
-|                                     םושיר|
-|      ןיבר 206  14.30-16.30'ג :האצרה      |
-|             ןייבשיפ.ב מ/פורפ : הצרמ      |
-|                               -----      |
-+------------------------------------------+
-`, Course{
-			ID:               14003,
-			Name:             "סטטיסטיקה",
-			LecturerInCharge: "ב.פישביין",
-			AcademicPoints:   3.0,
-			WeeklyHours: WeeklyHours{
-				lecture:  2,
-				tutorial: 2,
-			},
-			TestDates: []Date{
-				{2016, 01, 28},
-				{2016, 02, 26},
-			},
-			Groups: []Group{
-				{
-					id:       10,
-					teachers: []string{"פרופ/מ ב.פישביין"},
-					events: []Event{
-						{
-							day:       2,
-							startHour: 14*60 + 30,
-							endHour:   16*60 + 30,
-							location:  "רבין 206",
-						},
-					},
-				},
-			},
-		}},
+	// TODO(lutzky): This should be a glob
+	testCases, err := filepath.Glob("testdata/courses/*.repy")
+	if err != nil {
+		t.Fatalf("Failed to glob for course REPYs: %v", err)
 	}
 
-	for _, tc := range testCases {
-		t.Run(tc.name, func(t *testing.T) {
-			cp := newParserFromString(strings.TrimSpace(tc.data))
-			// parseCourse() expects one line to be scanned already
-			cp.scan()
+	for _, fullPathRepy := range testCases {
+		t.Run(filepath.Base(fullPathRepy), func(t *testing.T) {
+			fullPathJson := strings.TrimSuffix(fullPathRepy, ".repy") + ".json"
+
+			repyBytes, err := ioutil.ReadFile(fullPathRepy)
+			if err != nil {
+				t.Fatalf("Couldn't open %q: %v", fullPathRepy, err)
+			}
+
+			jsonBytes, err := ioutil.ReadFile(fullPathJson)
+			if err != nil {
+				t.Fatalf("Couldn't open %q: %v", fullPathJson, err)
+			}
+
+			var want Course
+			if err := json.Unmarshal(jsonBytes, &want); err != nil {
+				t.Fatalf("Couldn't unmarshal %q: %v", fullPathJson, err)
+			}
+
+			cp := newParserFromString(strings.TrimSpace(string(repyBytes)))
+
+			cp.scan() // parseCourse() expects one line to be scanned already
+
 			got, err := cp.parseCourse()
+
 			if err != nil {
 				t.Fatalf("Error parsing course: %v", err)
 			} else if got == nil {
 				t.Fatalf("Got a nil course")
-			} else if diff := pretty.Compare(tc.want, *got); diff != "" {
-				t.Fatalf("Mismatch parsing course. Diff -want +got:\n%s", diff)
+			} else if diff := pretty.Compare(want, *got); diff != "" {
+				var gotJSON string
+				b, err := json.MarshalIndent(*got, "", "  ")
+				if err == nil {
+					gotJSON = string(b)
+				} else {
+					gotJSON = fmt.Sprintf("Couldn't emit JSON: %v", err)
+				}
+
+				t.Fatalf("Mismatch parsing course. Diff -want +got:\n%s\nFull 'got' in JSON:\n%s", diff, gotJSON)
 			}
 		})
 	}

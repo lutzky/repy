@@ -56,28 +56,8 @@ func ReadFile(repyReader io.Reader, logger Logger) (c *Catalog, err error) {
 	return p.parseFile()
 }
 
-// Catalog represents all of the information in a REPY file
-type Catalog []Faculty
-
-// Faculty represents a set of courses offered by a faculty.
-type Faculty struct {
-	Name    string
-	Courses []Course
-}
-
 func (f Faculty) String() string {
 	return fmt.Sprintf("faculty(%s, %d)", f.Name, len(f.Courses))
-}
-
-// Course represents information about a technion course.
-type Course struct {
-	ID               uint
-	Name             string
-	AcademicPoints   float32 // ...even though 2*points is always a uint :/
-	LecturerInCharge string
-	WeeklyHours      WeeklyHours
-	TestDates        []Date
-	Groups           []Group
 }
 
 func (c Course) String() string {
@@ -93,44 +73,14 @@ func (c Course) String() string {
 	)
 }
 
-// Date is a timezone-free representation of a date
-type Date struct {
-	Year, Month, Day uint
-}
-
 // TODO(lutzky): Why isn't this used when print("%v")ing a course?
 func (d Date) String() string {
 	return fmt.Sprintf("%04d-%02d-%02d", d.Year, d.Month, d.Day)
 }
 
-// WeeklyHours represents the amount of weekly hours, by type, that a course
-// has.
-type WeeklyHours struct {
-	lecture  uint
-	tutorial uint
-	lab      uint
-	project  uint
-}
-
 func (wh WeeklyHours) String() string {
-	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.lecture, wh.tutorial, wh.lab)
+	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.Lecture, wh.Tutorial, wh.Lab)
 }
-
-// GroupType is the type of events in a group (applies to all events within a
-// group).
-type GroupType int
-
-const (
-	// Lecture groups indicate frontal lectures by professors (הרצאה)
-	Lecture GroupType = iota
-
-	// Tutorial groups indicate frontal tutorials by TAs (תרגול, תרגיל)
-	Tutorial
-
-	// Lab groups indicate laboratory experiments (מעבדה)
-	Lab
-)
-
 func (gt GroupType) String() string {
 	return map[GroupType]string{
 		Lecture:  "Lecture",
@@ -138,45 +88,25 @@ func (gt GroupType) String() string {
 		Lab:      "Lab",
 	}[gt]
 }
-
-// Group represents a course's registration group (קבוצת רישום) and the events
-// it entails.
-type Group struct {
-	id        uint
-	teachers  []string
-	events    []Event
-	groupType GroupType
-}
-
 func (g Group) String() string {
 	return fmt.Sprintf(
 		"{group%d (%v) teachers:%q events:%v}",
-		g.id,
-		g.groupType,
-		g.teachers,
-		g.events,
+		g.ID,
+		g.Type,
+		g.Teachers,
+		g.Events,
 	)
-}
-
-// Event represents a singular weekly event within a course.
-type Event struct {
-	day                time.Weekday
-	location           string
-	startHour, endHour TimeOfDay
 }
 
 func (e Event) String() string {
 	return fmt.Sprintf(
 		"{%v %v-%v at %q}",
-		e.day,
-		e.startHour,
-		e.endHour,
-		e.location,
+		e.Day,
+		e.StartHour,
+		e.EndHour,
+		e.Location,
 	)
 }
-
-// TimeOfDay is represented as "minutes since midnight".
-type TimeOfDay uint
 
 func (t TimeOfDay) String() string {
 	return fmt.Sprintf("%02d:%02d", t/60, t%60)
@@ -262,13 +192,13 @@ func (p *parser) parseTotalHours(totalHours string) error {
 		hours := p.parseUint(bits[0])
 		switch bits[1] {
 		case "ה":
-			p.course.WeeklyHours.lecture = hours
+			p.course.WeeklyHours.Lecture = hours
 		case "ת":
-			p.course.WeeklyHours.tutorial = hours
+			p.course.WeeklyHours.Tutorial = hours
 		case "מ":
-			p.course.WeeklyHours.lab = hours
+			p.course.WeeklyHours.Lab = hours
 		case "פ":
-			p.course.WeeklyHours.project = hours
+			p.course.WeeklyHours.Project = hours
 		default:
 			return p.errorf("Invalid hour descriptor %q", bits[1])
 		}
@@ -656,7 +586,7 @@ var lecturerRegexp = regexp.MustCompile(
 func (p *parser) parseLecturerLine() bool {
 	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
 		lecturer := hebrewFlip(collapseSpaces(m[1]))
-		teachers := &p.lastGroup().teachers
+		teachers := &p.lastGroup().Teachers
 		*teachers = append(*teachers, lecturer)
 		return true
 	}
@@ -670,10 +600,10 @@ func (p *parser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
 	if m := eventRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
 		ev := Event{
-			day:       p.weekDayFromHebrewLetter(m[6]),
-			startHour: p.timeOfDayFromStrings(m[2], m[3]),
-			endHour:   p.timeOfDayFromStrings(m[4], m[5]),
-			location:  p.parseLocation(m[1]),
+			Day:       p.weekDayFromHebrewLetter(m[6]),
+			StartHour: p.timeOfDayFromStrings(m[2], m[3]),
+			EndHour:   p.timeOfDayFromStrings(m[4], m[5]),
+			Location:  p.parseLocation(m[1]),
 		}
 
 		groupType, err := p.groupTypeFromString(m[7])
@@ -683,16 +613,16 @@ func (p *parser) parseEventLine() bool {
 		}
 
 		group := Group{
-			teachers:  []string{}, // TODO(lutzky): Fill these in
-			events:    []Event{ev},
-			groupType: groupType,
+			Teachers: []string{}, // TODO(lutzky): Fill these in
+			Events:   []Event{ev},
+			Type:     groupType,
 		}
 
 		if m[8] != "" {
-			group.id = p.parseUint(m[8])
-			p.groupID = group.id + 1
+			group.ID = p.parseUint(m[8])
+			p.groupID = group.ID + 1
 		} else {
-			group.id = p.groupID
+			group.ID = p.groupID
 			p.groupID++
 		}
 

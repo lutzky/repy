@@ -1,0 +1,39 @@
+{
+  "ID": 14003,
+  "Name": "סטטיסטיקה",
+  "AcademicPoints": 3,
+  "LecturerInCharge": "ב.פישביין",
+  "WeeklyHours": {
+    "Lecture": 2,
+    "Tutorial": 2
+  },
+  "TestDates": [
+    {
+      "Year": 2016,
+      "Month": 1,
+      "Day": 28
+    },
+    {
+      "Year": 2016,
+      "Month": 2,
+      "Day": 26
+    }
+  ],
+  "Groups": [
+    {
+      "ID": 10,
+      "Teachers": [
+        "פרופ/מ ב.פישביין"
+      ],
+      "Events": [
+        {
+          "Day": 2,
+          "Location": "רבין 206",
+          "StartHour": 870,
+          "EndHour": 990
+        }
+      ],
+      "Type": 0
+    }
+  ]
+}
