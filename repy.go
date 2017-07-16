@@ -437,8 +437,6 @@ func (p *parser) parseCourse() (*Course, error) {
 		return nil, io.EOF
 	}
 
-	p.infof("Still scanning")
-
 	if err := p.parseIDAndName(); err != nil {
 		return nil, errors.Wrap(err, "failed to parse ID and name in ordinary course")
 	}
