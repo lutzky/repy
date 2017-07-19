@@ -9,7 +9,7 @@
       var main = document.getElementById("maindiv");
       main.innerHTML = "Loading...";
       var xmlhttp = new XMLHttpRequest();
-      var url = "/";
+      var url = "https://storage.googleapis.com/dev-machine-152620.appspot.com/latest.json";
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var catalog = JSON.parse(this.responseText);

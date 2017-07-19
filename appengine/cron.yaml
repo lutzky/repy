@@ -1,0 +1,4 @@
+cron:
+- description: hourly repy fetch
+  url: /update
+  schedule: every 1 hours

@@ -2,7 +2,7 @@ runtime: go
 api_version: go1
 
 handlers:
-- url: /
+- url: /update
   script: _go_app
 - url: /view
   static_files: view/index.html

@@ -3,11 +3,16 @@ package repyapp
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
+	"io"
 	"net/http"
+
+	"cloud.google.com/go/storage"
 
 	"golang.org/x/net/context"
 
 	"google.golang.org/appengine"
+	"google.golang.org/appengine/file"
 	"google.golang.org/appengine/log"
 	"google.golang.org/appengine/urlfetch"
 
@@ -30,8 +35,7 @@ func (ael appEngineLogger) Warningf(format string, args ...interface{}) {
 }
 
 func DownloadREPYZip(ctx context.Context) ([]byte, error) {
-	client := urlfetch.Client(ctx)
-	resp, err := client.Get(repy.RepFileURL)
+	resp, err := urlfetch.Client(ctx).Get(repy.RepFileURL)
 	if err != nil {
 		return nil, errors.Wrapf(err, "Failed to download")
 	}
@@ -41,24 +45,65 @@ func DownloadREPYZip(ctx context.Context) ([]byte, error) {
 }
 
 func init() {
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/update", handler)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 
-	repyReader, err := DownloadREPYZip(ctx)
+	bucket, err := file.DefaultBucketName(ctx)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
 
-	catalog, err := repy.ReadFile(bytes.NewReader(repyReader), appEngineLogger{ctx})
+	client, err := storage.NewClient(ctx)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
-	enc := json.NewEncoder(w)
+
+	repyBytes, err := DownloadREPYZip(ctx)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	jsonObj := client.Bucket(bucket).Object("latest.json")
+	wc := jsonObj.NewWriter(ctx)
+	defer wc.Close()
+
+	catalog, err := repy.ReadFile(bytes.NewReader(repyBytes), appEngineLogger{ctx})
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	enc := json.NewEncoder(wc)
 
 	if err := enc.Encode(catalog); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		http.Error(w, errors.Wrap(err, "failed to write latest.json").Error(), http.StatusInternalServerError)
+		return
 	}
+
+	wc.Close() // Ensure close now so that sharing-with-all-users works
+
+	repyObj := client.Bucket(bucket).Object("latest.repy")
+	wc2 := repyObj.NewWriter(ctx)
+	defer wc2.Close()
+	if _, err := io.Copy(wc2, bytes.NewReader(repyBytes)); err != nil {
+		http.Error(w, errors.Wrap(err, "failed to write latest.repy").Error(), http.StatusInternalServerError)
+		return
+	}
+
+	wc2.Close() // Ensure close now so that sharing-with-all-users works
+
+	if err := repyObj.ACL().Set(ctx, storage.AllUsers, storage.RoleReader); err != nil {
+		http.Error(w, errors.Wrap(err, "Failed to make latest.repy public").Error(), http.StatusInternalServerError)
+		return
+	}
+	if err := jsonObj.ACL().Set(ctx, storage.AllUsers, storage.RoleReader); err != nil {
+		http.Error(w, errors.Wrap(err, "Failed to make latest.json public").Error(), http.StatusInternalServerError)
+		return
+	}
+	fmt.Fprintf(w, "Success, wrote new REPY files. Bucket is %q\n", bucket)
 }
