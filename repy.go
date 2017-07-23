@@ -258,6 +258,7 @@ func (p *parser) scan() bool {
 		if err := p.scanner.Err(); err != nil {
 			panic(err)
 		}
+		p.logger.Infof("Hit EOF, numEOFHits is %d. Stack trace:\n%s", numEOFHits, string(debug.Stack()))
 		if numEOFHits > 10 {
 			panic("Hit EOF too many times")
 		}
