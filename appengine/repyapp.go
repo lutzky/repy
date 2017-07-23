@@ -56,7 +56,7 @@ func init() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 
-	bucket, err := file.DefaultBucketName(ctx)
+	bucketName, err := file.DefaultBucketName(ctx)
 	if err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to get default bucket name")
 		return
@@ -68,6 +68,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	bucket := client.Bucket(bucketName)
+
 	repyBytes, err := DownloadREPYZip(ctx)
 	if err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to download REPY zip")
@@ -76,39 +78,21 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	repySHA1Sum := sha1.Sum(repyBytes)
 
-	repyObj := client.Bucket(bucket).Object("latest.repy")
-	wc2 := repyObj.NewWriter(ctx)
-	defer func() {
-		wc2.Close()
-		if err := makePublic(ctx, repyObj); err != nil {
-			httpErrorWrap(ctx, w, err, "Failed to make latest.repypublic")
-			return
-		}
-	}()
+	repyWriter, repyCloser := makePublicObject(ctx, bucket, "latest.repy")
+	defer repyCloser()
 
-	if _, err := io.Copy(wc2, bytes.NewReader(repyBytes)); err != nil {
+	if _, err := io.Copy(repyWriter, bytes.NewReader(repyBytes)); err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to write latest.repy")
 		return
 	}
 
-	jsonObj := client.Bucket(bucket).Object("latest.json")
-	wc := jsonObj.NewWriter(ctx)
-	defer func() {
-		wc.Close()
-		if err := makePublic(ctx, jsonObj); err != nil {
-			httpErrorWrap(ctx, w, err, "Failed to make latest.json public")
-			return
-		}
-	}()
+	// TODO(lutzky): Also write to SHA1.repy
 
-	parseLogObj := client.Bucket(bucket).Object("latest.parse.log")
-	parseLogWriter := parseLogObj.NewWriter(ctx)
-	defer func() {
-		parseLogWriter.Close()
-		if err := makePublic(ctx, parseLogObj); err != nil {
-			httpErrorWrap(ctx, w, err, "Failed to make parselog public")
-		}
-	}()
+	jsonWriter, jsonCloser := makePublicObject(ctx, bucket, "latest.json")
+	defer jsonCloser()
+
+	parseLogWriter, parseLogCloser := makePublicObject(ctx, bucket, "latest.parse.log")
+	defer parseLogCloser()
 
 	catalog, err := repy.ReadFile(bytes.NewReader(repyBytes), writerLogger{parseLogWriter})
 	if err != nil {
@@ -116,7 +100,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		httpErrorWrap(ctx, w, err, "Failed to read catalog")
 		return
 	}
-	enc := json.NewEncoder(wc)
+	enc := json.NewEncoder(jsonWriter)
 
 	if err := enc.Encode(catalog); err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to write latest.json")
@@ -127,12 +111,24 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Success")
 }
 
-func makePublic(ctx context.Context, obj *storage.ObjectHandle) error {
-	return obj.ACL().Set(ctx, storage.AllUsers, storage.RoleReader)
-}
-
 func httpErrorWrap(ctx context.Context, w http.ResponseWriter, err error, format string, args ...interface{}) {
 	wrapedErr := errors.Wrapf(err, format, args...)
 	log.Errorf(ctx, wrapedErr.Error())
 	http.Error(w, wrapedErr.Error(), http.StatusInternalServerError)
+}
+
+// makePublicObject opens a file in the specified client and bucket with the
+// given name, and returns a writer to it as well as a closer function. Caller
+// must call the closer function when done writing to the file (e.g. using
+// defer). The object will be made public upon closing.
+func makePublicObject(ctx context.Context, bucket *storage.BucketHandle, filename string) (io.Writer, func()) {
+	obj := bucket.Object("latest.repy")
+	w := obj.NewWriter(ctx)
+	closer := func() {
+		w.Close()
+		if err := obj.ACL().Set(ctx, storage.AllUsers, storage.RoleReader); err != nil {
+			log.Errorf(ctx, "Failed to make %q public: %v", filename, err)
+		}
+	}
+	return w, closer
 }
