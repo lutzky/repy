@@ -2,6 +2,7 @@ package repyapp
 
 import (
 	"bytes"
+	"crypto/sha1"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -13,6 +14,7 @@ import (
 
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/file"
+	"google.golang.org/appengine/log"
 	"google.golang.org/appengine/urlfetch"
 
 	"github.com/lutzky/repy"
@@ -40,7 +42,7 @@ func (wl writerLogger) Warningf(format string, args ...interface{}) {
 func DownloadREPYZip(ctx context.Context) ([]byte, error) {
 	resp, err := urlfetch.Client(ctx).Get(repy.RepFileURL)
 	if err != nil {
-		return nil, errors.Wrapf(err, "Failed to download")
+		return nil, errors.Wrapf(err, "Failed to download %q", repy.RepFileURL)
 	}
 	defer resp.Body.Close()
 
@@ -56,34 +58,36 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	bucket, err := file.DefaultBucketName(ctx)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		httpErrorWrap(ctx, w, err, "Failed to get default bucket name")
 		return
 	}
 
 	client, err := storage.NewClient(ctx)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		httpErrorWrap(ctx, w, err, "Failed to get storage client")
 		return
 	}
 
 	repyBytes, err := DownloadREPYZip(ctx)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		httpErrorWrap(ctx, w, err, "Failed to download REPY zip")
 		return
 	}
+
+	repySHA1Sum := sha1.Sum(repyBytes)
 
 	repyObj := client.Bucket(bucket).Object("latest.repy")
 	wc2 := repyObj.NewWriter(ctx)
 	defer func() {
 		wc2.Close()
 		if err := makePublic(ctx, repyObj); err != nil {
-			httpErrorWrap(w, err, "Failed to make latest.repypublic")
+			httpErrorWrap(ctx, w, err, "Failed to make latest.repypublic")
 			return
 		}
 	}()
 
 	if _, err := io.Copy(wc2, bytes.NewReader(repyBytes)); err != nil {
-		http.Error(w, errors.Wrap(err, "failed to write latest.repy").Error(), http.StatusInternalServerError)
+		httpErrorWrap(ctx, w, err, "Failed to write latest.repy")
 		return
 	}
 
@@ -92,7 +96,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		wc.Close()
 		if err := makePublic(ctx, jsonObj); err != nil {
-			httpErrorWrap(w, err, "Failed to make latest.json public")
+			httpErrorWrap(ctx, w, err, "Failed to make latest.json public")
 			return
 		}
 	}()
@@ -102,29 +106,33 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		parseLogWriter.Close()
 		if err := makePublic(ctx, parseLogObj); err != nil {
-			httpErrorWrap(w, err, "Failed to make parselog public")
+			httpErrorWrap(ctx, w, err, "Failed to make parselog public")
 		}
 	}()
 
 	catalog, err := repy.ReadFile(bytes.NewReader(repyBytes), writerLogger{parseLogWriter})
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		fmt.Fprintf(parseLogWriter, "Read returned error: %v\n", err)
+		httpErrorWrap(ctx, w, err, "Failed to read catalog")
 		return
 	}
 	enc := json.NewEncoder(wc)
 
 	if err := enc.Encode(catalog); err != nil {
-		http.Error(w, errors.Wrap(err, "failed to write latest.json").Error(), http.StatusInternalServerError)
+		httpErrorWrap(ctx, w, err, "Failed to write latest.json")
 		return
 	}
 
-	fmt.Fprintf(w, "Success, wrote new REPY files. Bucket is %q\n", bucket)
+	log.Infof(ctx, "Successfully parsed REPY with SHA1 %x", repySHA1Sum)
+	fmt.Fprintf(w, "Success")
 }
 
 func makePublic(ctx context.Context, obj *storage.ObjectHandle) error {
 	return obj.ACL().Set(ctx, storage.AllUsers, storage.RoleReader)
 }
 
-func httpErrorWrap(w http.ResponseWriter, err error, format string, args ...interface{}) {
-	http.Error(w, errors.Wrapf(err, format, args...).Error(), http.StatusInternalServerError)
+func httpErrorWrap(ctx context.Context, w http.ResponseWriter, err error, format string, args ...interface{}) {
+	wrapedErr := errors.Wrapf(err, format, args...)
+	log.Errorf(ctx, wrapedErr.Error())
+	http.Error(w, wrapedErr.Error(), http.StatusInternalServerError)
 }
