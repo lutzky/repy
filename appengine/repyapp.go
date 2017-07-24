@@ -78,6 +78,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	repySHA1Sum := sha1.Sum(repyBytes)
 
+	log.Infof(ctx, "REPY SHA1SUM: %x", repySHA1Sum)
+
 	repyWriter, repyCloser := makePublicObject(ctx, bucket, "latest.repy")
 	defer repyCloser()
 
@@ -86,7 +88,13 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO(lutzky): Also write to SHA1.repy
+	historicREPYWriter, historicREPYCloser := makePublicObject(ctx, bucket, fmt.Sprintf("%x.repy", repySHA1Sum))
+	defer historicREPYCloser()
+
+	if _, err := io.Copy(historicREPYWriter, bytes.NewReader(repyBytes)); err != nil {
+		httpErrorWrap(ctx, w, err, "Failed to write historic %x.repy", repySHA1Sum)
+		return
+	}
 
 	jsonWriter, jsonCloser := makePublicObject(ctx, bucket, "latest.json")
 	defer jsonCloser()
@@ -107,7 +115,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Infof(ctx, "Successfully parsed REPY with SHA1 %x", repySHA1Sum)
+	log.Infof(ctx, "Successfully parsed REPY")
 	fmt.Fprintf(w, "Success")
 }
 
@@ -122,7 +130,7 @@ func httpErrorWrap(ctx context.Context, w http.ResponseWriter, err error, format
 // must call the closer function when done writing to the file (e.g. using
 // defer). The object will be made public upon closing.
 func makePublicObject(ctx context.Context, bucket *storage.BucketHandle, filename string) (io.Writer, func()) {
-	obj := bucket.Object("latest.repy")
+	obj := bucket.Object(filename)
 	w := obj.NewWriter(ctx)
 	closer := func() {
 		w.Close()
