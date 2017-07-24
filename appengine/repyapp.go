@@ -96,9 +96,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	jsonWriter, jsonCloser := makePublicObject(ctx, bucket, "latest.json")
-	defer jsonCloser()
-
 	parseLogWriter, parseLogCloser := makePublicObject(ctx, bucket, "latest.parse.log")
 	defer parseLogCloser()
 
@@ -108,6 +105,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		httpErrorWrap(ctx, w, err, "Failed to read catalog")
 		return
 	}
+
+	jsonWriter, jsonCloser := makePublicObject(ctx, bucket, "latest.json")
+	defer jsonCloser()
 	enc := json.NewEncoder(jsonWriter)
 
 	if err := enc.Encode(catalog); err != nil {
