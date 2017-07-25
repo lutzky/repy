@@ -266,7 +266,7 @@ func (p *parser) scan() bool {
 		if err := p.scanner.Err(); err != nil {
 			panic(err)
 		}
-		p.logger.Infof("Hit EOF, numEOFHits is %d. Stack trace:\n%s", p.numEOFHits, string(debug.Stack()))
+		p.infof("Hit EOF, numEOFHits is %d. Stack trace:\n%s", p.numEOFHits, string(debug.Stack()))
 		if p.numEOFHits > 10 {
 			panic("Hit EOF too many times")
 		}
@@ -402,6 +402,8 @@ courses:
 const sportsFacultyName = "חינוך גופני"
 
 func (p *parser) parseSportsFaculty(faculty *Faculty) error {
+	p.infof("Started scanning sports faculty")
+
 	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {
 		return errors.Wrap(err, "didn't find 1nd faculty separate line in sports faculty")
 	}
@@ -500,6 +502,8 @@ func (p *parser) parseSportsCourse() (*Course, error) {
 	}
 
 	// TODO(lutzky): Actually collect the group information
+
+	p.warningf("Skipping sports course group information (not implemented) for %s", p.course.Name)
 
 	for p.text() != sportsCourseSep {
 		if !p.scan() {
