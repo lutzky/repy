@@ -230,6 +230,9 @@ type parser struct {
 	line    uint
 	groupID uint
 	logger  Logger
+
+	numEOFHits int
+	eof        bool
 }
 
 func (p *parser) errorfSkip(skip int, format string, a ...interface{}) error {
@@ -255,9 +258,6 @@ func (p *parser) warningf(format string, a ...interface{}) {
 	}
 }
 
-var eof = false
-var numEOFHits = 0
-
 func (p *parser) scan() bool {
 	result := p.scanner.Scan()
 	if result {
@@ -266,12 +266,12 @@ func (p *parser) scan() bool {
 		if err := p.scanner.Err(); err != nil {
 			panic(err)
 		}
-		p.logger.Infof("Hit EOF, numEOFHits is %d. Stack trace:\n%s", numEOFHits, string(debug.Stack()))
-		if numEOFHits > 10 {
+		p.logger.Infof("Hit EOF, numEOFHits is %d. Stack trace:\n%s", p.numEOFHits, string(debug.Stack()))
+		if p.numEOFHits > 10 {
 			panic("Hit EOF too many times")
 		}
-		numEOFHits++
-		eof = true
+		p.numEOFHits++
+		p.eof = true
 	}
 	return result
 }
