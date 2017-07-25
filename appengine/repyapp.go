@@ -39,6 +39,8 @@ func (wl writerLogger) Warningf(format string, args ...interface{}) {
 	fmt.Fprint(wl.w, "\n")
 }
 
+func (wl writerLogger) Flush() {}
+
 func DownloadREPYZip(ctx context.Context) ([]byte, error) {
 	resp, err := urlfetch.Client(ctx).Get(repy.RepFileURL)
 	if err != nil {

@@ -21,6 +21,9 @@ import (
 type Logger interface {
 	Infof(format string, args ...interface{})
 	Warningf(format string, args ...interface{})
+
+	// Flush will automatically be called after parsing is complete
+	Flush()
 }
 
 // GLogger is a Logger that uses glog
@@ -28,12 +31,16 @@ type GLogger struct{}
 
 // Infof implements Logger.Infof
 func (g GLogger) Infof(format string, args ...interface{}) {
-	glog.Infof(format, args...)
+	glog.InfoDepth(3, fmt.Sprintf(format, args...))
 }
 
 // Warningf implements Logger.Warningf
 func (g GLogger) Warningf(format string, args ...interface{}) {
-	glog.Warningf(format, args...)
+	glog.WarningDepth(3, fmt.Sprintf(format, args...))
+}
+
+func (g GLogger) Flush() {
+	glog.Flush()
 }
 
 // ReadFile reads repyReader, parses it as REPY, and returns a Catalog. If
@@ -45,6 +52,7 @@ func ReadFile(repyReader io.Reader, logger Logger) (c *Catalog, err error) {
 			err = fmt.Errorf("Failed to read REPY: %v\n%s", r, debug.Stack())
 		}
 	}()
+	defer logger.Flush()
 	d := charmap.CodePage862.NewDecoder()
 
 	p := parser{
