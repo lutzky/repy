@@ -3,7 +3,7 @@
 package repy
 
 import (
-	"encoding/json"
+	"encoding"
 	"time"
 
 	"github.com/pkg/errors"
@@ -70,15 +70,19 @@ func (gt GroupType) String() string {
 	return GroupTypeName[gt]
 }
 
-func (gt GroupType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(GroupTypeName[gt])
+func (gt GroupType) MarshalText() ([]byte, error) {
+	return []byte(GroupTypeName[gt]), nil
 }
 
-func (gt *GroupType) UnmarshalJSON(b []byte) error {
-	var s string
-	if err := json.Unmarshal(b, &s); err != nil {
-		return err
-	}
+func typeCheckTextMarshaler() {
+	var gt GroupType = GroupType(0)
+	var _ encoding.TextMarshaler = gt
+	var _ encoding.TextUnmarshaler = &gt
+	panic("This should never be called")
+}
+
+func (gt *GroupType) UnmarshalText(b []byte) error {
+	s := string(b)
 
 	for i, n := range GroupTypeName {
 		if n == s {
