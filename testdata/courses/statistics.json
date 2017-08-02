@@ -29,8 +29,8 @@
         {
           "day": 2,
           "location": "רבין 206",
-          "startHour": 870,
-          "endHour": 990
+          "startMinute": 870,
+          "endMinute": 990
         }
       ],
       "type": "lecture"

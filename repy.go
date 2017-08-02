@@ -104,17 +104,17 @@ func (e Event) String() string {
 	return fmt.Sprintf(
 		"{%v %v-%v at %q}",
 		e.Day,
-		e.StartHour,
-		e.EndHour,
+		e.StartMinute,
+		e.EndStartMinute,
 		e.Location,
 	)
 }
 
-func (t TimeOfDay) String() string {
+func (t MinutesSinceMidnight) String() string {
 	return fmt.Sprintf("%02d:%02d", t/60, t%60)
 }
 
-func parseTimeOfDay(x string) (TimeOfDay, error) {
+func parseTimeOfDay(x string) (MinutesSinceMidnight, error) {
 	sections := strings.Split(strings.TrimSpace(x), ".")
 
 	if len(sections) != 2 {
@@ -132,7 +132,7 @@ func parseTimeOfDay(x string) (TimeOfDay, error) {
 		result += uint(n)
 	}
 
-	return TimeOfDay(result), nil
+	return MinutesSinceMidnight(result), nil
 }
 
 func hebrewFlip(s string) string {
@@ -541,10 +541,10 @@ func (p *parser) weekDayFromHebrewLetter(letter string) time.Weekday {
 	return result
 }
 
-func (p *parser) timeOfDayFromStrings(hours, minutes string) TimeOfDay {
+func (p *parser) timeOfDayFromStrings(hours, minutes string) MinutesSinceMidnight {
 	h := p.parseUint(hours)
 	m := p.parseUint(minutes)
-	return TimeOfDay(h*60 + m)
+	return MinutesSinceMidnight(h*60 + m)
 }
 
 func (p *parser) groupTypeFromString(s string) (GroupType, error) {
@@ -605,10 +605,10 @@ func (p *parser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
 	if m := eventRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
 		ev := Event{
-			Day:       p.weekDayFromHebrewLetter(m[6]),
-			StartHour: p.timeOfDayFromStrings(m[2], m[3]),
-			EndHour:   p.timeOfDayFromStrings(m[4], m[5]),
-			Location:  p.parseLocation(m[1]),
+			Day:            p.weekDayFromHebrewLetter(m[6]),
+			StartMinute:    p.timeOfDayFromStrings(m[2], m[3]),
+			EndStartMinute: p.timeOfDayFromStrings(m[4], m[5]),
+			Location:       p.parseLocation(m[1]),
 		}
 
 		groupType, err := p.groupTypeFromString(m[7])

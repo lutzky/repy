@@ -24,7 +24,7 @@ func newParserFromString(s string) *parser {
 
 func TestTimeOfDayToString(t *testing.T) {
 	testCases := []struct {
-		x    TimeOfDay
+		x    MinutesSinceMidnight
 		want string
 	}{
 		{0, "00:00"},
@@ -43,7 +43,7 @@ func TestTimeOfDayToString(t *testing.T) {
 func TestTimeOfDayFromString(t *testing.T) {
 	testCases := []struct {
 		x    string
-		want TimeOfDay
+		want MinutesSinceMidnight
 	}{
 		{"6.30", 6*60 + 30},
 		{" 6.30", 6*60 + 30},

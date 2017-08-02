@@ -29,8 +29,8 @@
         {
           "day": 2,
           "location": "טאוב 9",
-          "startHour": 630,
-          "endHour": 750
+          "startMinute": 630,
+          "endMinute": 750
         }
       ],
       "type": "lecture"
@@ -42,8 +42,8 @@
         {
           "day": 2,
           "location": "טאוב 5",
-          "startHour": 1050,
-          "endHour": 1110
+          "startMinute": 1050,
+          "endMinute": 1110
         }
       ],
       "type": "tutorial"
@@ -55,8 +55,8 @@
         {
           "day": 3,
           "location": "טאוב 6",
-          "startHour": 930,
-          "endHour": 990
+          "startMinute": 930,
+          "endMinute": 990
         }
       ],
       "type": "tutorial"
