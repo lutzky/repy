@@ -7,3 +7,6 @@ handlers:
 - url: /view
   static_files: view/index.html
   upload: view/index.html
+- url: /
+  static_files: view/index.html
+  upload: view/index.html

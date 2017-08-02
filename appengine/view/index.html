@@ -5,18 +5,18 @@
 <body>
   <h1>REPY Viewer</h1>
   <script>
+    jsonUrl = "https://storage.googleapis.com/dev-machine-152620.appspot.com/latest.json";
     function loadCatalog() {
       var main = document.getElementById("maindiv");
       main.innerHTML = "Loading...";
       var xmlhttp = new XMLHttpRequest();
-      var url = "https://storage.googleapis.com/dev-machine-152620.appspot.com/latest.json";
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var catalog = JSON.parse(this.responseText);
           showCatalog(catalog);
         }
       };
-      xmlhttp.open("GET", url, true);
+      xmlhttp.open("GET", jsonUrl, true);
       console.info("sending xhr request");
       xmlhttp.send();
     }
@@ -43,11 +43,14 @@
   </script>
   <div id="topdiv">
     <p>The catalog is coming from REPY downloaded from the Technion, available
-    as JSON <a href="/">here</a> (please do not hammer that nor this page, there
-    is no caching yet). The parsing code is available at <a
-               href="http://github.com/lutzky/repy">github.com/lutzky/repy</a>
+    as JSON <a id="jsonLink" href="/">here</a>. This is cached and updated
+    hourly.  The parsing code is available at <a
+                             href="http://github.com/lutzky/repy">github.com/lutzky/repy</a>
     </p>
   </div>
+  <script>
+    document.getElementById("jsonLink").href = jsonUrl;
+  </script>
   <div id="maindiv">
     <p><a onclick="loadCatalog()" href="#">Load catalog</a></p>
   </div>
