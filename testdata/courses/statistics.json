@@ -1,39 +1,39 @@
 {
-  "ID": 14003,
-  "Name": "סטטיסטיקה",
-  "AcademicPoints": 3,
-  "LecturerInCharge": "ב.פישביין",
-  "WeeklyHours": {
-    "Lecture": 2,
-    "Tutorial": 2
+  "id": 14003,
+  "name": "סטטיסטיקה",
+  "academicPoints": 3,
+  "lecturerInCharge": "ב.פישביין",
+  "weeklyHours": {
+    "lecture": 2,
+    "tutorial": 2
   },
-  "TestDates": [
+  "testDates": [
     {
-      "Year": 2016,
-      "Month": 1,
-      "Day": 28
+      "year": 2016,
+      "month": 1,
+      "day": 28
     },
     {
-      "Year": 2016,
-      "Month": 2,
-      "Day": 26
+      "year": 2016,
+      "month": 2,
+      "day": 26
     }
   ],
-  "Groups": [
+  "groups": [
     {
-      "ID": 10,
-      "Teachers": [
+      "id": 10,
+      "teachers": [
         "פרופ/מ ב.פישביין"
       ],
-      "Events": [
+      "events": [
         {
-          "Day": 2,
-          "Location": "רבין 206",
-          "StartHour": 870,
-          "EndHour": 990
+          "day": 2,
+          "location": "רבין 206",
+          "startHour": 870,
+          "endHour": 990
         }
       ],
-      "Type": "lecture"
+      "type": "lecture"
     }
   ]
 }

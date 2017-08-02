@@ -1,65 +1,65 @@
 {
-  "ID": 234322,
-  "Name": "מערכות אחסון מידע",
-  "AcademicPoints": 3,
-  "LecturerInCharge": "",
-  "WeeklyHours": {
-    "Lecture": 2,
-    "Tutorial": 1
+  "id": 234322,
+  "name": "מערכות אחסון מידע",
+  "academicPoints": 3,
+  "lecturerInCharge": "",
+  "weeklyHours": {
+    "lecture": 2,
+    "tutorial": 1
   },
-  "TestDates": [
+  "testDates": [
     {
-      "Year": 2016,
-      "Month": 2,
-      "Day": 11
+      "year": 2016,
+      "month": 2,
+      "day": 11
     },
     {
-      "Year": 2016,
-      "Month": 3,
-      "Day": 8
+      "year": 2016,
+      "month": 3,
+      "day": 8
     }
   ],
-  "Groups": [
+  "groups": [
     {
-      "ID": 10,
-      "Teachers": [
+      "id": 10,
+      "teachers": [
         "ד\"ר ג.ידגר"
       ],
-      "Events": [
+      "events": [
         {
-          "Day": 2,
-          "Location": "טאוב 9",
-          "StartHour": 630,
-          "EndHour": 750
+          "day": 2,
+          "location": "טאוב 9",
+          "startHour": 630,
+          "endHour": 750
         }
       ],
-      "Type": "lecture"
+      "type": "lecture"
     },
     {
-      "ID": 11,
-      "Teachers": [],
-      "Events": [
+      "id": 11,
+      "teachers": [],
+      "events": [
         {
-          "Day": 2,
-          "Location": "טאוב 5",
-          "StartHour": 1050,
-          "EndHour": 1110
+          "day": 2,
+          "location": "טאוב 5",
+          "startHour": 1050,
+          "endHour": 1110
         }
       ],
-      "Type": "tutorial"
+      "type": "tutorial"
     },
     {
-      "ID": 12,
-      "Teachers": [],
-      "Events": [
+      "id": 12,
+      "teachers": [],
+      "events": [
         {
-          "Day": 3,
-          "Location": "טאוב 6",
-          "StartHour": 930,
-          "EndHour": 990
+          "day": 3,
+          "location": "טאוב 6",
+          "startHour": 930,
+          "endHour": 990
         }
       ],
-      "Type": "tutorial"
+      "type": "tutorial"
     }
   ]
 }
