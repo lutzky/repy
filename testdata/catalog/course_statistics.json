@@ -1,0 +1,46 @@
+[
+  {
+    "name": "פקולטה שקרית",
+    "courses": [
+      {
+        "id": 14003,
+        "name": "סטטיסטיקה",
+        "academicPoints": 3,
+        "lecturerInCharge": "ב.פישביין",
+        "weeklyHours": {
+          "lecture": 2,
+          "tutorial": 2
+        },
+        "testDates": [
+          {
+            "year": 2016,
+            "month": 1,
+            "day": 28
+          },
+          {
+            "year": 2016,
+            "month": 2,
+            "day": 26
+          }
+        ],
+        "groups": [
+          {
+            "id": 10,
+            "teachers": [
+              "פרופ/מ ב.פישביין"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "רבין 206",
+                "startMinute": 870,
+                "endMinute": 990
+              }
+            ],
+            "type": "lecture"
+          }
+        ]
+      }
+    ]
+  }
+]

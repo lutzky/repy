@@ -1,10 +1,8 @@
 package repy
 
 import (
-	"bufio"
-	"bytes"
 	"encoding/json"
-	"fmt"
+	"flag"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -14,13 +12,7 @@ import (
 	"github.com/kylelemons/godebug/pretty"
 )
 
-func newParserFromString(s string) *parser {
-	return &parser{
-		course:  &Course{},
-		scanner: bufio.NewScanner(bytes.NewBufferString(s)),
-		logger:  GLogger{},
-	}
-}
+var update = flag.Bool("update", false, "update golden files in testdata")
 
 func TestTimeOfDayToString(t *testing.T) {
 	testCases := []struct {
@@ -78,65 +70,12 @@ func TestParseLocation(t *testing.T) {
 	}
 }
 
-func TestParseCourse(t *testing.T) {
-	glob := "testdata/courses/*.repy"
-	testCases, err := filepath.Glob(glob)
-	if err != nil {
-		t.Fatalf("Failed to glob %q for course REPYs: %v", glob, err)
-	}
-	if len(testCases) == 0 {
-		t.Fatalf("Got 0 testcases in %q", glob)
-	}
-
-	for _, fullPathRepy := range testCases {
-		t.Run(filepath.Base(fullPathRepy), func(t *testing.T) {
-			fullPathJson := strings.TrimSuffix(fullPathRepy, ".repy") + ".json"
-
-			repyBytes, err := ioutil.ReadFile(fullPathRepy)
-			if err != nil {
-				t.Fatalf("Couldn't open %q: %v", fullPathRepy, err)
-			}
-
-			jsonBytes, err := ioutil.ReadFile(fullPathJson)
-			if err != nil {
-				t.Fatalf("Couldn't open %q: %v", fullPathJson, err)
-			}
-
-			var want Course
-			if err := json.Unmarshal(jsonBytes, &want); err != nil {
-				t.Fatalf("Couldn't unmarshal %q: %v", fullPathJson, err)
-			}
-
-			cp := newParserFromString(strings.TrimSpace(string(repyBytes)))
-
-			cp.scan() // parseCourse() expects one line to be scanned already
-
-			got, err := cp.parseCourse()
-
-			if err != nil {
-				t.Fatalf("Error parsing course: %v", err)
-			} else if got == nil {
-				t.Fatalf("Got a nil course")
-			} else if diff := pretty.Compare(want, *got); diff != "" {
-				var gotJSON string
-				b, err := json.MarshalIndent(*got, "", "  ")
-				if err == nil {
-					gotJSON = string(b)
-				} else {
-					gotJSON = fmt.Sprintf("Couldn't emit JSON: %v", err)
-				}
-
-				t.Fatalf("Mismatch parsing course. Diff -want +got:\n%s\nFull 'got' in JSON:\n%s", diff, gotJSON)
-			}
-		})
-	}
-}
-
-func TestParseCatalog(t *testing.T) {
+func TestParse(t *testing.T) {
+	// TODO(lutzky): mv testdata/catalog/* testdata/
 	glob := "testdata/catalog/*.repy"
 	testCases, err := filepath.Glob(glob)
 	if err != nil {
-		t.Fatalf("Failed to glob %q for catalog REPYs: %v", glob, err)
+		t.Fatalf("Failed to glob %q for course REPYs: %v", glob, err)
 	}
 	if len(testCases) == 0 {
 		t.Fatalf("Got 0 testcases in %q", glob)
@@ -151,6 +90,24 @@ func TestParseCatalog(t *testing.T) {
 				t.Fatalf("Couldn't open %q: %v", fullPathRepy, err)
 			}
 
+			got, err := ReadFile(repyFile, GLogger{})
+
+			if err != nil {
+				t.Fatalf("Error parsing course: %v", err)
+			} else if got == nil {
+				t.Fatalf("Got a nil course")
+			}
+
+			if *update {
+				jsonGolden, err := json.MarshalIndent(got, "", "  ")
+				if err != nil {
+					t.Fatalf("Failed to marshal golden JSON: %v", err)
+				}
+				if err := ioutil.WriteFile(fullPathJson, jsonGolden, 0644); err != nil {
+					t.Fatalf("Failed to write golden JSON file %q: %v", fullPathJson, err)
+				}
+			}
+
 			jsonBytes, err := ioutil.ReadFile(fullPathJson)
 			if err != nil {
 				t.Fatalf("Couldn't open %q: %v", fullPathJson, err)
@@ -161,22 +118,12 @@ func TestParseCatalog(t *testing.T) {
 				t.Fatalf("Couldn't unmarshal %q: %v", fullPathJson, err)
 			}
 
-			got, err := ReadFile(repyFile, GLogger{})
-
-			if err != nil {
-				t.Fatalf("Error parsing course: %v", err)
-			} else if got == nil {
-				t.Fatalf("Got a nil course")
-			} else if diff := pretty.Compare(want, *got); diff != "" {
-				var gotJSON string
-				b, err := json.MarshalIndent(*got, "", "  ")
-				if err == nil {
-					gotJSON = string(b)
+			if diff := pretty.Compare(want, *got); diff != "" {
+				if len(diff) > 2048 {
+					t.Fatal("Parse mismatch, but diff is too long. Use go test -update and git diff.")
 				} else {
-					gotJSON = fmt.Sprintf("Couldn't emit JSON: %v", err)
+					t.Fatalf("Mismatch parsing. Diff -want +got:\n%s\n", diff)
 				}
-
-				t.Fatalf("Mismatch parsing course. Diff -want +got:\n%s\nFull 'got' in JSON:\n%s", diff, gotJSON)
 			}
 		})
 	}

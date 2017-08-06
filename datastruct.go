@@ -21,10 +21,10 @@ type Faculty struct {
 // WeeklyHours represents the amount of weekly hours, by type, that a course
 // has.
 type WeeklyHours struct {
-	Lecture  uint `json:"lecture"`
-	Tutorial uint `json:"tutorial"`
-	Lab      uint `json:"lab"`
-	Project  uint `json:"project"`
+	Lecture  uint `json:"lecture,omitempty"`
+	Tutorial uint `json:"tutorial,omitempty"`
+	Lab      uint `json:"lab,omitempty"`
+	Project  uint `json:"project,omitempty"`
 }
 
 // Course represents information about a technion course.

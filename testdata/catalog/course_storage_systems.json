@@ -1,0 +1,72 @@
+[
+  {
+    "name": "פקולטה שקרית",
+    "courses": [
+      {
+        "id": 234322,
+        "name": "מערכות אחסון מידע",
+        "academicPoints": 3,
+        "lecturerInCharge": "",
+        "weeklyHours": {
+          "lecture": 2,
+          "tutorial": 1
+        },
+        "testDates": [
+          {
+            "year": 2016,
+            "month": 2,
+            "day": 11
+          },
+          {
+            "year": 2016,
+            "month": 3,
+            "day": 8
+          }
+        ],
+        "groups": [
+          {
+            "id": 10,
+            "teachers": [
+              "ד\"ר ג.ידגר"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "טאוב 9",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "טאוב 5",
+                "startMinute": 1050,
+                "endMinute": 1110
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "טאוב 6",
+                "startMinute": 930,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
+          }
+        ]
+      }
+    ]
+  }
+]
