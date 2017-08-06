@@ -71,8 +71,7 @@ func TestParseLocation(t *testing.T) {
 }
 
 func TestParse(t *testing.T) {
-	// TODO(lutzky): mv testdata/catalog/* testdata/
-	glob := "testdata/catalog/*.repy"
+	glob := "testdata/*.repy"
 	testCases, err := filepath.Glob(glob)
 	if err != nil {
 		t.Fatalf("Failed to glob %q for course REPYs: %v", glob, err)
