@@ -90,7 +90,7 @@
             "type": "tutorial"
           },
           {
-            "id": 15,
+            "id": 20,
             "teachers": [],
             "events": [
               {
@@ -142,7 +142,7 @@
             "type": "tutorial"
           },
           {
-            "id": 24,
+            "id": 30,
             "teachers": [
               "פרופ/מ ר.בנד"
             ],
