@@ -651,6 +651,9 @@ func (p *parser) parseGroups() error {
 			if err := p.expectLineAndAdvance(groupSep2); err != nil {
 				return errors.Wrap(err, "didn't find 2nd expected group separator")
 			}
+			if p.groupID > 10 {
+				p.groupID = (p.groupID/10)*10 + 10
+			}
 		} else if p.text() == courseSep {
 			p.scan()
 			return nil
