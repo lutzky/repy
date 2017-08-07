@@ -1,0 +1,215 @@
+[
+  {
+    "name": "פקולטה שקרית",
+    "courses": [
+      {
+        "id": 104166,
+        "name": "אלגברה א'",
+        "academicPoints": 5.5,
+        "lecturerInCharge": "",
+        "weeklyHours": {
+          "lecture": 4,
+          "tutorial": 3
+        },
+        "testDates": [
+          {
+            "year": 2018,
+            "month": 2,
+            "day": 9
+          },
+          {
+            "year": 2018,
+            "month": 3,
+            "day": 8
+          }
+        ],
+        "groups": [
+          {
+            "id": 10,
+            "teachers": [],
+            "events": [
+              {
+                "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 13,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 14,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 15,
+            "teachers": [],
+            "events": [
+              {
+                "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 21,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 22,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 23,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 24,
+            "teachers": [
+              "פרופ/מ ר.בנד"
+            ],
+            "events": [
+              {
+                "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 31,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 930,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 32,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 33,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 34,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
+              }
+            ],
+            "type": "tutorial"
+          }
+        ]
+      }
+    ]
+  }
+]
