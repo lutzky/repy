@@ -404,7 +404,11 @@ courses:
 			faculty.Courses = append(faculty.Courses, *course)
 			// Keep scanning
 		default:
-			return errors.Wrapf(err, "failed to scan a course in faculty %s", faculty.Name)
+			p.errorf("failed to scan a course in faculty %s: %v", faculty.Name, err)
+			p.warningf("skipping to next course")
+			for p.text() != courseSep {
+				p.scan()
+			}
 		}
 	}
 
