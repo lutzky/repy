@@ -316,12 +316,24 @@ func (p *parser) parseCourseHeadInfo() error {
 	}
 }
 
-var facultyNameRegexp = regexp.MustCompile(`\| *([א-ת ]+) *- *תועש תכרעמ *\|`)
+var (
+	facultyNameRegexp     = regexp.MustCompile(`\| *([א-ת ]+) *- *תועש תכרעמ *\|`)
+	facultySemesterRegexp = regexp.MustCompile(`\| *([א-ת" ]+) +רטסמס *\|`)
+)
 
 func (p *parser) parseFacultyName() (string, error) {
 	m := facultyNameRegexp.FindStringSubmatch(p.text())
 	if m == nil {
 		return "", p.errorf("Line %q doesn't match faculty name regex `%s`", p.text(), facultyNameRegexp)
+	}
+	p.scan()
+	return Reverse(strings.TrimSpace(m[1])), nil
+}
+
+func (p *parser) parseFacultySemester() (string, error) {
+	m := facultySemesterRegexp.FindStringSubmatch(p.text())
+	if m == nil {
+		return "", p.errorf("Line %q doesn't match faculty semester regex `%s`", p.text(), facultySemesterRegexp)
 	}
 	p.scan()
 	return Reverse(strings.TrimSpace(m[1])), nil
@@ -373,10 +385,10 @@ func (p *parser) parseFaculty(faculty *Faculty) error {
 		if faculty.Name, err = p.parseFacultyName(); err != nil {
 			return errors.Wrap(err, "failed to parse faculty name")
 		}
+		if faculty.Semester, err = p.parseFacultySemester(); err != nil {
+			return errors.Wrap(err, "failed to parse faculty semester")
+		}
 	}
-
-	// Throw away semester line
-	p.scan()
 
 	if err := p.expectLineAndAdvance(facultySep); err != nil {
 		return errors.Wrap(err, "didn't find 2nd faculty separator line in faculty")
@@ -399,7 +411,9 @@ courses:
 	return nil
 }
 
-const sportsFacultyName = "חינוך גופני"
+const sportsFacultyName = "טרופס תועוצקמ"
+
+var sportsFacultySemesterRegexp = regexp.MustCompile(`\| *([א-ת" ]+) +רטסמס *- *טרופס תועוצקמ *\|`)
 
 func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 	p.infof("Started scanning sports faculty")
@@ -408,8 +422,12 @@ func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 		return errors.Wrap(err, "didn't find 1nd faculty separate line in sports faculty")
 	}
 
-	// Skip faculty name line
+	m := sportsFacultySemesterRegexp.FindStringSubmatch(p.text())
+	if m == nil {
+		return p.errorf("Line %q doesn't match sports semester regex `%s`", p.text(), sportsFacultySemesterRegexp)
+	}
 	p.scan()
+	faculty.Semester = Reverse(strings.TrimSpace(m[1]))
 	faculty.Name = sportsFacultyName
 
 	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {

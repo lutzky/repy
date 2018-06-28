@@ -16,6 +16,10 @@ type Catalog []Faculty
 type Faculty struct {
 	Name    string   `json:"name"`
 	Courses []Course `json:"courses"`
+
+	// Semester is specified per-faculty in the REPY file. Presumably this is for
+	// cases when not all faculties are up-to-date.
+	Semester string `json:"semester"`
 }
 
 // WeeklyHours represents the amount of weekly hours, by type, that a course

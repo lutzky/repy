@@ -7287,7 +7287,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסת מכונות",
@@ -10888,7 +10889,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסת חשמל",
@@ -14691,7 +14693,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסה כימית",
@@ -15912,7 +15915,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסת ביוטכנולוגיה ומזון",
@@ -16832,7 +16836,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסת אוירונוטיקה וחלל",
@@ -18791,7 +18796,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסת תעשיה וניהול",
@@ -23421,7 +23427,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "מתמטיקה",
@@ -28295,7 +28302,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "פיסיקה",
@@ -30730,7 +30738,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "כימיה",
@@ -32703,7 +32712,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "ביולוגיה",
@@ -33595,7 +33605,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "ארכיטקטורה ובינוי ערים",
@@ -36589,7 +36600,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "חינוך למדע וטכנולוגיה",
@@ -37539,7 +37551,8 @@
           }
         ]
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "מדעי המחשב",
@@ -42166,7 +42179,8 @@
           }
         ]
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "רפואה",
@@ -43854,7 +43868,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "מדע והנדסה של חומרים",
@@ -44729,7 +44744,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "לימודים הומניסטיים ואמנויות",
@@ -45915,7 +45931,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "הנדסה ביורפואית",
@@ -46670,7 +46687,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "ננומדעים וננוטכנולוגיה",
@@ -46729,7 +46747,8 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
     "name": "אנרגיה",
@@ -46812,10 +46831,11 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   },
   {
-    "name": "חינוך גופני",
+    "name": "טרופס תועוצקמ",
     "courses": [
       {
         "id": 394800,
@@ -46927,6 +46947,7 @@
         "testDates": null,
         "groups": null
       }
-    ]
+    ],
+    "semester": "חורף תשע\"ו"
   }
 ]
