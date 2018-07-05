@@ -75,17 +75,21 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 	}
 
 	destinations := []struct {
-		filename string
-		data     []byte
+		filename    string
+		contentType string
+		data        []byte
 	}{
-		{fmt.Sprintf("%x.repy", rs.sha1sum), rs.data},
-		{fmt.Sprintf("%x.txt", rs.sha1sum), repyBytesISO8859_8},
-		{"latest.repy", rs.data},
+		{fmt.Sprintf("%x.repy", rs.sha1sum), "text/plain; charset=cp862", rs.data},
+		{fmt.Sprintf("%x.txt", rs.sha1sum), "text/plain; charset=iso8859-8", repyBytesISO8859_8},
+		{"latest.repy", "text/plain; charset=cp862", rs.data},
 	}
 
 	for _, dest := range destinations {
 		if err := rs.copyToFile(dest.filename, bytes.NewReader(dest.data)); err != nil {
 			return errors.Wrapf(err, "failed to write %q", dest.filename)
+		}
+		if err := rs.setContentType(dest.filename, dest.contentType); err != nil {
+			return err
 		}
 	}
 
@@ -172,4 +176,13 @@ func (rs *repyStorer) makePublicObject(filename string) (io.Writer, func()) {
 		}
 	}
 	return w, closer
+}
+
+func (rs *repyStorer) setContentType(filename string, contentType string) error {
+	obj := rs.bucket.Object(filename)
+	if _, err := obj.Update(rs.ctx, storage.ObjectAttrsToUpdate{ContentType: contentType}); err != nil {
+		return errors.Wrapf(err, "failed to set content-type for %q to %q", filename, contentType)
+	}
+
+	return nil
 }
