@@ -19,8 +19,8 @@ import (
 	"google.golang.org/appengine/urlfetch"
 
 	"github.com/lutzky/repy"
-	"github.com/lutzky/repy/appengine/writerlogger"
 	"github.com/lutzky/repy/recode"
+	"github.com/lutzky/repy/writerlogger"
 	"github.com/pkg/errors"
 )
 
