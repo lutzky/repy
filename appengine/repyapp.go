@@ -81,6 +81,7 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 	}{
 		{fmt.Sprintf("%x.repy", rs.sha1sum), "text/plain; charset=cp862", rs.data},
 		{fmt.Sprintf("%x.txt", rs.sha1sum), "text/plain; charset=iso8859-8", repyBytesISO8859_8},
+		{"latest.txt", "text/plain; charset=iso8859-8", repyBytesISO8859_8},
 		{"latest.repy", "text/plain; charset=cp862", rs.data},
 	}
 
