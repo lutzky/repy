@@ -74,12 +74,21 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 		return errors.Wrap(err, "failed to convert REPY to ISO8859-8")
 	}
 
+	baseFileName := fmt.Sprintf("%x.repy", rs.sha1sum)
+
+	if exists, err := rs.fileExists(baseFileName); err != nil {
+		return errors.Wrapf(err, "Coudln't check if %q already exists", baseFileName)
+	} else if exists {
+		log.Infof(rs.ctx, "%q already exists", baseFileName)
+		return nil
+	}
+
 	destinations := []struct {
 		filename    string
 		contentType string
 		data        []byte
 	}{
-		{fmt.Sprintf("%x.repy", rs.sha1sum), "text/plain; charset=cp862", rs.data},
+		{baseFileName, "text/plain; charset=cp862", rs.data},
 		{fmt.Sprintf("%x.txt", rs.sha1sum), "text/plain; charset=iso8859-8", repyBytesISO8859_8},
 		{"latest.txt", "text/plain; charset=iso8859-8", repyBytesISO8859_8},
 		{"latest.repy", "text/plain; charset=cp862", rs.data},
@@ -186,4 +195,17 @@ func (rs *repyStorer) setContentType(filename string, contentType string) error 
 	}
 
 	return nil
+}
+
+func (rs *repyStorer) fileExists(filename string) (bool, error) {
+	obj := rs.bucket.Object(filename)
+	_, err := obj.Attrs(rs.ctx)
+	switch err {
+	case nil:
+		return true, nil
+	case storage.ErrObjectNotExist:
+		return false, nil
+	default:
+		return false, errors.Wrapf(err, "couldn't check if %q exists", filename)
+	}
 }
