@@ -76,25 +76,32 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 
 	baseFileName := fmt.Sprintf("%x.repy", rs.sha1sum)
 
+	isMissing := true
+
 	if exists, err := rs.fileExists(baseFileName); err != nil {
 		return errors.Wrapf(err, "Coudln't check if %q already exists", baseFileName)
 	} else if exists {
 		log.Infof(rs.ctx, "%q already exists", baseFileName)
-		return nil
+		isMissing = false
 	}
 
 	destinations := []struct {
-		filename    string
-		contentType string
-		data        []byte
+		filename      string
+		contentType   string
+		data          []byte
+		onlyIfMissing bool
 	}{
-		{baseFileName, "text/plain; charset=cp862", rs.data},
-		{fmt.Sprintf("%x.txt", rs.sha1sum), "text/plain; charset=iso8859-8", repyBytesISO8859_8},
-		{"latest.txt", "text/plain; charset=iso8859-8", repyBytesISO8859_8},
-		{"latest.repy", "text/plain; charset=cp862", rs.data},
+		{baseFileName, "text/plain; charset=cp862", rs.data, true},
+		{fmt.Sprintf("%x.txt", rs.sha1sum), "text/plain; charset=iso8859-8", repyBytesISO8859_8, true},
+		{"latest.txt", "text/plain; charset=iso8859-8", repyBytesISO8859_8, false},
+		{"latest.repy", "text/plain; charset=cp862", rs.data, false},
 	}
 
 	for _, dest := range destinations {
+		if dest.onlyIfMissing && !isMissing {
+			continue
+		}
+		log.Infof(rs.ctx, "writing %q with content-type %q", dest.filename, dest.contentType)
 		if err := rs.copyToFile(dest.filename, bytes.NewReader(dest.data)); err != nil {
 			return errors.Wrapf(err, "failed to write %q", dest.filename)
 		}
