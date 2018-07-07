@@ -39,13 +39,13 @@
         Parsed: "latest.json",
         Iso8859_8: "latest.txt",
         Original: "latest.repy",
+        Sha1Sum: "latest",
         TimeStamp: "Latest",
       });
       let ul = document.createElement('ul');
       catalog.Entries.forEach(function(entry) {
         let li = document.createElement('li');
-        li.innerText = entry.TimeStamp;
-        li.title = 'SHA1SUM: ' + entry.Sha1Sum;
+        li.innerText = entry.TimeStamp + ' (' + entry.Sha1Sum + ')';
         ul.appendChild(li);
 
         let subUl = document.createElement('ul');
