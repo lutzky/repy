@@ -6,7 +6,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
+	"regexp"
+	"strings"
+	"sync"
 	"time"
 
 	"cloud.google.com/go/storage"
@@ -15,6 +19,7 @@ import (
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/text/encoding/charmap"
 
+	"google.golang.org/api/iterator"
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/file"
 	"google.golang.org/appengine/log"
@@ -181,6 +186,14 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Infof(ctx, "Successfully parsed REPY")
+
+	log.Infof(ctx, "Writing catalog.json")
+
+	if err := rs.writeCatalog(); err != nil {
+		httpErrorWrap(ctx, w, err, "Failed to write catalog")
+		return
+	}
+
 	fmt.Fprintf(w, "Success")
 }
 
@@ -243,4 +256,142 @@ func (rs *repyStorer) writeTimeStamp(filename string, t time.Time) error {
 		return errors.Wrapf(err, "couldn't write timestamp %q", filename)
 	}
 	return nil
+}
+
+type timedSum struct {
+	sha1sum string
+	t       time.Time
+}
+
+// Catalog is the format for catalog.json
+type Catalog struct {
+	Entries []CatalogEntry
+}
+
+// CatalogEntry is an entry for Catalog
+type CatalogEntry struct {
+	Sha1Sum   string
+	Original  string
+	Iso8859_8 string
+	Parsed    string
+	TimeStamp time.Time
+}
+
+func (rs *repyStorer) writeCatalog() error {
+	ts, err := rs.getSumsAndTimestamps()
+	if err != nil {
+		return errors.Wrap(err, "failed to get timestamps and sums")
+	}
+
+	catalog := Catalog{Entries: []CatalogEntry{}}
+
+	for _, tss := range ts {
+		catalog.Entries = append(catalog.Entries, CatalogEntry{
+			Sha1Sum:   tss.sha1sum,
+			TimeStamp: tss.t,
+			Iso8859_8: tss.sha1sum + ".txt",
+			Original:  tss.sha1sum + ".repy",
+			Parsed:    tss.sha1sum + ".json",
+		})
+	}
+
+	jsonBytes, err := json.Marshal(catalog)
+	if err != nil {
+		return errors.Wrap(err, "failed to format JSON")
+	}
+
+	if err := rs.copyToFile("catalog.json", bytes.NewReader(jsonBytes)); err != nil {
+		return errors.Wrap(err, "failed to write JSON to catalog.json")
+	}
+
+	return nil
+}
+
+func (rs *repyStorer) getSumsAndTimestamps() ([]timedSum, error) {
+	sums, err := rs.getExistingSHA1Sums()
+	if err != nil {
+		return nil, errors.Wrap(err, "failed to list existing REPY data")
+	}
+
+	var wg sync.WaitGroup
+	ch := make(chan timedSum)
+
+	for _, sum := range sums {
+		sum := sum
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			ts, err := rs.getTimeStampForSHA1Sum(sum)
+			if err != nil {
+				log.Errorf(rs.ctx, "Couldn't get timeestamp for %q: %v", sum, err)
+			}
+			ch <- timedSum{sum, ts}
+		}()
+	}
+
+	results := []timedSum{}
+
+	var wg2 sync.WaitGroup
+
+	wg2.Add(1)
+	go func() {
+		for ts := range ch {
+			results = append(results, ts)
+		}
+		wg2.Done()
+	}()
+
+	wg.Wait()
+	close(ch)
+
+	wg2.Wait()
+
+	return results, nil
+}
+
+var repyFileRegexp = regexp.MustCompile(`[0-9a-f]{20}.repy`)
+
+func (rs *repyStorer) getExistingSHA1Sums() ([]string, error) {
+	result := []string{}
+
+	it := rs.bucket.Objects(rs.ctx, nil)
+	for {
+		objAttrs, err := it.Next()
+		if err == iterator.Done {
+			break
+		}
+		if err != nil {
+			return nil, errors.Wrap(err, "Problem iterating")
+		}
+
+		if repyFileRegexp.MatchString(objAttrs.Name) {
+			sha1sum := strings.TrimSuffix(objAttrs.Name, ".repy")
+			result = append(result, sha1sum)
+		}
+	}
+
+	return result, nil
+}
+
+func (rs *repyStorer) getTimeStampForSHA1Sum(sha1sum string) (time.Time, error) {
+	filename := sha1sum + ".timestamp"
+	obj := rs.bucket.Object(filename)
+	r, err := obj.NewReader(rs.ctx)
+	if err != nil {
+		return time.Time{}, errors.Wrapf(err, "couldn't open %q", filename)
+	}
+
+	data, err := ioutil.ReadAll(r)
+	if err != nil {
+		return time.Time{}, errors.Wrapf(err, "couldn't read from %q", filename)
+	}
+
+	timestamp := strings.TrimSpace(string(data))
+
+	t, err := time.Parse(time.UnixDate, timestamp)
+	if err != nil {
+		return time.Time{}, errors.Wrapf(err, "couldn't parse time %q", timestamp)
+	}
+
+	return t, nil
 }
