@@ -1,8 +1,11 @@
 language: go
 sudo: false
 go:
-  - tip
+  - 1.8
 before_install:
   - go get github.com/mattn/goveralls
 script:
+  - go get -t ./...
+  - go test ./...
+  - go vet ./...
   - $HOME/gopath/bin/goveralls -service=travis-ci
