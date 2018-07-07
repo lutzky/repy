@@ -24,7 +24,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func DownloadREPYZip(ctx context.Context) ([]byte, error) {
+func downloadREPYZip(ctx context.Context) ([]byte, error) {
 	resp, err := urlfetch.Client(ctx).Get(repy.RepFileURL)
 	if err != nil {
 		return nil, errors.Wrapf(err, "failed to download %q", repy.RepFileURL)
@@ -117,7 +117,7 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 	parseLogWriter, parseLogCloser := rs.makePublicObject("latest.parse.log")
 	defer parseLogCloser()
 
-	catalog, err := repy.ReadFile(bytes.NewReader(rs.data), writerlogger.Logger{parseLogWriter})
+	catalog, err := repy.ReadFile(bytes.NewReader(rs.data), writerlogger.Logger{W: parseLogWriter})
 	if err != nil {
 		fmt.Fprintf(parseLogWriter, "Read returned error: %v\n", err)
 		return errors.Wrap(err, "failed to read catalog")
@@ -139,7 +139,7 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 
-	repyBytes, err := DownloadREPYZip(ctx)
+	repyBytes, err := downloadREPYZip(ctx)
 	if err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to download REPY zip")
 		return
