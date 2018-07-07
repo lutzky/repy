@@ -151,6 +151,7 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 		jsonWriter, jsonCloser := rs.makePublicObject(filename)
 		defer jsonCloser()
 		enc := json.NewEncoder(jsonWriter)
+		enc.SetIndent("", "  ")
 
 		if err := enc.Encode(catalog); err != nil {
 			return errors.Wrapf(err, "failed to write %q", filename)
