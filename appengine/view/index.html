@@ -1,57 +1,70 @@
 <html>
 <head>
-  <title>REPY Viewer</title>
+  <title>REPY Catalog</title>
 </head>
 <body>
-  <h1>REPY Viewer</h1>
+  <h1>REPY Catalog</h1>
   <script>
-    jsonUrl = "https://storage.googleapis.com/dev-machine-152620.appspot.com/latest.json";
+    baseUrl = "https://storage.googleapis.com/repy-176217.appspot.com/";
     function loadCatalog() {
-      var main = document.getElementById("maindiv");
+      let main = document.getElementById("maindiv");
       main.innerHTML = "Loading...";
-      var xmlhttp = new XMLHttpRequest();
+      let xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          var catalog = JSON.parse(this.responseText);
+          let catalog = JSON.parse(this.responseText);
           showCatalog(catalog);
         }
       };
-      xmlhttp.open("GET", jsonUrl, true);
+      xmlhttp.open("GET", baseUrl + 'catalog.json', true);
       console.info("sending xhr request");
       xmlhttp.send();
     }
 
+    function linkLi(title, href) {
+      let li = document.createElement('li');
+      let a = document.createElement('a');
+      a.href = href;
+      a.textContent = title;
+      li.appendChild(a);
+      return li;
+    }
+
     function showCatalog(catalog) {
-      var main = document.getElementById("maindiv");
+      let main = document.getElementById("maindiv");
       main.innerHTML = "";
-      main.style = "direction: rtl";
-      for (var i = 0; i < catalog.length; i++) {
-        var faculty = catalog[i];
-        var h = document.createElement("h2");
-        h.innerText = faculty.Name;
-        main.appendChild(h);
-        var ul = document.createElement("ul");
-        main.appendChild(ul);
-        for (var j = 0; j < faculty.Courses.length; j++) {
-          var course = faculty.Courses[j];
-          var li = document.createElement("li");
-          li.innerText = course.ID + " " + course.Name;
-          ul.appendChild(li);
-        }
-      }
+      console.info(catalog);
+      catalog.Entries.sort((a,b) => a.Timestamp < b.Timestamp);
+      catalog.Entries.unshift({
+        Parsed: "latest.json",
+        Iso8859_8: "latest.txt",
+        Original: "latest.repy",
+        TimeStamp: "Latest",
+      });
+      let ul = document.createElement('ul');
+      catalog.Entries.forEach(function(entry) {
+        let li = document.createElement('li');
+        li.innerText = entry.TimeStamp;
+        li.title = 'SHA1SUM: ' + entry.Sha1Sum;
+        ul.appendChild(li);
+
+        let subUl = document.createElement('ul');
+        subUl.appendChild(linkLi('JSON' , baseUrl + entry.Parsed));
+        subUl.appendChild(linkLi('TXT iso8859-8' , baseUrl + entry.Iso8859_8));
+        subUl.appendChild(linkLi('REPY cp862' , baseUrl + entry.Original));
+        ul.appendChild(subUl);
+      });
+      main.appendChild(ul);
     }
   </script>
   <div id="topdiv">
-    <p>The catalog is coming from REPY downloaded from the Technion, available
-    as JSON <a id="jsonLink" href="/">here</a>. This is cached and updated
-    hourly.  The parsing code is available at <a
-                             href="http://github.com/lutzky/repy">github.com/lutzky/repy</a>
+    <p>The catalog is coming from REPY downloaded from the Technion. This is
+    cached and updated hourly.  The parsing code is available at <a
+      href="http://github.com/lutzky/repy">github.com/lutzky/repy</a>.
     </p>
   </div>
-  <script>
-    document.getElementById("jsonLink").href = jsonUrl;
-  </script>
   <div id="maindiv">
-    <p><a onclick="loadCatalog()" href="#">Load catalog</a></p>
   </div>
+  <script>loadCatalog();</script>
 </body>
+</html>
