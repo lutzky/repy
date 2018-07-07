@@ -11,6 +11,7 @@ import (
 	"cloud.google.com/go/storage"
 
 	"golang.org/x/net/context"
+	"golang.org/x/sync/errgroup"
 	"golang.org/x/text/encoding/charmap"
 
 	"google.golang.org/appengine"
@@ -97,17 +98,26 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 		{"latest.repy", "text/plain; charset=cp862", rs.data, false},
 	}
 
+	var g errgroup.Group
 	for _, dest := range destinations {
-		if dest.onlyIfMissing && !isMissing {
-			continue
-		}
-		log.Infof(rs.ctx, "writing %q with content-type %q", dest.filename, dest.contentType)
-		if err := rs.copyToFile(dest.filename, bytes.NewReader(dest.data)); err != nil {
-			return errors.Wrapf(err, "failed to write %q", dest.filename)
-		}
-		if err := rs.setContentType(dest.filename, dest.contentType); err != nil {
-			return err
-		}
+		dest := dest
+		g.Go(func() error {
+			if dest.onlyIfMissing && !isMissing {
+				return nil
+			}
+			log.Infof(rs.ctx, "writing %q with content-type %q", dest.filename, dest.contentType)
+			if err := rs.copyToFile(dest.filename, bytes.NewReader(dest.data)); err != nil {
+				return errors.Wrapf(err, "failed to write %q", dest.filename)
+			}
+			if err := rs.setContentType(dest.filename, dest.contentType); err != nil {
+				return err
+			}
+			return nil
+		})
+	}
+
+	if err := g.Wait(); err != nil {
+		return err
 	}
 
 	return nil
