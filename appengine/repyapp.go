@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"time"
 
 	"cloud.google.com/go/storage"
 
@@ -120,6 +121,14 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 		return err
 	}
 
+	if isMissing {
+		f := fmt.Sprintf("%x.timestamp", rs.sha1sum)
+		log.Infof(rs.ctx, "Writing timestamp file %q", f)
+		if err := rs.writeTimeStamp(f, time.Now()); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -225,4 +234,13 @@ func (rs *repyStorer) fileExists(filename string) (bool, error) {
 	default:
 		return false, errors.Wrapf(err, "couldn't check if %q exists", filename)
 	}
+}
+
+func (rs *repyStorer) writeTimeStamp(filename string, t time.Time) error {
+	w, closer := rs.makePublicObject(filename)
+	defer closer()
+	if _, err := fmt.Fprintf(w, "%s\n", t.UTC().Format(time.UnixDate)); err != nil {
+		return errors.Wrapf(err, "couldn't write timestamp %q", filename)
+	}
+	return nil
 }
