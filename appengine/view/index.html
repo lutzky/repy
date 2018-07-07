@@ -34,7 +34,8 @@
       let main = document.getElementById("maindiv");
       main.innerHTML = "";
       console.info(catalog);
-      catalog.Entries.sort((a,b) => a.Timestamp < b.Timestamp);
+      catalog.Entries = catalog.Entries.sort(
+          (a,b) => (a.TimeStamp < b.TimeStamp) ? 1 : -1);
       catalog.Entries.unshift({
         Parsed: "latest.json",
         Iso8859_8: "latest.txt",
