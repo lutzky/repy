@@ -166,6 +166,34 @@ func TestEventLineParse(t *testing.T) {
 				"weekday":     "א",
 			},
 		},
+		{
+			"EventWithoutGroupType",
+			`|                12.30-14.30'ג             |`,
+			map[string]string{
+				"groupID":     "",
+				"location":    "",
+				"startHour":   "12",
+				"startMinute": "30",
+				"endHour":     "14",
+				"endMinute":   "30",
+				"groupType":   "",
+				"weekday":     "ג",
+			},
+		},
+		{
+			"EventWithLocation",
+			`|       וגס ידוא 12.30-14.30'ב :האצרה      |`,
+			map[string]string{
+				"groupID":     "",
+				"location":    "וגס ידוא",
+				"startHour":   "12",
+				"startMinute": "30",
+				"endHour":     "14",
+				"endMinute":   "30",
+				"groupType":   "האצרה",
+				"weekday":     "ב",
+			},
+		},
 	}
 
 	for _, tc := range testCases {

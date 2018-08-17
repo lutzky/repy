@@ -1024,6 +1024,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -1115,6 +1121,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -1531,6 +1543,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1050
               }
             ],
             "type": "lecture"
@@ -2198,6 +2216,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -2289,6 +2313,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -2377,6 +2407,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -3049,6 +3085,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -5873,6 +5915,12 @@
                 "location": "דייויס 430",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "דייויס 430",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -6551,6 +6599,12 @@
                 "day": 2,
                 "location": "קאהן 1",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "קאהן 1",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -8213,6 +8267,12 @@
                 "location": "דייויס 441",
                 "startMinute": 930,
                 "endMinute": 1050
+              },
+              {
+                "day": 2,
+                "location": "דייויס 441",
+                "startMinute": 930,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -8462,6 +8522,12 @@
                 "location": "דייויס 451",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 0,
+                "location": "דייויס 451",
+                "startMinute": 930,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -9510,6 +9576,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -12759,6 +12831,12 @@
                 "location": "ה 1",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 1,
+                "location": "ה 1",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -12836,6 +12914,12 @@
                 "day": 1,
                 "location": "ה 1",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "ה 1",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -13911,6 +13995,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -14199,6 +14289,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -14212,6 +14308,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 750
               }
             ],
             "type": "lab"
@@ -14222,6 +14324,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 750
@@ -14264,6 +14372,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -14774,6 +14888,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -16816,6 +16936,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -17375,6 +17501,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -19685,6 +19817,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -20528,6 +20666,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -20580,6 +20724,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -20632,6 +20782,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -20671,6 +20827,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -20736,6 +20898,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -20812,6 +20980,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -20875,6 +21049,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -20888,6 +21068,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -20901,6 +21087,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -20914,6 +21106,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "tutorial"
@@ -20927,6 +21125,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "tutorial"
@@ -20964,6 +21168,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21029,6 +21239,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21094,6 +21310,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21156,6 +21378,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -21224,6 +21452,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -21313,6 +21547,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21389,6 +21629,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21441,6 +21687,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -21480,6 +21732,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -21529,6 +21787,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -21608,6 +21872,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21673,6 +21943,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21722,6 +21998,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -21777,6 +22059,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -21829,6 +22117,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -21881,6 +22175,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -21957,6 +22257,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -22004,6 +22310,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
@@ -22070,6 +22382,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -22082,6 +22400,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 570,
                 "endMinute": 630
               }
             ],
@@ -22096,6 +22420,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -22108,6 +22438,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 990,
+                "endMinute": 1050
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 930,
                 "endMinute": 1050
               }
             ],
@@ -22122,6 +22458,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -22135,6 +22477,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -22148,6 +22496,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -22161,6 +22515,12 @@
                 "location": "",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -22174,6 +22534,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "tutorial"
@@ -22187,6 +22553,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -22200,6 +22572,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -22213,6 +22591,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -22226,6 +22610,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -22239,6 +22629,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "tutorial"
@@ -22251,6 +22647,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 870,
+                "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 930,
                 "endMinute": 990
               }
             ],
@@ -22265,6 +22667,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -22277,6 +22685,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 570,
                 "endMinute": 630
               }
             ],
@@ -22291,6 +22705,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -22304,6 +22724,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -22317,6 +22743,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -22327,6 +22759,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -22343,6 +22781,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -22355,6 +22799,12 @@
                 "day": 0,
                 "location": "",
                 "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 690,
                 "endMinute": 750
               }
             ],
@@ -22369,6 +22819,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -22382,6 +22838,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -22419,6 +22881,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -22558,6 +23026,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 1,
+                "location": "אמדו 233",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -22610,6 +23084,12 @@
                 "location": "אמדו 233",
                 "startMinute": 930,
                 "endMinute": 1050
+              },
+              {
+                "day": 3,
+                "location": "אמדו 233",
+                "startMinute": 930,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -22670,6 +23150,12 @@
             "events": [
               {
                 "day": 2,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
@@ -22736,6 +23222,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -22775,6 +23267,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -22862,6 +23360,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -23261,6 +23765,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -23315,6 +23825,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -23367,6 +23883,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -23380,6 +23902,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -23393,6 +23921,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -23405,6 +23939,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -23419,6 +23959,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -23429,6 +23975,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
@@ -23445,6 +23997,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -23458,6 +24016,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -23471,6 +24035,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -23483,6 +24053,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
@@ -23499,6 +24075,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -23512,6 +24094,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1050
               }
             ],
             "type": "tutorial"
@@ -23525,6 +24113,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -23538,6 +24132,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -23631,6 +24231,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -23683,6 +24289,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -23747,6 +24359,12 @@
                 "day": 2,
                 "location": "",
                 "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 810,
                 "endMinute": 870
               }
             ],
@@ -23846,6 +24464,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -23861,6 +24485,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -23874,6 +24504,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -23989,6 +24625,12 @@
                 "location": "אמדו 233",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אמדו 233",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24054,6 +24696,12 @@
                 "location": "",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24106,6 +24754,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -24144,6 +24798,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 690,
                 "endMinute": 750
               }
             ],
@@ -24210,6 +24870,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -24262,6 +24928,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -24314,6 +24986,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -24366,6 +25044,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -24418,6 +25102,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -24698,6 +25388,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -24752,6 +25448,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24875,6 +25577,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -24983,6 +25691,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25036,6 +25750,12 @@
                 "day": 0,
                 "location": "",
                 "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 810,
                 "endMinute": 870
               }
             ],
@@ -25629,6 +26349,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 1",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -25709,6 +26435,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 1",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -25787,6 +26519,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -25878,6 +26616,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 1",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25956,6 +26700,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -26062,6 +26812,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -26142,6 +26898,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 1",
+                "startMinute": 990,
+                "endMinute": 1050
               }
             ],
             "type": "lecture"
@@ -26233,6 +26995,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -26311,6 +27079,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -26376,6 +27150,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 323",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -26467,6 +27247,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -26542,6 +27328,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -26623,6 +27415,18 @@
                 "location": "פיסיקה 502",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 1,
+                "location": "פיסיקה 323",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 502",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -26636,6 +27440,12 @@
                 "location": "",
                 "startMinute": 1050,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -26675,6 +27485,18 @@
                 "location": "סמינר' ב",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 502",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -26688,6 +27510,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -26749,6 +27577,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 323",
+                "startMinute": 750,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -26827,6 +27661,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -26927,6 +27767,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27038,6 +27884,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -27116,6 +27968,18 @@
                 "location": "פיסיקה 323",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 1,
+                "location": "פיסיקה 620",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 620",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27168,6 +28032,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "סמינר' ב",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -27209,6 +28079,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 1050,
                 "endMinute": 1110
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 502",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -27261,6 +28137,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27339,6 +28221,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -27391,6 +28279,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 502",
+                "startMinute": 990,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -27553,6 +28447,12 @@
                 "location": "סמינר' ב",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "סמינר' ב",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -27600,6 +28500,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 502",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27647,6 +28553,12 @@
                 "location": "סמינר' ב",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "סמינר' ב",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27758,6 +28670,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -27847,6 +28765,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -28069,6 +28993,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -28149,6 +29079,12 @@
                 "location": "",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -28216,6 +29152,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -28477,6 +29419,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -28542,6 +29490,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -28594,6 +29548,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -28817,6 +29777,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 1050,
+                "endMinute": 1170
               }
             ],
             "type": "lecture"
@@ -28858,6 +29824,12 @@
                 "location": "",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 1050,
+                "endMinute": 1170
               }
             ],
             "type": "lecture"
@@ -29019,6 +29991,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -32493,6 +33471,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -33354,6 +34338,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 1110
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 930,
+                "endMinute": 1110
               }
             ],
             "type": "tutorial"
@@ -33364,6 +34354,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 930,
+                "endMinute": 1110
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 1110
@@ -33380,6 +34376,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 1110
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 930,
+                "endMinute": 1110
               }
             ],
             "type": "tutorial"
@@ -33390,6 +34392,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 930,
+                "endMinute": 1110
+              },
+              {
+                "day": 4,
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 1110
@@ -38839,6 +39847,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 720,
+                "endMinute": 840
               }
             ],
             "type": "lecture"
@@ -39117,6 +40131,18 @@
                 "location": "ב.רפפורט",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "ב.רפפורט",
+                "startMinute": 570,
+                "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -39130,6 +40156,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 990,
                 "endMinute": 1170
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 990,
+                "endMinute": 1170
               }
             ],
             "type": "lab"
@@ -39140,6 +40172,12 @@
             "events": [
               {
                 "day": 2,
+                "location": "ב.רפפורט",
+                "startMinute": 990,
+                "endMinute": 1170
+              },
+              {
+                "day": 4,
                 "location": "ב.רפפורט",
                 "startMinute": 990,
                 "endMinute": 1170
@@ -39180,6 +40218,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 660,
                 "endMinute": 780
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 690,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -39461,6 +40505,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 690,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -39524,6 +40574,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 510,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lab"
@@ -40167,6 +41223,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 1,
+                "location": "",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -41826,11 +42888,24 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ ר.דאניאל"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי ביורפואי",
+                "startMinute": 870,
+                "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 570,
+                "endMinute": 630
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -41842,6 +42917,19 @@
                 "location": "אודי ביורפואי",
                 "startMinute": 510,
                 "endMinute": 570
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -42061,12 +43149,32 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ י.יניב"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 0,
+                "location": "אודי ביורפואי",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 0,
+                "location": "אודי ביורפואי",
+                "startMinute": 870,
+                "endMinute": 930
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -42143,7 +43251,34 @@
             "day": 14
           }
         ],
-        "groups": null
+        "groups": [
+          {
+            "id": 10,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי ביורפואי",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 750,
+                "endMinute": 810
+              }
+            ],
+            "type": "tutorial"
+          }
+        ]
       },
       {
         "id": 336502,
@@ -42375,11 +43510,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ד.ילין"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי ביורפואי",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -42391,6 +43533,19 @@
                 "location": "ביורפואי 202",
                 "startMinute": 990,
                 "endMinute": 1110
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אודי ביורפואי",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -42502,11 +43657,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ג.שניטמן"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -42518,6 +43680,19 @@
                 "location": "אודי ביורפואי",
                 "startMinute": 510,
                 "endMinute": 630
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אודי ביורפואי",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"

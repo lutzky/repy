@@ -644,11 +644,11 @@ func findStringSubmatchMap(r *regexp.Regexp, s string) map[string]string {
 
 var eventRegexp = regexp.MustCompile(
 	`\| *` +
-		`(?P<location>.*) + ` +
+		`(?P<location>.*) +` +
 		`(?P<startHour>[0-9]{1,2})\.(?P<startMinute>[0-9]{2})- *` +
 		`(?P<endHour>[0-9]{1,2})\.(?P<endMinute>[0-9]{2})'` +
 		`(?P<weekday>[אבגדהוש]) ` +
-		`:(?P<groupType>[א-ת]+)` +
+		`(:(?P<groupType>[א-ת]+))?` +
 		` +(?P<groupID>[0-9]+)? ` +
 		`*\|`)
 
@@ -662,27 +662,32 @@ func (p *parser) parseEventLine() bool {
 			Location:       p.parseLocation(m["location"]),
 		}
 
-		groupType, err := p.groupTypeFromString(m["groupType"])
-		if err != nil {
-			p.warningf("Failed to parse group type %q: %v", m["groupType"], err)
-			return false
+		if m["groupType"] != "" {
+			groupType, err := p.groupTypeFromString(m["groupType"])
+			if err != nil {
+				p.warningf("Failed to parse group type %q: %v", m["groupType"], err)
+				return false
+			}
+
+			group := Group{
+				Teachers: []string{}, // TODO(lutzky): Fill these in
+				Events:   []Event{},
+				Type:     groupType,
+			}
+
+			if m["groupID"] != "" {
+				group.ID = p.parseUint(m["groupID"])
+				p.groupID = group.ID + 1
+			} else {
+				group.ID = p.groupID
+				p.groupID++
+			}
+
+			p.course.Groups = append(p.course.Groups, group)
 		}
 
-		group := Group{
-			Teachers: []string{}, // TODO(lutzky): Fill these in
-			Events:   []Event{ev},
-			Type:     groupType,
-		}
-
-		if m["groupID"] != "" {
-			group.ID = p.parseUint(m["groupID"])
-			p.groupID = group.ID + 1
-		} else {
-			group.ID = p.groupID
-			p.groupID++
-		}
-
-		p.course.Groups = append(p.course.Groups, group)
+		group := &p.course.Groups[len(p.course.Groups)-1]
+		group.Events = append(group.Events, ev)
 
 		p.scan()
 		return true

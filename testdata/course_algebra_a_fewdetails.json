@@ -33,6 +33,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -46,6 +52,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -59,6 +71,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -71,6 +89,12 @@
                 "day": 1,
                 "location": "",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -85,6 +109,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -95,6 +125,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
@@ -111,6 +147,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -124,6 +166,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -137,6 +185,12 @@
                 "location": "",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -149,6 +203,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
@@ -165,6 +225,12 @@
                 "location": "",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -178,6 +244,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 990,
+                "endMinute": 1050
               }
             ],
             "type": "tutorial"
@@ -191,6 +263,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -204,6 +282,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"

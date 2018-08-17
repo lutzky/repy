@@ -825,11 +825,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ ע.אמיר"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי סגו",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -1146,6 +1153,12 @@
                 "location": "רבין 206",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "אודי סגו",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -1249,6 +1262,12 @@
                 "location": "",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -2008,7 +2027,21 @@
           {
             "id": 11,
             "teachers": [
-              "מר ע.קירה",
+              "מר ע.קירה"
+            ],
+            "events": [
+              {
+                "day": 3,
+                "location": "רבין 407",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [
               "מר ב.גידו",
               "פרופ/ח ע.פרידלר",
               "מר ב.גידו"
@@ -2016,7 +2049,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "רבין 407",
+                "location": "הורא חקלאית",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -2485,6 +2518,12 @@
                 "location": "רבין 206",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "רבין 206",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -2576,6 +2615,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -2664,6 +2709,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -4688,6 +4739,12 @@
                 "location": "רבין 405",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "רבין 405",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -5203,11 +5260,18 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ר.לינקר"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "חדר  חקלאית",
+                "startMinute": 990,
+                "endMinute": 1110
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -5522,10 +5586,7 @@
           {
             "id": 10,
             "teachers": [
-              "פרופ/ח א.פורמן",
-              "גב ת.שלם שחם",
-              "גב נ.שגב",
-              "גב ת.שלם שחם"
+              "פרופ/ח א.פורמן"
             ],
             "events": [
               {
@@ -5536,6 +5597,90 @@
               }
             ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
+              "גב ת.שלם שחם"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "הורא חקלאית",
+                "startMinute": 990,
+                "endMinute": 1050
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "הורא חקלאית",
+                "startMinute": 1050,
+                "endMinute": 1170
+              }
+            ],
+            "type": "lab"
+          },
+          {
+            "id": 12,
+            "teachers": [
+              "גב נ.שגב"
+            ],
+            "events": [
+              {
+                "day": 4,
+                "location": "הורא חקלאית",
+                "startMinute": 690,
+                "endMinute": 750
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 13,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "הורא חקלאית",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lab"
+          },
+          {
+            "id": 13,
+            "teachers": [
+              "גב ת.שלם שחם"
+            ],
+            "events": [
+              {
+                "day": 0,
+                "location": "הורא חקלאית",
+                "startMinute": 870,
+                "endMinute": 930
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 14,
+            "teachers": [],
+            "events": [
+              {
+                "day": 0,
+                "location": "הורא חקלאית",
+                "startMinute": 930,
+                "endMinute": 1050
+              }
+            ],
+            "type": "lab"
           }
         ]
       },
@@ -7326,6 +7471,12 @@
                 "location": "דייויס 450",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "דייויס 450",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -8129,6 +8280,12 @@
                 "location": "דייויס 250",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "דייויס 250",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -9913,6 +10070,12 @@
                 "location": "דייויס 443",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 2,
+                "location": "דייויס 443",
+                "startMinute": 930,
+                "endMinute": 1050
               }
             ],
             "type": "lecture"
@@ -11063,6 +11226,12 @@
                 "location": "פישבך 507",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "פישבך 507",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -11207,6 +11376,12 @@
                 "location": "ה 150",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 2,
+                "location": "ה 150",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -11261,6 +11436,12 @@
                 "location": "פישבך 405",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 1,
+                "location": "פישבך 405",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -11687,6 +11868,12 @@
                 "location": "פישבך 404",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פישבך 404",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -14732,6 +14919,12 @@
                 "location": "ה 6",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 2,
+                "location": "ה 3",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -14797,6 +14990,12 @@
                 "location": "הנ 300",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 1,
+                "location": "הנ 300",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -15998,6 +16197,12 @@
                 "location": "ה 6",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "הנ 300",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -16307,6 +16512,12 @@
                 "location": "ה 6",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 1,
+                "location": "הנ 300",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -16320,6 +16531,12 @@
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 750
               }
             ],
             "type": "lab"
@@ -16330,6 +16547,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 570,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 570,
                 "endMinute": 750
@@ -16372,6 +16595,12 @@
                 "location": "הנ 300",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "הנ 300",
+                "startMinute": 750,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -16916,6 +17145,12 @@
                 "location": "ה 150",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "ה 150",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -17093,6 +17328,12 @@
                 "location": "ה 149",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 1,
+                "location": "ה 235",
+                "startMinute": 750,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -17572,6 +17813,12 @@
                 "location": "ה 150",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "ה 150",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -17637,6 +17884,12 @@
                 "day": 1,
                 "location": "ה 150",
                 "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "ה 150",
+                "startMinute": 690,
                 "endMinute": 750
               }
             ],
@@ -19260,11 +19513,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ י.עמק"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 3,
+                "location": "אודי בלומפילד",
+                "startMinute": 870,
+                "endMinute": 1050
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -19322,11 +19582,24 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח א.גל"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי בלומפילד",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 1,
+                "location": "דייויס 250",
+                "startMinute": 930,
+                "endMinute": 990
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -19984,8 +20257,7 @@
           {
             "id": 12,
             "teachers": [
-              "מר ש.שלומוב",
-              "פרופ. ל.מיטניק"
+              "מר ש.שלומוב"
             ],
             "events": [
               {
@@ -19996,6 +20268,21 @@
               }
             ],
             "type": "tutorial"
+          },
+          {
+            "id": 20,
+            "teachers": [
+              "פרופ. ל.מיטניק"
+            ],
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי בלומפילד",
+                "startMinute": 870,
+                "endMinute": 1050
+              }
+            ],
+            "type": "lecture"
           },
           {
             "id": 21,
@@ -20191,6 +20478,12 @@
                 "location": "נהול 215",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "נהול 215",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -20997,13 +21290,34 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
-              "ד\"ר א.כוכבי",
+              "ד\"ר א.כוכבי"
+            ],
+            "events": [
+              {
+                "day": 3,
+                "location": "מועצ בלומפילד",
+                "startMinute": 1050,
+                "endMinute": 1170
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
               "מר א.חצבני"
             ],
-            "events": null,
-            "type": "lecture"
+            "events": [
+              {
+                "day": 3,
+                "location": "מועצ בלומפילד",
+                "startMinute": 1170,
+                "endMinute": 1230
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -21464,17 +21778,23 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "ד\"ר א.כרפס"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי בלומפילד",
+                "startMinute": 930,
+                "endMinute": 1110
+              }
+            ],
             "type": "lecture"
           },
           {
             "id": 11,
             "teachers": [
-              "מר א.שלייפמן",
               "מר א.שלייפמן"
             ],
             "events": [
@@ -21483,6 +21803,21 @@
                 "location": "בלומפילד 151",
                 "startMinute": 990,
                 "endMinute": 1050
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [
+              "מר א.שלייפמן"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי בלומפילד",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "tutorial"
@@ -21531,13 +21866,34 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
-              "פרופ/ח א.גל",
+              "פרופ/ח א.גל"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "מועצ בלומפילד",
+                "startMinute": 750,
+                "endMinute": 930
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
               "מר ר.שרגא"
             ],
-            "events": null,
-            "type": "lecture"
+            "events": [
+              {
+                "day": 2,
+                "location": "מועצ בלומפילד",
+                "startMinute": 930,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -21792,6 +22148,12 @@
                 "location": "נהול 215",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "נהול 215",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -22442,6 +22804,12 @@
                 "location": "נהול 214",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 2,
+                "location": "נהול 214",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -22503,7 +22871,6 @@
           {
             "id": 11,
             "teachers": [
-              "מר א.יעקובי",
               "מר א.יעקובי"
             ],
             "events": [
@@ -22512,6 +22879,21 @@
                 "location": "בלומפילד 153",
                 "startMinute": 870,
                 "endMinute": 930
+              }
+            ],
+            "type": "tutorial"
+          },
+          {
+            "id": 12,
+            "teachers": [
+              "מר א.יעקובי"
+            ],
+            "events": [
+              {
+                "day": 1,
+                "location": "מועצ בלומפילד",
+                "startMinute": 810,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -23516,6 +23898,12 @@
                 "location": "אולמן 707",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "אולמן 707",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -23561,6 +23949,12 @@
                 "location": "אולמן 707",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 707",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -23591,6 +23985,12 @@
                 "location": "אולמן 310",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 310",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -23649,6 +24049,12 @@
                 "location": "אולמן 309",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "אולמן 309",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -23737,6 +24143,12 @@
                 "location": "אולמן 202",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "אולמן 203",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -23805,6 +24217,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "אולמן 203",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "אולמן 203",
                 "startMinute": 750,
                 "endMinute": 870
@@ -23880,6 +24298,12 @@
                 "location": "אולמן 201",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "אולמן 201",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -23961,6 +24385,12 @@
                 "location": "אולמן 305",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 305",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -23976,6 +24406,12 @@
                 "location": "אולמן 306",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "אולמן 306",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -23991,6 +24427,12 @@
                 "location": "אולמן 709",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "אולמן 709",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "tutorial"
@@ -24030,6 +24472,12 @@
                 "location": "טאוב 1",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "טאוב 1",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24105,6 +24553,12 @@
                 "location": "אולמן 309",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 309",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24165,6 +24619,12 @@
                 "location": "אולמן 305",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 305",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24223,6 +24683,12 @@
               {
                 "day": 1,
                 "location": "טאוב 1",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אודי סגו",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -24300,6 +24766,12 @@
                 "location": "פישבך 507",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 1",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -24401,6 +24873,12 @@
                 "location": "אולמן 701",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 701",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24470,6 +24948,12 @@
                 "location": "אולמן 305",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 305",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24530,6 +25014,12 @@
                 "location": "אולמן 304",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 304",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -24575,6 +25065,12 @@
                 "location": "אולמן 701",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 701",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -24618,6 +25114,12 @@
               {
                 "day": 1,
                 "location": "פישבך 507",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פישבך 405",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -24704,6 +25206,12 @@
                 "location": "אולמן 310",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "אולמן 310",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -24762,6 +25270,12 @@
               {
                 "day": 1,
                 "location": "טאוב 2",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "טאוב 1",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -24839,6 +25353,12 @@
                 "location": "אולמן 305",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "אולמן 309",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -24884,6 +25404,12 @@
                 "location": "אולמן 307",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "אולמן 505",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -24929,6 +25455,12 @@
                 "location": "אולמן 707",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "אולמן 707",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -25013,6 +25545,12 @@
                 "location": "אולמן 709",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "אולמן 709",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -25064,6 +25602,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "אולמן 707",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
                 "location": "אולמן 707",
                 "startMinute": 630,
                 "endMinute": 750
@@ -25121,6 +25665,12 @@
                 "location": "פישבך 504",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פישבך 507",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25135,6 +25685,12 @@
                 "day": 1,
                 "location": "אולמן 301",
                 "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 709",
+                "startMinute": 570,
                 "endMinute": 630
               }
             ],
@@ -25151,6 +25707,12 @@
                 "location": "אולמן 201",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 201",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -25165,6 +25727,12 @@
                 "day": 1,
                 "location": "אולמן 704",
                 "startMinute": 990,
+                "endMinute": 1050
+              },
+              {
+                "day": 2,
+                "location": "אולמן 709",
+                "startMinute": 930,
                 "endMinute": 1050
               }
             ],
@@ -25181,6 +25749,12 @@
                 "location": "אולמן 703",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "אולמן 201",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -25196,6 +25770,12 @@
                 "location": "בנ 280",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "בנ 280",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25211,6 +25791,12 @@
                 "location": "אולמן 708",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 3,
+                "location": "אולמן 708",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -25226,6 +25812,12 @@
                 "location": "אולמן 301",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 3,
+                "location": "אולמן 303",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -25241,6 +25833,12 @@
                 "location": "אולמן 702",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "אולמן 708",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "tutorial"
@@ -25256,6 +25854,12 @@
                 "location": "אולמן 105",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 1,
+                "location": "אולמן 103",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -25271,6 +25875,12 @@
                 "location": "אולמן 301",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "אולמן 202",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25286,6 +25896,12 @@
                 "location": "אולמן 708",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 709",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -25299,6 +25915,12 @@
                 "location": "",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "tutorial"
@@ -25313,6 +25935,12 @@
                 "day": 1,
                 "location": "אולמן 301",
                 "startMinute": 870,
+                "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "אולמן 603",
+                "startMinute": 930,
                 "endMinute": 990
               }
             ],
@@ -25329,6 +25957,12 @@
                 "location": "טאוב 1",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פישבך 504",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25343,6 +25977,12 @@
                 "day": 1,
                 "location": "אולמן 702",
                 "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 301",
+                "startMinute": 570,
                 "endMinute": 630
               }
             ],
@@ -25359,6 +25999,12 @@
                 "location": "אולמן 704",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 704",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -25374,6 +26020,12 @@
                 "location": "אולמן 704",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 704",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -25389,6 +26041,12 @@
                 "location": "אולמן 102",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 101",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -25401,6 +26059,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "אמדו 233",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
                 "location": "אמדו 233",
                 "startMinute": 510,
                 "endMinute": 630
@@ -25419,6 +26083,12 @@
                 "location": "אולמן 604",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 301",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -25434,6 +26104,12 @@
                 "location": "אולמן 706",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 709",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -25447,6 +26123,12 @@
                 "location": "אולמן 301",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -25464,6 +26146,12 @@
                 "location": "אולמן 709",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 2,
+                "location": "אולמן 709",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -25503,6 +26191,12 @@
                 "location": "אולמן 307",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "אולמן 310",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -25626,6 +26320,12 @@
                 "location": "אולמן 204",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 1,
+                "location": "אולמן 202",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -25671,6 +26371,12 @@
                 "location": "אולמן 309",
                 "startMinute": 930,
                 "endMinute": 1050
+              },
+              {
+                "day": 3,
+                "location": "אולמן 309",
+                "startMinute": 930,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -25737,6 +26443,12 @@
             "events": [
               {
                 "day": 2,
+                "location": "אולמן 309",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
                 "location": "אולמן 309",
                 "startMinute": 630,
                 "endMinute": 750
@@ -25824,6 +26536,12 @@
                 "location": "אולמן 202",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 4,
+                "location": "אולמן 202",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -25869,6 +26587,12 @@
                 "location": "אולמן 204",
                 "startMinute": 690,
                 "endMinute": 810
+              },
+              {
+                "day": 4,
+                "location": "אולמן 204",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -25959,6 +26683,12 @@
                 "day": 0,
                 "location": "אמדו 619",
                 "startMinute": 690,
+                "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "אמדו 814",
+                "startMinute": 630,
                 "endMinute": 750
               }
             ],
@@ -26329,6 +27059,12 @@
                 "location": "אמדו 232",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 1,
+                "location": "אמדו 232",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -26383,6 +27119,12 @@
                 "location": "אמדו 232",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "אמדו 232",
+                "startMinute": 810,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -26437,6 +27179,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 1",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -26452,6 +27200,12 @@
                 "location": "אולמן 503",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 303",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -26467,6 +27221,12 @@
                 "location": "אולמן 501",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 301",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -26481,6 +27241,12 @@
                 "day": 1,
                 "location": "אולמן 311",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 303",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -26497,6 +27263,12 @@
                 "location": "אולמן 302",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "אולמן 302",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -26510,6 +27282,12 @@
               {
                 "day": 0,
                 "location": "אולמן 309",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "פישבך 504",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -26527,6 +27305,12 @@
                 "location": "אולמן 306",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 307",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "tutorial"
@@ -26542,6 +27326,12 @@
                 "location": "אולמן 503",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 302",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -26557,6 +27347,12 @@
                 "location": "אולמן 703",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "אולמן 307",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -26569,6 +27365,12 @@
             "events": [
               {
                 "day": 0,
+                "location": "אולמן 302",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
                 "location": "אולמן 302",
                 "startMinute": 750,
                 "endMinute": 870
@@ -26587,6 +27389,12 @@
                 "location": "אולמן 306",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 501",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "tutorial"
@@ -26680,6 +27488,18 @@
                 "location": "אולמן 211",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 1,
+                "location": "אולמן 505",
+                "startMinute": 630,
+                "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "אולמן 301",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -26747,6 +27567,12 @@
                 "location": "אמדו 509",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אמדו 919",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -26834,6 +27660,12 @@
                 "location": "אולמן 204",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אולמן 204",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -26849,6 +27681,12 @@
                 "location": "אולמן 705",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "אולמן 705",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -26864,6 +27702,12 @@
                 "location": "אולמן 306",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "אולמן 306",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -26987,6 +27831,12 @@
                 "location": "אמדו 233",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אמדו 233",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -27047,6 +27897,12 @@
                 "location": "אולמן 205",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 202",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -27092,6 +27948,12 @@
                 "location": "אולמן 309",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 305",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -27136,6 +27998,12 @@
                 "day": 1,
                 "location": "אולמן 311",
                 "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 211",
+                "startMinute": 690,
                 "endMinute": 750
               }
             ],
@@ -27245,6 +28113,12 @@
                 "location": "אולמן 305",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "אולמן 305",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -27290,6 +28164,12 @@
                 "location": "אולמן 205",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "אולמן 205",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -27335,6 +28215,12 @@
                 "location": "אמדו 233",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "אמדו 233",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -27380,6 +28266,12 @@
                 "location": "אולמן 505",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "אולמן 505",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -27708,6 +28600,12 @@
                 "location": "אולמן 604",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "אולמן 708",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -27762,6 +28660,12 @@
                 "location": "אולמן 304",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "אולמן 304",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -27831,6 +28735,12 @@
                 "location": "אמדו 814",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "אמדו 814",
+                "startMinute": 750,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -27883,6 +28793,12 @@
                 "location": "אולמן 301",
                 "startMinute": 870,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "אולמן 302",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -27991,6 +28907,12 @@
                 "location": "אולמן 204",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 204",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -28045,6 +28967,12 @@
                 "location": "אמדו 619",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 3,
+                "location": "אמדו 719",
+                "startMinute": 570,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -28672,6 +29600,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "אודי סגו",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -28739,8 +29673,7 @@
           {
             "id": 15,
             "teachers": [
-              "מר ר.גוברין",
-              "ד\"ר ס.בהר"
+              "מר ר.גוברין"
             ],
             "events": [
               {
@@ -28751,6 +29684,27 @@
               }
             ],
             "type": "tutorial"
+          },
+          {
+            "id": 20,
+            "teachers": [
+              "ד\"ר ס.בהר"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי בלומפילד",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 1",
+                "startMinute": 570,
+                "endMinute": 630
+              }
+            ],
+            "type": "lecture"
           },
           {
             "id": 21,
@@ -28851,6 +29805,12 @@
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 570
               }
             ],
             "type": "lecture"
@@ -28932,11 +29892,24 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "ד\"ר מ.עכאשה"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי סגו",
+                "startMinute": 750,
+                "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 690,
+                "endMinute": 750
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -29036,6 +30009,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אודי סגו",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -29126,6 +30105,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "רבין 206",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -29216,6 +30201,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 990,
+                "endMinute": 1050
               }
             ],
             "type": "lecture"
@@ -29315,6 +30306,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 1",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -29429,6 +30426,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 323",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -29513,6 +30516,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -29583,6 +30592,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -29664,6 +30679,18 @@
                 "location": "אולמן 309",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 1,
+                "location": "פיסיקה 323",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 502",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -29679,6 +30706,12 @@
                 "location": "אולמן 506",
                 "startMinute": 1050,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "אולמן 703",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "tutorial"
@@ -29718,6 +30751,18 @@
                 "location": "אמדו 231",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 1",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "אולמן 202",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -29733,6 +30778,12 @@
                 "location": "אולמן 303",
                 "startMinute": 870,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "אולמן 311",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -29748,6 +30799,12 @@
                 "location": "אולמן 211",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 4,
+                "location": "אולמן 708",
+                "startMinute": 630,
+                "endMinute": 690
               }
             ],
             "type": "tutorial"
@@ -29809,6 +30866,12 @@
                 "location": "אודי סגו",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 323",
+                "startMinute": 750,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -29883,11 +30946,24 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ. י.אברון"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי סגו",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 323",
+                "startMinute": 630,
+                "endMinute": 690
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -29992,6 +31068,12 @@
                 "location": "פיסיקה 1",
                 "startMinute": 990,
                 "endMinute": 1050
+              },
+              {
+                "day": 4,
+                "location": "אמדו 233",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -30109,6 +31191,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "טאוב 2",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -30193,6 +31281,18 @@
                 "location": "פיסיקה 323",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 1,
+                "location": "אולמן 502",
+                "startMinute": 630,
+                "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "אולמן 603",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -30247,6 +31347,12 @@
                 "location": "פיסיקה 620",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 620",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -30290,6 +31396,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 1110,
                 "endMinute": 1170
+              },
+              {
+                "day": 4,
+                "location": "פיסיקה 502",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -30355,6 +31467,12 @@
                 "location": "פיסיקה 323",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "רבין 206",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -30438,6 +31556,12 @@
                 "day": 0,
                 "location": "סמינר' ב",
                 "startMinute": 570,
+                "endMinute": 630
+              },
+              {
+                "day": 1,
+                "location": "סמינר' ב",
+                "startMinute": 510,
                 "endMinute": 630
               }
             ],
@@ -30565,6 +31689,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 750,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "פיסיקה 502",
+                "startMinute": 570,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -30614,6 +31744,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 570,
                 "endMinute": 630
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 502",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -30663,6 +31799,12 @@
                 "location": "פיסיקה 502",
                 "startMinute": 630,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "פיסיקה 502",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -31025,6 +32167,12 @@
                 "location": "אודי בלומפילד",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "אודי סגו",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -31115,6 +32263,12 @@
                 "location": "פישבך 343",
                 "startMinute": 990,
                 "endMinute": 1110
+              },
+              {
+                "day": 3,
+                "location": "רבין 206",
+                "startMinute": 990,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -31203,6 +32357,12 @@
                 "location": "הנ 100",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 1,
+                "location": "הנ 100",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -31326,6 +32486,12 @@
                 "location": "כימיה 1",
                 "startMinute": 510,
                 "endMinute": 630
+              },
+              {
+                "day": 3,
+                "location": "כימיה 1",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -31375,6 +32541,12 @@
             "events": [
               {
                 "day": 1,
+                "location": "",
+                "startMinute": 510,
+                "endMinute": 630
+              },
+              {
+                "day": 3,
                 "location": "",
                 "startMinute": 510,
                 "endMinute": 630
@@ -31469,6 +32641,12 @@
                 "location": "כימיה 1",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 3,
+                "location": "כימיה 1",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -31538,6 +32716,12 @@
                 "location": "כימיה 4",
                 "startMinute": 750,
                 "endMinute": 810
+              },
+              {
+                "day": 2,
+                "location": "כימיה 2",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -31592,6 +32776,12 @@
                 "location": "כימיה 1",
                 "startMinute": 810,
                 "endMinute": 930
+              },
+              {
+                "day": 2,
+                "location": "כימיה 1",
+                "startMinute": 690,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -32011,6 +33201,12 @@
                 "location": "כימיה 1",
                 "startMinute": 930,
                 "endMinute": 1050
+              },
+              {
+                "day": 4,
+                "location": "כימיה 1",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -32165,9 +33361,7 @@
           },
           {
             "id": 14,
-            "teachers": [
-              "ד\"ר ש.מלצמן"
-            ],
+            "teachers": [],
             "events": [
               {
                 "day": 2,
@@ -32177,6 +33371,21 @@
               }
             ],
             "type": "tutorial"
+          },
+          {
+            "id": 20,
+            "teachers": [
+              "ד\"ר ש.מלצמן"
+            ],
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי סגו",
+                "startMinute": 990,
+                "endMinute": 1110
+              }
+            ],
+            "type": "lecture"
           },
           {
             "id": 21,
@@ -32557,6 +33766,12 @@
                 "location": "כימיה 3",
                 "startMinute": 810,
                 "endMinute": 870
+              },
+              {
+                "day": 3,
+                "location": "כימיה 3",
+                "startMinute": 630,
+                "endMinute": 750
               }
             ],
             "type": "lecture"
@@ -32682,6 +33897,12 @@
                 "location": "כימיה 4",
                 "startMinute": 930,
                 "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "כימיה 4",
+                "startMinute": 510,
+                "endMinute": 630
               }
             ],
             "type": "lecture"
@@ -33263,11 +34484,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ. י.רייטר"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי סגו",
+                "startMinute": 870,
+                "endMinute": 1050
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -34295,11 +35523,18 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ק.מרטנס"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "סמינ סגו",
+                "startMinute": 930,
+                "endMinute": 1050
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -34628,6 +35863,12 @@
                 "location": "אמדו 233",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "ח.סטודיו",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "lecture"
@@ -35371,6 +36612,12 @@
                 "location": "אמדו 231",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "ח.סטודיו",
+                "startMinute": 750,
+                "endMinute": 870
               }
             ],
             "type": "tutorial"
@@ -35704,12 +36951,32 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ א.יזיאורו"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "סמינ סגו",
+                "startMinute": 930,
+                "endMinute": 1050
+              }
+            ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "סמינ סגו",
+                "startMinute": 1050,
+                "endMinute": 1170
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -35869,12 +37136,32 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ א.יזיאורו"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 4,
+                "location": "סמינ סגו",
+                "startMinute": 870,
+                "endMinute": 990
+              }
+            ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "סמינ סגו",
+                "startMinute": 990,
+                "endMinute": 1110
+              }
+            ],
+            "type": "lab"
           }
         ]
       },
@@ -36152,12 +37439,32 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ר.קלוש"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 4,
+                "location": "סמינ סגו",
+                "startMinute": 690,
+                "endMinute": 810
+              }
+            ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "סמינ סגו",
+                "startMinute": 810,
+                "endMinute": 870
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -36216,6 +37523,12 @@
                 "location": "אולמן 701",
                 "startMinute": 900,
                 "endMinute": 1080
+              },
+              {
+                "day": 4,
+                "location": "אולמן 701",
+                "startMinute": 930,
+                "endMinute": 1110
               }
             ],
             "type": "lecture"
@@ -40261,7 +41574,6 @@
           {
             "id": 10,
             "teachers": [
-              "פרופ. י.מקובסקי",
               "פרופ. י.מקובסקי"
             ],
             "events": [
@@ -40273,6 +41585,21 @@
               }
             ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
+              "פרופ. י.מקובסקי"
+            ],
+            "events": [
+              {
+                "day": 3,
+                "location": "חדר  טאוב",
+                "startMinute": 690,
+                "endMinute": 750
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -42025,13 +43352,34 @@
         "testDates": null,
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
-              "פרופ. ר.קימל",
+              "פרופ. ר.קימל"
+            ],
+            "events": [
+              {
+                "day": 1,
+                "location": "חדר  טאוב",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
               "מר מ.סלע"
             ],
-            "events": null,
-            "type": "lecture"
+            "events": [
+              {
+                "day": 1,
+                "location": "חדר  טאוב",
+                "startMinute": 750,
+                "endMinute": 810
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -42274,6 +43622,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 780,
                 "endMinute": 900
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 690,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -42707,6 +44061,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 720,
                 "endMinute": 840
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 720,
+                "endMinute": 840
               }
             ],
             "type": "lecture"
@@ -42976,6 +44336,18 @@
                 "location": "ב.רפפורט",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "ב.רפפורט",
+                "startMinute": 510,
+                "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "ב.רפפורט",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -43102,6 +44474,12 @@
                 "location": "ב.רפפורט",
                 "startMinute": 510,
                 "endMinute": 690
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 510,
+                "endMinute": 690
               }
             ],
             "type": "lecture"
@@ -43187,6 +44565,18 @@
                 "location": "ב.רפפורט",
                 "startMinute": 570,
                 "endMinute": 690
+              },
+              {
+                "day": 2,
+                "location": "ב.רפפורט",
+                "startMinute": 510,
+                "endMinute": 690
+              },
+              {
+                "day": 3,
+                "location": "ב.רפפורט",
+                "startMinute": 870,
+                "endMinute": 990
               }
             ],
             "type": "lecture"
@@ -43750,6 +45140,18 @@
                 "location": "ב.רפפורט",
                 "startMinute": 690,
                 "endMinute": 750
+              },
+              {
+                "day": 2,
+                "location": "ב.רפפורט",
+                "startMinute": 810,
+                "endMinute": 930
+              },
+              {
+                "day": 4,
+                "location": "ב.רפפורט",
+                "startMinute": 690,
+                "endMinute": 810
               }
             ],
             "type": "lecture"
@@ -43976,6 +45378,12 @@
                 "location": "חומרים 302",
                 "startMinute": 630,
                 "endMinute": 750
+              },
+              {
+                "day": 1,
+                "location": "חומרים 302",
+                "startMinute": 870,
+                "endMinute": 930
               }
             ],
             "type": "lecture"
@@ -44057,11 +45465,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ. י.עין-אלי"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי חומרים",
+                "startMinute": 630,
+                "endMinute": 750
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -44320,11 +45735,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "מר ש.אריאלי"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי חומרים",
+                "startMinute": 990,
+                "endMinute": 1110
+              }
+            ],
             "type": "lecture"
           },
           {
@@ -46005,12 +47427,25 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/מ ר.דאניאל",
               "מר י.רם"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 870,
+                "endMinute": 990
+              },
+              {
+                "day": 3,
+                "location": "אודי ביורפואי",
+                "startMinute": 870,
+                "endMinute": 930
+              }
+            ],
             "type": "lecture"
           }
         ]
@@ -46150,8 +47585,7 @@
           {
             "id": 10,
             "teachers": [
-              "פרופ. ש.לבנברג",
-              "מר ש.בן שאול"
+              "פרופ. ש.לבנברג"
             ],
             "events": [
               {
@@ -46162,6 +47596,21 @@
               }
             ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
+              "מר ש.בן שאול"
+            ],
+            "events": [
+              {
+                "day": 1,
+                "location": "אודי ביורפואי",
+                "startMinute": 930,
+                "endMinute": 990
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -46327,8 +47776,7 @@
           {
             "id": 10,
             "teachers": [
-              "פרופ/ח א.לנדסברג",
-              "גב א.פיינגרש- קלב"
+              "פרופ/ח א.לנדסברג"
             ],
             "events": [
               {
@@ -46339,6 +47787,21 @@
               }
             ],
             "type": "lecture"
+          },
+          {
+            "id": 11,
+            "teachers": [
+              "גב א.פיינגרש- קלב"
+            ],
+            "events": [
+              {
+                "day": 2,
+                "location": "אודי ביורפואי",
+                "startMinute": 690,
+                "endMinute": 810
+              }
+            ],
+            "type": "tutorial"
           }
         ]
       },
@@ -46458,11 +47921,18 @@
         ],
         "groups": [
           {
-            "id": 0,
+            "id": 10,
             "teachers": [
               "פרופ/ח ד.ילין"
             ],
-            "events": null,
+            "events": [
+              {
+                "day": 0,
+                "location": "אודי ביורפואי",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
             "type": "lecture"
           },
           {
