@@ -13,6 +13,7 @@ import (
 )
 
 var update = flag.Bool("update", false, "update golden files in testdata")
+var onlyTestREPY = flag.String("only_test_repy", "", "only test the given REPY file")
 
 func TestTimeOfDayToString(t *testing.T) {
 	testCases := []struct {
@@ -72,6 +73,9 @@ func TestParseLocation(t *testing.T) {
 
 func TestParse(t *testing.T) {
 	glob := "testdata/*.repy"
+	if *onlyTestREPY != "" {
+		glob = *onlyTestREPY
+	}
 	testCases, err := filepath.Glob(glob)
 	if err != nil {
 		t.Fatalf("Failed to glob %q for course REPYs: %v", glob, err)
