@@ -128,6 +128,52 @@ func TestParse(t *testing.T) {
 	}
 }
 
+func TestEventLineParse(t *testing.T) {
+	testCases := []struct {
+		name string
+		s    string
+		want map[string]string
+	}{
+		{
+			"FullEventWithGroupNumber",
+			`|                10.30-12.30'ב :ליגרת  11  |`,
+			map[string]string{
+				"groupID":     "11",
+				"location":    "",
+				"startHour":   "10",
+				"startMinute": "30",
+				"endHour":     "12",
+				"endMinute":   "30",
+				"groupType":   "ליגרת",
+				"weekday":     "ב",
+			},
+		},
+		{
+			"FullEventWithoutGroupNumber",
+			`|                12.30-14.30'א :האצרה      |`,
+			map[string]string{
+				"groupID":     "",
+				"location":    "",
+				"startHour":   "12",
+				"startMinute": "30",
+				"endHour":     "14",
+				"endMinute":   "30",
+				"groupType":   "האצרה",
+				"weekday":     "א",
+			},
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			got := findStringSubmatchMap(eventRegexp, tc.s)
+			if d := pretty.Compare(tc.want, got); d != "" {
+				t.Fatalf("Diff -want +got:\n%s", d)
+			}
+		})
+	}
+}
+
 func TestReverse(t *testing.T) {
 	testCases := []struct {
 		s, want string
