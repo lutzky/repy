@@ -620,22 +620,51 @@ func (p *parser) parseLecturerLine() bool {
 	return false
 }
 
+func findStringSubmatchMap(r *regexp.Regexp, s string) map[string]string {
+	// It's very odd that we need to implement this function ourselves.
+	// Lifted from here:
+	// http://blog.kamilkisiel.net/blog/2012/07/05/using-the-go-regexp-package/
+
+	result := map[string]string{}
+
+	m := r.FindStringSubmatch(s)
+	if m == nil {
+		return result
+	}
+
+	for i, name := range r.SubexpNames() {
+		if i == 0 || name == "" {
+			continue
+		}
+		result[name] = m[i]
+	}
+
+	return result
+}
+
 var eventRegexp = regexp.MustCompile(
-	`\| *(.*) + ([0-9]{1,2})\.([0-9]{2})- *([0-9]{1,2})\.([0-9]{2})'([אבגדהוש]) :([א-ת]+) +([0-9]+)? *\|`)
+	`\| *` +
+		`(?P<location>.*) + ` +
+		`(?P<startHour>[0-9]{1,2})\.(?P<startMinute>[0-9]{2})- *` +
+		`(?P<endHour>[0-9]{1,2})\.(?P<endMinute>[0-9]{2})'` +
+		`(?P<weekday>[אבגדהוש]) ` +
+		`:(?P<groupType>[א-ת]+)` +
+		` +(?P<groupID>[0-9]+)? ` +
+		`*\|`)
 
 func (p *parser) parseEventLine() bool {
 	// TODO(lutzky): This is actually a group-and-event-at-once line
-	if m := eventRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
+	if m := findStringSubmatchMap(eventRegexp, p.text()); len(m) > 0 {
 		ev := Event{
-			Day:            p.weekDayFromHebrewLetter(m[6]),
-			StartMinute:    p.timeOfDayFromStrings(m[2], m[3]),
-			EndStartMinute: p.timeOfDayFromStrings(m[4], m[5]),
-			Location:       p.parseLocation(m[1]),
+			Day:            p.weekDayFromHebrewLetter(m["weekday"]),
+			StartMinute:    p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
+			EndStartMinute: p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
+			Location:       p.parseLocation(m["location"]),
 		}
 
-		groupType, err := p.groupTypeFromString(m[7])
+		groupType, err := p.groupTypeFromString(m["groupType"])
 		if err != nil {
-			p.warningf("Failed to parse group type %q: %v", m[7], err)
+			p.warningf("Failed to parse group type %q: %v", m["groupType"], err)
 			return false
 		}
 
@@ -645,8 +674,8 @@ func (p *parser) parseEventLine() bool {
 			Type:     groupType,
 		}
 
-		if m[8] != "" {
-			group.ID = p.parseUint(m[8])
+		if m["groupID"] != "" {
+			group.ID = p.parseUint(m["groupID"])
 			p.groupID = group.ID + 1
 		} else {
 			group.ID = p.groupID
