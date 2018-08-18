@@ -10,3 +10,6 @@ script:
   - go test ./...
   - go vet ./...
   - $HOME/gopath/bin/goveralls -service=travis-ci
+branches:
+  except:
+    - /.*-wip$/
