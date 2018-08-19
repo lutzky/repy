@@ -1,6 +1,7 @@
 package repy
 
 import (
+	"bytes"
 	"encoding/json"
 	"flag"
 	"io/ioutil"
@@ -86,7 +87,7 @@ func TestParse(t *testing.T) {
 
 	for _, fullPathRepy := range testCases {
 		t.Run(filepath.Base(fullPathRepy), func(t *testing.T) {
-			fullPathJson := strings.TrimSuffix(fullPathRepy, ".repy") + ".json"
+			fullPathJSON := strings.TrimSuffix(fullPathRepy, ".repy") + ".json"
 
 			repyFile, err := os.Open(fullPathRepy)
 			if err != nil {
@@ -101,32 +102,24 @@ func TestParse(t *testing.T) {
 				t.Fatalf("Got a nil course")
 			}
 
-			if *update {
-				jsonGolden, err := json.MarshalIndent(got, "", "  ")
-				if err != nil {
-					t.Fatalf("Failed to marshal golden JSON: %v", err)
-				}
-				if err := ioutil.WriteFile(fullPathJson, jsonGolden, 0644); err != nil {
-					t.Fatalf("Failed to write golden JSON file %q: %v", fullPathJson, err)
-				}
-			}
-
-			jsonBytes, err := ioutil.ReadFile(fullPathJson)
+			jsonGot, err := json.MarshalIndent(got, "", "  ")
 			if err != nil {
-				t.Fatalf("Couldn't open %q: %v", fullPathJson, err)
+				t.Fatalf("Failed to marshal golden JSON: %v", err)
 			}
 
-			var want Catalog
-			if err := json.Unmarshal(jsonBytes, &want); err != nil {
-				t.Fatalf("Couldn't unmarshal %q: %v", fullPathJson, err)
-			}
-
-			if diff := pretty.Compare(want, *got); diff != "" {
-				if len(diff) > 2048 {
-					t.Fatal("Parse mismatch, but diff is too long. Use go test -update and git diff.")
-				} else {
-					t.Fatalf("Mismatch parsing. Diff -want +got:\n%s\n", diff)
+			if *update {
+				if err := ioutil.WriteFile(fullPathJSON, jsonGot, 0644); err != nil {
+					t.Fatalf("Failed to write golden JSON file %q: %v", fullPathJSON, err)
 				}
+			}
+
+			jsonWant, err := ioutil.ReadFile(fullPathJSON)
+			if err != nil {
+				t.Fatalf("Couldn't open %q: %v", fullPathJSON, err)
+			}
+
+			if !bytes.Equal(jsonGot, jsonWant) {
+				t.Fatal("Parsed JSON differs from expected. Use go test -update and git diff.")
 			}
 		})
 	}
