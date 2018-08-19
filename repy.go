@@ -1,3 +1,5 @@
+// Package repy parses REPY files into Catalog objects, intended for conversion
+// into JSON.
 package repy
 
 import (
@@ -39,6 +41,7 @@ func (g GLogger) Warningf(format string, args ...interface{}) {
 	glog.WarningDepth(3, fmt.Sprintf(format, args...))
 }
 
+// Flush implements Logger.Flush
 func (g GLogger) Flush() {
 	glog.Flush()
 }

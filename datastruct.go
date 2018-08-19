@@ -1,6 +1,7 @@
-// datastruct.go has exported data structure definitions for REPY. These also
-// determine the JSON export format.
 package repy
+
+// This file has exported data structure definitions for REPY. These also
+// determine the JSON export format.
 
 import (
 	"encoding"
@@ -64,31 +65,30 @@ const (
 	Lab
 )
 
-var GroupTypeName = []string{
+var groupTypeName = []string{
 	Lecture:  "lecture",
 	Tutorial: "tutorial",
 	Lab:      "lab",
 }
 
 func (gt GroupType) String() string {
-	return GroupTypeName[gt]
+	return groupTypeName[gt]
 }
 
+// MarshalText implements encoding.TextMarshaler
 func (gt GroupType) MarshalText() ([]byte, error) {
-	return []byte(GroupTypeName[gt]), nil
+	return []byte(groupTypeName[gt]), nil
 }
 
-func typeCheckTextMarshaler() {
-	var gt GroupType = GroupType(0)
-	var _ encoding.TextMarshaler = gt
-	var _ encoding.TextUnmarshaler = &gt
-	panic("This should never be called")
-}
+var dummyGroupTypeForStaticTypeChecks = GroupType(0)
+var _ encoding.TextMarshaler = dummyGroupTypeForStaticTypeChecks
+var _ encoding.TextUnmarshaler = &dummyGroupTypeForStaticTypeChecks
 
+// UnmarshalText implements encoding.TextUnmarshaler
 func (gt *GroupType) UnmarshalText(b []byte) error {
 	s := string(b)
 
-	for i, n := range GroupTypeName {
+	for i, n := range groupTypeName {
 		if n == s {
 			*gt = GroupType(i)
 			return nil

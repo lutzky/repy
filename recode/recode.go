@@ -5,6 +5,7 @@ import (
 	"golang.org/x/text/encoding/charmap"
 )
 
+// Recode converts data from the "from" charset to the "to" charset
 func Recode(from, to *charmap.Charmap, data []byte) ([]byte, error) {
 	dataUTF8, err := from.NewDecoder().Bytes(data)
 	if err != nil {
