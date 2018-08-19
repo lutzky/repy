@@ -48,7 +48,6 @@ func (g GLogger) Flush() {
 
 // ReadFile reads repyReader, parses it as REPY, and returns a Catalog. If
 // logger is not nil, log messages will be sent to it.
-// TODO(lutzky): Determine if encoding can be auto-detected here.
 func ReadFile(repyReader io.Reader, logger Logger) (c *Catalog, err error) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -81,35 +80,6 @@ func (c Course) String() string {
 		c.LecturerInCharge,
 		c.TestDates,
 		c.Groups,
-	)
-}
-
-// TODO(lutzky): Why isn't this used when print("%v")ing a course?
-func (d Date) String() string {
-	return fmt.Sprintf("%04d-%02d-%02d", d.Year, d.Month, d.Day)
-}
-
-func (wh WeeklyHours) String() string {
-	return fmt.Sprintf("Lec:%d,Tut:%d,Lab:%d", wh.Lecture, wh.Tutorial, wh.Lab)
-}
-
-func (g Group) String() string {
-	return fmt.Sprintf(
-		"{group%d (%v) teachers:%q events:%v}",
-		g.ID,
-		g.Type,
-		g.Teachers,
-		g.Events,
-	)
-}
-
-func (e Event) String() string {
-	return fmt.Sprintf(
-		"{%v %v-%v at %q}",
-		e.Day,
-		e.StartMinute,
-		e.EndStartMinute,
-		e.Location,
 	)
 }
 
@@ -292,6 +262,14 @@ var (
 
 var separatorLineRegex = regexp.MustCompile(`\| +-+ *\|`)
 
+func fixTwoDigitYear(baseYear uint) uint {
+	if baseYear < 100 {
+		return 2000 + baseYear
+	}
+
+	return baseYear
+}
+
 func (p *parser) parseCourseHeadInfo() error {
 	for {
 		if p.text() == groupSep1 || p.text() == courseSep {
@@ -302,7 +280,7 @@ func (p *parser) parseCourseHeadInfo() error {
 			// skip
 		} else if m := testDateRegex.FindStringSubmatch(p.text()); m != nil {
 			d := Date{
-				2000 + p.parseUint(m[3]), // TODO(lutzky): Reverse Y2K bug :/
+				fixTwoDigitYear(p.parseUint(m[3])),
 				p.parseUint(m[2]),
 				p.parseUint(m[1]),
 			}
@@ -656,7 +634,6 @@ var eventRegexp = regexp.MustCompile(
 		`*\|`)
 
 func (p *parser) parseEventLine() bool {
-	// TODO(lutzky): This is actually a group-and-event-at-once line
 	if m := findStringSubmatchMap(eventRegexp, p.text()); len(m) > 0 {
 		ev := Event{
 			Day:            p.weekDayFromHebrewLetter(m["weekday"]),

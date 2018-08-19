@@ -214,3 +214,23 @@ func TestReverse(t *testing.T) {
 		}
 	}
 }
+
+func TestFixTwoDigitYear(t *testing.T) {
+	testCases := []struct {
+		baseYear, want uint
+	}{
+		{2, 2002},
+		{18, 2018},
+		{85, 2085},
+		{99, 2099},
+		{105, 105},
+		{1985, 1985},
+	}
+
+	for _, tc := range testCases {
+		got := fixTwoDigitYear(tc.baseYear)
+		if got != tc.want {
+			t.Errorf("fixTwoDigitYear(%d) = %d; want %d", tc.baseYear, got, tc.want)
+		}
+	}
+}
