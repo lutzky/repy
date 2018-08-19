@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	inputFile       = flag.String("input_file", "", "REPY file to read")
+	inputFile       = flag.String("input_repy_file", "", "REPY file to read")
 	repfileURL      = flag.String("repfile_url", repy.RepFileURL, "URL to REPFILE.zip")
 	desiredREPYFile = flag.String("desired_repy_file", "REPY", "Desired name of REPY file inside REPFILE.zip")
 )
