@@ -650,7 +650,7 @@ func (p *parser) parseEventLine() bool {
 			}
 
 			group := Group{
-				Teachers: []string{}, // TODO(lutzky): Fill these in
+				Teachers: []string{},
 				Events:   []Event{},
 				Type:     groupType,
 			}
