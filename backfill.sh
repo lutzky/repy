@@ -7,13 +7,11 @@ GLOB="*.repy"
 PROJECT="$(gcloud config get-value project)"
 BUCKET="$PROJECT.appspot.com"
 
+cd "$(dirname "$0")"/cmd/repy-convert/
+echo "Installing repy-convert"
+go install
 if ! hash repy-convert 2>/dev/null; then
-	cd "$(dirname "$0")"/cmd/repy-convert/
-	echo "Installing repy-convert"
-	go install
-	if ! hash repy-convert 2>/dev/null; then
-		echo "Failed to install repy-convert in GOPATH."
-	fi
+	echo "Failed to install repy-convert in GOPATH."
 fi
 
 echo -n "Download all REPY files, convert to JSON and re-upload? [y/N] "
