@@ -853,7 +853,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -1318,13 +1318,13 @@
             "events": [
               {
                 "day": 4,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 630,
                 "endMinute": 750
               },
               {
                 "day": 4,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 810,
                 "endMinute": 870
               }
@@ -1690,7 +1690,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -11562,7 +11562,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -11607,7 +11607,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -11666,7 +11666,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 750,
                 "endMinute": 930
               }
@@ -11819,7 +11819,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -11834,7 +11834,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -11873,13 +11873,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 750,
                 "endMinute": 870
               },
               {
                 "day": 1,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -11909,7 +11909,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -11990,7 +11990,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -12089,13 +12089,13 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 930,
                 "endMinute": 990
               },
               {
                 "day": 4,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 690,
                 "endMinute": 810
               }
@@ -12110,7 +12110,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -12140,7 +12140,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 810,
                 "endMinute": 870
               }
@@ -12179,7 +12179,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -12192,7 +12192,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 630,
                 "endMinute": 690
               }
@@ -12276,7 +12276,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -12399,7 +12399,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -12444,7 +12444,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 570,
                 "endMinute": 630
               }
@@ -12573,7 +12573,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -12603,7 +12603,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -12945,7 +12945,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 750,
                 "endMinute": 930
               }
@@ -13014,7 +13014,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -13029,7 +13029,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -13093,7 +13093,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -13108,7 +13108,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -13162,7 +13162,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -13246,7 +13246,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -13291,7 +13291,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -13399,7 +13399,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 930,
                 "endMinute": 1170
               }
@@ -13459,13 +13459,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 630,
                 "endMinute": 750
               },
               {
                 "day": 3,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -13531,7 +13531,7 @@
               },
               {
                 "day": 3,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -13546,7 +13546,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -13615,7 +13615,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -13714,7 +13714,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -13813,7 +13813,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -13828,7 +13828,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 570,
                 "endMinute": 630
               }
@@ -13843,7 +13843,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -13882,7 +13882,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -13897,7 +13897,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -13961,7 +13961,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -14093,7 +14093,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -14108,7 +14108,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -14147,7 +14147,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -14160,7 +14160,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -14199,7 +14199,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -14214,7 +14214,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -14253,7 +14253,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -14268,7 +14268,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -14445,7 +14445,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -14460,7 +14460,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -14499,7 +14499,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -14652,7 +14652,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -14786,7 +14786,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -14799,7 +14799,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -14881,7 +14881,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -14896,7 +14896,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -14935,7 +14935,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -14950,7 +14950,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -15071,7 +15071,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -15086,7 +15086,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -15125,7 +15125,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -15138,7 +15138,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -15177,7 +15177,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -15192,7 +15192,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 930,
                 "endMinute": 990
               }
@@ -15231,7 +15231,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -15330,7 +15330,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -15345,7 +15345,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 165",
+                "location": "בנ.מאייר 165",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -15551,7 +15551,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -15564,7 +15564,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 1110,
                 "endMinute": 1170
               }
@@ -15657,7 +15657,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -15672,7 +15672,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 930,
                 "endMinute": 990
               }
@@ -15711,7 +15711,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -15726,7 +15726,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -15765,7 +15765,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -15780,7 +15780,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -15819,7 +15819,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -15834,7 +15834,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -15927,7 +15927,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -15940,7 +15940,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -16095,7 +16095,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -16122,7 +16122,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -16230,7 +16230,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 353",
+                "location": "בנ.מאייר 353",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -16268,7 +16268,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -16306,7 +16306,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -16333,7 +16333,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -16420,7 +16420,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -16474,7 +16474,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -16572,7 +16572,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 1110,
                 "endMinute": 1230
               }
@@ -16630,7 +16630,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -16657,7 +16657,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -16684,7 +16684,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "בנ 351",
+                "location": "בנ.מאייר 351",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -16711,7 +16711,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 352",
+                "location": "בנ.מאייר 352",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -16769,7 +16769,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -16808,7 +16808,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 630,
                 "endMinute": 810
               }
@@ -16823,7 +16823,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -16838,7 +16838,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -16854,7 +16854,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -16893,13 +16893,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 750,
                 "endMinute": 810
               },
               {
                 "day": 1,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -16914,7 +16914,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -16946,7 +16946,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -16985,7 +16985,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -17000,7 +17000,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -17015,7 +17015,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -17030,7 +17030,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -17047,7 +17047,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -17097,13 +17097,13 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 750,
                 "endMinute": 870
               },
               {
                 "day": 2,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 570,
                 "endMinute": 630
               }
@@ -17118,7 +17118,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -17135,7 +17135,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -17211,7 +17211,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -17226,7 +17226,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -17241,7 +17241,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -17257,7 +17257,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -17329,7 +17329,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -17383,13 +17383,13 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 630,
                 "endMinute": 750
               },
               {
                 "day": 2,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 630,
                 "endMinute": 690
               }
@@ -17404,13 +17404,13 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 690,
                 "endMinute": 810
               },
               {
                 "day": 2,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 810,
                 "endMinute": 870
               }
@@ -17425,13 +17425,13 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 870,
                 "endMinute": 990
               },
               {
                 "day": 2,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 930,
                 "endMinute": 990
               }
@@ -17448,7 +17448,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -17475,7 +17475,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -17511,7 +17511,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 810,
                 "endMinute": 990
               }
@@ -17550,7 +17550,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -17565,7 +17565,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -17580,7 +17580,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -17597,7 +17597,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -17632,7 +17632,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -17647,7 +17647,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 930,
                 "endMinute": 1110
               }
@@ -17676,7 +17676,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 930,
                 "endMinute": 1110
               }
@@ -17691,7 +17691,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 6",
+                "location": "ה.כימית 6",
                 "startMinute": 930,
                 "endMinute": 1110
               }
@@ -17730,7 +17730,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 1",
+                "location": "ה.כימית 1",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -17745,7 +17745,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -17760,7 +17760,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -17798,7 +17798,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 690,
                 "endMinute": 870
               }
@@ -17879,7 +17879,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -17928,7 +17928,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 930,
                 "endMinute": 1110
               }
@@ -17941,7 +17941,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 2",
+                "location": "ה.כימית 2",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -17969,7 +17969,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -17996,7 +17996,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -18023,7 +18023,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -18057,7 +18057,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -18072,7 +18072,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 630,
                 "endMinute": 690
               }
@@ -18099,7 +18099,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 3",
+                "location": "ה.כימית 3",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -18201,7 +18201,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 930,
                 "endMinute": 1110
               }
@@ -18216,7 +18216,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 5",
+                "location": "ה.כימית 5",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -18243,7 +18243,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 4",
+                "location": "ה.כימית 4",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -18332,13 +18332,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 750,
                 "endMinute": 870
               },
               {
                 "day": 1,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -18370,7 +18370,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -18409,7 +18409,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -18424,7 +18424,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -18439,7 +18439,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -18467,7 +18467,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -18482,7 +18482,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -18512,7 +18512,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -18525,7 +18525,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 630,
                 "endMinute": 810
               }
@@ -18564,7 +18564,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 510,
                 "endMinute": 810
               }
@@ -18602,7 +18602,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 930,
                 "endMinute": 1170
               }
@@ -18641,13 +18641,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 630,
                 "endMinute": 750
               },
               {
                 "day": 1,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -18662,7 +18662,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -18716,7 +18716,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -18742,7 +18742,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 570,
                 "endMinute": 630
               }
@@ -18871,7 +18871,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -18963,13 +18963,13 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 930,
                 "endMinute": 990
               },
               {
                 "day": 4,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -19008,7 +19008,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -19021,13 +19021,13 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 690,
                 "endMinute": 870
               },
               {
                 "day": 4,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 570,
                 "endMinute": 870
               }
@@ -19153,7 +19153,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 1050,
                 "endMinute": 1170
               }
@@ -19168,7 +19168,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 1170,
                 "endMinute": 1230
               }
@@ -19206,7 +19206,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -19233,7 +19233,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -19284,7 +19284,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -19322,7 +19322,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -19388,7 +19388,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -19442,7 +19442,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "הנ 247",
+                "location": "הנ.מזון 247",
                 "startMinute": 630,
                 "endMinute": 810
               }
@@ -19470,7 +19470,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "הנ 300",
+                "location": "הנ.מזון 300",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -19515,7 +19515,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -19530,7 +19530,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 165",
+                "location": "ה.אויר 165",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -19545,7 +19545,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 165",
+                "location": "ה.אויר 165",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -19573,7 +19573,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -19586,7 +19586,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 750,
                 "endMinute": 930
               }
@@ -19625,7 +19625,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -19655,7 +19655,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 165",
+                "location": "ה.אויר 165",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -19725,7 +19725,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -19740,7 +19740,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -19794,7 +19794,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 630,
                 "endMinute": 690
               }
@@ -19809,7 +19809,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -19863,7 +19863,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -19878,7 +19878,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 810,
                 "endMinute": 870
               }
@@ -19917,7 +19917,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 690,
                 "endMinute": 810
               }
@@ -19932,7 +19932,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 810,
                 "endMinute": 930
               }
@@ -19971,7 +19971,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -19986,7 +19986,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -20001,7 +20001,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -20040,7 +20040,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 870,
                 "endMinute": 1050
               }
@@ -20125,7 +20125,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 870,
                 "endMinute": 930
               }
@@ -20153,7 +20153,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 810,
                 "endMinute": 870
               }
@@ -20193,7 +20193,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -20208,7 +20208,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 930,
                 "endMinute": 1050
               }
@@ -20223,7 +20223,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -20279,7 +20279,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -20307,7 +20307,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 1050,
                 "endMinute": 1110
               }
@@ -20363,7 +20363,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -20489,7 +20489,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 750,
                 "endMinute": 810
               }
@@ -20528,7 +20528,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -20543,7 +20543,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 510,
                 "endMinute": 570
               }
@@ -20558,7 +20558,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 630,
                 "endMinute": 690
               }
@@ -20583,7 +20583,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 1110,
                 "endMinute": 1230
               }
@@ -20596,7 +20596,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -20668,7 +20668,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -20707,7 +20707,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -20735,7 +20735,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 510,
                 "endMinute": 630
               }
@@ -20748,7 +20748,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -20874,7 +20874,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 690,
                 "endMinute": 810
               }
@@ -20923,7 +20923,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 690,
                 "endMinute": 870
               }
@@ -20950,7 +20950,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -20983,7 +20983,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 870,
                 "endMinute": 1050
               }
@@ -21021,7 +21021,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 870,
                 "endMinute": 1050
               }
@@ -21060,7 +21060,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -21087,7 +21087,7 @@
             "events": [
               {
                 "day": 4,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 570,
                 "endMinute": 750
               }
@@ -21125,7 +21125,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -21158,7 +21158,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 570,
                 "endMinute": 750
               }
@@ -21196,7 +21196,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -21223,7 +21223,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 150",
+                "location": "ה.אויר 150",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -21261,7 +21261,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -21299,7 +21299,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 165",
+                "location": "ה.אויר 165",
                 "startMinute": 510,
                 "endMinute": 690
               }
@@ -21337,7 +21337,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 1050,
                 "endMinute": 1170
               }
@@ -21413,7 +21413,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 810,
                 "endMinute": 990
               }
@@ -21467,7 +21467,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ה 149",
+                "location": "ה.אויר 149",
                 "startMinute": 570,
                 "endMinute": 750
               }
@@ -21500,7 +21500,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 690,
                 "endMinute": 870
               }
@@ -21527,7 +21527,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 1050,
                 "endMinute": 1170
               }
@@ -21554,7 +21554,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 241",
+                "location": "ה.אויר 241",
                 "startMinute": 870,
                 "endMinute": 1050
               }
@@ -21581,7 +21581,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 240",
+                "location": "ה.אויר 240",
                 "startMinute": 1050,
                 "endMinute": 1230
               }
@@ -28092,7 +28092,7 @@
               },
               {
                 "day": 3,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -29256,7 +29256,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -33160,7 +33160,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 990,
                 "endMinute": 1050
               }
@@ -34036,7 +34036,7 @@
               },
               {
                 "day": 2,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 870,
                 "endMinute": 1050
               }
@@ -36620,7 +36620,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "א 1",
+                "location": "א.קולנוע 1",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -37426,7 +37426,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 990,
                 "endMinute": 1110
               },
@@ -44760,7 +44760,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -49754,7 +49754,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ח 1",
+                "location": "ח.בניה 1",
                 "startMinute": 570,
                 "endMinute": 750
               }
@@ -53891,7 +53891,7 @@
               },
               {
                 "day": 2,
-                "location": "ב 208",
+                "location": "ב.המכינה 208",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -54492,7 +54492,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "בנ 280",
+                "location": "בנ.מאייר 280",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -54889,7 +54889,7 @@
             "events": [
               {
                 "day": 0,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -55141,7 +55141,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "ה 235",
+                "location": "ה.אויר 235",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -56140,7 +56140,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "הנ 100",
+                "location": "הנ.מזון 100",
                 "startMinute": 870,
                 "endMinute": 990
               }
@@ -56241,7 +56241,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "בנ 354",
+                "location": "בנ.מאייר 354",
                 "startMinute": 930,
                 "endMinute": 1050
               }

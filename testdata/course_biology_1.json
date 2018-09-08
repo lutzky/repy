@@ -52,13 +52,13 @@
             "events": [
               {
                 "day": 0,
-                "location": "א 1",
+                "location": "א.קולנוע 1",
                 "startMinute": 810,
                 "endMinute": 870
               },
               {
                 "day": 2,
-                "location": "א 1",
+                "location": "א.קולנוע 1",
                 "startMinute": 750,
                 "endMinute": 870
               }

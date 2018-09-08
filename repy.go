@@ -565,7 +565,7 @@ func (p *parser) groupTypeFromString(s string) (GroupType, error) {
 	return result, nil
 }
 
-var standardLocationRegexp = regexp.MustCompile(`([א-ת]+) ([0-9]+)`)
+var standardLocationRegexp = regexp.MustCompile(`([א-ת\.]+) ([0-9]+)`)
 
 func (p *parser) parseLocation(s string) string {
 	m := standardLocationRegexp.FindStringSubmatch(s)
