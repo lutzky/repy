@@ -4,6 +4,7 @@ api_version: go1.9
 handlers:
 - url: /update
   script: _go_app
+  login: admin
 - url: /view
   static_files: view/index.html
   upload: view/index.html
