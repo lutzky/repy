@@ -272,7 +272,7 @@ func fixTwoDigitYear(baseYear uint) uint {
 
 func (p *parser) parseCourseHeadInfo() error {
 	for {
-		if p.text() == groupSep1 || p.text() == courseSep {
+		if p.text() == groupSep1 || p.text() == courseSep || p.text() == blankLine2 {
 			return nil
 		}
 
@@ -666,8 +666,12 @@ func (p *parser) parseEventLine() bool {
 			p.course.Groups = append(p.course.Groups, group)
 		}
 
-		group := &p.course.Groups[len(p.course.Groups)-1]
-		group.Events = append(group.Events, ev)
+		if len(p.course.Groups) > 0 {
+			group := &p.course.Groups[len(p.course.Groups)-1]
+			group.Events = append(group.Events, ev)
+		} else {
+			p.warningf("Couldn't establish a group, nowhere to add event %q", p.text())
+		}
 
 		p.scan()
 		return true
@@ -676,8 +680,8 @@ func (p *parser) parseEventLine() bool {
 }
 
 func (p *parser) parseGroups() error {
-	if p.text() != groupSep1 {
-		p.warningf("Expected %q, got %q; skipping course", groupSep1, p.text())
+	if p.text() != groupSep1 && p.text() != blankLine2 {
+		p.warningf("Expected either %q or %q, got %q; skipping course", groupSep1, blankLine2, p.text())
 		return nil
 	}
 

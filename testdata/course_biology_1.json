@@ -1,0 +1,94 @@
+[
+  {
+    "name": "פקולטה שקרית",
+    "courses": [
+      {
+        "id": 134058,
+        "name": "ביולוגיה 1",
+        "academicPoints": 3,
+        "lecturerInCharge": "ד\"ר    ד.מאירי",
+        "weeklyHours": {
+          "lecture": 3
+        },
+        "testDates": [
+          {
+            "year": 2019,
+            "month": 2,
+            "day": 11
+          },
+          {
+            "year": 2019,
+            "month": 3,
+            "day": 8
+          }
+        ],
+        "groups": [
+          {
+            "id": 10,
+            "teachers": [
+              "ד\"ר ד.מאירי"
+            ],
+            "events": [
+              {
+                "day": 0,
+                "location": "ביולוגיה 1",
+                "startMinute": 870,
+                "endMinute": 990
+              },
+              {
+                "day": 4,
+                "location": "ביולוגיה 1",
+                "startMinute": 750,
+                "endMinute": 810
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 20,
+            "teachers": [
+              "פרופ. ע.בז'ה"
+            ],
+            "events": [
+              {
+                "day": 0,
+                "location": "א 1",
+                "startMinute": 810,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "א 1",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          },
+          {
+            "id": 30,
+            "teachers": [
+              "פרופ. ג.שוסטר"
+            ],
+            "events": [
+              {
+                "day": 0,
+                "location": "",
+                "startMinute": 810,
+                "endMinute": 870
+              },
+              {
+                "day": 2,
+                "location": "",
+                "startMinute": 750,
+                "endMinute": 870
+              }
+            ],
+            "type": "lecture"
+          }
+        ]
+      }
+    ],
+    "semester": "חורף תשע\"ו"
+  }
+]
