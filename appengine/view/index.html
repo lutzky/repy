@@ -30,6 +30,29 @@
       return li;
     }
 
+    function getSemester(catalogURL, callback) {
+      let xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let catalog = JSON.parse(this.responseText);
+          if (catalog.length < 1) {
+            callback('NO FACULTIES');
+            return;
+          }
+          let semester = catalog[0].semester;
+          catalog.forEach(function(faculty) {
+            if (faculty.semester != semester) {
+              semester = 'INCONSISTENT SEMESTER';
+              return;
+            }
+          });
+          callback(semester);
+        }
+      };
+      xmlhttp.open("GET", catalogURL, true);
+      xmlhttp.send();
+    }
+
     function showCatalog(catalog) {
       let main = document.getElementById("maindiv");
       main.innerHTML = "";
@@ -46,7 +69,13 @@
       let ul = document.createElement('ul');
       catalog.Entries.forEach(function(entry) {
         let li = document.createElement('li');
-        li.innerText = entry.TimeStamp + ' (' + entry.Sha1Sum + ')';
+        li.innerText = entry.TimeStamp + ' (' + entry.Sha1Sum + ') ';
+        let semesterSpan = document.createElement('span');
+        semesterSpan.innerHTML = '<i>checking semester</i>';
+        li.appendChild(semesterSpan);
+        getSemester(baseUrl + entry.Parsed, function(semester) {
+          semesterSpan.innerText = semester;
+        });
         ul.appendChild(li);
 
         let subUl = document.createElement('ul');
