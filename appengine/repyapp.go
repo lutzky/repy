@@ -259,9 +259,10 @@ func (rs *repyStorer) writeTimeStamp(filename string, t time.Time) error {
 	return nil
 }
 
-type timedSum struct {
-	sha1sum string
-	t       time.Time
+type metadataEntry struct {
+	sha1sum  string
+	t        time.Time
+	semester string
 }
 
 // Catalog is the format for catalog.json
@@ -276,23 +277,25 @@ type CatalogEntry struct {
 	Iso8859_8 string
 	Parsed    string
 	TimeStamp time.Time
+	Semester  string
 }
 
 func (rs *repyStorer) writeCatalog() error {
-	ts, err := rs.getSumsAndTimestamps()
+	metadata, err := rs.getAllMetadata()
 	if err != nil {
 		return errors.Wrap(err, "failed to get timestamps and sums")
 	}
 
 	catalog := Catalog{Entries: []CatalogEntry{}}
 
-	for _, tss := range ts {
+	for _, m := range metadata {
 		catalog.Entries = append(catalog.Entries, CatalogEntry{
-			Sha1Sum:   tss.sha1sum,
-			TimeStamp: tss.t,
-			Iso8859_8: tss.sha1sum + ".txt",
-			Original:  tss.sha1sum + ".repy",
-			Parsed:    tss.sha1sum + ".json",
+			Sha1Sum:   m.sha1sum,
+			TimeStamp: m.t,
+			Semester:  m.semester,
+			Iso8859_8: m.sha1sum + ".txt",
+			Original:  m.sha1sum + ".repy",
+			Parsed:    m.sha1sum + ".json",
 		})
 	}
 
@@ -308,29 +311,36 @@ func (rs *repyStorer) writeCatalog() error {
 	return nil
 }
 
-func (rs *repyStorer) getSumsAndTimestamps() ([]timedSum, error) {
+func (rs *repyStorer) getAllMetadata() ([]metadataEntry, error) {
 	sums, err := rs.getExistingSHA1Sums()
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to list existing REPY data")
 	}
 
-	var wg sync.WaitGroup
-	ch := make(chan timedSum)
+	var wg errgroup.Group
+	ch := make(chan metadataEntry)
 
 	for _, sum := range sums {
 		sum := sum
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
+		wg.Go(func() error {
 			ts, err := rs.getTimeStampForSHA1Sum(sum)
 			if err != nil {
-				log.Errorf(rs.ctx, "Couldn't get timeestamp for %q: %v", sum, err)
+				log.Errorf(rs.ctx, "Couldn't get timestamp for %q: %v", sum, err)
+				return err
 			}
-			ch <- timedSum{sum, ts}
-		}()
+
+			semester := rs.getSemesterForSHA1Sum(sum)
+
+			ch <- metadataEntry{
+				sha1sum:  sum,
+				t:        ts,
+				semester: semester,
+			}
+			return nil
+		})
 	}
 
-	results := []timedSum{}
+	results := []metadataEntry{}
 
 	var wg2 sync.WaitGroup
 
@@ -342,12 +352,12 @@ func (rs *repyStorer) getSumsAndTimestamps() ([]timedSum, error) {
 		wg2.Done()
 	}()
 
-	wg.Wait()
+	err = wg.Wait()
 	close(ch)
 
 	wg2.Wait()
 
-	return results, nil
+	return results, err
 }
 
 var repyFileRegexp = regexp.MustCompile(`[0-9a-f]{20}.repy`)
@@ -395,4 +405,35 @@ func (rs *repyStorer) getTimeStampForSHA1Sum(sha1sum string) (time.Time, error) 
 	}
 
 	return t, nil
+}
+
+func (rs *repyStorer) getSemesterForSHA1Sum(sha1sum string) string {
+	filename := sha1sum + ".json"
+	obj := rs.bucket.Object(filename)
+	r, err := obj.NewReader(rs.ctx)
+	if err != nil {
+		log.Errorf(rs.ctx, "Failed to read %q: %v", filename, err)
+		return ""
+	}
+
+	dec := json.NewDecoder(r)
+	catalog := repy.Catalog{}
+	if err := dec.Decode(&catalog); err != nil {
+		log.Errorf(rs.ctx, "Failed to unmarshal %q: %v", filename, err)
+		return ""
+	}
+
+	if len(catalog) == 0 {
+		return "No faculties"
+	}
+
+	semester := catalog[0].Semester
+
+	for _, faculty := range catalog {
+		if faculty.Semester != semester {
+			return "INCONSISTENT"
+		}
+	}
+
+	return semester
 }
