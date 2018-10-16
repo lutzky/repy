@@ -1,0 +1,19 @@
+[
+  {
+    "name": "טרופס תועוצקמ",
+    "courses": [
+      {
+        "id": 394800,
+        "name": "חינוך גופני-כושר בנים",
+        "academicPoints": 1,
+        "lecturerInCharge": "",
+        "weeklyHours": {
+          "tutorial": 2
+        },
+        "testDates": null,
+        "groups": null
+      }
+    ],
+    "semester": "אביב תשע\"ח"
+  }
+]
