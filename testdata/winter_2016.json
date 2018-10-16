@@ -9943,7 +9943,7 @@
       },
       {
         "id": 34311,
-        "name": "פרויקט  אדריכלות ימית 1",
+        "name": "פרויקט אדריכלות ימית 1",
         "academicPoints": 2.5,
         "lecturerInCharge": "מר א.בירן",
         "weeklyHours": {
@@ -9954,7 +9954,7 @@
       },
       {
         "id": 34312,
-        "name": "פרויקט  אדריכלות ימית 2",
+        "name": "פרויקט אדריכלות ימית 2",
         "academicPoints": 2.5,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -11821,7 +11821,7 @@
       },
       {
         "id": 36055,
-        "name": "אופטיקה לינארית ויישומים  2",
+        "name": "אופטיקה לינארית ויישומים 2",
         "academicPoints": 2.5,
         "lecturerInCharge": "פרופ. א.חסמן",
         "weeklyHours": {
@@ -12172,7 +12172,7 @@
       },
       {
         "id": 36083,
-        "name": "החלטות#  אתגרים והשלכות",
+        "name": "החלטות# אתגרים והשלכות",
         "academicPoints": 2,
         "lecturerInCharge": "פרופ. י.בן-חיים",
         "weeklyHours": {
@@ -13637,7 +13637,7 @@
       },
       {
         "id": 44169,
-        "name": "פרויקט  ב",
+        "name": "פרויקט ב",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -13648,7 +13648,7 @@
       },
       {
         "id": 44170,
-        "name": "פרויקט  מיוחד",
+        "name": "פרויקט מיוחד",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -16205,7 +16205,7 @@
       },
       {
         "id": 46925,
-        "name": "כלים  לניתוח מערכות מחשבים",
+        "name": "כלים לניתוח מערכות מחשבים",
         "academicPoints": 3,
         "lecturerInCharge": "14 ר.רום",
         "weeklyHours": {
@@ -17421,7 +17421,7 @@
       },
       {
         "id": 54400,
-        "name": "מעבדה   להנדסה כימית 2",
+        "name": "מעבדה להנדסה כימית 2",
         "academicPoints": 2.5,
         "lecturerInCharge": "31 א.שרודר",
         "weeklyHours": {
@@ -18280,7 +18280,7 @@
     "courses": [
       {
         "id": 64001,
-        "name": "עבודת גמר  1",
+        "name": "עבודת גמר 1",
         "academicPoints": 4,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -21311,7 +21311,7 @@
       },
       {
         "id": 86219,
-        "name": "דינמיקה ואוירודינמיקה  של מסוקים",
+        "name": "דינמיקה ואוירודינמיקה של מסוקים",
         "academicPoints": 3,
         "lecturerInCharge": "פרופ. ע.רנד",
         "weeklyHours": {
@@ -27057,7 +27057,7 @@
       },
       {
         "id": 99635,
-        "name": "סמינר שטח במדעי ההתנהגות  בניהול",
+        "name": "סמינר שטח במדעי ההתנהגות בניהול",
         "academicPoints": 0.5,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -33011,7 +33011,7 @@
       },
       {
         "id": 114021,
-        "name": "מעבדה לפיסיקה  2מ",
+        "name": "מעבדה לפיסיקה 2מ",
         "academicPoints": 1.5,
         "lecturerInCharge": "פרופ/ח ע.קניגל",
         "weeklyHours": {
@@ -50990,7 +50990,7 @@
       },
       {
         "id": 274170,
-        "name": "אנטומיה ואמבריולוגיה  1 ת\"א",
+        "name": "אנטומיה ואמבריולוגיה 1 ת\"א",
         "academicPoints": 5,
         "lecturerInCharge": "פרופ. א.לוי",
         "weeklyHours": {

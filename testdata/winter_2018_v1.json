@@ -10604,7 +10604,7 @@
       },
       {
         "id": 35091,
-        "name": "תרמודינמיקה  2",
+        "name": "תרמודינמיקה 2",
         "academicPoints": 3.5,
         "lecturerInCharge": "פרופ/מ מ.סאס",
         "weeklyHours": {
@@ -12851,7 +12851,7 @@
       },
       {
         "id": 44169,
-        "name": "פרויקט  ב",
+        "name": "פרויקט ב",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -12862,7 +12862,7 @@
       },
       {
         "id": 44170,
-        "name": "פרויקט  מיוחד",
+        "name": "פרויקט מיוחד",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -17058,7 +17058,7 @@
       },
       {
         "id": 54251,
-        "name": "עבודה בתעשיה  1",
+        "name": "עבודה בתעשיה 1",
         "academicPoints": 1,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -18260,7 +18260,7 @@
     "courses": [
       {
         "id": 64001,
-        "name": "עבודת גמר  1",
+        "name": "עבודת גמר 1",
         "academicPoints": 4,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -32029,7 +32029,7 @@
       },
       {
         "id": 114021,
-        "name": "מעבדה לפיסיקה  2מ",
+        "name": "מעבדה לפיסיקה 2מ",
         "academicPoints": 1.5,
         "lecturerInCharge": "פרופ/ח מ.רזניקוב",
         "weeklyHours": {
@@ -43135,7 +43135,7 @@
       },
       {
         "id": 207900,
-        "name": "נושאים מתקדמים בתכנון ערים  1",
+        "name": "נושאים מתקדמים בתכנון ערים 1",
         "academicPoints": 3,
         "lecturerInCharge": "פרופ/מ מ.פורטמן",
         "weeklyHours": {
@@ -43452,7 +43452,7 @@
       },
       {
         "id": 209700,
-        "name": "אולפן 4  תכנון מטרופוליטני",
+        "name": "אולפן 4 תכנון מטרופוליטני",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ/ח צ.מרטנס",
         "weeklyHours": {

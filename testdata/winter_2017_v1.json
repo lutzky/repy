@@ -9569,7 +9569,7 @@
       },
       {
         "id": 36055,
-        "name": "אופטיקה לינארית ויישומים  2",
+        "name": "אופטיקה לינארית ויישומים 2",
         "academicPoints": 2.5,
         "lecturerInCharge": "פרופ. א.חסמן",
         "weeklyHours": {
@@ -11098,7 +11098,7 @@
       },
       {
         "id": 44169,
-        "name": "פרויקט  ב",
+        "name": "פרויקט ב",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -11109,7 +11109,7 @@
       },
       {
         "id": 44170,
-        "name": "פרויקט  מיוחד",
+        "name": "פרויקט מיוחד",
         "academicPoints": 4,
         "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
@@ -14321,7 +14321,7 @@
       },
       {
         "id": 54400,
-        "name": "מעבדה   להנדסה כימית 2",
+        "name": "מעבדה להנדסה כימית 2",
         "academicPoints": 2.5,
         "lecturerInCharge": "פרופ/מ א.שרודר",
         "weeklyHours": {
@@ -15101,7 +15101,7 @@
     "courses": [
       {
         "id": 64001,
-        "name": "עבודת גמר  1",
+        "name": "עבודת גמר 1",
         "academicPoints": 4,
         "lecturerInCharge": "",
         "weeklyHours": {
@@ -28606,7 +28606,7 @@
       },
       {
         "id": 114021,
-        "name": "מעבדה לפיסיקה  2מ",
+        "name": "מעבדה לפיסיקה 2מ",
         "academicPoints": 1.5,
         "lecturerInCharge": "פרופ/ח מ.רזניקוב",
         "weeklyHours": {

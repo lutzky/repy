@@ -138,7 +138,7 @@ func (p *parser) parseIDAndName() error {
 		return p.errorf("Line %q doesn't match id-and-name regex `%s`", p.text(), idAndNameRegex)
 	}
 
-	p.course.Name = hebrewFlip(m[1])
+	p.course.Name = dedupeSpaces(hebrewFlip(m[1]))
 	p.course.ID = p.parseUint(m[2])
 	p.scan()
 	return nil
@@ -613,7 +613,7 @@ var lecturerRegexp = regexp.MustCompile(
 
 func (p *parser) parseLecturerLine() bool {
 	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
-		lecturer := hebrewFlip(collapseSpaces(m[1]))
+		lecturer := dedupeSpaces(hebrewFlip(collapseSpaces(m[1])))
 		teachers := &p.lastGroup().Teachers
 		*teachers = append(*teachers, lecturer)
 		return true
