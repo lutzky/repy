@@ -904,7 +904,7 @@
         "id": 14143,
         "name": "שיטות מחשב בסטטיקת מבנים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.איזנברגר",
+        "lecturerInCharge": "פרופ. מ.איזנברגר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -995,7 +995,7 @@
         "id": 14145,
         "name": "תורת החוזק 2",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  ע.רבינוביץ",
+        "lecturerInCharge": "פרופ. ע.רבינוביץ",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -1150,7 +1150,7 @@
         "id": 14147,
         "name": "בניית המהנדס 1",
         "academicPoints": 4,
-        "lecturerInCharge": "אינג.  צ.המלי",
+        "lecturerInCharge": "אינג. צ.המלי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 3,
@@ -1295,7 +1295,7 @@
         "id": 14201,
         "name": "פרויקט בהנדסת מים 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.צמחוני",
+        "lecturerInCharge": "ד\"ר א.צמחוני",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -1478,7 +1478,7 @@
         "id": 14212,
         "name": "מבוא להידרולוגיה הנדסית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.אוסטפלד",
+        "lecturerInCharge": "פרופ. א.אוסטפלד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -1628,7 +1628,7 @@
         "id": 14301,
         "name": "פרויקט בהנדסה סביבתית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    צ.גרטלר",
+        "lecturerInCharge": "ד\"ר צ.גרטלר",
         "weeklyHours": {
           "project": 2
         },
@@ -2201,7 +2201,7 @@
         "id": 14501,
         "name": "פרויקט בחומרים ותפקוד",
         "academicPoints": 2.5,
-        "lecturerInCharge": "אינג.  י.סיקולר",
+        "lecturerInCharge": "אינג. י.סיקולר",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -2571,7 +2571,7 @@
         "id": 14513,
         "name": "בניה במתכות-חומרים וטכנולוגיה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ס.ז'וטובסקי",
+        "lecturerInCharge": "ד\"ר ס.ז'וטובסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -2688,7 +2688,7 @@
         "id": 14601,
         "name": "פרויקט בניהול הבנייה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.שפירא",
+        "lecturerInCharge": "פרופ. א.שפירא",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -2851,7 +2851,7 @@
         "id": 14613,
         "name": "ניהול משאבי אנוש בבנייה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.זאל",
+        "lecturerInCharge": "ד\"ר ד.זאל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -2903,7 +2903,7 @@
         "id": 14615,
         "name": "מבוא לניהול פיננסי בבנייה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ח.בן-עוז",
+        "lecturerInCharge": "ד\"ר ח.בן-עוז",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -3042,7 +3042,7 @@
         "id": 14620,
         "name": "עקרונות תכן מבנים בהנדסת ביצוע",
         "academicPoints": 5,
-        "lecturerInCharge": "אינג.  פ.אלולי",
+        "lecturerInCharge": "אינג. פ.אלולי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 3,
@@ -3095,7 +3095,7 @@
         "id": 14631,
         "name": "אומדן עלויות של פרויקטי תשתית",
         "academicPoints": 3,
-        "lecturerInCharge": "אינג.  א.גליל",
+        "lecturerInCharge": "אינג. א.גליל",
         "weeklyHours": {
           "lecture": 3
         },
@@ -3144,7 +3144,7 @@
         "id": 14702,
         "name": "תכנון תחבורה",
         "academicPoints": 4.5,
-        "lecturerInCharge": "ד\"ר    ר.אסחאק",
+        "lecturerInCharge": "ד\"ר ר.אסחאק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2,
@@ -3268,7 +3268,7 @@
         "id": 14709,
         "name": "מעבדת דרכים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.סידס",
+        "lecturerInCharge": "ד\"ר א.סידס",
         "weeklyHours": {
           "lecture": 1,
           "lab": 2
@@ -3424,7 +3424,7 @@
         "id": 14716,
         "name": "תכנון ותפעול תחבורה ציבורית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ר.אסחאק",
+        "lecturerInCharge": "ד\"ר ר.אסחאק",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -3540,7 +3540,7 @@
         "id": 14722,
         "name": "פרויקט בהנדסת תעבורה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ת.בלשה",
+        "lecturerInCharge": "ד\"ר ת.בלשה",
         "weeklyHours": {
           "tutorial": 2,
           "project": 5
@@ -3552,7 +3552,7 @@
         "id": 14723,
         "name": "פרויקט בתכן גיאומטרי של דרכים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.מגיד",
+        "lecturerInCharge": "ד\"ר ד.מגיד",
         "weeklyHours": {
           "tutorial": 2,
           "project": 5
@@ -3746,7 +3746,7 @@
         "id": 14829,
         "name": "תחיקת המדידה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.שניידמן",
+        "lecturerInCharge": "ד\"ר א.שניידמן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -3784,7 +3784,7 @@
         "id": 14841,
         "name": "יסודות המיפוי והמדידה 1",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ש.דליות",
+        "lecturerInCharge": "ד\"ר ש.דליות",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -3967,7 +3967,7 @@
         "id": 14842,
         "name": "יסודות המיפוי והמדידה 2",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    ג.ג'אד",
+        "lecturerInCharge": "ד\"ר ג.ג'אד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -4224,7 +4224,7 @@
         "id": 14848,
         "name": "מבוא לגיאודזיה",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    ל.שחר",
+        "lecturerInCharge": "ד\"ר ל.שחר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -4276,7 +4276,7 @@
         "id": 14851,
         "name": "רשתות בקרה גיאודטיות",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.גרינפלד",
+        "lecturerInCharge": "פרופ. י.גרינפלד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -4456,7 +4456,7 @@
         "id": 14867,
         "name": "פרויקט בגיאודזיה ומדידות 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ש.דליות",
+        "lecturerInCharge": "ד\"ר ש.דליות",
         "weeklyHours": {
           "project": 2
         },
@@ -4467,7 +4467,7 @@
         "id": 14869,
         "name": "פרויקט במיפוי ספרתי 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  מ.שושני",
+        "lecturerInCharge": "פרופ. מ.שושני",
         "weeklyHours": {
           "project": 2
         },
@@ -4478,7 +4478,7 @@
         "id": 14874,
         "name": "מבוא לחישה מרחוק",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.שושני",
+        "lecturerInCharge": "פרופ. מ.שושני",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -4607,7 +4607,7 @@
         "id": 14952,
         "name": "סקר קרקעות - מערכות מידע",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ר.זיידנברג",
+        "lecturerInCharge": "ד\"ר ר.זיידנברג",
         "weeklyHours": {
           "lecture": 2,
           "lab": 2
@@ -4842,7 +4842,7 @@
         "id": 15017,
         "name": "ציוד מערכות ושיטות בעבודות עפר",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    צ.בורוביץ",
+        "lecturerInCharge": "ד\"ר צ.בורוביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -5011,7 +5011,7 @@
         "id": 16203,
         "name": "הנדסת מערכות משאבי מים 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.אוסטפלד",
+        "lecturerInCharge": "פרופ. א.אוסטפלד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -5219,7 +5219,7 @@
         "id": 16327,
         "name": "פירוק ביולוגי של מזהמים אורגניים",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ק.דוזורץ",
+        "lecturerInCharge": "פרופ. ק.דוזורץ",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5323,7 +5323,7 @@
         "id": 16329,
         "name": "הידרוביולוגיה",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     י.אזוב",
+        "lecturerInCharge": "מר י.אזוב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5399,7 +5399,7 @@
         "id": 16337,
         "name": "אלקטרוכימיה סביבתית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.גנדל",
+        "lecturerInCharge": "ד\"ר י.גנדל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -5503,7 +5503,7 @@
         "id": 16504,
         "name": "אבטחת איכות ובקרת איכות בבנייה",
         "academicPoints": 2,
-        "lecturerInCharge": "אינג.  י.סיקולר",
+        "lecturerInCharge": "אינג. י.סיקולר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5554,7 +5554,7 @@
         "id": 16505,
         "name": "בנייה בעץ - חומרים וטכנולוגיה",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ח.דביר",
+        "lecturerInCharge": "מר ח.דביר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5592,7 +5592,7 @@
         "id": 16619,
         "name": "תכן טפסות לבטון",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.שפירא",
+        "lecturerInCharge": "פרופ. א.שפירא",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5625,7 +5625,7 @@
         "id": 16631,
         "name": "יזמות בינלאומית בנדל\"ן",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.ורשבסקי",
+        "lecturerInCharge": "ד\"ר י.ורשבסקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -5652,7 +5652,7 @@
         "id": 16709,
         "name": "התכנון העירוני, האזורי והארצי",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ר.קטושבסקי",
+        "lecturerInCharge": "ד\"ר ר.קטושבסקי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -5690,7 +5690,7 @@
         "id": 16801,
         "name": "חשבון תאום 2",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  י.גרינפלד",
+        "lecturerInCharge": "פרופ. י.גרינפלד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -5808,7 +5808,7 @@
         "id": 16816,
         "name": "גיאודזיה פיסיקלית 1",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ב.שירמן",
+        "lecturerInCharge": "מר ב.שירמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -5860,7 +5860,7 @@
         "id": 16819,
         "name": "מיפוי ימי מתקדם",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ב.גרינקר",
+        "lecturerInCharge": "מר ב.גרינקר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -5912,7 +5912,7 @@
         "id": 16832,
         "name": "ניווט ומערכות אינרציאליות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    י.קליין",
+        "lecturerInCharge": "ד\"ר י.קליין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -5964,7 +5964,7 @@
         "id": 16834,
         "name": "סדנא בפיתוח מערכות מידע גיאוגרפי",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.ספרא",
+        "lecturerInCharge": "ד\"ר א.ספרא",
         "weeklyHours": {
           "lecture": 2,
           "lab": 2
@@ -6016,7 +6016,7 @@
         "id": 16835,
         "name": "היבטים נומריים בפתרון תצלומים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ג.תלם",
+        "lecturerInCharge": "ד\"ר ג.תלם",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -6231,7 +6231,7 @@
         "id": 34011,
         "name": "תורת הרטט",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  י.בוכר",
+        "lecturerInCharge": "פרופ. י.בוכר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -6450,7 +6450,7 @@
         "id": 34016,
         "name": "תכן מכני 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    מ.גרופר",
+        "lecturerInCharge": "ד\"ר מ.גרופר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -6753,7 +6753,7 @@
         "id": 34030,
         "name": "תהליכי יצור",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.זוסמן",
+        "lecturerInCharge": "פרופ. א.זוסמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -6845,7 +6845,7 @@
         "id": 34032,
         "name": "מערכות ליניאריות מ'",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.הלוי",
+        "lecturerInCharge": "פרופ. י.הלוי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -6916,7 +6916,7 @@
         "id": 34033,
         "name": "אנליזה נומרית מ'",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.אורון",
+        "lecturerInCharge": "פרופ. א.אורון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -7216,7 +7216,7 @@
         "id": 34040,
         "name": "מבוא לבקרה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ל.מירקין",
+        "lecturerInCharge": "פרופ. ל.מירקין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -7294,7 +7294,7 @@
         "id": 34041,
         "name": "מעבר חום",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  מ.שפירא",
+        "lecturerInCharge": "פרופ. מ.שפירא",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -7450,7 +7450,7 @@
         "id": 34043,
         "name": "שרטוט הנדסי ממוחשב",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     א.לומברוזו",
+        "lecturerInCharge": "מר א.לומברוזו",
         "weeklyHours": {
           "lecture": 2,
           "lab": 2
@@ -7584,7 +7584,7 @@
         "id": 34206,
         "name": "תכן מערכות הדראוליות ופנאומטיות 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ב.מיטל",
+        "lecturerInCharge": "ד\"ר ב.מיטל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -7743,7 +7743,7 @@
         "id": 34353,
         "name": "פרויקט תכן מוצר חדש 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ח.במברגר",
+        "lecturerInCharge": "ד\"ר ח.במברגר",
         "weeklyHours": {
           "lecture": 1,
           "project": 3
@@ -7793,7 +7793,7 @@
         "id": 34362,
         "name": "פרויקט בבקרה 2",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  י.הלוי",
+        "lecturerInCharge": "פרופ. י.הלוי",
         "weeklyHours": {
           "project": 2
         },
@@ -7804,7 +7804,7 @@
         "id": 34364,
         "name": "פרויקט במכניקה 2",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.דורוגוי",
+        "lecturerInCharge": "ד\"ר א.דורוגוי",
         "weeklyHours": {
           "project": 2
         },
@@ -7899,7 +7899,7 @@
         "id": 34378,
         "name": "פר.תכן באנרגיה מתחדשת ובת קיימא 2",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.פישר",
+        "lecturerInCharge": "ד\"ר א.פישר",
         "weeklyHours": {
           "project": 4
         },
@@ -7921,7 +7921,7 @@
         "id": 34401,
         "name": "מעבדה מתקדמת לרובוטים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  מ.שהם",
+        "lecturerInCharge": "פרופ. מ.שהם",
         "weeklyHours": {
           "lab": 4
         },
@@ -7946,7 +7946,7 @@
         "id": 34404,
         "name": "מעבדה מתקדמת בתיב\"ם",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     א.לומברוזו",
+        "lecturerInCharge": "מר א.לומברוזו",
         "weeklyHours": {
           "lab": 2
         },
@@ -7971,7 +7971,7 @@
         "id": 34406,
         "name": "מעבדה מתקדמת לבקרה ואוטומציה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.שניידרמן",
+        "lecturerInCharge": "ד\"ר ד.שניידרמן",
         "weeklyHours": {
           "lab": 4
         },
@@ -7996,7 +7996,7 @@
         "id": 34410,
         "name": "מעבדה מתקדמת לאנרגיה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     ע.בן-ארי",
+        "lecturerInCharge": "מר ע.בן-ארי",
         "weeklyHours": {
           "lab": 4
         },
@@ -8021,7 +8021,7 @@
         "id": 34413,
         "name": "מעבדה לתכן וייצור",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     כ.כהן",
+        "lecturerInCharge": "מר כ.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -8111,7 +8111,7 @@
         "id": 35003,
         "name": "מערכות תיב\"מ 1",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     י.בן-שבת",
+        "lecturerInCharge": "מר י.בן-שבת",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -8176,7 +8176,7 @@
         "id": 35008,
         "name": "אוטומציה תעשייתית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.קנושר",
+        "lecturerInCharge": "ד\"ר ד.קנושר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -8228,7 +8228,7 @@
         "id": 35017,
         "name": "מערכת רכב 2",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    נ.סלע",
+        "lecturerInCharge": "ד\"ר נ.סלע",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -8332,7 +8332,7 @@
         "id": 35024,
         "name": "טריבולוגיה שימושית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ה.קאסם",
+        "lecturerInCharge": "ד\"ר ה.קאסם",
         "weeklyHours": {
           "lecture": 2,
           "lab": 2
@@ -8384,7 +8384,7 @@
         "id": 35026,
         "name": "מבוא יצירתי להנדסת מכונות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ד.אילתה",
+        "lecturerInCharge": "פרופ. ד.אילתה",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -8478,7 +8478,7 @@
         "id": 35036,
         "name": "תכן מערכות בקרה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    מ.קריסטלני",
+        "lecturerInCharge": "ד\"ר מ.קריסטלני",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -8645,7 +8645,7 @@
         "id": 35044,
         "name": "הידרוסטטיקה של אוניות",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     א.בירן",
+        "lecturerInCharge": "מר א.בירן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -8683,7 +8683,7 @@
         "id": 35045,
         "name": "קריאוגניקה# מקררים וניזול גזים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ב.מיטל",
+        "lecturerInCharge": "ד\"ר ב.מיטל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -8765,7 +8765,7 @@
         "id": 35049,
         "name": "עקרונות מערכות הנעת כלי שייט",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.אשד",
+        "lecturerInCharge": "ד\"ר ש.אשד",
         "weeklyHours": {
           "lecture": 3
         },
@@ -8850,7 +8850,7 @@
         "id": 35053,
         "name": "אנרגיה מתחדשת ובת קיימא",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.פישר",
+        "lecturerInCharge": "ד\"ר א.פישר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -8943,7 +8943,7 @@
         "id": 35124,
         "name": "אנליזת תהליכי עבוד",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.שיריזלי",
+        "lecturerInCharge": "ד\"ר א.שיריזלי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -8995,7 +8995,7 @@
         "id": 35146,
         "name": "מנועי שריפה פנימית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ל.טרטקובסקי",
+        "lecturerInCharge": "ד\"ר ל.טרטקובסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -9047,7 +9047,7 @@
         "id": 35188,
         "name": "תורת הבקרה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ל.מירקין",
+        "lecturerInCharge": "פרופ. ל.מירקין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -9105,7 +9105,7 @@
         "id": 36001,
         "name": "שיטות אנליטיות בהנדסת מכונות 1",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  א.גנדלמן",
+        "lecturerInCharge": "פרופ. א.גנדלמן",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -9208,7 +9208,7 @@
         "id": 36005,
         "name": "דינמיקה אנליטית 1",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.גנדלמן",
+        "lecturerInCharge": "פרופ. א.גנדלמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9246,7 +9246,7 @@
         "id": 36006,
         "name": "גלי מאמצים במוצקים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ד.ריטל",
+        "lecturerInCharge": "פרופ. ד.ריטל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -9379,7 +9379,7 @@
         "id": 36020,
         "name": "גאומטריה חישובית ומודלים לתיב\"ם 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ע.פישר",
+        "lecturerInCharge": "פרופ. ע.פישר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -9431,7 +9431,7 @@
         "id": 36031,
         "name": "טריבולוגיה עיונית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ר.גולצברג",
+        "lecturerInCharge": "ד\"ר ר.גולצברג",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9464,7 +9464,7 @@
         "id": 36041,
         "name": "תכן הנדסי מתקדם 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ב.מיטל",
+        "lecturerInCharge": "ד\"ר ב.מיטל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -9571,7 +9571,7 @@
         "id": 36055,
         "name": "אופטיקה לינארית ויישומים  2",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.חסמן",
+        "lecturerInCharge": "פרופ. א.חסמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -9612,7 +9612,7 @@
         "id": 36057,
         "name": "שטות פער-ידע להערכת סיכון ואמינות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.בן-חיים",
+        "lecturerInCharge": "פרופ. י.בן-חיים",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9650,7 +9650,7 @@
         "id": 36062,
         "name": "מכניקת מגע",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.קליגרמן",
+        "lecturerInCharge": "ד\"ר י.קליגרמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9688,7 +9688,7 @@
         "id": 36070,
         "name": "ננואופטיקה ומבני' אופט' מחזוריים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.חסמן",
+        "lecturerInCharge": "פרופ. א.חסמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -9783,7 +9783,7 @@
         "id": 36075,
         "name": "נושאים מתקדמים בהנדסת מכונות 9",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.אוסובסקי",
+        "lecturerInCharge": "ד\"ר ש.אוסובסקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9810,7 +9810,7 @@
         "id": 36081,
         "name": "עקרונות תכן ויצור מיקרו-מערכות",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ד.סתר",
+        "lecturerInCharge": "ד\"ר ד.סתר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -9837,7 +9837,7 @@
         "id": 36093,
         "name": "מכניקה של חומרים מרוכבים 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ע.תותרי",
+        "lecturerInCharge": "ד\"ר ע.תותרי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -9905,7 +9905,7 @@
         "id": 38727,
         "name": "שיטות נומריות בהנדסת מכונות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ס.פרנקל",
+        "lecturerInCharge": "פרופ. ס.פרנקל",
         "weeklyHours": {
           "lecture": 2,
           "project": 2
@@ -9933,7 +9933,7 @@
         "id": 38785,
         "name": "נושאים מתקדמים ברובוטיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.שהם",
+        "lecturerInCharge": "פרופ. מ.שהם",
         "weeklyHours": {
           "lecture": 2
         },
@@ -9987,7 +9987,7 @@
         "id": 38807,
         "name": "טורבולנציה, תאוריה ומעשה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ס.פרנקל",
+        "lecturerInCharge": "פרופ. ס.פרנקל",
         "weeklyHours": {
           "lecture": 3
         },
@@ -10020,7 +10020,7 @@
         "id": 44000,
         "name": "פרויקט מחקרי לסטודנטים מצטיינים",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  א.טל",
+        "lecturerInCharge": "פרופ. א.טל",
         "weeklyHours": {
           "lab": 4,
           "project": 4
@@ -10032,7 +10032,7 @@
         "id": 44098,
         "name": "מבוא להנדסת חשמל לתעופה וחלל",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    א.אפלבוים",
+        "lecturerInCharge": "ד\"ר א.אפלבוים",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1,
@@ -10109,7 +10109,7 @@
         "id": 44101,
         "name": "מבוא למערכות תכנה",
         "academicPoints": 3,
-        "lecturerInCharge": "גב     א.דוד",
+        "lecturerInCharge": "גב א.דוד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -10187,7 +10187,7 @@
         "id": 44102,
         "name": "בטיחות במעבדות חשמל",
         "academicPoints": 0,
-        "lecturerInCharge": "ד\"ר    ד.בר-און",
+        "lecturerInCharge": "ד\"ר ד.בר-און",
         "weeklyHours": {
           "lecture": 4
         },
@@ -10707,7 +10707,7 @@
         "id": 44147,
         "name": "מעגלי מיתוג אלקטרוניים",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -10904,7 +10904,7 @@
         "id": 44151,
         "name": "מעבדה להנדסת חשמל 1ח'",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -10968,7 +10968,7 @@
         "id": 44160,
         "name": "מעבדה בהנדסת חשמל 1",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -11032,7 +11032,7 @@
         "id": 44165,
         "name": "מעבדה בהנדסת חשמל 2",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -11063,7 +11063,7 @@
         "id": 44166,
         "name": "מעבדה בהנדסת חשמל 3",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -11074,7 +11074,7 @@
         "id": 44167,
         "name": "פרוייקט א'",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lecture": 2,
           "lab": 4
@@ -11100,7 +11100,7 @@
         "id": 44169,
         "name": "פרויקט  ב",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -11111,7 +11111,7 @@
         "id": 44170,
         "name": "פרויקט  מיוחד",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 4
         },
@@ -11122,7 +11122,7 @@
         "id": 44173,
         "name": "פרויקט בתעשיה",
         "academicPoints": 8,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 16
         },
@@ -11231,7 +11231,7 @@
         "id": 44192,
         "name": "מערכות בקרה 2",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.אתר",
+        "lecturerInCharge": "פרופ. ר.אתר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -11283,7 +11283,7 @@
         "id": 44193,
         "name": "מעבדה לבקרה לינארית",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  נ.שימקין",
+        "lecturerInCharge": "פרופ. נ.שימקין",
         "weeklyHours": {
           "lab": 2
         },
@@ -11451,7 +11451,7 @@
         "id": 44202,
         "name": "אותות אקראיים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ת.מיכאלי",
+        "lecturerInCharge": "ד\"ר ת.מיכאלי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -11595,7 +11595,7 @@
         "id": 44231,
         "name": "התקנים אלקטרוניים 1",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    ל.קורנבלום",
+        "lecturerInCharge": "ד\"ר ל.קורנבלום",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -11648,7 +11648,7 @@
         "id": 44239,
         "name": "תהליכים במיקרואלקטרוניקה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    י.יעיש",
+        "lecturerInCharge": "ד\"ר י.יעיש",
         "weeklyHours": {
           "lecture": 2,
           "lab": 4
@@ -11687,7 +11687,7 @@
         "id": 44262,
         "name": "תכן לוגי ומבוא למחשבים",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ר.דובקין",
+        "lecturerInCharge": "מר ר.דובקין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -11778,7 +11778,7 @@
         "id": 44268,
         "name": "מבוא למבני נתונים ואלגוריתמים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.מוזס",
+        "lecturerInCharge": "פרופ. י.מוזס",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12001,7 +12001,7 @@
         "id": 44339,
         "name": "אלקטרואופטיקה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.הורוביץ",
+        "lecturerInCharge": "פרופ. מ.הורוביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12053,7 +12053,7 @@
         "id": 45001,
         "name": "פרויקט מבוא בהנדסת חשמל",
         "academicPoints": 1,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lab": 2
         },
@@ -12130,7 +12130,7 @@
         "id": 46012,
         "name": "מבוא לרכיבים וחומרים אורגניים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  נ.טסלר",
+        "lecturerInCharge": "פרופ. נ.טסלר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12286,7 +12286,7 @@
         "id": 46187,
         "name": "תכן מעגלים אנלוגיים",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ר.אלבחר",
+        "lecturerInCharge": "מר ר.אלבחר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12338,7 +12338,7 @@
         "id": 46193,
         "name": "עיבוד וניתוח מידע",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.מאיר",
+        "lecturerInCharge": "פרופ. ר.מאיר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12390,7 +12390,7 @@
         "id": 46195,
         "name": "מערכות לומדות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  נ.שימקין",
+        "lecturerInCharge": "פרופ. נ.שימקין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12468,7 +12468,7 @@
         "id": 46200,
         "name": "עבוד ונתוח תמונות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.כהן",
+        "lecturerInCharge": "פרופ. י.כהן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12533,7 +12533,7 @@
         "id": 46204,
         "name": "תקשורת אנלוגית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ש.שמאי-שיץ",
+        "lecturerInCharge": "פרופ. ש.שמאי-שיץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12637,7 +12637,7 @@
         "id": 46206,
         "name": "מבוא לתקשורת ספרתית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.שטינברג",
+        "lecturerInCharge": "פרופ. י.שטינברג",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12765,7 +12765,7 @@
         "id": 46225,
         "name": "עקרונות פיזיקליים של התקני מל\"מ",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.ריטר",
+        "lecturerInCharge": "פרופ. ד.ריטר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12817,7 +12817,7 @@
         "id": 46237,
         "name": "מעגלים משולבים - מבוא ל-וי.ל.ס.י.",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.גינוסר",
+        "lecturerInCharge": "פרופ. ר.גינוסר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12869,7 +12869,7 @@
         "id": 46249,
         "name": "מערכות אלקטרו-אופטיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.שכנר",
+        "lecturerInCharge": "פרופ. י.שכנר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12921,7 +12921,7 @@
         "id": 46265,
         "name": "ארכיטקטורות מתקדמות ומעגלים בשילו",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.קוטינסקי",
+        "lecturerInCharge": "ד\"ר ש.קוטינסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -12973,7 +12973,7 @@
         "id": 46266,
         "name": "שיטות הידור )קומפילציה(",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     א.זקס",
+        "lecturerInCharge": "מר א.זקס",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13194,7 +13194,7 @@
         "id": 46272,
         "name": "מערכות מבוזרות# עקרונות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.קידר",
+        "lecturerInCharge": "פרופ. ע.קידר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13246,7 +13246,7 @@
         "id": 46326,
         "name": "מבוא לאותות ומערכות ביולוגיים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.סודרי",
+        "lecturerInCharge": "ד\"ר ד.סודרי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13358,7 +13358,7 @@
         "id": 46733,
         "name": "תורת האינפורמציה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  נ.מרחב",
+        "lecturerInCharge": "פרופ. נ.מרחב",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13410,7 +13410,7 @@
         "id": 46745,
         "name": "עבוד ספרתי של אותות",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ג.בן-דוד",
+        "lecturerInCharge": "ד\"ר ג.בן-דוד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13566,7 +13566,7 @@
         "id": 46868,
         "name": "יסודות תהליכים אקראיים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ע.בוברובסקי",
+        "lecturerInCharge": "ד\"ר ע.בוברובסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13618,7 +13618,7 @@
         "id": 46880,
         "name": "תכן בעזרת מחשב של וי.אל.אס.אי",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.זהבי",
+        "lecturerInCharge": "ד\"ר א.זהבי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -13728,7 +13728,7 @@
         "id": 54133,
         "name": "מבט על הנדסה כימית וביוכימית",
         "academicPoints": 1,
-        "lecturerInCharge": "פרופ.  ח.ביאנקו-פלד",
+        "lecturerInCharge": "פרופ. ח.ביאנקו-פלד",
         "weeklyHours": {
           "lecture": 1
         },
@@ -13755,7 +13755,7 @@
         "id": 54135,
         "name": "מבוא להנדסה כימית וביוכימית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ג.גרדר",
+        "lecturerInCharge": "פרופ. ג.גרדר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -13891,7 +13891,7 @@
         "id": 54306,
         "name": "עקרונות הנדסה כימית 2 מ'",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ש.ברנדון",
+        "lecturerInCharge": "פרופ. ש.ברנדון",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -13962,7 +13962,7 @@
         "id": 54314,
         "name": "מבוא לדינמיקה ובקרת תהליכים מ'",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.לוין",
+        "lecturerInCharge": "פרופ. ד.לוין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -14040,7 +14040,7 @@
         "id": 54315,
         "name": "תרמודינמיקה ב'",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ח.חאיק",
+        "lecturerInCharge": "פרופ. ח.חאיק",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -14118,7 +14118,7 @@
         "id": 54350,
         "name": "פולימרים 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ח.ביאנקו-פלד",
+        "lecturerInCharge": "פרופ. ח.ביאנקו-פלד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -14386,7 +14386,7 @@
         "id": 54408,
         "name": "מב.לתכן ריאקטורים כימיים וביוכימ.",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  י.פז",
+        "lecturerInCharge": "פרופ. י.פז",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -14516,7 +14516,7 @@
         "id": 54416,
         "name": "תכון אינטגרטיבי של תהליכים כימיים",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ד.לוין",
+        "lecturerInCharge": "פרופ. ד.לוין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2,
@@ -14633,7 +14633,7 @@
         "id": 54452,
         "name": "בעיות סביבתיות-זיהום אויר",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ג.גרדר",
+        "lecturerInCharge": "פרופ. ג.גרדר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -14791,7 +14791,7 @@
         "id": 56146,
         "name": "נושאים הנדסיים נבחרים",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ג.סמבורסקי",
+        "lecturerInCharge": "מר ג.סמבורסקי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -14818,7 +14818,7 @@
         "id": 56394,
         "name": "תבניות ריח# מבוא ויישומים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.ברוזה",
+        "lecturerInCharge": "ד\"ר י.ברוזה",
         "weeklyHours": {
           "lecture": 2
         },
@@ -14886,7 +14886,7 @@
         "id": 56399,
         "name": "הנדסת אנרגיה וסביבה",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ג.גרדר",
+        "lecturerInCharge": "פרופ. ג.גרדר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -14924,7 +14924,7 @@
         "id": 56400,
         "name": "בטיחות תהליכית בהנדסה כימית",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ג.גרדר",
+        "lecturerInCharge": "פרופ. ג.גרדר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -15218,7 +15218,7 @@
         "id": 64117,
         "name": "תופעות מעבר חום",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    מ.דוידוביץ-פנח",
+        "lecturerInCharge": "ד\"ר מ.דוידוביץ-פנח",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -15592,7 +15592,7 @@
         "id": 64405,
         "name": "מיקרוביולוגיה של מזון",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.קשי",
+        "lecturerInCharge": "פרופ. י.קשי",
         "weeklyHours": {
           "lecture": 3,
           "lab": 3
@@ -15675,7 +15675,7 @@
         "id": 64507,
         "name": "ביוטכנולוגיה מולקולרית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ב.לוי",
+        "lecturerInCharge": "פרופ. ב.לוי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -15746,7 +15746,7 @@
         "id": 64509,
         "name": "תהליכי יסוד בביוטכנולוגיה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    פ.שלומאי",
+        "lecturerInCharge": "ד\"ר פ.שלומאי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -15839,7 +15839,7 @@
         "id": 64523,
         "name": "מבוא לביוטכנולוגיה מולקולרית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  י.שוהם",
+        "lecturerInCharge": "פרופ. י.שוהם",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -16098,7 +16098,7 @@
         "id": 66521,
         "name": "הנדסת רקמות",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.מחלוף",
+        "lecturerInCharge": "פרופ. מ.מחלוף",
         "weeklyHours": {
           "lecture": 2
         },
@@ -16178,7 +16178,7 @@
         "id": 66613,
         "name": "מזון פונקציונלי ונוטרסיאוטיקלים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ב.טל",
+        "lecturerInCharge": "ד\"ר ב.טל",
         "weeklyHours": {
           "lecture": 2
         },
@@ -16287,7 +16287,7 @@
         "id": 84225,
         "name": "דינמיקה",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  י.פרנקל",
+        "lecturerInCharge": "פרופ. י.פרנקל",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -16476,7 +16476,7 @@
         "id": 84314,
         "name": "זרימה צמיגה ומעבר חום",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.ג'קובי",
+        "lecturerInCharge": "ד\"ר א.ג'קובי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1,
@@ -16568,7 +16568,7 @@
         "id": 84512,
         "name": "אנליזה ויישומי מחשב במבנים אוירו.",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.גבעולי",
+        "lecturerInCharge": "פרופ. ד.גבעולי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -16880,7 +16880,7 @@
         "id": 85236,
         "name": "ניהול תעשיות עתירות ידע",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  י.נגל",
+        "lecturerInCharge": "פרופ. י.נגל",
         "weeklyHours": {
           "lecture": 2
         },
@@ -16918,7 +16918,7 @@
         "id": 85305,
         "name": "מעבדה באוירודינמיקה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    צ.נדלר",
+        "lecturerInCharge": "ד\"ר צ.נדלר",
         "weeklyHours": {
           "lecture": 2,
           "lab": 2
@@ -17063,7 +17063,7 @@
         "id": 85695,
         "name": "תכן ראשוני של מטוסים",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ד.ארצי",
+        "lecturerInCharge": "מר ד.ארצי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17193,7 +17193,7 @@
         "id": 86287,
         "name": "מכניקת גופים בחלל",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.משנה",
+        "lecturerInCharge": "ד\"ר ד.משנה",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17269,7 +17269,7 @@
         "id": 86320,
         "name": "מעבר חום בהנדסת אוירונוטיקה וחלל",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ע.לייטנר",
+        "lecturerInCharge": "ד\"ר ע.לייטנר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17307,7 +17307,7 @@
         "id": 86321,
         "name": "נושאים נבחרים בתורת הזרימה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.סטלנוב",
+        "lecturerInCharge": "ד\"ר א.סטלנוב",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17345,7 +17345,7 @@
         "id": 86376,
         "name": "אוירודינמיקה חישובית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.לוי",
+        "lecturerInCharge": "ד\"ר י.לוי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17383,7 +17383,7 @@
         "id": 86380,
         "name": "מבוא לשכבות גבול",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.ג'קובי",
+        "lecturerInCharge": "ד\"ר א.ג'קובי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17421,7 +17421,7 @@
         "id": 86389,
         "name": "אוירודינמיקה של גופים וכנפיים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.מאיר",
+        "lecturerInCharge": "ד\"ר י.מאיר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17459,7 +17459,7 @@
         "id": 86401,
         "name": "מער. הנעה לכלי טייס המונעים במדחף",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.שר",
+        "lecturerInCharge": "פרופ. ע.שר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17497,7 +17497,7 @@
         "id": 86414,
         "name": "מנועי מגח סילון",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ב.נתן",
+        "lecturerInCharge": "פרופ. ב.נתן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17535,7 +17535,7 @@
         "id": 86462,
         "name": "נושאים נבחרים באמצעי הנעה 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.מייקלס",
+        "lecturerInCharge": "ד\"ר ד.מייקלס",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17573,7 +17573,7 @@
         "id": 86464,
         "name": "נושאים נבחרים באמצעי הנעה 4",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.מייקלס",
+        "lecturerInCharge": "ד\"ר ד.מייקלס",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17584,7 +17584,7 @@
         "id": 86480,
         "name": "יסוד. אוירו-תרמים של טורבו-מכונות",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ב.צ'וקורל",
+        "lecturerInCharge": "ד\"ר ב.צ'וקורל",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17622,7 +17622,7 @@
         "id": 86733,
         "name": "תהליכים אקראיים במערכות אויר-חלל",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.אושמן",
+        "lecturerInCharge": "פרופ. י.אושמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17725,7 +17725,7 @@
         "id": 86761,
         "name": "ניווט נעזר ראיה ממוחשבת",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ו.אינדלמן",
+        "lecturerInCharge": "ד\"ר ו.אינדלמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17866,7 +17866,7 @@
         "id": 86925,
         "name": "חישה של כדה\"א מהחלל",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    פ.כמון",
+        "lecturerInCharge": "ד\"ר פ.כמון",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17893,7 +17893,7 @@
         "id": 87541,
         "name": "נושאים נבחרים בהנדסת אויר-חלל_1",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ת.רוקיטה",
+        "lecturerInCharge": "מר ת.רוקיטה",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17931,7 +17931,7 @@
         "id": 88103,
         "name": "מתמטיקה שמושית בהנדסה אוירונוטית1",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.פרנקל",
+        "lecturerInCharge": "פרופ. י.פרנקל",
         "weeklyHours": {
           "lecture": 3
         },
@@ -17985,7 +17985,7 @@
         "id": 88752,
         "name": "בקרה אופטימלית במערכות תעופתיות 2",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  י.בן-אשר",
+        "lecturerInCharge": "פרופ. י.בן-אשר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -18078,7 +18078,7 @@
         "id": 94101,
         "name": "מבוא להנדסת תעשיה ושילוב מערכות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     א.אברהמי",
+        "lecturerInCharge": "מר א.אברהמי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -18147,7 +18147,7 @@
         "id": 94139,
         "name": "נהול שרשראות אספקה ומע' לוגיסטיות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ג.יום-טוב",
+        "lecturerInCharge": "ד\"ר ג.יום-טוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -18216,7 +18216,7 @@
         "id": 94141,
         "name": "תכן המוצר ומערכות ייצור ושירות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ע.דניאלי",
+        "lecturerInCharge": "ד\"ר ע.דניאלי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -18397,7 +18397,7 @@
         "id": 94198,
         "name": "אירועים בהנדסת תעשיה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ח.נסראלדין",
+        "lecturerInCharge": "ד\"ר ח.נסראלדין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -18475,7 +18475,7 @@
         "id": 94222,
         "name": "אפיון וניתוח מערכות מידע",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    נ.ונגרוביץ",
+        "lecturerInCharge": "ד\"ר נ.ונגרוביץ",
         "weeklyHours": {
           "lecture": 3,
           "lab": 2
@@ -18620,7 +18620,7 @@
         "id": 94241,
         "name": "ניהול מסדי נתונים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.גל",
+        "lecturerInCharge": "פרופ. א.גל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -18886,7 +18886,7 @@
         "id": 94314,
         "name": "מודלים סטוכסטיים בחקר בצועים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ד.יופה",
+        "lecturerInCharge": "פרופ. ד.יופה",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -18961,7 +18961,7 @@
         "id": 94323,
         "name": "מודלים דינמיים בחקר ביצועים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ש.און",
+        "lecturerInCharge": "פרופ. ש.און",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -19075,7 +19075,7 @@
         "id": 94334,
         "name": "סימולציה ספרתית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.ליבר",
+        "lecturerInCharge": "ד\"ר ד.ליבר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -19171,7 +19171,7 @@
         "id": 94345,
         "name": "מתמטיקה דיסקרטית ת'",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    פ.סאלח",
+        "lecturerInCharge": "ד\"ר פ.סאלח",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -19451,7 +19451,7 @@
         "id": 94423,
         "name": "מבוא לסטטיסטיקה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    מ.בוגומולוב",
+        "lecturerInCharge": "ד\"ר מ.בוגומולוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -19526,7 +19526,7 @@
         "id": 94481,
         "name": "מבוא להסתברות וסטטיסטיקה",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    א.לוין",
+        "lecturerInCharge": "ד\"ר א.לוין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -19658,7 +19658,7 @@
         "id": 94504,
         "name": "מיקרו כלכלה 2",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ח.פרץ",
+        "lecturerInCharge": "ד\"ר ח.פרץ",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -19766,7 +19766,7 @@
         "id": 94513,
         "name": "מאקרו כלכלה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "מר     ר.בס",
+        "lecturerInCharge": "מר ר.בס",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -19820,7 +19820,7 @@
         "id": 94520,
         "name": "סדנא בעסקים קטנים ובינוניים 1",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    א.אדרס",
+        "lecturerInCharge": "ד\"ר א.אדרס",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1,
@@ -19918,7 +19918,7 @@
         "id": 94591,
         "name": "מבוא לכלכלה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ש.רגב-טייטלר",
+        "lecturerInCharge": "ד\"ר ש.רגב-טייטלר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20047,7 +20047,7 @@
         "id": 94594,
         "name": "עקרונות הכלכלה למהנדסים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ח.פרץ",
+        "lecturerInCharge": "ד\"ר ח.פרץ",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20116,7 +20116,7 @@
         "id": 94814,
         "name": "היבטים משפטיים ופיננסים ביזמות טכ",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.בן-אוליאל",
+        "lecturerInCharge": "ד\"ר ד.בן-אוליאל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -20159,7 +20159,7 @@
         "id": 94821,
         "name": "חשבונאות פיננסית וניהולית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "מר     ר.שביט",
+        "lecturerInCharge": "מר ר.שביט",
         "weeklyHours": {
           "lecture": 3,
           "lab": 2
@@ -20211,7 +20211,7 @@
         "id": 94822,
         "name": "חשבונאות ניהולית מתקדמת",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.כוכבי",
+        "lecturerInCharge": "ד\"ר א.כוכבי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -20265,7 +20265,7 @@
         "id": 94851,
         "name": "משחק מנהלים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.גרינברג",
+        "lecturerInCharge": "ד\"ר א.גרינברג",
         "weeklyHours": {
           "lecture": 2
         },
@@ -20292,7 +20292,7 @@
         "id": 95112,
         "name": "מדידת ביצועים ושיפור שיטות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.בלילה",
+        "lecturerInCharge": "ד\"ר א.בלילה",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20389,7 +20389,7 @@
         "id": 95140,
         "name": "תכנון פרויקטים וניהולם",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    י.כהן",
+        "lecturerInCharge": "ד\"ר י.כהן",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20443,7 +20443,7 @@
         "id": 95142,
         "name": "מבוא לניהול פרויקטים ר'",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.דובינסקי",
+        "lecturerInCharge": "ד\"ר י.דובינסקי",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -20484,7 +20484,7 @@
         "id": 95605,
         "name": "מבוא לפסיכולוגיה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ו.ערב-יהנה",
+        "lecturerInCharge": "ד\"ר ו.ערב-יהנה",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -20620,7 +20620,7 @@
         "id": 96124,
         "name": "תיכון לייצוריות ולהרכבה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    פ.גרבוב",
+        "lecturerInCharge": "ד\"ר פ.גרבוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20674,7 +20674,7 @@
         "id": 96125,
         "name": "אבטחת איכות יישומית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    פ.גרבוב",
+        "lecturerInCharge": "ד\"ר פ.גרבוב",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -20728,7 +20728,7 @@
         "id": 96210,
         "name": "יסודות בינה מלאכותית וישומיה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.כרפס",
+        "lecturerInCharge": "ד\"ר א.כרפס",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20812,7 +20812,7 @@
         "id": 96211,
         "name": "מודלים למסחר אלקטרוני",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  כ.דומשלק",
+        "lecturerInCharge": "פרופ. כ.דומשלק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -20864,7 +20864,7 @@
         "id": 96220,
         "name": "מערכות עיבוד מאורעות",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     נ.ריווטי",
+        "lecturerInCharge": "מר נ.ריווטי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -20906,7 +20906,7 @@
         "id": 96240,
         "name": "תכן מערכות זמן אמת",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    י.מרדכי",
+        "lecturerInCharge": "ד\"ר י.מרדכי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -20960,7 +20960,7 @@
         "id": 96255,
         "name": "פיתוח מערכות מבוססות מארג",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ד.דורי",
+        "lecturerInCharge": "פרופ. ד.דורי",
         "weeklyHours": {
           "lecture": 3,
           "project": 4
@@ -20988,7 +20988,7 @@
         "id": 96260,
         "name": "נושאים מתקדמים במערכות מידע",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  כ.דומשלק",
+        "lecturerInCharge": "פרופ. כ.דומשלק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -21126,7 +21126,7 @@
         "id": 96310,
         "name": "תהליכים אקראיים ושימושיהם",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ת.מרגלית",
+        "lecturerInCharge": "ד\"ר ת.מרגלית",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21304,7 +21304,7 @@
         "id": 96401,
         "name": "נושאים נבחרים בסטטיסטיקה והסתברות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.עזריאל",
+        "lecturerInCharge": "ד\"ר ד.עזריאל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21347,7 +21347,7 @@
         "id": 96414,
         "name": "סטטיסטיקה תעשייתית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ג.אשר",
+        "lecturerInCharge": "ד\"ר ג.אשר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -21416,7 +21416,7 @@
         "id": 96502,
         "name": "מימון חברות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ש.טל גרעין",
+        "lecturerInCharge": "ד\"ר ש.טל גרעין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21470,7 +21470,7 @@
         "id": 96537,
         "name": "כלכלת מגזר השירות",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.רגב-טייטלר",
+        "lecturerInCharge": "ד\"ר ש.רגב-טייטלר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -21508,7 +21508,7 @@
         "id": 96553,
         "name": "כלכלת סביבה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     א.בן-חקון",
+        "lecturerInCharge": "מר א.בן-חקון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21562,7 +21562,7 @@
         "id": 96556,
         "name": "שוקי אופציות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    מ.קעדאן",
+        "lecturerInCharge": "ד\"ר מ.קעדאן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21686,7 +21686,7 @@
         "id": 96575,
         "name": "משחקים לא-שיתופיים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ד.מונדרר",
+        "lecturerInCharge": "פרופ. ד.מונדרר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -21740,7 +21740,7 @@
         "id": 96580,
         "name": "נושאים נבחרים בהנדסה פיננסית",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     א.קאופמן",
+        "lecturerInCharge": "מר א.קאופמן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -21778,7 +21778,7 @@
         "id": 96581,
         "name": "נושאים נבחרים בכלכלה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ר.מאיר",
+        "lecturerInCharge": "ד\"ר ר.מאיר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -21821,7 +21821,7 @@
         "id": 96582,
         "name": "נושאים מתקדמים בכלכלה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ג.זהבי",
+        "lecturerInCharge": "ד\"ר ג.זהבי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -21864,7 +21864,7 @@
         "id": 96586,
         "name": "אקונומטריקה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ח.פרץ",
+        "lecturerInCharge": "ד\"ר ח.פרץ",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -21924,7 +21924,7 @@
         "id": 96600,
         "name": "התנהגות ארגונית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ט.פפרמן",
+        "lecturerInCharge": "ד\"ר ט.פפרמן",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22146,7 +22146,7 @@
         "id": 96807,
         "name": "יזמות חברתית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    מ.דוידוב",
+        "lecturerInCharge": "ד\"ר מ.דוידוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22189,7 +22189,7 @@
         "id": 96809,
         "name": "נושאים מתקדמים בניהול",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.גרסטנר",
+        "lecturerInCharge": "פרופ. א.גרסטנר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22232,7 +22232,7 @@
         "id": 96815,
         "name": "יזמות וקנין רוחני",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ז.גנאור",
+        "lecturerInCharge": "ד\"ר ז.גנאור",
         "weeklyHours": {
           "lecture": 3
         },
@@ -22259,7 +22259,7 @@
         "id": 97122,
         "name": "ניהול אמינות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "מר     י.מיכלין",
+        "lecturerInCharge": "מר י.מיכלין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22313,7 +22313,7 @@
         "id": 97135,
         "name": "מחקר רב תחומי במערכות שירות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ג.יום-טוב",
+        "lecturerInCharge": "ד\"ר ג.יום-טוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1,
@@ -22343,7 +22343,7 @@
         "id": 97151,
         "name": "תכנון מיקום ומערך של מתקנים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.בן-דוד",
+        "lecturerInCharge": "ד\"ר א.בן-דוד",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22397,7 +22397,7 @@
         "id": 97200,
         "name": "למידה עמוקה, תיאוריה ומעשה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ת.חזן",
+        "lecturerInCharge": "ד\"ר ת.חזן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -22440,7 +22440,7 @@
         "id": 97215,
         "name": "עיבוד שפה טבעית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ר.רייכרט",
+        "lecturerInCharge": "ד\"ר ר.רייכרט",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -22535,7 +22535,7 @@
         "id": 97330,
         "name": "נושאים נבחרים בחקר ביצועים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.גרבר",
+        "lecturerInCharge": "ד\"ר ד.גרבר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -22578,7 +22578,7 @@
         "id": 97800,
         "name": "עקרונות השיווק",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ל.לבונטין",
+        "lecturerInCharge": "ד\"ר ל.לבונטין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -25444,7 +25444,7 @@
         "id": 104122,
         "name": "תורת הפונקציות 1",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ד.בשותי",
+        "lecturerInCharge": "פרופ. ד.בשותי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -25849,7 +25849,7 @@
         "id": 104142,
         "name": "מבוא למרחבים מטריים וטופולוגיים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "גב     ט.פינסקי",
+        "lecturerInCharge": "גב ט.פינסקי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -25909,7 +25909,7 @@
         "id": 104165,
         "name": "פונקציות ממשיות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ר.רוזנטל",
+        "lecturerInCharge": "ד\"ר ר.רוזנטל",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -26315,7 +26315,7 @@
         "id": 104173,
         "name": "אלגברה ליניארית ב'",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  מ.אנטוב",
+        "lecturerInCharge": "פרופ. מ.אנטוב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -26444,7 +26444,7 @@
         "id": 104177,
         "name": "גיאומטריה דיפרנציאלית",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  מ.פוליאק",
+        "lecturerInCharge": "פרופ. מ.פוליאק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -26504,7 +26504,7 @@
         "id": 104184,
         "name": "סמינר באלגברה להסמכה 2",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.שגיב",
+        "lecturerInCharge": "פרופ. מ.שגיב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -26531,7 +26531,7 @@
         "id": 104185,
         "name": "סמינר לסטודנ.בהסמכה1",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.אנטוב",
+        "lecturerInCharge": "פרופ. מ.אנטוב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -26558,7 +26558,7 @@
         "id": 104192,
         "name": "מבוא למתמטיקה שמושית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ג.וולנסקי",
+        "lecturerInCharge": "פרופ. ג.וולנסקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -26596,7 +26596,7 @@
         "id": 104195,
         "name": "חשבון אינפיניטסימלי 1",
         "academicPoints": 5.5,
-        "lecturerInCharge": "פרופ.  א.ברוך",
+        "lecturerInCharge": "פרופ. א.ברוך",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 3
@@ -26681,7 +26681,7 @@
         "id": 104215,
         "name": "פונקציות מרוכבות א'",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.שפריר",
+        "lecturerInCharge": "פרופ. א.שפריר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -27002,7 +27002,7 @@
         "id": 104222,
         "name": "תורת ההסתברות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ר.פינסקי",
+        "lecturerInCharge": "פרופ. ר.פינסקי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -27433,7 +27433,7 @@
         "id": 104277,
         "name": "נושאים במתמטיקה לתלמידי ארכיטקט.",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.סוקאן",
+        "lecturerInCharge": "ד\"ר א.סוקאן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -27471,7 +27471,7 @@
         "id": 104279,
         "name": "מבוא לחוגים ושדות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ע.נבו",
+        "lecturerInCharge": "פרופ. ע.נבו",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -27558,7 +27558,7 @@
         "id": 104281,
         "name": "חשבון אינפי 2",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  ש.מנדלסון",
+        "lecturerInCharge": "פרופ. ש.מנדלסון",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -27618,7 +27618,7 @@
         "id": 104282,
         "name": "חשבון אינפי 3",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    ב.דביבר",
+        "lecturerInCharge": "ד\"ר ב.דביבר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -27747,7 +27747,7 @@
         "id": 104285,
         "name": "משוואות דיפרנציאליות רגילות א'",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ב.דביבר",
+        "lecturerInCharge": "ד\"ר ב.דביבר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -27807,7 +27807,7 @@
         "id": 104286,
         "name": "קומבינטוריקה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ר.פינסקי",
+        "lecturerInCharge": "פרופ. ר.פינסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -27861,7 +27861,7 @@
         "id": 104290,
         "name": "תורת הקבוצות",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  ע.נבו",
+        "lecturerInCharge": "פרופ. ע.נבו",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -27981,7 +27981,7 @@
         "id": 106347,
         "name": "מספרים אלגבריים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.נפטין",
+        "lecturerInCharge": "ד\"ר ד.נפטין",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28091,7 +28091,7 @@
         "id": 106383,
         "name": "טופולוגיה אלגברית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.שגיב",
+        "lecturerInCharge": "פרופ. מ.שגיב",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28124,7 +28124,7 @@
         "id": 106384,
         "name": "סמינר בטופולוגיה 1",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.פוליאק",
+        "lecturerInCharge": "פרופ. מ.פוליאק",
         "weeklyHours": {
           "lecture": 2
         },
@@ -28151,7 +28151,7 @@
         "id": 106413,
         "name": "משוואות דיפרנציאליות חלקיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.שפריר",
+        "lecturerInCharge": "פרופ. א.שפריר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28184,7 +28184,7 @@
         "id": 106723,
         "name": "יריעות דיפרנציביאליות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.אנטוב",
+        "lecturerInCharge": "פרופ. מ.אנטוב",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28217,7 +28217,7 @@
         "id": 106800,
         "name": "נושאים בתורה הארגודית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.נבו",
+        "lecturerInCharge": "פרופ. ע.נבו",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28261,7 +28261,7 @@
         "id": 106929,
         "name": "נושאים נבחרים באנליזה 2",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.ז'יטומרסקי",
+        "lecturerInCharge": "פרופ. מ.ז'יטומרסקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28338,7 +28338,7 @@
         "id": 106950,
         "name": "נושאים נבחרים בתורת המשחקים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.הולצמן",
+        "lecturerInCharge": "פרופ. ר.הולצמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28382,7 +28382,7 @@
         "id": 106960,
         "name": "מערכות דינמיות 1 דינמיקה המלטונית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    מ.חנבסקי",
+        "lecturerInCharge": "ד\"ר מ.חנבסקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28409,7 +28409,7 @@
         "id": 108324,
         "name": "יסודות האנליזה המודרנית להנ חשמל",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ג.וולנסקי",
+        "lecturerInCharge": "פרופ. ג.וולנסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -28479,7 +28479,7 @@
         "id": 197011,
         "name": "נושאים נבחרים במתמטיקה שימושית 4",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.נוביק-כהן",
+        "lecturerInCharge": "פרופ. א.נוביק-כהן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -28616,7 +28616,7 @@
         "id": 114027,
         "name": "מעבדה לפיסיקה 5",
         "academicPoints": 4.5,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -28647,7 +28647,7 @@
         "id": 114028,
         "name": "מעבדה לפיסיקה 6",
         "academicPoints": 4.5,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -29049,7 +29049,7 @@
         "id": 114051,
         "name": "פיסיקה 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ש.טרם",
+        "lecturerInCharge": "פרופ. ש.טרם",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -29474,7 +29474,7 @@
         "id": 114054,
         "name": "פיסיקה 3",
         "academicPoints": 3.5,
-        "lecturerInCharge": "מר     ז.מיקוליצקי",
+        "lecturerInCharge": "מר ז.מיקוליצקי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -29853,7 +29853,7 @@
         "id": 114073,
         "name": "פיסיקה 3ח'",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ר.עופר",
+        "lecturerInCharge": "ד\"ר ר.עופר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -30008,7 +30008,7 @@
         "id": 114074,
         "name": "פיסיקה 1פ'",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  א.בכר",
+        "lecturerInCharge": "פרופ. א.בכר",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -30105,7 +30105,7 @@
         "id": 114075,
         "name": "פיסיקה 2ממ",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  ד.לוין",
+        "lecturerInCharge": "פרופ. ד.לוין",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -30273,7 +30273,7 @@
         "id": 114077,
         "name": "פיסיקה 1ל",
         "academicPoints": 2.5,
-        "lecturerInCharge": "גב     ה.וקסלר",
+        "lecturerInCharge": "גב ה.וקסלר",
         "weeklyHours": {
           "lecture": 5,
           "tutorial": 3
@@ -30343,7 +30343,7 @@
         "id": 114078,
         "name": "פיסיקה 2ל",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    מ.עכאשה",
+        "lecturerInCharge": "ד\"ר מ.עכאשה",
         "weeklyHours": {
           "lecture": 6,
           "tutorial": 3
@@ -30709,7 +30709,7 @@
         "id": 114208,
         "name": "מעבדה במדידות אופטיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -30740,7 +30740,7 @@
         "id": 114229,
         "name": "פרויקט",
         "academicPoints": 4.5,
-        "lecturerInCharge": "פרופ.  ש.טרם",
+        "lecturerInCharge": "פרופ. ש.טרם",
         "weeklyHours": {
           "project": 10
         },
@@ -30751,7 +30751,7 @@
         "id": 114248,
         "name": "פיסיקה 1 ר",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    מ.עכאשה",
+        "lecturerInCharge": "ד\"ר מ.עכאשה",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -30835,7 +30835,7 @@
         "id": 114250,
         "name": "מעבדה לפיסיקה 5ת",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -30866,7 +30866,7 @@
         "id": 114251,
         "name": "מעבדה לפיסיקה 6ת",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -30897,7 +30897,7 @@
         "id": 114252,
         "name": "פרויקט ת",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ש.טרם",
+        "lecturerInCharge": "פרופ. ש.טרם",
         "weeklyHours": {
           "project": 6
         },
@@ -30908,7 +30908,7 @@
         "id": 115204,
         "name": "פיסיקה קוונטית 2",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  י.שדמי",
+        "lecturerInCharge": "פרופ. י.שדמי",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -30992,7 +30992,7 @@
         "id": 115248,
         "name": "פיסיקה 1רל",
         "academicPoints": 3.5,
-        "lecturerInCharge": "מר     ד.אגמון",
+        "lecturerInCharge": "מר ד.אגמון",
         "weeklyHours": {
           "lecture": 6,
           "tutorial": 3
@@ -31056,7 +31056,7 @@
         "id": 116003,
         "name": "פיסיקה של לייזרים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  מ.שגב",
+        "lecturerInCharge": "פרופ. מ.שגב",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -31114,7 +31114,7 @@
         "id": 116029,
         "name": "מבוא לביופיסיקה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.בראון",
+        "lecturerInCharge": "פרופ. א.בראון",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -31303,7 +31303,7 @@
         "id": 117016,
         "name": "פיסיקת הפלסמה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  י.קרסיק",
+        "lecturerInCharge": "פרופ. י.קרסיק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -31438,7 +31438,7 @@
         "id": 118076,
         "name": "מעבדה מתקדמת",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ד.גרשוני",
+        "lecturerInCharge": "פרופ. ד.גרשוני",
         "weeklyHours": {
           "lab": 8
         },
@@ -31469,7 +31469,7 @@
         "id": 118081,
         "name": "תורת הכבידה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.אורי",
+        "lecturerInCharge": "פרופ. ע.אורי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -31523,7 +31523,7 @@
         "id": 118093,
         "name": "גישות עיוניות בפיסיקה מודרנית",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  י.כפרי",
+        "lecturerInCharge": "פרופ. י.כפרי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -31550,7 +31550,7 @@
         "id": 118094,
         "name": "פיסיקה חישובית",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.לאור",
+        "lecturerInCharge": "פרופ. א.לאור",
         "weeklyHours": {
           "lecture": 2
         },
@@ -31577,7 +31577,7 @@
         "id": 118105,
         "name": "נושאים מתקדמים בקוסמולוגיה",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ע.נסר",
+        "lecturerInCharge": "פרופ. ע.נסר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -31631,7 +31631,7 @@
         "id": 118113,
         "name": "מכניקה סטטיסטית של פולימרים",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ד.לוין",
+        "lecturerInCharge": "פרופ. ד.לוין",
         "weeklyHours": {
           "lecture": 2
         },
@@ -31705,7 +31705,7 @@
         "id": 118122,
         "name": "תורת הקוונטים 3",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.אקרמן",
+        "lecturerInCharge": "פרופ. א.אקרמן",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -31758,7 +31758,7 @@
         "id": 118129,
         "name": "מכניקה סטטיסטית 2",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ג.בונין",
+        "lecturerInCharge": "ד\"ר ג.בונין",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -31811,7 +31811,7 @@
         "id": 118133,
         "name": "תורת השדות הקוונטית 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.רזמט",
+        "lecturerInCharge": "ד\"ר ש.רזמט",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -32193,7 +32193,7 @@
         "id": 124120,
         "name": "יסודות הכימיה",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  מ.אייזן",
+        "lecturerInCharge": "פרופ. מ.אייזן",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -32449,7 +32449,7 @@
         "id": 124210,
         "name": "כימיה ביו-אי אורגנית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ז.גרוס",
+        "lecturerInCharge": "פרופ. ז.גרוס",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -32501,7 +32501,7 @@
         "id": 124212,
         "name": "מעבדה בכימיה אנליטית 1 מורחב",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ד.איזנברג",
+        "lecturerInCharge": "ד\"ר ד.איזנברג",
         "weeklyHours": {
           "lab": 5
         },
@@ -32539,7 +32539,7 @@
         "id": 124214,
         "name": "מעבדה בכימיה אנליטית 2 מורחב",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ד.איזנברג",
+        "lecturerInCharge": "ד\"ר ד.איזנברג",
         "weeklyHours": {
           "lab": 6
         },
@@ -32590,7 +32590,7 @@
         "id": 124305,
         "name": "כימיה אי-אורגנית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.איזנברג",
+        "lecturerInCharge": "ד\"ר ד.איזנברג",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -32702,7 +32702,7 @@
         "id": 124400,
         "name": "כימיה קוונטית 1",
         "academicPoints": 5,
-        "lecturerInCharge": "פרופ.  א.פסקין",
+        "lecturerInCharge": "פרופ. א.פסקין",
         "weeklyHours": {
           "lecture": 4,
           "tutorial": 2
@@ -32773,7 +32773,7 @@
         "id": 124408,
         "name": "תורת הקוונטים ויישומיה בכימיה",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    ע.גילרי",
+        "lecturerInCharge": "ד\"ר ע.גילרי",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -32831,7 +32831,7 @@
         "id": 124415,
         "name": "כימיה פיסיקלית-תרמודינמיקה כימית",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -33178,7 +33178,7 @@
         "id": 124601,
         "name": "מעבדה בכימיה פיסיקלית 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lab": 5
         },
@@ -33242,7 +33242,7 @@
         "id": 124605,
         "name": "מע. בכימיה פיסיקלית 2 לכימאים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lab": 6
         },
@@ -33267,7 +33267,7 @@
         "id": 124608,
         "name": "מע. בכימיה פיסיקלית להנ. חומרים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lab": 6
         },
@@ -33316,7 +33316,7 @@
         "id": 124703,
         "name": "מבנה ופעילות בכימיה אורגנית",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  י.אפלויג",
+        "lecturerInCharge": "פרופ. י.אפלויג",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -33855,7 +33855,7 @@
         "id": 125102,
         "name": "מעבדה כימיה אנליטית 1 למהנדסים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ד.איזנברג",
+        "lecturerInCharge": "ד\"ר ד.איזנברג",
         "weeklyHours": {
           "lab": 5
         },
@@ -33893,7 +33893,7 @@
         "id": 125105,
         "name": "מע.בכימיה אנליטית 1 להנ.ביוכימית",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ד.איזנברג",
+        "lecturerInCharge": "ד\"ר ד.איזנברג",
         "weeklyHours": {
           "lab": 3
         },
@@ -33970,7 +33970,7 @@
         "id": 126302,
         "name": "מעב' אנליטית מתקדמת בניטור סביבתי",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  י.שכטר",
+        "lecturerInCharge": "פרופ. י.שכטר",
         "weeklyHours": {
           "lab": 4
         },
@@ -33995,7 +33995,7 @@
         "id": 126303,
         "name": "מע. בכימיה אי-אורגנית ואורגנומתכת",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.אייזן",
+        "lecturerInCharge": "פרופ. מ.אייזן",
         "weeklyHours": {
           "lab": 8
         },
@@ -34020,7 +34020,7 @@
         "id": 126600,
         "name": "מעבדה מתקדמת בכימיה פיסיקלית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.קולודני",
+        "lecturerInCharge": "פרופ. א.קולודני",
         "weeklyHours": {
           "lab": 8
         },
@@ -34089,7 +34089,7 @@
         "id": 126901,
         "name": "מעבדה מתקדמת בכימיה אורגנית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ט.באזוב",
+        "lecturerInCharge": "פרופ. ט.באזוב",
         "weeklyHours": {
           "lab": 8
         },
@@ -34151,7 +34151,7 @@
         "id": 127427,
         "name": "מצב מוצק לכימאים )מורחב(",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.ליפשיץ",
+        "lecturerInCharge": "פרופ. א.ליפשיץ",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -34203,7 +34203,7 @@
         "id": 127727,
         "name": "תרכובות אורגנומתכתיות בסינתזה אור",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.מרק",
+        "lecturerInCharge": "פרופ. א.מרק",
         "weeklyHours": {
           "lecture": 2
         },
@@ -34320,7 +34320,7 @@
         "id": 127738,
         "name": "כימיה אורגנית 3 מורחב",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  א.מרק",
+        "lecturerInCharge": "פרופ. א.מרק",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -34372,7 +34372,7 @@
         "id": 127741,
         "name": "כימיה של פפטידים וחלבונים",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.בריק",
+        "lecturerInCharge": "פרופ. א.בריק",
         "weeklyHours": {
           "lecture": 2
         },
@@ -34405,7 +34405,7 @@
         "id": 134019,
         "name": "מבוא לביוכימיה ואנזימולוגיה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ח.גליקמן",
+        "lecturerInCharge": "פרופ. ח.גליקמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -34686,7 +34686,7 @@
         "id": 134058,
         "name": "ביולוגיה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.בז'ה",
+        "lecturerInCharge": "פרופ. ע.בז'ה",
         "weeklyHours": {
           "lecture": 3
         },
@@ -34886,7 +34886,7 @@
         "id": 134113,
         "name": "מסלולים מטבולים",
         "academicPoints": 3.5,
-        "lecturerInCharge": "פרופ.  י.רייטר",
+        "lecturerInCharge": "פרופ. י.רייטר",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 1
@@ -35130,7 +35130,7 @@
         "id": 134129,
         "name": "הביולוגיה של מחלת הסרטן",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ד.רון",
+        "lecturerInCharge": "פרופ. ד.רון",
         "weeklyHours": {
           "lecture": 2
         },
@@ -35398,7 +35398,7 @@
         "id": 136022,
         "name": "מסלולי חישה במיקרואורגניזמים",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ב.הורביץ",
+        "lecturerInCharge": "פרופ. ב.הורביץ",
         "weeklyHours": {
           "lecture": 2
         },
@@ -35445,7 +35445,7 @@
         "id": 136088,
         "name": "גנטיקה מולקולרית של האדם",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.זליג",
+        "lecturerInCharge": "ד\"ר ש.זליג",
         "weeklyHours": {
           "lecture": 3
         },
@@ -35554,7 +35554,7 @@
         "id": 204003,
         "name": "נושאים נבחרים באדריכלות נוף 1",
         "academicPoints": 3,
-        "lecturerInCharge": "אינג.  ע.בן נון",
+        "lecturerInCharge": "אינג. ע.בן נון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -35606,7 +35606,7 @@
         "id": 204005,
         "name": "מבנה ופרטי גן 1",
         "academicPoints": 3.5,
-        "lecturerInCharge": "71     ד.אילת",
+        "lecturerInCharge": "71 ד.אילת",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 3
@@ -35655,7 +35655,7 @@
         "id": 204090,
         "name": "תולדות אדריכלות נוף 1",
         "academicPoints": 3,
-        "lecturerInCharge": "71     ר.אביסף",
+        "lecturerInCharge": "71 ר.אביסף",
         "weeklyHours": {
           "lecture": 3
         },
@@ -35693,7 +35693,7 @@
         "id": 204202,
         "name": "צמחיה בנוף 2#יסודות תכנון בצמחיה",
         "academicPoints": 3,
-        "lecturerInCharge": "71     י.דרורי",
+        "lecturerInCharge": "71 י.דרורי",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 4
@@ -35774,7 +35774,7 @@
         "id": 204406,
         "name": "תורת המבנה לאדריכלי נוף",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   י.עמיר",
+        "lecturerInCharge": "ארכ. י.עמיר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -35911,7 +35911,7 @@
         "id": 204652,
         "name": "ייצוג נוף",
         "academicPoints": 2,
-        "lecturerInCharge": "ארכ.   מ.ז\"ק",
+        "lecturerInCharge": "ארכ. מ.ז\"ק",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -36020,7 +36020,7 @@
         "id": 205012,
         "name": "מבוא לחברה ורוח בארכיטקטורה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.פוקס",
+        "lecturerInCharge": "ד\"ר א.פוקס",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -36136,7 +36136,7 @@
         "id": 205071,
         "name": "מורפולוגיה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.קרני",
+        "lecturerInCharge": "ד\"ר א.קרני",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -36177,7 +36177,7 @@
         "id": 205096,
         "name": "תולדות האומנות כאם האדריכלות",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ע.כרמון פופר",
+        "lecturerInCharge": "גב ע.כרמון פופר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -36204,7 +36204,7 @@
         "id": 205097,
         "name": "מבוא לשימור בניינים ואתרים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.שחר",
+        "lecturerInCharge": "ד\"ר א.שחר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -36231,7 +36231,7 @@
         "id": 205103,
         "name": "תולדות האדריכלות בעידן המודרני",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    מ.אפשטיין-פלוש",
+        "lecturerInCharge": "ד\"ר מ.אפשטיין-פלוש",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -36309,7 +36309,7 @@
         "id": 205104,
         "name": "הסט' ותיאוריה של אדר' מלח\"ע-כיום",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    י.אלואיל",
+        "lecturerInCharge": "ד\"ר י.אלואיל",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -36376,7 +36376,7 @@
         "id": 205152,
         "name": "סוגיות בסוציולוגיה אורבנית",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    מ.אהרון",
+        "lecturerInCharge": "ד\"ר מ.אהרון",
         "weeklyHours": {
           "lecture": 2
         },
@@ -36403,7 +36403,7 @@
         "id": 205154,
         "name": "סוגיות בפסיכולוגיה לאדריכלים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.איזנברג",
+        "lecturerInCharge": "ד\"ר א.איזנברג",
         "weeklyHours": {
           "lecture": 2
         },
@@ -36441,7 +36441,7 @@
         "id": 205162,
         "name": "אוריינות# מרחב וטקסט",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ת.ברגר",
+        "lecturerInCharge": "ד\"ר ת.ברגר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -36547,7 +36547,7 @@
         "id": 205257,
         "name": "מבוא לעיצוב עירוני",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.אלואיל",
+        "lecturerInCharge": "ד\"ר י.אלואיל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -36614,7 +36614,7 @@
         "id": 205304,
         "name": "מיני סטודיו עיצוב א'",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   ש.ביימל",
+        "lecturerInCharge": "ארכ. ש.ביימל",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 4
@@ -36726,7 +36726,7 @@
         "id": 205423,
         "name": "מבנה ופרטי בניין 3",
         "academicPoints": 3.5,
-        "lecturerInCharge": "ד\"ר    א.קרני",
+        "lecturerInCharge": "ד\"ר א.קרני",
         "weeklyHours": {
           "lecture": 2,
           "project": 3
@@ -36760,7 +36760,7 @@
         "id": 205458,
         "name": "תכן מבנים 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ר.עיד",
+        "lecturerInCharge": "ד\"ר ר.עיד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -36838,7 +36838,7 @@
         "id": 205459,
         "name": "תכן מבנים 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ר.עיד",
+        "lecturerInCharge": "ד\"ר ר.עיד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -37000,7 +37000,7 @@
         "id": 205505,
         "name": "מערכות תברואה - מבוא",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    ע.ברונפמן",
+        "lecturerInCharge": "ד\"ר ע.ברונפמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -37054,7 +37054,7 @@
         "id": 205508,
         "name": "בטיחות בבניינים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ארכ.   א.גונן",
+        "lecturerInCharge": "ארכ. א.גונן",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -37108,7 +37108,7 @@
         "id": 205624,
         "name": "פרויקט מיוחד 4ב'",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ד.שושן",
+        "lecturerInCharge": "מר ד.שושן",
         "weeklyHours": {
           "project": 4
         },
@@ -37119,7 +37119,7 @@
         "id": 205638,
         "name": "פרויקט מיוחד 3ד'",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   י.כהן ליברמן",
+        "lecturerInCharge": "ארכ. י.כהן ליברמן",
         "weeklyHours": {
           "project": 6
         },
@@ -37196,7 +37196,7 @@
         "id": 205692,
         "name": "נושאים מיוחדים בארכי' 1ג'",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     א.גרושקו",
+        "lecturerInCharge": "מר א.גרושקו",
         "weeklyHours": {
           "lecture": 3
         },
@@ -37326,7 +37326,7 @@
         "id": 205703,
         "name": "נושאים בתכנון כולל",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     מ.ויצמן",
+        "lecturerInCharge": "מר מ.ויצמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -37353,7 +37353,7 @@
         "id": 205704,
         "name": "נושאים בתכנון כולל",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ד.שושן",
+        "lecturerInCharge": "מר ד.שושן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -37382,7 +37382,7 @@
         "id": 205705,
         "name": "נושאים בתכנון כולל",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     י.רובינשטיין",
+        "lecturerInCharge": "מר י.רובינשטיין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -37425,7 +37425,7 @@
         "id": 205716,
         "name": "נושאים בטכנולוגיית בנייה",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   א.בן-ארי",
+        "lecturerInCharge": "ארכ. א.בן-ארי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -37492,7 +37492,7 @@
         "id": 205813,
         "name": "הבעה גרפית",
         "academicPoints": 2,
-        "lecturerInCharge": "ארכ.   א.תומשוב",
+        "lecturerInCharge": "ארכ. א.תומשוב",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -37535,7 +37535,7 @@
         "id": 205824,
         "name": "סדנאות מדיה 2 א'",
         "academicPoints": 1,
-        "lecturerInCharge": "ארכ.   א.שפיר",
+        "lecturerInCharge": "ארכ. א.שפיר",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -37577,7 +37577,7 @@
         "id": 205825,
         "name": "סדנאות מדיה 2 ב'",
         "academicPoints": 1,
-        "lecturerInCharge": "ארכ.   א.שפיר",
+        "lecturerInCharge": "ארכ. א.שפיר",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -37728,7 +37728,7 @@
         "id": 205878,
         "name": "עיצוב בסיסי 1 א'",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   נ.וייסמן",
+        "lecturerInCharge": "ארכ. נ.וייסמן",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 4
@@ -37970,7 +37970,7 @@
         "id": 206003,
         "name": "נושאים נבחרים בארכיטקטורה-שימור 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   ר.ליברטי-שלו",
+        "lecturerInCharge": "ארכ. ר.ליברטי-שלו",
         "weeklyHours": {
           "lecture": 3
         },
@@ -37997,7 +37997,7 @@
         "id": 206007,
         "name": "נוש. בארכיטקטורה-אדריכלות ירוקה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.אלכסנדרוביץ",
+        "lecturerInCharge": "ד\"ר א.אלכסנדרוביץ",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38024,7 +38024,7 @@
         "id": 206009,
         "name": "נושאים בארכ.-היסטוריה ותיאוריה 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    צ.פיינהולץ",
+        "lecturerInCharge": "ד\"ר צ.פיינהולץ",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38051,7 +38051,7 @@
         "id": 206010,
         "name": "נושא. בארכ. - היסטוריה ותיאוריה1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.שפירא",
+        "lecturerInCharge": "ד\"ר י.שפירא",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38078,7 +38078,7 @@
         "id": 206011,
         "name": "נושאים נבח. בארכ.-עיצוב עירוני 2",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ר.בן-אריה",
+        "lecturerInCharge": "ד\"ר ר.בן-אריה",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38156,7 +38156,7 @@
         "id": 206075,
         "name": "קיימות בראיה כוללת",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   ת.כלימור",
+        "lecturerInCharge": "ארכ. ת.כלימור",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38210,7 +38210,7 @@
         "id": 206150,
         "name": "גישות לחינוך והוראת התכן בארכיטקט",
         "academicPoints": 3,
-        "lecturerInCharge": "ארכ.   ג.נוסבאום",
+        "lecturerInCharge": "ארכ. ג.נוסבאום",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -38323,7 +38323,7 @@
         "id": 206566,
         "name": "מיקרו אקלים בעיר בעזרת צמחייה",
         "academicPoints": 3,
-        "lecturerInCharge": "גב     ל.שעשוע",
+        "lecturerInCharge": "גב ל.שעשוע",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38418,7 +38418,7 @@
         "id": 206820,
         "name": "היסטורית העיצוב התעשייתי 1",
         "academicPoints": 3,
-        "lecturerInCharge": "מר     ד.גוס",
+        "lecturerInCharge": "מר ד.גוס",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38470,7 +38470,7 @@
         "id": 206828,
         "name": "עיצוב, טכנולוגיה וחדשנות 2",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    ד.בהר",
+        "lecturerInCharge": "ד\"ר ד.בהר",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -38498,7 +38498,7 @@
         "id": 206831,
         "name": "נושאים נבחרים בעיצוב תעשייתי 5",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.טרזי",
+        "lecturerInCharge": "פרופ. ע.טרזי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38525,7 +38525,7 @@
         "id": 206832,
         "name": "נושאים נבחרים בעיצוב תעשייתי 6",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ע.טרזי",
+        "lecturerInCharge": "פרופ. ע.טרזי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -38575,7 +38575,7 @@
         "id": 206940,
         "name": "סוגיות פילוסופיות בהקשר ארכיטקטו'",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.ערבות",
+        "lecturerInCharge": "פרופ. א.ערבות",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38638,7 +38638,7 @@
         "id": 207001,
         "name": "תיאוריות התכנון",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    נ.מועלם",
+        "lecturerInCharge": "ד\"ר נ.מועלם",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38676,7 +38676,7 @@
         "id": 207020,
         "name": "מבוא לממ\"ג למתכננים",
         "academicPoints": 3,
-        "lecturerInCharge": "אינג.  ע.בן נון",
+        "lecturerInCharge": "אינג. ע.בן נון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -38806,7 +38806,7 @@
         "id": 207070,
         "name": "תכנון שימושי קרקע# עקרונות וכימות",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.ישראל",
+        "lecturerInCharge": "ד\"ר א.ישראל",
         "weeklyHours": {
           "lecture": 3
         },
@@ -38860,7 +38860,7 @@
         "id": 207342,
         "name": "גיאוגרפיה עירונית ואזורית",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.ישראל",
+        "lecturerInCharge": "ד\"ר א.ישראל",
         "weeklyHours": {
           "lecture": 2
         },
@@ -38914,7 +38914,7 @@
         "id": 207450,
         "name": "המרחב הישראלי# קריאה ביקורתית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ת.ברגר",
+        "lecturerInCharge": "ד\"ר ת.ברגר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39011,7 +39011,7 @@
         "id": 207468,
         "name": "התמקדות בתהליך היצירה בסטודיו",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.גניהר רז",
+        "lecturerInCharge": "ד\"ר ד.גניהר רז",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 3
@@ -39033,7 +39033,7 @@
         "id": 207469,
         "name": "עיצוב אינטראקטיבי",
         "academicPoints": 3,
-        "lecturerInCharge": "אינג.  ת.סופר",
+        "lecturerInCharge": "אינג. ת.סופר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -39151,7 +39151,7 @@
         "id": 207800,
         "name": "חשיבה כמותית וסטטיסטיקה בתכנון",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.ברויטמן",
+        "lecturerInCharge": "ד\"ר ד.ברויטמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39205,7 +39205,7 @@
         "id": 207920,
         "name": "שיטות מחקר איכותניות למתכננים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.איזנברג",
+        "lecturerInCharge": "ד\"ר א.איזנברג",
         "weeklyHours": {
           "lecture": 3
         },
@@ -39232,7 +39232,7 @@
         "id": 208348,
         "name": "פרויקט מיוחד בעיצוב תעשייתי 2",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ע.טרזי",
+        "lecturerInCharge": "פרופ. ע.טרזי",
         "weeklyHours": {
           "tutorial": 5
         },
@@ -39259,7 +39259,7 @@
         "id": 208350,
         "name": "חומרים תעשיתיים 1",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ד.בהר",
+        "lecturerInCharge": "ד\"ר ד.בהר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -39302,7 +39302,7 @@
         "id": 208353,
         "name": "פרוייקט גמר בעיצוב תעשייתי",
         "academicPoints": 6,
-        "lecturerInCharge": "פרופ.  ע.טרזי",
+        "lecturerInCharge": "פרופ. ע.טרזי",
         "weeklyHours": {
           "project": 12
         },
@@ -39418,7 +39418,7 @@
         "id": 209031,
         "name": "נוש מתקדמים בתכנון ערים ואזורים 4",
         "academicPoints": 3,
-        "lecturerInCharge": "אינג.  ע.בן נון",
+        "lecturerInCharge": "אינג. ע.בן נון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39447,7 +39447,7 @@
         "id": 209032,
         "name": "נושאים בתכנון ערים ואזורים 5",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ה.שדר",
+        "lecturerInCharge": "ד\"ר ה.שדר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -39485,7 +39485,7 @@
         "id": 209050,
         "name": "כלכלה עירונית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ד.ברויטמן",
+        "lecturerInCharge": "ד\"ר ד.ברויטמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39539,7 +39539,7 @@
         "id": 209100,
         "name": "סוציולוגיה למתכננים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    מ.אהרון",
+        "lecturerInCharge": "ד\"ר מ.אהרון",
         "weeklyHours": {
           "lecture": 2
         },
@@ -39651,7 +39651,7 @@
         "id": 214094,
         "name": "קליניקה חינוכית - מדעית 1",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    א.גרו",
+        "lecturerInCharge": "ד\"ר א.גרו",
         "weeklyHours": {
           "tutorial": 3
         },
@@ -39678,7 +39678,7 @@
         "id": 214103,
         "name": "מיומנויות ושיטות הוראה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.תנחום-זודיק",
+        "lecturerInCharge": "ד\"ר א.תנחום-זודיק",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39748,7 +39748,7 @@
         "id": 214116,
         "name": "חשיפה למחקר בחינוך מדעי טכנולוגי",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    צ.הורוביץ-קראו",
+        "lecturerInCharge": "ד\"ר צ.הורוביץ-קראו",
         "weeklyHours": {
           "lecture": 2
         },
@@ -39775,7 +39775,7 @@
         "id": 214117,
         "name": "מבוא לחינוך למדע וטכנולוגיה 1",
         "academicPoints": 4.5,
-        "lecturerInCharge": "ד\"ר    ע.הד-מצוינים",
+        "lecturerInCharge": "ד\"ר ע.הד-מצוינים",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 3
@@ -39815,7 +39815,7 @@
         "id": 214209,
         "name": "דרכי הוראת המתימטיקה בחטה\"ע א'",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    מ.וידר",
+        "lecturerInCharge": "ד\"ר מ.וידר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -39869,7 +39869,7 @@
         "id": 214231,
         "name": "התנסות בהוראת מתמטיקה בחט\"ב ז-ט",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ע.הד-מצוינים",
+        "lecturerInCharge": "ד\"ר ע.הד-מצוינים",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6
@@ -39895,7 +39895,7 @@
         "id": 214232,
         "name": "התנסות בהוראת מתמטיקה בחט\"ע י-י\"ב",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ע.הד-מצוינים",
+        "lecturerInCharge": "ד\"ר ע.הד-מצוינים",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6
@@ -39948,7 +39948,7 @@
         "id": 214410,
         "name": "התנסות בהוראת הכימיה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.הרשקוביץ",
+        "lecturerInCharge": "ד\"ר א.הרשקוביץ",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6,
@@ -39975,7 +39975,7 @@
         "id": 214444,
         "name": "הוראת חקר במעבדות בכימיה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.הרשקוביץ",
+        "lecturerInCharge": "ד\"ר א.הרשקוביץ",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -40033,7 +40033,7 @@
         "id": 214501,
         "name": "דרכי הוראת ביולוגיה 1",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    מ.צאושו",
+        "lecturerInCharge": "ד\"ר מ.צאושו",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -40076,7 +40076,7 @@
         "id": 214510,
         "name": "התנסות בהוראת ביולוגיה וסביבה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    מ.צאושו",
+        "lecturerInCharge": "ד\"ר מ.צאושו",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6,
@@ -40189,7 +40189,7 @@
         "id": 214610,
         "name": "התנסות בהוראת האלקטרוניקה",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     ש.ישראלי",
+        "lecturerInCharge": "מר ש.ישראלי",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6,
@@ -40216,7 +40216,7 @@
         "id": 214709,
         "name": "התנסות בהוראת טכנולוגיה-מכונות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     א.פולישוק",
+        "lecturerInCharge": "מר א.פולישוק",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6,
@@ -40243,7 +40243,7 @@
         "id": 214905,
         "name": "התנסות בהוראת מדעי המחשב",
         "academicPoints": 2.5,
-        "lecturerInCharge": "גב     ר.ויזר",
+        "lecturerInCharge": "גב ר.ויזר",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 6,
@@ -40270,7 +40270,7 @@
         "id": 214907,
         "name": "עולמות זוטא-למידה בסביבה ממוחשבת",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     נ.רגוניס",
+        "lecturerInCharge": "גב נ.רגוניס",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -40313,7 +40313,7 @@
         "id": 216003,
         "name": "ליקויי למידה והתנהגות בילדים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    צ.הורוביץ-קראו",
+        "lecturerInCharge": "ד\"ר צ.הורוביץ-קראו",
         "weeklyHours": {
           "lecture": 2
         },
@@ -40367,7 +40367,7 @@
         "id": 216006,
         "name": "סוגיות מתק. ב\"מוטל\" בתיכון",
         "academicPoints": 3,
-        "lecturerInCharge": "גב     מ.נחשון",
+        "lecturerInCharge": "גב מ.נחשון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -40451,7 +40451,7 @@
         "id": 216110,
         "name": "הוראת מדעים זיקה להוראת טכנולוגיה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.גרו",
+        "lecturerInCharge": "ד\"ר א.גרו",
         "weeklyHours": {
           "lecture": 2
         },
@@ -40532,7 +40532,7 @@
         "id": 216125,
         "name": "גישות מתקדמות להערכה בחינוך מתמטי",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    ז.כהן",
+        "lecturerInCharge": "ד\"ר ז.כהן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -40573,7 +40573,7 @@
         "id": 216126,
         "name": "סדנת התנסות במדע בלווי מחקר פעולה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    א.הרשקוביץ",
+        "lecturerInCharge": "ד\"ר א.הרשקוביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -40616,7 +40616,7 @@
         "id": 216300,
         "name": "סוגיות מתקדמות בהוראת מדעי המחשב",
         "academicPoints": 3,
-        "lecturerInCharge": "גב     נ.רגוניס",
+        "lecturerInCharge": "גב נ.רגוניס",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -40795,7 +40795,7 @@
         "id": 234112,
         "name": "מבוא למחשב - שפת סי",
         "academicPoints": 4,
-        "lecturerInCharge": "ד\"ר    י.נופברי",
+        "lecturerInCharge": "ד\"ר י.נופברי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -41255,7 +41255,7 @@
         "id": 234118,
         "name": "ארגון ותכנות המחשב",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.רוט",
+        "lecturerInCharge": "פרופ. ר.רוט",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -41375,7 +41375,7 @@
         "id": 234122,
         "name": "מבוא לתכנות מערכות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ג.ברקת",
+        "lecturerInCharge": "פרופ. ג.ברקת",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -41466,7 +41466,7 @@
         "id": 234123,
         "name": "מערכות הפעלה",
         "academicPoints": 4.5,
-        "lecturerInCharge": "ד\"ר    ל.רסקין",
+        "lecturerInCharge": "ד\"ר ל.רסקין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2,
@@ -41587,7 +41587,7 @@
         "id": 234125,
         "name": "אלגוריתמים נומריים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.אלעד",
+        "lecturerInCharge": "פרופ. מ.אלעד",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -41783,7 +41783,7 @@
         "id": 234141,
         "name": "קומבינטוריקה למדעי המחשב",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  נ.בשותי",
+        "lecturerInCharge": "פרופ. נ.בשותי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -42349,7 +42349,7 @@
         "id": 234262,
         "name": "תכן לוגי",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.לינדנבאום",
+        "lecturerInCharge": "פרופ. מ.לינדנבאום",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -42468,7 +42468,7 @@
         "id": 234267,
         "name": "מבנה מחשבים ספרתיים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ל.רפפורט",
+        "lecturerInCharge": "ד\"ר ל.רפפורט",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -42690,7 +42690,7 @@
         "id": 234313,
         "name": "פרויקט תעשייתי",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.רז",
+        "lecturerInCharge": "פרופ. ד.רז",
         "weeklyHours": {
           "project": 6
         },
@@ -42917,7 +42917,7 @@
         "id": 234329,
         "name": "פרויקט בעיבוד וניתוח תמונות",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ר.קימל",
+        "lecturerInCharge": "פרופ. ר.קימל",
         "weeklyHours": {
           "project": 12
         },
@@ -42928,7 +42928,7 @@
         "id": 236200,
         "name": "עיבוד מידע סטטיסטי",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ר.קימל",
+        "lecturerInCharge": "פרופ. ר.קימל",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -42982,7 +42982,7 @@
         "id": 236304,
         "name": "לוגיקה למדעי המחשב 2",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.קמינסקי",
+        "lecturerInCharge": "פרופ. מ.קמינסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43034,7 +43034,7 @@
         "id": 236309,
         "name": "מבוא לתורת הצפינה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.רוט",
+        "lecturerInCharge": "פרופ. ר.רוט",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43086,7 +43086,7 @@
         "id": 236313,
         "name": "תורת הסיבוכיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.קושילביץ",
+        "lecturerInCharge": "פרופ. א.קושילביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43140,7 +43140,7 @@
         "id": 236315,
         "name": "שיטות אלגבריות במדעי המחשב",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.בן ששון",
+        "lecturerInCharge": "פרופ. א.בן ששון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43195,7 +43195,7 @@
         "id": 236321,
         "name": "שיטות בהנדסת תוכנה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ע.תומר",
+        "lecturerInCharge": "ד\"ר ע.תומר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43269,7 +43269,7 @@
         "id": 236332,
         "name": "האינטרנט של הדברים - טכנולוגיות",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     א.דברן",
+        "lecturerInCharge": "מר א.דברן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -43322,7 +43322,7 @@
         "id": 236334,
         "name": "מבוא לרשתות מחשבים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.כהן",
+        "lecturerInCharge": "פרופ. ר.כהן",
         "weeklyHours": {
           "lecture": 3,
           "tutorial": 2
@@ -43387,7 +43387,7 @@
         "id": 236336,
         "name": "פתרון נומרי של משוואות דיפ.חלקיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.אונגריש",
+        "lecturerInCharge": "פרופ. מ.אונגריש",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43441,7 +43441,7 @@
         "id": 236340,
         "name": "פרויקט בתקשורת מחשבים",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.רז",
+        "lecturerInCharge": "פרופ. ד.רז",
         "weeklyHours": {
           "lecture": 2,
           "project": 3
@@ -43462,7 +43462,7 @@
         "id": 236341,
         "name": "תקשורת באינטרנט",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.כהן",
+        "lecturerInCharge": "פרופ. ר.כהן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43515,7 +43515,7 @@
         "id": 236342,
         "name": "מבוא לאימות תוכנה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.גרימברג",
+        "lecturerInCharge": "פרופ. א.גרימברג",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43583,7 +43583,7 @@
         "id": 236343,
         "name": "תורת החישוביות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.בן ששון",
+        "lecturerInCharge": "פרופ. א.בן ששון",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43714,7 +43714,7 @@
         "id": 236350,
         "name": "הגנה במערכות מתוכנתות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.ביהם",
+        "lecturerInCharge": "פרופ. א.ביהם",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -43779,7 +43779,7 @@
         "id": 236351,
         "name": "מערכות מבוזרות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.פרידמן",
+        "lecturerInCharge": "פרופ. ר.פרידמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43834,7 +43834,7 @@
         "id": 236353,
         "name": "אוטומטים ושפות פורמליות",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ג.אלכסנדרוביץ",
+        "lecturerInCharge": "ד\"ר ג.אלכסנדרוביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -43926,7 +43926,7 @@
         "id": 236360,
         "name": "תורת הקומפילציה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.יצחקי",
+        "lecturerInCharge": "ד\"ר ש.יצחקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -44069,7 +44069,7 @@
         "id": 236370,
         "name": "תכנות מקבילי ומבוזר",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.שוסטר",
+        "lecturerInCharge": "פרופ. א.שוסטר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -44157,7 +44157,7 @@
         "id": 236501,
         "name": "מבוא לבינה מלאכותית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ש.מרקוביץ",
+        "lecturerInCharge": "פרופ. ש.מרקוביץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -44259,7 +44259,7 @@
         "id": 236508,
         "name": "קריפטוגרפיה וסיבוכיות",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  י.ישי",
+        "lecturerInCharge": "פרופ. י.ישי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44297,7 +44297,7 @@
         "id": 236521,
         "name": "אלגוריתמי קירוב",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ר.שורץ",
+        "lecturerInCharge": "ד\"ר ר.שורץ",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44389,7 +44389,7 @@
         "id": 236524,
         "name": "פרוייקט בביואינפורמטיקה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ד.גייגר",
+        "lecturerInCharge": "פרופ. ד.גייגר",
         "weeklyHours": {
           "lecture": 2,
           "project": 3
@@ -44437,7 +44437,7 @@
         "id": 236602,
         "name": "נושאים מתקדמים במדעי המחשב 2",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.פילמוס",
+        "lecturerInCharge": "ד\"ר י.פילמוס",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44502,7 +44502,7 @@
         "id": 236604,
         "name": "נושאים מתקדמים במדעי המחשב 4",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.קמינסקי",
+        "lecturerInCharge": "פרופ. מ.קמינסקי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44540,7 +44540,7 @@
         "id": 236607,
         "name": "נושאים מתקדמים במדעי המחשב 7",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ש.ביתן-ארליך",
+        "lecturerInCharge": "ד\"ר ש.ביתן-ארליך",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -44592,7 +44592,7 @@
         "id": 236646,
         "name": "נושאים בתאוריה של מדעי המחשב",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.פילמוס",
+        "lecturerInCharge": "ד\"ר י.פילמוס",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44657,7 +44657,7 @@
         "id": 236703,
         "name": "תכנות מונחה עצמים",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ק.לנץ",
+        "lecturerInCharge": "ד\"ר ק.לנץ",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -44722,7 +44722,7 @@
         "id": 236716,
         "name": "מודלים גאומטריים במערכות תיב\"מ",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ג.אלבר",
+        "lecturerInCharge": "פרופ. ג.אלבר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -44763,7 +44763,7 @@
         "id": 236719,
         "name": "גאומטריה חישובית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ג.ברקת",
+        "lecturerInCharge": "פרופ. ג.ברקת",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -44839,7 +44839,7 @@
         "id": 236801,
         "name": "סמינר במדעי המחשב 1",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ט.עציון",
+        "lecturerInCharge": "פרופ. ט.עציון",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44893,7 +44893,7 @@
         "id": 236818,
         "name": "סמינר בביואינפורמטיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ר.פינטר",
+        "lecturerInCharge": "פרופ. ר.פינטר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44920,7 +44920,7 @@
         "id": 236826,
         "name": "סמינר במסדי נתונים",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  ע.שמואלי",
+        "lecturerInCharge": "פרופ. ע.שמואלי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -44958,7 +44958,7 @@
         "id": 236832,
         "name": "סמינר בתכנות מקבילי",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.פטרנק",
+        "lecturerInCharge": "פרופ. א.פטרנק",
         "weeklyHours": {
           "lecture": 2
         },
@@ -45038,7 +45038,7 @@
         "id": 236861,
         "name": "ראיה חישובית גאומטרית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ר.קימל",
+        "lecturerInCharge": "פרופ. ר.קימל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -45093,7 +45093,7 @@
         "id": 236862,
         "name": "ייצוגים דלילים ויתירים ויישומיהם",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  מ.אלעד",
+        "lecturerInCharge": "פרופ. מ.אלעד",
         "weeklyHours": {
           "lecture": 2
         },
@@ -45131,7 +45131,7 @@
         "id": 236873,
         "name": "ראיה ממוחשבת",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  מ.לינדנבאום",
+        "lecturerInCharge": "פרופ. מ.לינדנבאום",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1,
@@ -45207,7 +45207,7 @@
         "id": 236927,
         "name": "מבוא לרובוטיקה",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    ה.רוטשטיין",
+        "lecturerInCharge": "ד\"ר ה.רוטשטיין",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -45332,7 +45332,7 @@
         "id": 274073,
         "name": "פתולוגיה כללית - רפואה מעבדתית",
         "academicPoints": 3,
-        "lecturerInCharge": "51     ע.בן-יצחק",
+        "lecturerInCharge": "51 ע.בן-יצחק",
         "weeklyHours": {
           "lecture": 3
         },
@@ -45377,7 +45377,7 @@
         "id": 274109,
         "name": "מבוא לרפואה דחופה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.שביט",
+        "lecturerInCharge": "ד\"ר א.שביט",
         "weeklyHours": {
           "lecture": 1,
           "lab": 3
@@ -45516,7 +45516,7 @@
         "id": 274140,
         "name": "להיות רופא-חשיפה למקצוע הרפואה 1",
         "academicPoints": 1,
-        "lecturerInCharge": "51     ד.איזנבוד",
+        "lecturerInCharge": "51 ד.איזנבוד",
         "weeklyHours": {
           "lab": 2
         },
@@ -45541,7 +45541,7 @@
         "id": 274219,
         "name": "ביוסטטיסטיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    נ.וולף",
+        "lecturerInCharge": "ד\"ר נ.וולף",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -45604,7 +45604,7 @@
         "id": 274234,
         "name": "להיות רופא-חשיפה למקצוע הרפואה 3",
         "academicPoints": 1,
-        "lecturerInCharge": "51     ד.איזנבוד",
+        "lecturerInCharge": "51 ד.איזנבוד",
         "weeklyHours": {
           "lab": 2
         },
@@ -45629,7 +45629,7 @@
         "id": 274237,
         "name": "מעבדה בביוכימיה קלינית",
         "academicPoints": 1,
-        "lecturerInCharge": "פרופ.  ה.וולוסקר",
+        "lecturerInCharge": "פרופ. ה.וולוסקר",
         "weeklyHours": {
           "tutorial": 1,
           "lab": 2
@@ -45861,7 +45861,7 @@
         "id": 274243,
         "name": "ביולוגיה מולקולרית ומנגנוני בקרה",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ע.אהרונהיים",
+        "lecturerInCharge": "פרופ. ע.אהרונהיים",
         "weeklyHours": {
           "lecture": 3
         },
@@ -46005,7 +46005,7 @@
         "id": 274318,
         "name": "אפידמיולוגיה",
         "academicPoints": 2,
-        "lecturerInCharge": "41     ו.סליבא",
+        "lecturerInCharge": "41 ו.סליבא",
         "weeklyHours": {
           "lecture": 2
         },
@@ -46041,7 +46041,7 @@
         "id": 274320,
         "name": "אתיקה ומשפט רפואי",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ג.גרונפלד",
+        "lecturerInCharge": "מר ג.גרונפלד",
         "weeklyHours": {
           "lecture": 2
         },
@@ -46072,7 +46072,7 @@
         "id": 274335,
         "name": "להיות רופא-סוגיות תרבותיות אתיות5",
         "academicPoints": 0.5,
-        "lecturerInCharge": "51     ד.איזנבוד",
+        "lecturerInCharge": "51 ד.איזנבוד",
         "weeklyHours": {
           "lab": 1
         },
@@ -46097,7 +46097,7 @@
         "id": 274336,
         "name": "נוירופזיולוגיה מערכתית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  ג.שילר",
+        "lecturerInCharge": "פרופ. ג.שילר",
         "weeklyHours": {
           "lecture": 3
         },
@@ -46251,7 +46251,7 @@
         "id": 274353,
         "name": "שיטות מתקדמות בביוסטטיסטיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    נ.וולף",
+        "lecturerInCharge": "ד\"ר נ.וולף",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -46402,7 +46402,7 @@
         "id": 274358,
         "name": "ביואינפורמטיקה וגנומיקה ברפואה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    נ.קפלן",
+        "lecturerInCharge": "ד\"ר נ.קפלן",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -46527,7 +46527,7 @@
         "id": 274362,
         "name": "אימונולוגיה קלינית",
         "academicPoints": 2,
-        "lecturerInCharge": "51     א.קסל",
+        "lecturerInCharge": "51 א.קסל",
         "weeklyHours": {
           "lecture": 1,
           "lab": 3
@@ -46564,7 +46564,7 @@
         "id": 274363,
         "name": "אנדוקרינולוגיה פיזיולוגיה פתופיז'",
         "academicPoints": 2,
-        "lecturerInCharge": "51     ד.טיאוסנו",
+        "lecturerInCharge": "51 ד.טיאוסנו",
         "weeklyHours": {
           "lecture": 2
         },
@@ -46600,7 +46600,7 @@
         "id": 274425,
         "name": "שילוב מערכות פרה-קליניקה -קליניקה",
         "academicPoints": 0,
-        "lecturerInCharge": "41     א.בראון",
+        "lecturerInCharge": "41 א.בראון",
         "weeklyHours": {},
         "testDates": [
           {
@@ -46615,7 +46615,7 @@
         "id": 274526,
         "name": "כירורגיה 1ח'",
         "academicPoints": 7,
-        "lecturerInCharge": "51     י.קלוגר",
+        "lecturerInCharge": "51 י.קלוגר",
         "weeklyHours": {
           "lab": 17
         },
@@ -46626,7 +46626,7 @@
         "id": 274530,
         "name": "נוירולוגיה",
         "academicPoints": 3,
-        "lecturerInCharge": "41     ב.וולר",
+        "lecturerInCharge": "41 ב.וולר",
         "weeklyHours": {
           "lecture": 3,
           "lab": 11
@@ -46638,7 +46638,7 @@
         "id": 274531,
         "name": "פסיכיאטריה",
         "academicPoints": 6,
-        "lecturerInCharge": "51     א.גרינשפון",
+        "lecturerInCharge": "51 א.גרינשפון",
         "weeklyHours": {
           "lecture": 6,
           "lab": 14
@@ -46650,7 +46650,7 @@
         "id": 274532,
         "name": "רפואת נשים ומילדות",
         "academicPoints": 7,
-        "lecturerInCharge": "51     ל.לבנשטיין",
+        "lecturerInCharge": "51 ל.לבנשטיין",
         "weeklyHours": {
           "lecture": 7,
           "lab": 17
@@ -46668,7 +46668,7 @@
         "id": 274533,
         "name": "רפואת ילדים 1ח'",
         "academicPoints": 7,
-        "lecturerInCharge": "51     י.סרוגו",
+        "lecturerInCharge": "51 י.סרוגו",
         "weeklyHours": {
           "lecture": 7,
           "lab": 20
@@ -46680,7 +46680,7 @@
         "id": 274604,
         "name": "רפואת המשפחה והקהילה",
         "academicPoints": 4,
-        "lecturerInCharge": "41     ח.כרכבי",
+        "lecturerInCharge": "41 ח.כרכבי",
         "weeklyHours": {
           "lab": 11
         },
@@ -46702,7 +46702,7 @@
         "id": 274632,
         "name": "רפואת ילדים 2",
         "academicPoints": 3,
-        "lecturerInCharge": "51     י.סרוגו",
+        "lecturerInCharge": "51 י.סרוגו",
         "weeklyHours": {
           "lecture": 3,
           "lab": 9
@@ -46714,7 +46714,7 @@
         "id": 274633,
         "name": "רפואה פנימית 2ת'",
         "academicPoints": 4,
-        "lecturerInCharge": "41     מ.אליאס",
+        "lecturerInCharge": "41 מ.אליאס",
         "weeklyHours": {
           "lecture": 4,
           "lab": 11
@@ -46726,7 +46726,7 @@
         "id": 275101,
         "name": "פרקים בהיסטוריה של הרפואה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.רימר",
+        "lecturerInCharge": "ד\"ר י.רימר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -46768,7 +46768,7 @@
         "id": 275208,
         "name": "מבוא לרפואה דחופה ב'",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.שביט",
+        "lecturerInCharge": "ד\"ר א.שביט",
         "weeklyHours": {
           "lecture": 2,
           "lab": 1
@@ -46794,7 +46794,7 @@
         "id": 275317,
         "name": "ספרות ורפואה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    מ.קאפמן",
+        "lecturerInCharge": "ד\"ר מ.קאפמן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -46852,7 +46852,7 @@
         "id": 276001,
         "name": "רפואת שינה-מפיזיולוגיה ועד מחלות",
         "academicPoints": 3,
-        "lecturerInCharge": "0      ת.עציוני",
+        "lecturerInCharge": "0 ת.עציוני",
         "weeklyHours": {
           "lecture": 3
         },
@@ -46927,7 +46927,7 @@
         "id": 276310,
         "name": "ביוכימיה קלינית",
         "academicPoints": 4,
-        "lecturerInCharge": "פרופ.  ה.וולוסקר",
+        "lecturerInCharge": "פרופ. ה.וולוסקר",
         "weeklyHours": {
           "lecture": 4
         },
@@ -46969,7 +46969,7 @@
         "id": 276413,
         "name": "אימונולוגיה בסיסית",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  נ.קרין",
+        "lecturerInCharge": "פרופ. נ.קרין",
         "weeklyHours": {
           "lecture": 3
         },
@@ -48511,7 +48511,7 @@
         "id": 324227,
         "name": "אלתור ג'אז למתחילים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    ד.כהן",
+        "lecturerInCharge": "ד\"ר ד.כהן",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -48539,7 +48539,7 @@
         "id": 324228,
         "name": "נגינה ואלתור בהרכב ג'אז-למתקדמים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    ד.כהן",
+        "lecturerInCharge": "ד\"ר ד.כהן",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -48567,7 +48567,7 @@
         "id": 324235,
         "name": "תקשורת בין-אישית באמצעי תיאטרון",
         "academicPoints": 1.5,
-        "lecturerInCharge": "גב     ש.סיבוני",
+        "lecturerInCharge": "גב ש.סיבוני",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -48595,7 +48595,7 @@
         "id": 324290,
         "name": "היסטוריה של רפואה וחומרי מרפא",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.לב",
+        "lecturerInCharge": "פרופ. א.לב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48622,7 +48622,7 @@
         "id": 324291,
         "name": "חיי היהודים באגן ים התיכון בימה\"ב",
         "academicPoints": 2,
-        "lecturerInCharge": "פרופ.  א.לב",
+        "lecturerInCharge": "פרופ. א.לב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48649,7 +48649,7 @@
         "id": 324292,
         "name": "משפט, שוויון וצדק חברתי",
         "academicPoints": 2,
-        "lecturerInCharge": "61     ת.גוטגולד-כהן",
+        "lecturerInCharge": "61 ת.גוטגולד-כהן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48676,7 +48676,7 @@
         "id": 324293,
         "name": "תובנות יסוד בפילוסופיה של הרמב\"ם",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.מקבילי",
+        "lecturerInCharge": "ד\"ר י.מקבילי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48703,7 +48703,7 @@
         "id": 324295,
         "name": "הגות יהודית בימי הביניים",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.דוקוב",
+        "lecturerInCharge": "ד\"ר א.דוקוב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48730,7 +48730,7 @@
         "id": 324296,
         "name": "יסודות באמנות ותרבות סין",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.לנצמן",
+        "lecturerInCharge": "ד\"ר א.לנצמן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48757,7 +48757,7 @@
         "id": 324297,
         "name": "אישים בתנ\"ך לאור זמננו",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.דוקוב",
+        "lecturerInCharge": "ד\"ר א.דוקוב",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48784,7 +48784,7 @@
         "id": 324298,
         "name": "מן התנ\"ך ועד למשפט הישראלי החדשני",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ת.כץ פלד",
+        "lecturerInCharge": "ד\"ר ת.כץ פלד",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48811,7 +48811,7 @@
         "id": 324385,
         "name": "תקשורת בעל-פה ובכתב באנגלית",
         "academicPoints": 3,
-        "lecturerInCharge": "ד\"ר    י.הן",
+        "lecturerInCharge": "ד\"ר י.הן",
         "weeklyHours": {
           "lecture": 4
         },
@@ -48838,7 +48838,7 @@
         "id": 324390,
         "name": "נגינה בהרכב קאמרי",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     מ.נבנהויז",
+        "lecturerInCharge": "מר מ.נבנהויז",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48865,7 +48865,7 @@
         "id": 324397,
         "name": "סוגיות בפילוסופיה של מדעי החיים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     ד.ברא\"ז",
+        "lecturerInCharge": "מר ד.ברא\"ז",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48916,7 +48916,7 @@
         "id": 324426,
         "name": "מחורבן ליצירה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.טל",
+        "lecturerInCharge": "ד\"ר א.טל",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48943,7 +48943,7 @@
         "id": 324432,
         "name": "פסיכולוגיה של המוזיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ד.כהן",
+        "lecturerInCharge": "ד\"ר ד.כהן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -48970,7 +48970,7 @@
         "id": 324434,
         "name": "מבוא היסטורי למוסיקה 1",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     מ.נבנהויז",
+        "lecturerInCharge": "מר מ.נבנהויז",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49003,7 +49003,7 @@
         "id": 324435,
         "name": "מבוא לפילוסופיה הסינית",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    ג.ישי",
+        "lecturerInCharge": "ד\"ר ג.ישי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49030,7 +49030,7 @@
         "id": 324440,
         "name": "יסודות המוסיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     מ.נבנהויז",
+        "lecturerInCharge": "מר מ.נבנהויז",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49063,7 +49063,7 @@
         "id": 324442,
         "name": "משפט העבודה בישראל",
         "academicPoints": 2,
-        "lecturerInCharge": "61     ת.גוטגולד-כהן",
+        "lecturerInCharge": "61 ת.גוטגולד-כהן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49090,7 +49090,7 @@
         "id": 324444,
         "name": "לוחמה פסיכול'-מתעמולה ללוחמת מידע",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.לויתן",
+        "lecturerInCharge": "ד\"ר י.לויתן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49117,7 +49117,7 @@
         "id": 324445,
         "name": "הסתגלות למצבי לחץ",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ד.פלד-לינדנש",
+        "lecturerInCharge": "גב ד.פלד-לינדנש",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49194,7 +49194,7 @@
         "id": 324461,
         "name": "מודרניזם בתיאטרון",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     א.מעין",
+        "lecturerInCharge": "מר א.מעין",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49221,7 +49221,7 @@
         "id": 324462,
         "name": "ברלין בקולנוע-מהנאציזם ועד ימינו",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    פ.רוזנברג",
+        "lecturerInCharge": "ד\"ר פ.רוזנברג",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49248,7 +49248,7 @@
         "id": 324482,
         "name": "רישום ביד חופשית למתקדמים",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     מ.ביבר",
+        "lecturerInCharge": "גב מ.ביבר",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -49276,7 +49276,7 @@
         "id": 324483,
         "name": "ציור למתחילים",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     מ.ביבר",
+        "lecturerInCharge": "גב מ.ביבר",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 2
@@ -49304,7 +49304,7 @@
         "id": 324567,
         "name": "סדנת צילום# שפה וכלים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     ק.גופר",
+        "lecturerInCharge": "מר ק.גופר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49346,7 +49346,7 @@
         "id": 324600,
         "name": "גרמנית 1",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ב.האן-מיכאלי",
+        "lecturerInCharge": "גב ב.האן-מיכאלי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49403,7 +49403,7 @@
         "id": 324602,
         "name": "יפנית למתחילים",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ר.עיני-טאקאקי",
+        "lecturerInCharge": "גב ר.עיני-טאקאקי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49430,7 +49430,7 @@
         "id": 324603,
         "name": "גרמנית 2",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ב.האן-מיכאלי",
+        "lecturerInCharge": "גב ב.האן-מיכאלי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49457,7 +49457,7 @@
         "id": 324607,
         "name": "גרמנית 6",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ב.האן-מיכאלי",
+        "lecturerInCharge": "גב ב.האן-מיכאלי",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49484,7 +49484,7 @@
         "id": 324608,
         "name": "צרפתית 1",
         "academicPoints": 1.5,
-        "lecturerInCharge": "גב     א.רביב",
+        "lecturerInCharge": "גב א.רביב",
         "weeklyHours": {
           "lecture": 1,
           "tutorial": 1
@@ -49512,7 +49512,7 @@
         "id": 324621,
         "name": "רוסית למתחילים 1",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.פוריסמן",
+        "lecturerInCharge": "ד\"ר א.פוריסמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49539,7 +49539,7 @@
         "id": 324626,
         "name": "ערבית )כשפה זרה( 1",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    י.פרידמן",
+        "lecturerInCharge": "ד\"ר י.פרידמן",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49566,7 +49566,7 @@
         "id": 324630,
         "name": "איטלקית למתחילים 1",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     מ.גבריאל",
+        "lecturerInCharge": "מר מ.גבריאל",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49593,7 +49593,7 @@
         "id": 324675,
         "name": "ספרדית למתחילים",
         "academicPoints": 1.5,
-        "lecturerInCharge": "גב     ב.קוסובסקי",
+        "lecturerInCharge": "גב ב.קוסובסקי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49620,7 +49620,7 @@
         "id": 324679,
         "name": "ספרדית ברמה בינונית",
         "academicPoints": 1.5,
-        "lecturerInCharge": "גב     ב.קוסובסקי",
+        "lecturerInCharge": "גב ב.קוסובסקי",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49647,7 +49647,7 @@
         "id": 324692,
         "name": "סינית למתחילים",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     א.בינה פולק",
+        "lecturerInCharge": "גב א.בינה פולק",
         "weeklyHours": {
           "lecture": 3
         },
@@ -49699,7 +49699,7 @@
         "id": 324904,
         "name": "מזרח תיכון עת חדשה#תמורות,שינויים",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     מ.יזבק",
+        "lecturerInCharge": "מר מ.יזבק",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49726,7 +49726,7 @@
         "id": 324907,
         "name": "ספורי בריאה ומיתוסים במצרים עתיקה",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ד.קהאן",
+        "lecturerInCharge": "מר ד.קהאן",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49878,7 +49878,7 @@
         "id": 324946,
         "name": "הרנסנס באיטליה#מסע אמנותי ותרבותי",
         "academicPoints": 2,
-        "lecturerInCharge": "גב     ע.סגרה",
+        "lecturerInCharge": "גב ע.סגרה",
         "weeklyHours": {
           "lecture": 2
         },
@@ -49980,7 +49980,7 @@
         "id": 324961,
         "name": "מדע ונצרות# קונפליקט או דו-קיום",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    מ.אלעזר",
+        "lecturerInCharge": "ד\"ר מ.אלעזר",
         "weeklyHours": {
           "lecture": 2
         },
@@ -50107,7 +50107,7 @@
         "id": 394580,
         "name": "פיתוח קול",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     ל.וולף",
+        "lecturerInCharge": "מר ל.וולף",
         "weeklyHours": {
           "lecture": 2
         },
@@ -50134,7 +50134,7 @@
         "id": 394582,
         "name": "תזמורת",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     מ.נבנהויז",
+        "lecturerInCharge": "מר מ.נבנהויז",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 4
@@ -50162,7 +50162,7 @@
         "id": 394587,
         "name": "מקהלה 3",
         "academicPoints": 2,
-        "lecturerInCharge": "מר     ל.וולף",
+        "lecturerInCharge": "מר ל.וולף",
         "weeklyHours": {
           "lecture": 3
         },
@@ -50189,7 +50189,7 @@
         "id": 394591,
         "name": "פיתוח קול 2",
         "academicPoints": 1.5,
-        "lecturerInCharge": "מר     ל.וולף",
+        "lecturerInCharge": "מר ל.וולף",
         "weeklyHours": {
           "lecture": 2
         },
@@ -50345,7 +50345,7 @@
         "id": 335001,
         "name": "מעבדה בהנדסה ביו-רפואית 1",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.ליכטנשטיין",
+        "lecturerInCharge": "ד\"ר א.ליכטנשטיין",
         "weeklyHours": {
           "lab": 4
         },
@@ -50387,7 +50387,7 @@
         "id": 335002,
         "name": "מעבדה בהנדסה ביו-רפואית 2",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.ליכטנשטיין",
+        "lecturerInCharge": "ד\"ר א.ליכטנשטיין",
         "weeklyHours": {
           "lab": 4
         },
@@ -50429,7 +50429,7 @@
         "id": 335003,
         "name": "מעבדה בהנדסה ביו-רפואית 3",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.ליכטנשטיין",
+        "lecturerInCharge": "ד\"ר א.ליכטנשטיין",
         "weeklyHours": {
           "lab": 4
         },
@@ -50471,7 +50471,7 @@
         "id": 335004,
         "name": "מעבדה בהנדסה ביו-רפואית 4",
         "academicPoints": 2,
-        "lecturerInCharge": "ד\"ר    א.ליכטנשטיין",
+        "lecturerInCharge": "ד\"ר א.ליכטנשטיין",
         "weeklyHours": {
           "lab": 4
         },
@@ -50513,7 +50513,7 @@
         "id": 336017,
         "name": "נושאים מתקדמים בה. ביו רפואית3",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    י.שכטמן",
+        "lecturerInCharge": "ד\"ר י.שכטמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -50565,7 +50565,7 @@
         "id": 336018,
         "name": "נושאים מתקדמים בהנדסה ביורפואית 4",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    י.שכטמן",
+        "lecturerInCharge": "ד\"ר י.שכטמן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -50831,7 +50831,7 @@
         "id": 336518,
         "name": "מעבר חום במערכות ביולוגיות",
         "academicPoints": 3,
-        "lecturerInCharge": "פרופ.  א.קימל",
+        "lecturerInCharge": "פרופ. א.קימל",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 2
@@ -50928,7 +50928,7 @@
         "id": 336523,
         "name": "מכשור רפואי, סטנדרטים ובטיחות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    א.וילנסקי",
+        "lecturerInCharge": "ד\"ר א.וילנסקי",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -51090,7 +51090,7 @@
         "id": 336538,
         "name": "עקרונות ביוהנדסיים לחישת מולקולות",
         "academicPoints": 2.5,
-        "lecturerInCharge": "פרופ.  ע.מלר",
+        "lecturerInCharge": "פרופ. ע.מלר",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -51133,7 +51133,7 @@
         "id": 336540,
         "name": "תכן מיכשור רפואי ממוחשב)וירטואלי(",
         "academicPoints": 2.5,
-        "lecturerInCharge": "ד\"ר    י.קוניוחוב",
+        "lecturerInCharge": "ד\"ר י.קוניוחוב",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -51321,7 +51321,7 @@
         "id": 648010,
         "name": "מכניקת קוונטים לננומדעים",
         "academicPoints": 2.5,
-        "lecturerInCharge": "מר     ע.חריטן",
+        "lecturerInCharge": "מר ע.חריטן",
         "weeklyHours": {
           "lecture": 2,
           "tutorial": 1
@@ -51407,7 +51407,7 @@
         "id": 394800,
         "name": "חינוך גופני-כושר בנים",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51418,7 +51418,7 @@
         "id": 394801,
         "name": "חינוך גופני - התעמלות כללית בנות",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51429,7 +51429,7 @@
         "id": 394802,
         "name": "חינוך גופני - שחיה",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51440,7 +51440,7 @@
         "id": 394803,
         "name": "חינוך גופני - משחקי כדור",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51451,7 +51451,7 @@
         "id": 394804,
         "name": "חינוך גופני - משחקי מחבט",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51462,7 +51462,7 @@
         "id": 394805,
         "name": "חינוך גופני - אתלטיקה קלה",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51473,7 +51473,7 @@
         "id": 394806,
         "name": "חינוך גופני - הגנה עצמית",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51484,7 +51484,7 @@
         "id": 394808,
         "name": "חינוך גופני-מיועד לסטודנטים חדשים",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51495,7 +51495,7 @@
         "id": 394820,
         "name": "חינוך גופני - תנועה ומחול",
         "academicPoints": 1,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 2
         },
@@ -51506,7 +51506,7 @@
         "id": 394902,
         "name": "נבחרות ספורט",
         "academicPoints": 1.5,
-        "lecturerInCharge": "ד\"ר    ח.מרגלית",
+        "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
           "tutorial": 4
         },

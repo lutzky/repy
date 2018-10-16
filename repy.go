@@ -279,6 +279,12 @@ func matchesAny(s string, candidates ...string) bool {
 	return false
 }
 
+var spaceRegex = regexp.MustCompile(`\s+`)
+
+func dedupeSpaces(s string) string {
+	return spaceRegex.ReplaceAllString(s, " ")
+}
+
 func (p *parser) parseCourseHeadInfo() error {
 	for {
 		if matchesAny(p.text(), groupSep1, courseSep, sportsCourseSep,
@@ -296,7 +302,7 @@ func (p *parser) parseCourseHeadInfo() error {
 			}
 			p.course.TestDates = append(p.course.TestDates, d)
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
-			p.course.LecturerInCharge = hebrewFlip(strings.TrimSpace(m[1]))
+			p.course.LecturerInCharge = dedupeSpaces(hebrewFlip(strings.TrimSpace(m[1])))
 		} else {
 			p.infof("Ignored courseHeadInfo line %q", p.text())
 		}
