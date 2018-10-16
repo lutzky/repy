@@ -396,7 +396,7 @@ courses:
 	return nil
 }
 
-const sportsFacultyName = "טרופס תועוצקמ"
+const sportsFacultyName = "מקצועות ספורט"
 
 var sportsFacultySemesterRegexp = regexp.MustCompile(`\| *([א-ת" ]+) +רטסמס *- *טרופס תועוצקמ *\|`)
 
