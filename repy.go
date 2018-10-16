@@ -270,9 +270,19 @@ func fixTwoDigitYear(baseYear uint) uint {
 	return baseYear
 }
 
+func matchesAny(s string, candidates ...string) bool {
+	for _, c := range candidates {
+		if c == s {
+			return true
+		}
+	}
+	return false
+}
+
 func (p *parser) parseCourseHeadInfo() error {
 	for {
-		if p.text() == groupSep1 || p.text() == courseSep || p.text() == blankLine2 {
+		if matchesAny(p.text(), groupSep1, courseSep, sportsCourseSep,
+			blankLine2, sportsBlankLine2) {
 			return nil
 		}
 
@@ -504,6 +514,10 @@ func (p *parser) parseSportsCourse() (*Course, error) {
 		return nil, errors.Wrap(err, "didn't find expected course separator when parsing course")
 	}
 
+	if err := p.parseCourseHeadInfo(); err != nil {
+		return nil, errors.Wrap(err, "failed to parse course head info")
+	}
+
 	// TODO(lutzky): Actually collect the group information
 
 	p.warningf("Skipping sports course group information (not implemented) for %s", p.course.Name)
@@ -697,7 +711,7 @@ func (p *parser) parseGroups() error {
 		} else if p.text() == courseSep {
 			p.scan()
 			return nil
-		} else if p.text() == blankLine1 || p.text() == blankLine2 {
+		} else if matchesAny(p.text(), blankLine1, blankLine2) {
 			p.scan()
 		} else if p.parseEventLine() {
 			// TODO(lutzky): Do nothing?
