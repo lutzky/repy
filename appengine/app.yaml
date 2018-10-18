@@ -4,9 +4,6 @@ handlers:
 - url: /update
   script: auto
   login: admin
-- url: /view
-  static_files: view/index.html
-  upload: view/index.html
 - url: /
-  static_files: view/index.html
-  upload: view/index.html
+  static_files: appengine/view/index.html
+  upload: appengine/view/index.html
