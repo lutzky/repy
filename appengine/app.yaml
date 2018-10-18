@@ -1,9 +1,8 @@
-runtime: go
-api_version: go1.9
+runtime: go111
 
 handlers:
 - url: /update
-  script: _go_app
+  script: auto
   login: admin
 - url: /view
   static_files: view/index.html
