@@ -7,3 +7,6 @@ handlers:
 - url: /
   static_files: appengine/view/index.html
   upload: appengine/view/index.html
+
+env_variables:
+  CLOUD_STORAGE_BUCKET: repy-176217.appspot.com

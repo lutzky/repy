@@ -28,6 +28,10 @@ import (
 	"github.com/pkg/errors"
 )
 
+var bucketName string
+
+const defaultBucketName = "staging.repy-176217.appspot.com"
+
 func downloadREPYZip(ctx context.Context) ([]byte, error) {
 	resp, err := http.Get(repy.RepFileURL)
 	if err != nil {
@@ -46,6 +50,13 @@ func main() {
 		log.Printf("Defaulting to port %s", port)
 	}
 
+	bucketName = os.Getenv("CLOUD_STORAGE_BUCKET")
+	if bucketName == "" {
+		bucketName = defaultBucketName
+		log.Printf("Using default cloud storage bucket")
+	}
+	log.Printf("Using cloud storage bucket %q", bucketName)
+
 	log.Printf("Listening on port %s", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
@@ -58,8 +69,6 @@ type repyStorer struct {
 }
 
 func newRepyStorer(ctx context.Context, data []byte) (*repyStorer, error) {
-	bucketName := "repy-176217.appspot.com" // TODO(lutzky): Show be a flag
-
 	client, err := storage.NewClient(ctx)
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to get storage client")
@@ -71,9 +80,6 @@ func newRepyStorer(ctx context.Context, data []byte) (*repyStorer, error) {
 		data:    data,
 		sha1sum: sha1.Sum(data),
 	}
-
-	// TODO(lutzky): Are log statements still chunked together by request, despite
-	// no longer getting the ctx?
 
 	log.Printf("REPY SHA1SUM: %x", result.sha1sum)
 
