@@ -28,13 +28,11 @@ go run examples/json-export.go -input_file REPY
 
 The `appengine` directory contains a Google AppEngine app built to poll the Technion servers for the latest REPY file and make a (cached) parsed JSON version available for download.
 
-Running a test instance on google cloud shell:
+Running a test instance on google cloud shell - **requires go1.11 or higher**:
 
 ```shell
-go get github.com/lutzky/repy
-gopath=~/gopath # Or wherever your gopath is
-cd ${gopath}/src/github.com/lutzky/repy/appengine
-dev_appserver.py --default_gcs_bucket_name staging.repy-176217.appspot.com app.yaml
+cd appengine
+go run repyapp.go
 ```
 
 Afterwards, browse to the preview URL at the `/update` endpoint (http://0.0.0.0:8080/update if running locally). This should write the files to the *staging* file bucket.

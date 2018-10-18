@@ -1,13 +1,12 @@
-runtime: go
-api_version: go1.9
+runtime: go111
 
 handlers:
 - url: /update
-  script: _go_app
+  script: auto
   login: admin
-- url: /view
-  static_files: view/index.html
-  upload: view/index.html
 - url: /
-  static_files: view/index.html
-  upload: view/index.html
+  static_files: appengine/view/index.html
+  upload: appengine/view/index.html
+
+env_variables:
+  CLOUD_STORAGE_BUCKET: repy-176217.appspot.com

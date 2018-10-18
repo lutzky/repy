@@ -1,29 +1,26 @@
-package repyapp
+package main
 
 import (
 	"bytes"
+	"context"
 	"crypto/sha1"
 	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
+	"os"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
 
 	"cloud.google.com/go/storage"
+	"google.golang.org/api/iterator"
 
-	"golang.org/x/net/context"
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/text/encoding/charmap"
-
-	"google.golang.org/api/iterator"
-	"google.golang.org/appengine"
-	"google.golang.org/appengine/file"
-	"google.golang.org/appengine/log"
-	"google.golang.org/appengine/urlfetch"
 
 	"github.com/lutzky/repy"
 	"github.com/lutzky/repy/recode"
@@ -31,8 +28,12 @@ import (
 	"github.com/pkg/errors"
 )
 
+var bucketName string
+
+const defaultBucketName = "staging.repy-176217.appspot.com"
+
 func downloadREPYZip(ctx context.Context) ([]byte, error) {
-	resp, err := urlfetch.Client(ctx).Get(repy.RepFileURL)
+	resp, err := http.Get(repy.RepFileURL)
 	if err != nil {
 		return nil, errors.Wrapf(err, "failed to download %q", repy.RepFileURL)
 	}
@@ -41,8 +42,23 @@ func downloadREPYZip(ctx context.Context) ([]byte, error) {
 	return repy.ExtractFromZip(resp.Body)
 }
 
-func init() {
+func main() {
 	http.HandleFunc("/update", handler)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		log.Printf("Defaulting to port %s", port)
+	}
+
+	bucketName = os.Getenv("CLOUD_STORAGE_BUCKET")
+	if bucketName == "" {
+		bucketName = defaultBucketName
+		log.Printf("Using default cloud storage bucket")
+	}
+	log.Printf("Using cloud storage bucket %q", bucketName)
+
+	log.Printf("Listening on port %s", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
 
 type repyStorer struct {
@@ -53,11 +69,6 @@ type repyStorer struct {
 }
 
 func newRepyStorer(ctx context.Context, data []byte) (*repyStorer, error) {
-	bucketName, err := file.DefaultBucketName(ctx)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to get default bucket name")
-	}
-
 	client, err := storage.NewClient(ctx)
 	if err != nil {
 		return nil, errors.Wrap(err, "failed to get storage client")
@@ -70,7 +81,7 @@ func newRepyStorer(ctx context.Context, data []byte) (*repyStorer, error) {
 		sha1sum: sha1.Sum(data),
 	}
 
-	log.Infof(ctx, "REPY SHA1SUM: %x", result.sha1sum)
+	log.Printf("REPY SHA1SUM: %x", result.sha1sum)
 
 	return result, nil
 }
@@ -88,7 +99,7 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 	if exists, err := rs.fileExists(baseFileName); err != nil {
 		return errors.Wrapf(err, "Coudln't check if %q already exists", baseFileName)
 	} else if exists {
-		log.Infof(rs.ctx, "%q already exists", baseFileName)
+		log.Printf("%q already exists", baseFileName)
 		isMissing = false
 	}
 
@@ -111,7 +122,7 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 			if dest.onlyIfMissing && !isMissing {
 				return nil
 			}
-			log.Infof(rs.ctx, "writing %q with content-type %q", dest.filename, dest.contentType)
+			log.Printf("writing %q with content-type %q", dest.filename, dest.contentType)
 			if err := rs.copyToFile(dest.filename, bytes.NewReader(dest.data)); err != nil {
 				return errors.Wrapf(err, "failed to write %q", dest.filename)
 			}
@@ -128,7 +139,7 @@ func (rs *repyStorer) writeAllREPYFiles() error {
 
 	if isMissing {
 		f := fmt.Sprintf("%x.timestamp", rs.sha1sum)
-		log.Infof(rs.ctx, "Writing timestamp file %q", f)
+		log.Printf("Writing timestamp file %q", f)
 		if err := rs.writeTimeStamp(f, time.Now()); err != nil {
 			return err
 		}
@@ -162,7 +173,7 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	ctx := appengine.NewContext(r)
+	ctx := r.Context()
 
 	repyBytes, err := downloadREPYZip(ctx)
 	if err != nil {
@@ -186,9 +197,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Infof(ctx, "Successfully parsed REPY")
+	log.Printf("Successfully parsed REPY")
 
-	log.Infof(ctx, "Writing catalog.json")
+	log.Printf("Writing catalog.json")
 
 	if err := rs.writeCatalog(); err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to write catalog")
@@ -208,7 +219,7 @@ func (rs *repyStorer) copyToFile(filename string, r io.Reader) error {
 }
 
 func httpErrorWrap(ctx context.Context, w http.ResponseWriter, err error, msg string) {
-	log.Errorf(ctx, errors.Wrap(err, msg).Error())
+	log.Printf(errors.Wrap(err, msg).Error())
 	http.Error(w, msg, http.StatusInternalServerError)
 }
 
@@ -222,7 +233,7 @@ func (rs *repyStorer) makePublicObject(filename string) (io.Writer, func()) {
 	closer := func() {
 		w.Close()
 		if err := obj.ACL().Set(rs.ctx, storage.AllUsers, storage.RoleReader); err != nil {
-			log.Errorf(rs.ctx, "Failed to make %q public: %v", filename, err)
+			log.Printf("Failed to make %q public: %v", filename, err)
 		}
 	}
 	return w, closer
@@ -325,7 +336,7 @@ func (rs *repyStorer) getAllMetadata() ([]metadataEntry, error) {
 		wg.Go(func() error {
 			ts, err := rs.getTimeStampForSHA1Sum(sum)
 			if err != nil {
-				log.Errorf(rs.ctx, "Couldn't get timestamp for %q: %v", sum, err)
+				log.Printf("Couldn't get timestamp for %q: %v", sum, err)
 				return err
 			}
 
@@ -412,14 +423,14 @@ func (rs *repyStorer) getSemesterForSHA1Sum(sha1sum string) string {
 	obj := rs.bucket.Object(filename)
 	r, err := obj.NewReader(rs.ctx)
 	if err != nil {
-		log.Errorf(rs.ctx, "Failed to read %q: %v", filename, err)
+		log.Printf("Failed to read %q: %v", filename, err)
 		return ""
 	}
 
 	dec := json.NewDecoder(r)
 	catalog := repy.Catalog{}
 	if err := dec.Decode(&catalog); err != nil {
-		log.Errorf(rs.ctx, "Failed to unmarshal %q: %v", filename, err)
+		log.Printf("Failed to unmarshal %q: %v", filename, err)
 		return ""
 	}
 
