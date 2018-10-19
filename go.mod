@@ -19,6 +19,7 @@ require (
 	github.com/koron/iferr v0.0.0-20180615142939-bb332a3b1d91 // indirect
 	github.com/kylelemons/godebug v0.0.0-20170820004349-d65d576e9348
 	github.com/mattn/go-isatty v0.0.4 // indirect
+	github.com/mattn/goveralls v0.0.2 // indirect
 	github.com/nsf/gocode v0.0.0-20180902125341-7b1d4e18cdc5 // indirect
 	github.com/peterh/liner v1.1.0 // indirect
 	github.com/pkg/errors v0.8.0
@@ -28,6 +29,7 @@ require (
 	github.com/zmb3/gogetdoc v0.0.0-20181009153131-0d07153cccef // indirect
 	go.opencensus.io v0.17.0 // indirect
 	golang.org/x/arch v0.0.0-20180920145803-b19384d3c130 // indirect
+	golang.org/x/lint v0.0.0-20181011164241-5906bd5c48cd // indirect
 	golang.org/x/net v0.0.0-20181017193950-04a2e542c03f // indirect
 	golang.org/x/oauth2 v0.0.0-20181017192945-9dcd33a902f4 // indirect
 	golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f
