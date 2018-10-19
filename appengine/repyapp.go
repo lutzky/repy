@@ -170,6 +170,8 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 	return nil
 }
 
+const catalogFileName = "catalog.json"
+
 func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
@@ -197,7 +199,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	log.Printf("Successfully parsed REPY")
 
-	log.Printf("Writing catalog.json")
+	log.Printf("Writing %s", catalogFileName)
 
 	if err := rs.writeCatalog(); err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to write catalog")
@@ -275,7 +277,7 @@ type metadataEntry struct {
 	semester string
 }
 
-// Catalog is the format for catalog.json
+// Catalog is the format for catalogFileName
 type Catalog struct {
 	Entries []CatalogEntry
 }
@@ -314,11 +316,38 @@ func (rs *repyStorer) writeCatalog() error {
 		return errors.Wrap(err, "failed to format JSON")
 	}
 
-	if err := rs.copyToFile("catalog.json", bytes.NewReader(jsonBytes)); err != nil {
-		return errors.Wrap(err, "failed to write JSON to catalog.json")
+	if err := rs.copyToFile(catalogFileName, bytes.NewReader(jsonBytes)); err != nil {
+		return errors.Wrapf(err, "failed to write JSON to %q", catalogFileName)
 	}
 
 	return nil
+}
+
+func (rs *repyStorer) loadMetaCatalog() map[string]metadataEntry {
+	log.Printf("Reading cached catalog from %q", catalogFileName)
+
+	obj := rs.bucket.Object(catalogFileName)
+	r, err := obj.NewReader(rs.ctx)
+	if err != nil {
+		log.Printf("Failed to read %q: %v", catalogFileName, err)
+		return nil
+	}
+	dec := json.NewDecoder(r)
+	catalog := Catalog{}
+
+	if err := dec.Decode(&catalog); err != nil {
+		log.Printf("Failed to unmarshal %q: %v", catalogFileName, err)
+	}
+
+	result := map[string]metadataEntry{}
+	for _, entry := range catalog.Entries {
+		result[entry.Sha1Sum] = metadataEntry{
+			sha1sum:  entry.Sha1Sum,
+			semester: entry.Semester,
+			t:        entry.TimeStamp,
+		}
+	}
+	return result
 }
 
 func (rs *repyStorer) getAllMetadata() ([]metadataEntry, error) {
@@ -327,12 +356,20 @@ func (rs *repyStorer) getAllMetadata() ([]metadataEntry, error) {
 		return nil, errors.Wrap(err, "failed to list existing REPY data")
 	}
 
+	cache := rs.loadMetaCatalog()
+
 	var wg errgroup.Group
 	ch := make(chan metadataEntry)
 
 	for _, sum := range sums {
 		sum := sum
 		wg.Go(func() error {
+			// TODO(lutzky): Add a cache-bypass option via GET parameter
+			if entry, ok := cache[sum]; ok {
+				ch <- entry
+				return nil
+			}
+
 			ts, err := rs.getTimeStampForSHA1Sum(sum)
 			if err != nil {
 				log.Printf("Couldn't get timestamp for %q: %v", sum, err)
