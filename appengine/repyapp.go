@@ -60,10 +60,11 @@ func main() {
 }
 
 type repyStorer struct {
-	ctx     context.Context
-	bucket  *storage.BucketHandle
-	data    []byte
-	sha1sum [20]byte
+	ctx           context.Context
+	bucket        *storage.BucketHandle
+	data          []byte
+	sha1sum       [20]byte
+	cacheDisabled bool
 }
 
 func newRepyStorer(ctx context.Context, data []byte) (*repyStorer, error) {
@@ -185,6 +186,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		httpErrorWrap(ctx, w, err, "Failed to initialize REPY App")
 		return
+	}
+
+	if r.FormValue("nocache") == "1" {
+		rs.cacheDisabled = true
 	}
 
 	if err := rs.writeAllREPYFiles(); err != nil {
@@ -324,6 +329,11 @@ func (rs *repyStorer) writeCatalog() error {
 }
 
 func (rs *repyStorer) loadMetaCatalog() map[string]metadataEntry {
+	if rs.cacheDisabled {
+		log.Printf("Bypassing cache")
+		return nil
+	}
+
 	log.Printf("Reading cached catalog from %q", catalogFileName)
 
 	obj := rs.bucket.Object(catalogFileName)
@@ -364,7 +374,6 @@ func (rs *repyStorer) getAllMetadata() ([]metadataEntry, error) {
 	for _, sum := range sums {
 		sum := sum
 		wg.Go(func() error {
-			// TODO(lutzky): Add a cache-bypass option via GET parameter
 			if entry, ok := cache[sum]; ok {
 				ch <- entry
 				return nil
