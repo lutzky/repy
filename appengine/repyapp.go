@@ -17,15 +17,13 @@ import (
 	"time"
 
 	"cloud.google.com/go/storage"
-	"google.golang.org/api/iterator"
-
-	"golang.org/x/sync/errgroup"
-	"golang.org/x/text/encoding/charmap"
-
 	"github.com/lutzky/repy"
 	"github.com/lutzky/repy/recode"
 	"github.com/lutzky/repy/writerlogger"
 	"github.com/pkg/errors"
+	"golang.org/x/sync/errgroup"
+	"golang.org/x/text/encoding/charmap"
+	"google.golang.org/api/iterator"
 )
 
 var bucketName string
