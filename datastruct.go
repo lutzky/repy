@@ -113,10 +113,10 @@ type Group struct {
 
 // Event represents a singular weekly event within a course.
 type Event struct {
-	Day            time.Weekday         `json:"day"`
-	Location       string               `json:"location"`
-	StartMinute    MinutesSinceMidnight `json:"startMinute"`
-	EndStartMinute MinutesSinceMidnight `json:"endMinute"`
+	Day         time.Weekday         `json:"day"`
+	Location    string               `json:"location"`
+	StartMinute MinutesSinceMidnight `json:"startMinute"`
+	EndMinute   MinutesSinceMidnight `json:"endMinute"`
 }
 
 // MinutesSinceMidnight is a way of representing a scheduled time-of-day,

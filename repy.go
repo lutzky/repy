@@ -660,10 +660,10 @@ var eventRegexp = regexp.MustCompile(
 func (p *parser) parseEventLine() bool {
 	if m := findStringSubmatchMap(eventRegexp, p.text()); len(m) > 0 {
 		ev := Event{
-			Day:            p.weekDayFromHebrewLetter(m["weekday"]),
-			StartMinute:    p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
-			EndStartMinute: p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
-			Location:       p.parseLocation(m["location"]),
+			Day:         p.weekDayFromHebrewLetter(m["weekday"]),
+			StartMinute: p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
+			EndMinute:   p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
+			Location:    p.parseLocation(m["location"]),
 		}
 
 		if m["groupType"] != "" {
@@ -757,10 +757,10 @@ func (p *parser) parseSportsGroups() error {
 			p.scan()
 		} else if m := findStringSubmatchMap(sportLineRegexp, p.text()); len(m) > 0 {
 			ev := Event{
-				Day:            p.weekDayFromHebrewLetter(m["weekday"]),
-				StartMinute:    p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
-				EndStartMinute: p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
-				Location:       p.parseLocation(m["location"]),
+				Day:         p.weekDayFromHebrewLetter(m["weekday"]),
+				StartMinute: p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
+				EndMinute:   p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
+				Location:    p.parseLocation(m["location"]),
 			}
 
 			if m["groupID"] != "" {
