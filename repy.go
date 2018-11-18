@@ -657,50 +657,54 @@ var eventRegexp = regexp.MustCompile(
 		` +(?P<groupID>[0-9]+)? ` +
 		`*\|`)
 
+// parseEventLine returns true iff it has successfully parsed the current line
+// as an event line.
 func (p *parser) parseEventLine() bool {
-	if m := findStringSubmatchMap(eventRegexp, p.text()); len(m) > 0 {
-		ev := Event{
-			Day:         p.weekDayFromHebrewLetter(m["weekday"]),
-			StartMinute: p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
-			EndMinute:   p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
-			Location:    p.parseLocation(m["location"]),
-		}
-
-		if m["groupType"] != "" {
-			groupType, err := p.groupTypeFromString(m["groupType"])
-			if err != nil {
-				p.warningf("Failed to parse group type %q: %v", m["groupType"], err)
-				return false
-			}
-
-			group := Group{
-				Teachers: []string{},
-				Events:   []Event{},
-				Type:     groupType,
-			}
-
-			if m["groupID"] != "" {
-				group.ID = p.parseUint(m["groupID"])
-				p.groupID = group.ID + 1
-			} else {
-				group.ID = p.groupID
-				p.groupID++
-			}
-
-			p.course.Groups = append(p.course.Groups, group)
-		}
-
-		if len(p.course.Groups) > 0 {
-			group := &p.course.Groups[len(p.course.Groups)-1]
-			group.Events = append(group.Events, ev)
-		} else {
-			p.warningf("Couldn't establish a group, nowhere to add event %q", p.text())
-		}
-
-		p.scan()
-		return true
+	m := findStringSubmatchMap(eventRegexp, p.text())
+	if len(m) == 0 {
+		return false
 	}
-	return false
+
+	ev := Event{
+		Day:         p.weekDayFromHebrewLetter(m["weekday"]),
+		StartMinute: p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
+		EndMinute:   p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
+		Location:    p.parseLocation(m["location"]),
+	}
+
+	if m["groupType"] != "" {
+		groupType, err := p.groupTypeFromString(m["groupType"])
+		if err != nil {
+			p.warningf("Failed to parse group type %q: %v", m["groupType"], err)
+			return false
+		}
+
+		group := Group{
+			Teachers: []string{},
+			Events:   []Event{},
+			Type:     groupType,
+		}
+
+		if m["groupID"] != "" {
+			group.ID = p.parseUint(m["groupID"])
+			p.groupID = group.ID + 1
+		} else {
+			group.ID = p.groupID
+			p.groupID++
+		}
+
+		p.course.Groups = append(p.course.Groups, group)
+	}
+
+	if len(p.course.Groups) > 0 {
+		group := &p.course.Groups[len(p.course.Groups)-1]
+		group.Events = append(group.Events, ev)
+	} else {
+		p.warningf("Couldn't establish a group, nowhere to add event %q", p.text())
+	}
+
+	p.scan()
+	return true
 }
 
 func (p *parser) parseGroups() error {
@@ -724,7 +728,7 @@ func (p *parser) parseGroups() error {
 		} else if matchesAny(p.text(), blankLine1, blankLine2) {
 			p.scan()
 		} else if p.parseEventLine() {
-			// TODO(lutzky): Do nothing?
+			// Continue parsing event lines
 		} else if p.parseLecturerLine() {
 			p.scan()
 		} else {
