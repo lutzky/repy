@@ -42,7 +42,8 @@
                 "endMinute": 810
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 20,
@@ -63,7 +64,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 30,
@@ -84,7 +86,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           }
         ]
       }

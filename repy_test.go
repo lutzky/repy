@@ -125,6 +125,52 @@ func TestParse(t *testing.T) {
 	}
 }
 
+func TestSportLineParse(t *testing.T) {
+	testCases := []struct {
+		name string
+		s    string
+		want map[string]string
+	}{
+		{
+			"FullEventWithGroupNumber",
+			`|             יטלתא.צא 19.00-20.30'ב  .ברועמ -הלק.לתא 11        |`,
+			map[string]string{
+				"location":    "יטלתא.צא",
+				"startHour":   "19",
+				"startMinute": "00",
+				"endHour":     "20",
+				"endMinute":   "30",
+				"weekday":     "ב",
+				"description": ".ברועמ -הלק.לתא",
+				"groupID":     "11",
+			},
+		},
+		{
+			"EventWithoutGroupNumber",
+			`|             יטלתא.צא 19.00-20.30'ד                            |`,
+			map[string]string{
+				"location":    "יטלתא.צא",
+				"startHour":   "19",
+				"startMinute": "00",
+				"endHour":     "20",
+				"endMinute":   "30",
+				"weekday":     "ד",
+				"description": "",
+				"groupID":     "",
+			},
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			got := findStringSubmatchMap(sportLineRegexp, tc.s)
+			if d := pretty.Compare(tc.want, got); d != "" {
+				t.Fatalf("Diff -want +got:\n%s", d)
+			}
+		})
+	}
+}
+
 func TestEventLineParse(t *testing.T) {
 	testCases := []struct {
 		name string

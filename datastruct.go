@@ -63,12 +63,16 @@ const (
 
 	// Lab groups indicate laboratory experiments (מעבדה)
 	Lab
+
+	// Sport groups indicate a sporting activity in the sports faculty
+	Sport
 )
 
 var groupTypeName = []string{
 	Lecture:  "lecture",
 	Tutorial: "tutorial",
 	Lab:      "lab",
+	Sport:    "sport",
 }
 
 func (gt GroupType) String() string {
@@ -100,10 +104,11 @@ func (gt *GroupType) UnmarshalText(b []byte) error {
 // Group represents a course's registration group (קבוצת רישום) and the events
 // it entails.
 type Group struct {
-	ID       uint      `json:"id"`
-	Teachers []string  `json:"teachers"`
-	Events   []Event   `json:"events"`
-	Type     GroupType `json:"type"`
+	ID          uint      `json:"id"`
+	Teachers    []string  `json:"teachers"`
+	Events      []Event   `json:"events"`
+	Type        GroupType `json:"type"`
+	Description string    `json:"description"`
 }
 
 // Event represents a singular weekly event within a course.

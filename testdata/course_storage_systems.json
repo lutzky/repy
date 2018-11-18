@@ -37,7 +37,8 @@
                 "endMinute": 750
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 11,
@@ -50,7 +51,8 @@
                 "endMinute": 1110
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 12,
@@ -63,7 +65,8 @@
                 "endMinute": 990
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           }
         ]
       }

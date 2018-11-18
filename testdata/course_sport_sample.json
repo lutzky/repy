@@ -3,15 +3,492 @@
     "name": "מקצועות ספורט",
     "courses": [
       {
-        "id": 394800,
-        "name": "חינוך גופני-כושר בנים",
-        "academicPoints": 1,
+        "id": 394902,
+        "name": "נבחרות ספורט",
+        "academicPoints": 1.5,
         "lecturerInCharge": "ד\"ר ח.מרגלית",
         "weeklyHours": {
-          "tutorial": 2
+          "tutorial": 4
         },
         "testDates": null,
-        "groups": null
+        "groups": [
+          {
+            "id": 11,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אצ.אתלטי",
+                "startMinute": 1140,
+                "endMinute": 1230
+              }
+            ],
+            "type": "sport",
+            "description": "אתל.קלה- מעורב."
+          },
+          {
+            "id": 12,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מג.כ.חופ",
+                "startMinute": 1050,
+                "endMinute": 1140
+              }
+            ],
+            "type": "sport",
+            "description": "כ.עף-חופים-מעורב"
+          },
+          {
+            "id": 13,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "בנ.ספורט",
+                "startMinute": 1200,
+                "endMinute": 1380
+              }
+            ],
+            "type": "sport",
+            "description": "כדורסל-אסא-בנים."
+          },
+          {
+            "id": 14,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בנ.ספורט",
+                "startMinute": 1050,
+                "endMinute": 1140
+              }
+            ],
+            "type": "sport",
+            "description": "כדורעף - בנים."
+          },
+          {
+            "id": 15,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בנ.ספורט",
+                "startMinute": 1230,
+                "endMinute": 1320
+              }
+            ],
+            "type": "sport",
+            "description": "קט-רגל-בנים."
+          },
+          {
+            "id": 16,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "קריתחיים",
+                "startMinute": 1260,
+                "endMinute": 1350
+              }
+            ],
+            "type": "sport",
+            "description": "כדור-יד-בנים."
+          },
+          {
+            "id": 17,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "מג.טניס",
+                "startMinute": 420,
+                "endMinute": 510
+              }
+            ],
+            "type": "sport",
+            "description": "טניס - בנים"
+          },
+          {
+            "id": 18,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אולם ב'",
+                "startMinute": 1170,
+                "endMinute": 1260
+              }
+            ],
+            "type": "sport",
+            "description": "טניס-שולחן-מעורב"
+          },
+          {
+            "id": 19,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אצ.אתלטי",
+                "startMinute": 1140,
+                "endMinute": 1230
+              }
+            ],
+            "type": "sport",
+            "description": "ריצות ארוכות-מעו"
+          },
+          {
+            "id": 21,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אולם ב'",
+                "startMinute": 960,
+                "endMinute": 1050
+              }
+            ],
+            "type": "sport",
+            "description": "ג'ודו - מעורב."
+          },
+          {
+            "id": 22,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "אולם ב'",
+                "startMinute": 1110,
+                "endMinute": 1200
+              }
+            ],
+            "type": "sport",
+            "description": "סיוף - מעורב."
+          },
+          {
+            "id": 23,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "מרכז ימי",
+                "startMinute": 480,
+                "endMinute": 750
+              }
+            ],
+            "type": "sport",
+            "description": "שייט - מעורב."
+          },
+          {
+            "id": 24,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "מרכזאס\"ט",
+                "startMinute": 1020,
+                "endMinute": 1200
+              }
+            ],
+            "type": "sport",
+            "description": "שחמט - מעורב."
+          },
+          {
+            "id": 25,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "אולם ב'",
+                "startMinute": 1080,
+                "endMinute": 1170
+              }
+            ],
+            "type": "sport",
+            "description": "שוטוקאן - מעורב"
+          },
+          {
+            "id": 26,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מג.אבירן",
+                "startMinute": 1170,
+                "endMinute": 1260
+              }
+            ],
+            "type": "sport",
+            "description": "רוגבי - בנים."
+          },
+          {
+            "id": 27,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "אולם ב'",
+                "startMinute": 840,
+                "endMinute": 930
+              }
+            ],
+            "type": "sport",
+            "description": "סלסה - להקה"
+          },
+          {
+            "id": 28,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בריכה",
+                "startMinute": 1200,
+                "endMinute": 1290
+              }
+            ],
+            "type": "sport",
+            "description": "שחיה - מעורב."
+          },
+          {
+            "id": 29,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בריכה",
+                "startMinute": 1200,
+                "endMinute": 1320
+              }
+            ],
+            "type": "sport",
+            "description": "כדורמים - בנים."
+          },
+          {
+            "id": 30,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "מרכז ימי",
+                "startMinute": 480,
+                "endMinute": 750
+              }
+            ],
+            "type": "sport",
+            "description": "קייאקים"
+          },
+          {
+            "id": 31,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "מרכז ימי",
+                "startMinute": 480,
+                "endMinute": 750
+              }
+            ],
+            "type": "sport",
+            "description": "סנונית"
+          },
+          {
+            "id": 32,
+            "teachers": [],
+            "events": [
+              {
+                "day": 1,
+                "location": "אולם ב'",
+                "startMinute": 1215,
+                "endMinute": 1395
+              }
+            ],
+            "type": "sport",
+            "description": "להקת - מ ח ו ל ."
+          },
+          {
+            "id": 33,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מר.סקווש",
+                "startMinute": 1200,
+                "endMinute": 1290
+              }
+            ],
+            "type": "sport",
+            "description": "סקווש - בנים."
+          },
+          {
+            "id": 34,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "א.קולנוע",
+                "startMinute": 1170,
+                "endMinute": 1305
+              }
+            ],
+            "type": "sport",
+            "description": "דיבייט - מעורב"
+          },
+          {
+            "id": 35,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "בנ.ספורט",
+                "startMinute": 660,
+                "endMinute": 840
+              }
+            ],
+            "type": "sport",
+            "description": "ניווט - מעורב."
+          },
+          {
+            "id": 36,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "בנ.ספורט",
+                "startMinute": 450,
+                "endMinute": 630
+              }
+            ],
+            "type": "sport",
+            "description": "רכיבה-אופני הרים"
+          },
+          {
+            "id": 37,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "צ'ק פוסט",
+                "startMinute": 900,
+                "endMinute": 1080
+              }
+            ],
+            "type": "sport",
+            "description": "באולינג-מעורב."
+          },
+          {
+            "id": 38,
+            "teachers": [],
+            "events": [
+              {
+                "day": 5,
+                "location": "מרכז ימי",
+                "startMinute": 600,
+                "endMinute": 750
+              }
+            ],
+            "type": "sport",
+            "description": "שייט בגלשני מפרש"
+          },
+          {
+            "id": 39,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בנ.ספורט",
+                "startMinute": 870,
+                "endMinute": 960
+              }
+            ],
+            "type": "sport",
+            "description": "טייקוונדו"
+          },
+          {
+            "id": 40,
+            "teachers": [],
+            "events": [
+              {
+                "day": 2,
+                "location": "בנ.ספורט",
+                "startMinute": 1110,
+                "endMinute": 1200
+              }
+            ],
+            "type": "sport",
+            "description": "כדורסל - בנות."
+          },
+          {
+            "id": 41,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "בנ.ספורט",
+                "startMinute": 1140,
+                "endMinute": 1230
+              }
+            ],
+            "type": "sport",
+            "description": "כדורעף - בנות."
+          },
+          {
+            "id": 42,
+            "teachers": [],
+            "events": [
+              {
+                "day": 4,
+                "location": "נשר-חט\"ב",
+                "startMinute": 1140,
+                "endMinute": 1230
+              }
+            ],
+            "type": "sport",
+            "description": "קט-רגל-בנות"
+          },
+          {
+            "id": 43,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מג.אבירן",
+                "startMinute": 1170,
+                "endMinute": 1290
+              }
+            ],
+            "type": "sport",
+            "description": "רוגבי - בנות"
+          },
+          {
+            "id": 45,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מר.סקווש",
+                "startMinute": 1110,
+                "endMinute": 1200
+              }
+            ],
+            "type": "sport",
+            "description": "סקווש -בנות"
+          },
+          {
+            "id": 46,
+            "teachers": [],
+            "events": [
+              {
+                "day": 3,
+                "location": "מג.טניס",
+                "startMinute": 420,
+                "endMinute": 510
+              }
+            ],
+            "type": "sport",
+            "description": "טניס - בנות"
+          }
+        ]
       }
     ],
     "semester": "אביב תשע\"ח"

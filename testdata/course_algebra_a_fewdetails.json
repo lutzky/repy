@@ -41,7 +41,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 11,
@@ -60,7 +61,8 @@
                 "endMinute": 630
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 12,
@@ -79,7 +81,8 @@
                 "endMinute": 690
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 13,
@@ -98,7 +101,8 @@
                 "endMinute": 630
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 14,
@@ -117,7 +121,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 20,
@@ -136,7 +141,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 21,
@@ -155,7 +161,8 @@
                 "endMinute": 630
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 22,
@@ -174,7 +181,8 @@
                 "endMinute": 690
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 23,
@@ -193,7 +201,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 30,
@@ -214,7 +223,8 @@
                 "endMinute": 870
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           },
           {
             "id": 31,
@@ -233,7 +243,8 @@
                 "endMinute": 750
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 32,
@@ -252,7 +263,8 @@
                 "endMinute": 1050
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 33,
@@ -271,7 +283,8 @@
                 "endMinute": 630
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           },
           {
             "id": 34,
@@ -290,7 +303,8 @@
                 "endMinute": 630
               }
             ],
-            "type": "tutorial"
+            "type": "tutorial",
+            "description": ""
           }
         ]
       }

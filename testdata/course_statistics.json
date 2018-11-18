@@ -37,7 +37,8 @@
                 "endMinute": 990
               }
             ],
-            "type": "lecture"
+            "type": "lecture",
+            "description": ""
           }
         ]
       }

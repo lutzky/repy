@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"log"
 	"path"
 	"regexp"
 	"runtime"
@@ -435,15 +436,22 @@ func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 		return errors.Wrap(err, "didn't find 2nd faculty separate line in sports faculty")
 	}
 
+courses:
 	for {
+		p.infof("About to scan a sports course")
 		course, err := p.parseSportsCourse()
-		if err != nil {
-			return errors.Wrap(err, "failed to scan a sports course")
-		}
-		if course != nil {
+		switch err {
+		case io.EOF:
+			break courses
+		case nil:
 			faculty.Courses = append(faculty.Courses, *course)
-		} else {
-			break
+			// Keep scanning
+		default:
+			p.errorf("failed to scan a sports course: %v", err)
+			p.warningf("skipping to next course")
+			for p.text() != sportsCourseSep {
+				p.scan()
+			}
 		}
 	}
 
@@ -504,7 +512,7 @@ func (p *parser) parseSportsCourse() (*Course, error) {
 
 	if p.text() == "" {
 		// End of faculty
-		return nil, nil
+		return nil, io.EOF
 	}
 
 	if err := p.parseIDAndName(); err != nil {
@@ -524,15 +532,11 @@ func (p *parser) parseSportsCourse() (*Course, error) {
 		return nil, errors.Wrap(err, "failed to parse course head info")
 	}
 
-	// TODO(lutzky): Actually collect the group information
-
-	p.warningf("Skipping sports course group information (not implemented) for %s", p.course.Name)
-
-	for p.text() != sportsCourseSep {
-		if !p.scan() {
-			panic("End of file reached unexpectedly")
-		}
+	if err := p.parseSportsGroups(); err != nil {
+		return nil, errors.Wrap(err, "failed to parse groups for course")
 	}
+
+	p.infof("Got all groups for course %d", p.course.ID)
 
 	return p.course, nil
 }
@@ -725,6 +729,57 @@ func (p *parser) parseGroups() error {
 			p.scan()
 		} else {
 			p.warningf("Ignored group line %q", p.text())
+			p.scan()
+		}
+	}
+}
+
+var sportLineRegexp = regexp.MustCompile(`\| *` +
+	`(?P<location>.*)? +` +
+	`(?P<startHour>[0-9]{1,2})\.(?P<startMinute>[0-9]{2})- *` +
+	`(?P<endHour>[0-9]{1,2})\.(?P<endMinute>[0-9]{2})'` +
+	`(?P<weekday>[אבגדהוש]) +` +
+	`(?P<description>[א-ת\.\- "']+)? +` +
+	`(?P<groupID>[0-9]+)? ` +
+	`*\|`)
+
+func (p *parser) parseSportsGroups() error {
+	if p.text() != sportsBlankLine2 {
+		p.warningf("Expected either %q or %q, got %q; skipping course", groupSep1, blankLine2, p.text())
+		log.Printf("buhbye, line is %q", p.text())
+		return nil
+	}
+
+	var group Group
+
+	for {
+		if p.text() == sportsBlankLine2 {
+			p.scan()
+		} else if m := findStringSubmatchMap(sportLineRegexp, p.text()); len(m) > 0 {
+			ev := Event{
+				Day:            p.weekDayFromHebrewLetter(m["weekday"]),
+				StartMinute:    p.timeOfDayFromStrings(m["startHour"], m["startMinute"]),
+				EndStartMinute: p.timeOfDayFromStrings(m["endHour"], m["endMinute"]),
+				Location:       p.parseLocation(m["location"]),
+			}
+
+			if m["groupID"] != "" {
+				id := p.parseUint(m["groupID"])
+				p.course.Groups = append(p.course.Groups, Group{
+					ID:          id,
+					Description: dedupeSpaces(hebrewFlip(collapseSpaces(m["description"]))),
+					Type:        Sport,
+					Teachers:    []string{},
+				})
+			}
+
+			p.lastGroup().Events = append(group.Events, ev)
+			p.scan()
+		} else if p.text() == sportsCourseSep {
+			p.scan()
+			return nil
+		} else {
+			p.warningf("Ignored sports line %q", p.text())
 			p.scan()
 		}
 	}
