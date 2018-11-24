@@ -280,10 +280,11 @@ func matchesAny(s string, candidates ...string) bool {
 	return false
 }
 
-var spaceRegex = regexp.MustCompile(`\s+`)
-
 func dedupeSpaces(s string) string {
-	return spaceRegex.ReplaceAllString(s, " ")
+	if strings.Contains(s, "  ") {
+		return strings.Join(strings.Fields(s), " ")
+	}
+	return s
 }
 
 func (p *parser) parseCourseHeadInfo() error {
