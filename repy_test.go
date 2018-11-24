@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -72,20 +73,39 @@ func TestParseLocation(t *testing.T) {
 	}
 }
 
-func TestParse(t *testing.T) {
+func getAllREPYs() []string {
 	glob := "testdata/*.repy"
 	if *onlyTestREPY != "" {
 		glob = *onlyTestREPY
 	}
-	testCases, err := filepath.Glob(glob)
+	result, err := filepath.Glob(glob)
 	if err != nil {
-		t.Fatalf("Failed to glob %q for course REPYs: %v", glob, err)
+		panic(fmt.Sprintf("Failed to glob %q for course REPYs: %v", glob, err))
 	}
-	if len(testCases) == 0 {
-		t.Fatalf("Got 0 testcases in %q", glob)
+	if len(result) == 0 {
+		panic(fmt.Sprintf("Got 0 testcases in %q", glob))
 	}
 
-	for _, fullPathRepy := range testCases {
+	return result
+}
+
+func BenchmarkParse(b *testing.B) {
+	for _, fullPathRepy := range getAllREPYs() {
+		b.Run(filepath.Base(fullPathRepy), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				repyFile, err := os.Open(fullPathRepy)
+				if err != nil {
+					b.Fatalf("Couldn't open %q: %v", fullPathRepy, err)
+				}
+
+				ReadFile(repyFile, GLogger{})
+			}
+		})
+	}
+}
+
+func TestParse(t *testing.T) {
+	for _, fullPathRepy := range getAllREPYs() {
 		t.Run(filepath.Base(fullPathRepy), func(t *testing.T) {
 			fullPathJSON := strings.TrimSuffix(fullPathRepy, ".repy") + ".json"
 
