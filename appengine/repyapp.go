@@ -171,10 +171,19 @@ func (rs *repyStorer) parseJSONAndWrite() error {
 	return nil
 }
 
-const catalogFileName = "catalog.json"
+const (
+	catalogFileName = "catalog.json"
+	cronHeader      = "X-Appengine-Cron"
+)
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
+
+	if r.Header.Get(cronHeader) == "" {
+		log.Printf("Missing header %q", cronHeader)
+		http.Error(w, "Access denied", http.StatusForbidden)
+		return
+	}
 
 	repyBytes, err := downloadREPYZip(ctx)
 	if err != nil {
