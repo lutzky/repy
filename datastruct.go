@@ -41,6 +41,7 @@ type Course struct {
 	WeeklyHours      WeeklyHours `json:"weeklyHours"`
 	TestDates        []Date      `json:"testDates"`
 	Groups           []Group     `json:"groups"`
+	Notes            string      `json:"notes,omitempty"`
 }
 
 // Date is a timezone-free representation of a date

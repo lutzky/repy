@@ -288,6 +288,12 @@ func dedupeSpaces(s string) string {
 }
 
 func (p *parser) parseCourseHeadInfo() error {
+	var notesBuilder strings.Builder
+
+	defer func() {
+		p.course.Notes = strings.TrimSpace(notesBuilder.String())
+	}()
+
 	for {
 		if matchesAny(p.text(), groupSep1, courseSep, sportsCourseSep,
 			blankLine2, sportsBlankLine2) {
@@ -306,7 +312,8 @@ func (p *parser) parseCourseHeadInfo() error {
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
 			p.course.LecturerInCharge = dedupeSpaces(hebrewFlip(strings.TrimSpace(m[1])))
 		} else {
-			p.infof("Ignored courseHeadInfo line %q", p.text())
+			notesBuilder.WriteString(hebrewFlip(strings.Trim(p.text(), "| ")))
+			notesBuilder.WriteRune('\n')
 		}
 
 		if !p.scan() {
@@ -492,8 +499,6 @@ func (p *parser) parseCourse() (*Course, error) {
 	if err := p.parseCourseHeadInfo(); err != nil {
 		return nil, errors.Wrap(err, "failed to parse course head info")
 	}
-
-	// TODO(lutzky): There might be some comments about the course here
 
 	if err := p.parseGroups(); err != nil {
 		return nil, errors.Wrap(err, "failed to parse groups for course")
