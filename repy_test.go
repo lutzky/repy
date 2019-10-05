@@ -265,22 +265,6 @@ func TestEventLineParse(t *testing.T) {
 	}
 }
 
-func TestReverse(t *testing.T) {
-	testCases := []struct {
-		s, want string
-	}{
-		{"hello", "olleh"},
-		{"הסדנה", "הנדסה"},
-	}
-
-	for _, tc := range testCases {
-		got := Reverse(tc.s)
-		if got != tc.want {
-			t.Errorf("Reverse(a%qa) = a%qa; want a%qa", tc.s, got, tc.want)
-		}
-	}
-}
-
 func TestFixTwoDigitYear(t *testing.T) {
 	testCases := []struct {
 		baseYear, want uint

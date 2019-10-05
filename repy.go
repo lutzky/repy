@@ -15,6 +15,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/lutzky/repy/bidi"
+
 	"github.com/golang/glog"
 	"github.com/pkg/errors"
 	"golang.org/x/text/encoding/charmap"
@@ -131,7 +133,7 @@ func (p *parser) parseIDAndName() error {
 		return p.errorf("Line %q doesn't match id-and-name regex `%s`", p.text(), idAndNameRegex)
 	}
 
-	p.course.Name = dedupeSpaces(Reverse(m[1]))
+	p.course.Name = dedupeSpaces(bidi.Reverse(m[1]))
 	p.course.ID = p.parseUint(m[2])
 	p.scan()
 	return nil
@@ -303,9 +305,9 @@ func (p *parser) parseCourseHeadInfo() error {
 			}
 			p.course.TestDates = append(p.course.TestDates, d)
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
-			p.course.LecturerInCharge = dedupeSpaces(Reverse(strings.TrimSpace(m[1])))
+			p.course.LecturerInCharge = dedupeSpaces(bidi.Reverse(strings.TrimSpace(m[1])))
 		} else {
-			notesBuilder.WriteString(Reverse(strings.Trim(p.text(), "| ")))
+			notesBuilder.WriteString(bidi.Reverse(strings.Trim(p.text(), "| ")))
 			notesBuilder.WriteRune('\n')
 		}
 
@@ -326,7 +328,7 @@ func (p *parser) parseFacultyName() (string, error) {
 		return "", p.errorf("Line %q doesn't match faculty name regex `%s`", p.text(), facultyNameRegexp)
 	}
 	p.scan()
-	return Reverse(strings.TrimSpace(m[1])), nil
+	return bidi.Reverse(strings.TrimSpace(m[1])), nil
 }
 
 func (p *parser) parseFacultySemester() (string, error) {
@@ -335,7 +337,7 @@ func (p *parser) parseFacultySemester() (string, error) {
 		return "", p.errorf("Line %q doesn't match faculty semester regex `%s`", p.text(), facultySemesterRegexp)
 	}
 	p.scan()
-	return Reverse(strings.TrimSpace(m[1])), nil
+	return bidi.Reverse(strings.TrimSpace(m[1])), nil
 }
 
 func (p *parser) parseFile() (*Catalog, error) {
@@ -430,7 +432,7 @@ func (p *parser) parseSportsFaculty(faculty *Faculty) error {
 		return p.errorf("Line %q doesn't match sports semester regex `%s`", p.text(), sportsFacultySemesterRegexp)
 	}
 	p.scan()
-	faculty.Semester = Reverse(strings.TrimSpace(m[1]))
+	faculty.Semester = bidi.Reverse(strings.TrimSpace(m[1]))
 	faculty.Name = sportsFacultyName
 
 	if err := p.expectLineAndAdvance(sportsFacultySep); err != nil {
@@ -593,9 +595,9 @@ var standardLocationRegexp = regexp.MustCompile(`([א-ת\.]+) ([0-9]+)`)
 func (p *parser) parseLocation(s string) string {
 	m := standardLocationRegexp.FindStringSubmatch(s)
 	if len(m) == 0 {
-		return dedupeSpaces(Reverse(s))
+		return dedupeSpaces(bidi.Reverse(s))
 	}
-	building := dedupeSpaces(Reverse(m[1]))
+	building := dedupeSpaces(bidi.Reverse(m[1]))
 	room := p.parseUint(m[2])
 	return fmt.Sprintf("%s %d", building, room)
 }
@@ -616,7 +618,7 @@ var lecturerRegexp = regexp.MustCompile(
 
 func (p *parser) parseLecturerLine() bool {
 	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
-		lecturer := dedupeSpaces(Reverse(collapseSpaces(m[1])))
+		lecturer := dedupeSpaces(bidi.Reverse(collapseSpaces(m[1])))
 		teachers := &p.lastGroup().Teachers
 		*teachers = append(*teachers, lecturer)
 		return true
@@ -770,7 +772,7 @@ func (p *parser) parseSportsGroups() error {
 				id := p.parseUint(m["groupID"])
 				p.course.Groups = append(p.course.Groups, Group{
 					ID:          id,
-					Description: dedupeSpaces(Reverse(collapseSpaces(m["description"]))),
+					Description: dedupeSpaces(bidi.Reverse(collapseSpaces(m["description"]))),
 					Type:        Sport,
 					Teachers:    []string{},
 				})
@@ -786,13 +788,4 @@ func (p *parser) parseSportsGroups() error {
 			p.scan()
 		}
 	}
-}
-
-// Reverse reverses a visual-Hebrew string into logical order.
-func Reverse(s string) string {
-	runes := []rune(s)
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	return string(runes)
 }
