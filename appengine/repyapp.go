@@ -16,6 +16,7 @@ import (
 	"sync"
 	"time"
 
+	"cloud.google.com/go/errorreporting"
 	"cloud.google.com/go/storage"
 	"github.com/lutzky/repy"
 	"github.com/lutzky/repy/recode"
@@ -40,6 +41,30 @@ func downloadREPYZip(ctx context.Context) ([]byte, error) {
 	return repy.ExtractFromZip(resp.Body)
 }
 
+var errorClient *errorreporting.Client
+
+func initErrorReporting(ctx context.Context) {
+	gcpProject := os.Getenv("GCP_PROJECT")
+	log.Printf("GCP_PROJECT: %q", gcpProject)
+
+	if gcpProject == "" {
+		log.Println("Skipping error reporting, as GCP_PROJECT is unset")
+		return
+	}
+
+	var err error
+
+	errorClient, err = errorreporting.NewClient(ctx, gcpProject, errorreporting.Config{
+		ServiceName: "repyapp",
+		OnError: func(err error) {
+			log.Printf("Could not log error: %v", err)
+		},
+	})
+	if err != nil {
+		log.Fatalf("Failed to create error reporting client: %v", err)
+	}
+}
+
 func main() {
 	http.HandleFunc("/update", handler)
 	port := os.Getenv("PORT")
@@ -47,6 +72,8 @@ func main() {
 		port = "8080"
 		log.Printf("Defaulting to port %s", port)
 	}
+
+	initErrorReporting(context.Background())
 
 	bucketName = os.Getenv("CLOUD_STORAGE_BUCKET")
 	if bucketName == "" {
@@ -181,19 +208,19 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Header.Get(cronHeader) == "" {
 		log.Printf("Missing header %q", cronHeader)
-		http.Error(w, "Access denied", http.StatusForbidden)
+		httpErrorWrap(ctx, w, r, fmt.Errorf("Access denied"), "Access denied")
 		return
 	}
 
 	repyBytes, err := downloadREPYZip(ctx)
 	if err != nil {
-		httpErrorWrap(ctx, w, err, "Failed to download REPY zip")
+		httpErrorWrap(ctx, w, r, err, "Failed to download REPY zip")
 		return
 	}
 
 	rs, err := newRepyStorer(ctx, repyBytes)
 	if err != nil {
-		httpErrorWrap(ctx, w, err, "Failed to initialize REPY App")
+		httpErrorWrap(ctx, w, r, err, "Failed to initialize REPY App")
 		return
 	}
 
@@ -202,12 +229,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := rs.writeAllREPYFiles(); err != nil {
-		httpErrorWrap(ctx, w, err, "Failed to write REPY files")
+		httpErrorWrap(ctx, w, r, err, "Failed to write REPY files")
 		return
 	}
 
 	if err := rs.parseJSONAndWrite(); err != nil {
-		httpErrorWrap(ctx, w, err, "Failed to complete JSON Parsing")
+		httpErrorWrap(ctx, w, r, err, "Failed to complete JSON Parsing")
 		return
 	}
 
@@ -216,7 +243,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Writing %s", catalogFileName)
 
 	if err := rs.writeCatalog(); err != nil {
-		httpErrorWrap(ctx, w, err, "Failed to write catalog")
+		httpErrorWrap(ctx, w, r, err, "Failed to write catalog")
 		return
 	}
 
@@ -233,8 +260,14 @@ func (rs *repyStorer) copyToFile(filename string, r io.Reader) error {
 	return err
 }
 
-func httpErrorWrap(ctx context.Context, w http.ResponseWriter, err error, msg string) {
+func httpErrorWrap(ctx context.Context, w http.ResponseWriter, r *http.Request, err error, msg string) {
 	log.Printf(errors.Wrap(err, msg).Error())
+	if errorClient != nil {
+		errorClient.Report(errorreporting.Entry{
+			Error: err,
+			Req:   r,
+		})
+	}
 	http.Error(w, msg, http.StatusInternalServerError)
 }
 
