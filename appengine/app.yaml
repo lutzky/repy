@@ -9,3 +9,4 @@ handlers:
 
 env_variables:
   CLOUD_STORAGE_BUCKET: repy-176217.appspot.com
+  GCP_PROJECT: repy-176217  # No longer set for go1.12
