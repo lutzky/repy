@@ -5766,7 +5766,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "חדר  חקלאית",
+                "location": "חדר חקלאית",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -50618,7 +50618,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 570,
                 "endMinute": 690
               }
@@ -50634,7 +50634,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 690,
                 "endMinute": 750
               }
@@ -52089,7 +52089,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -52134,7 +52134,7 @@
             "events": [
               {
                 "day": 2,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 750,
                 "endMinute": 870
               }
@@ -52773,7 +52773,7 @@
             "events": [
               {
                 "day": 3,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 990,
                 "endMinute": 1110
               }
@@ -52900,7 +52900,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 630,
                 "endMinute": 750
               }
@@ -52916,7 +52916,7 @@
             "events": [
               {
                 "day": 1,
-                "location": "חדר  טאוב",
+                "location": "חדר טאוב",
                 "startMinute": 750,
                 "endMinute": 810
               }

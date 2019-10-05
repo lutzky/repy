@@ -109,14 +109,6 @@ func parseTimeOfDay(x string) (MinutesSinceMidnight, error) {
 	return MinutesSinceMidnight(result), nil
 }
 
-func hebrewFlip(s string) string {
-	runes := []rune(strings.TrimSpace(s))
-	for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	return string(runes)
-}
-
 const (
 	facultySep = "+==========================================+"
 	courseSep  = "+------------------------------------------+"
@@ -139,7 +131,7 @@ func (p *parser) parseIDAndName() error {
 		return p.errorf("Line %q doesn't match id-and-name regex `%s`", p.text(), idAndNameRegex)
 	}
 
-	p.course.Name = dedupeSpaces(hebrewFlip(m[1]))
+	p.course.Name = dedupeSpaces(Reverse(m[1]))
 	p.course.ID = p.parseUint(m[2])
 	p.scan()
 	return nil
@@ -281,6 +273,7 @@ func matchesAny(s string, candidates ...string) bool {
 }
 
 func dedupeSpaces(s string) string {
+	s = strings.TrimSpace(s)
 	if strings.Contains(s, "  ") {
 		return strings.Join(strings.Fields(s), " ")
 	}
@@ -310,9 +303,9 @@ func (p *parser) parseCourseHeadInfo() error {
 			}
 			p.course.TestDates = append(p.course.TestDates, d)
 		} else if m := lecturerInChargeRegex.FindStringSubmatch(p.text()); m != nil {
-			p.course.LecturerInCharge = dedupeSpaces(hebrewFlip(strings.TrimSpace(m[1])))
+			p.course.LecturerInCharge = dedupeSpaces(Reverse(strings.TrimSpace(m[1])))
 		} else {
-			notesBuilder.WriteString(hebrewFlip(strings.Trim(p.text(), "| ")))
+			notesBuilder.WriteString(Reverse(strings.Trim(p.text(), "| ")))
 			notesBuilder.WriteRune('\n')
 		}
 
@@ -600,9 +593,9 @@ var standardLocationRegexp = regexp.MustCompile(`([א-ת\.]+) ([0-9]+)`)
 func (p *parser) parseLocation(s string) string {
 	m := standardLocationRegexp.FindStringSubmatch(s)
 	if len(m) == 0 {
-		return hebrewFlip(s)
+		return dedupeSpaces(Reverse(s))
 	}
-	building := hebrewFlip(m[1])
+	building := dedupeSpaces(Reverse(m[1]))
 	room := p.parseUint(m[2])
 	return fmt.Sprintf("%s %d", building, room)
 }
@@ -623,7 +616,7 @@ var lecturerRegexp = regexp.MustCompile(
 
 func (p *parser) parseLecturerLine() bool {
 	if m := lecturerRegexp.FindStringSubmatch(p.text()); len(m) > 0 {
-		lecturer := dedupeSpaces(hebrewFlip(collapseSpaces(m[1])))
+		lecturer := dedupeSpaces(Reverse(collapseSpaces(m[1])))
 		teachers := &p.lastGroup().Teachers
 		*teachers = append(*teachers, lecturer)
 		return true
@@ -777,7 +770,7 @@ func (p *parser) parseSportsGroups() error {
 				id := p.parseUint(m["groupID"])
 				p.course.Groups = append(p.course.Groups, Group{
 					ID:          id,
-					Description: dedupeSpaces(hebrewFlip(collapseSpaces(m["description"]))),
+					Description: dedupeSpaces(Reverse(collapseSpaces(m["description"]))),
 					Type:        Sport,
 					Teachers:    []string{},
 				})
