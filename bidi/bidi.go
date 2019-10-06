@@ -21,15 +21,28 @@ func Reverse(s string) string {
 
 	numberRun := false
 	for i, r := range runes {
+		wasNumberRun := numberRun
 		if unicode.IsNumber(r) {
+			// Number - start/continue number run
 			numberRun = true
 		} else if strings.ContainsRune(neutralRunes, r) {
-			// Neutral
-		} else {
+			// Neutral - continue number run iff we're in a middle of a run with
+			// only numbers and neutrals.
 			if numberRun {
-				emptyInto(&numStack, &mainStack)
+				numberRun = false
+				for j := i + 1; j < len(runes); j++ {
+					if unicode.IsNumber(runes[j]) {
+						numberRun = true
+					}
+				}
 			}
+		} else {
+			// Not a number - end number run
 			numberRun = false
+		}
+
+		if wasNumberRun && !numberRun {
+			emptyInto(&numStack, &mainStack)
 		}
 
 		if numberRun {
