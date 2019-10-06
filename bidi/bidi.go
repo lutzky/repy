@@ -48,19 +48,24 @@ func Reverse(s string) string {
 		if numberRun {
 			numStack.push(runes[i])
 		} else {
-			switch runes[i] {
-			case '(':
-				mainStack.push(')')
-			case ')':
-				mainStack.push('(')
-			default:
-				mainStack.push(runes[i])
-			}
+			mainStack.push(mirror(runes[i]))
 		}
 	}
 
 	emptyInto(&numStack, &mainStack)
 	return mainStack.toRevString()
+}
+
+var mirrors = map[rune]rune{
+	'(': ')',
+	')': '(',
+}
+
+func mirror(r rune) rune {
+	if m, ok := mirrors[r]; ok {
+		return m
+	}
+	return r
 }
 
 type runeStack []rune
