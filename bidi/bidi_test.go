@@ -26,3 +26,10 @@ func TestReverse(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkSimple(b *testing.B) {
+	input := "לקראת סוף המאה ה-19"
+	for i := 0; i < b.N; i++ {
+		Reverse(input)
+	}
+}
