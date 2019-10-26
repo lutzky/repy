@@ -3,9 +3,9 @@ sudo: false
 go:
   # Support two major versions back; see policy at
   # https://golang.org/doc/devel/release.html#policy
-  - "1.10"
   - "1.11"
   - "1.12"
+  - "1.13"
   - master
 before_install:
   - go get -u golang.org/x/lint/golint
