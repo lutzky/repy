@@ -35,7 +35,13 @@ cd appengine
 go run repyapp.go
 ```
 
-Afterwards, browse to the preview URL at the `/update` endpoint (http://0.0.0.0:8080/update if running locally). This should write the files to the *staging* file bucket.
+Afterwards, perform the update like so:
+
+```shell
+curl -H 'X-Appengine-Cron: testing' http://0.0.0.0:8080/update
+```
+
+This should write the files to the *staging* file bucket.
 
 If satisfied, deploy to production:
 
