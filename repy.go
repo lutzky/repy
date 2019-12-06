@@ -318,7 +318,7 @@ func (p *parser) parseCourseHeadInfo() error {
 }
 
 var (
-	facultyNameRegexp     = regexp.MustCompile(`\| *([א-ת\-\., ]+) *- *תועש תכרעמ *\|`)
+	facultyNameRegexp     = regexp.MustCompile(`\| *([א-ת\-\.,\* ]+) *- *תועש תכרעמ *\|`)
 	facultySemesterRegexp = regexp.MustCompile(`\| *([א-ת" ]+) +רטסמס *\|`)
 )
 
