@@ -1,6 +1,6 @@
 # repy
 
-[![Build Status](https://travis-ci.org/lutzky/repy.svg?branch=master)](https://travis-ci.org/lutzky/repy)
+![Go](https://github.com/lutzky/repy/workflows/Go/badge.svg)
 [![codecov](https://codecov.io/gh/lutzky/repy/branch/master/graph/badge.svg)](https://codecov.io/gh/lutzky/repy)
 
 This is a parsing library for Technion REPY files, written in Go. The intent is
